@@ -74,64 +74,68 @@
     <h1>Class Timetable</h1>
     <table>
         <caption>Weekly Class Timetable</caption>
-        <tr>
-            <th>Day</th>
-            <th>9:00 AM - 10:00 AM</th>
-            <th>10:15 AM - 11:15 AM</th>
-            <th>11:30 AM - 12:30 PM</th>
-            <th>1:30 PM - 2:30 PM</th>
-            <th>2:45 PM - 3:45 PM</th>
-        </tr>
-        <tr>
-            <td>Monday</td>
-            <td>Math</td>
-            <td>English</td>
-            <td>Physics</td>
-            <td>Chemistry</td>
-            <td>Sports</td>
-        </tr>
-        <tr>
-            <td>Tuesday</td>
-            <td>Biology</td>
-            <td>Math</td>
-            <td>History</td>
-            <td>Geography</td>
-            <td>Art</td>
-        </tr>
-        <tr>
-            <td>Wednesday</td>
-            <td>Physics</td>
-            <td>Chemistry</td>
-            <td>English</td>
-            <td>Math</td>
-            <td>Computer Science</td>
-        </tr>
-        <tr>
-            <td>Thursday</td>
-            <td>History</td>
-            <td>Biology</td>
-            <td>Geography</td>
-            <td>Math</td>
-            <td>Sports</td>
-        </tr>
-        <tr>
-            <td>Friday</td>
-            <td>English</td>
-            <td>Physics</td>
-            <td>Chemistry</td>
-            <td>Biology</td>
-            <td>Art</td>
-        </tr>
+        <thead>
+            <tr>
+                <th>Day</th>
+                <th>9:00 AM - 10:00 AM</th>
+                <th>10:15 AM - 11:15 AM</th>
+                <th>11:30 AM - 12:30 PM</th>
+                <th>1:30 PM - 2:30 PM</th>
+                <th>2:45 PM - 3:45 PM</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Monday</td>
+                <td>Math</td>
+                <td>English</td>
+                <td>Physics</td>
+                <td>Chemistry</td>
+                <td>Sports</td>
+            </tr>
+            <tr>
+                <td>Tuesday</td>
+                <td>Biology</td>
+                <td>Math</td>
+                <td>History</td>
+                <td>Geography</td>
+                <td>Art</td>
+            </tr>
+            <tr>
+                <td>Wednesday</td>
+                <td>Physics</td>
+                <td>Chemistry</td>
+                <td>English</td>
+                <td>Math</td>
+                <td>Computer Science</td>
+            </tr>
+            <tr>
+                <td>Thursday</td>
+                <td>History</td>
+                <td>Biology</td>
+                <td>Geography</td>
+                <td>Math</td>
+                <td>Sports</td>
+            </tr>
+            <tr>
+                <td>Friday</td>
+                <td>English</td>
+                <td>Physics</td>
+                <td>Chemistry</td>
+                <td>Biology</td>
+                <td>Art</td>
+            </tr>
+        </tbody>
     </table>
 
     <div class="form-container">
         <h2>Login Form</h2>
         <form>
             <label for="username">Username</label>
-            <input type="text" id="username" name="username" placeholder="Enter your username" required>
+            <input type="text" id="username" name="username" placeholder="Enter your username" aria-label="Username input field" required autofocus>
 
             <label for="password">Password</label>
-            <input type="password" id="password" name="password" placeholder="Enter your password" required>
+            <input type="password" id="password" name="password" placeholder="Enter your password" aria-label="Password input field" required>
 
             <button type="submit">Login</button>
         </form>
