@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shadow Dom</title>
+</head>
+<body style="display: flex; flex-direction: column; justify-content: center; align-items: center; height: 100vh;">
+    <template id="text">
+        <p style="color: darkcyan; font-size: 20px;">Apty’s AI-driven in-app guidance streamlines and accelerates software
+            adoption, improves onboarding, reduces IT support costs, and boosts
+            ROI with our Digital Adoption Platform</p>
+    </template>
+    
+    <button id="showText" 
+            style="background-color: aliceblue; cursor: pointer; color:darkgray; border: none; font-size: 27px; border-radius: 10px; padding: 10px;"
+            type="button" 
+            name="actionButton" 
+            value="ShowText" 
+            disabled="false" 
+            title="Click to see what Apty is" 
+            aria-label="What is Apty?" 
+            tabindex="0"
+            autofocus
+            form="formId"
+            formaction="/submit"
+            formenctype="multipart/form-data"
+            formmethod="post"
+            formtarget="_blank">
+        What is Apty ?
+    </button>
+   
+    <div id="home"
+         style="background-color: #f0f0f0; width: 80%; height: 80%; border: 2px solid #ccc; border-radius: 8px;">
+    </div>
+
+    <!--<button id="hideText" style="background-color: rgb(189, 24, 112); cursor: pointer; color:darkgray; border: none; font-size: 27px; border-radius: 10px; padding: 10px;">Got It ?</button>-->
+   
+</body>
+<script>
+
+    const showText = document.getElementById("showText");
+    showText.onclick = function (){
+        const template = document.getElementById("text");
+        const home  = document.getElementById("home").attachShadow({mode:"open"});
+        home.appendChild(template.content);
+    }
+
+</script>
+</html>

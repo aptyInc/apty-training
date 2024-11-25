@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Apty Inc.">
+    <meta name="description" content="Apty's Digital Adoption Platform">
+    <meta name="keywords" content="Digital Adoption, In-App Guidance, Software Adoption, ROI, Onboarding">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Apty Landing Page</title>
+    <link rel="stylesheet" href="style.css" type="text/css" media="all" sizes="16x16">
+    <link rel="icon" href="https://www.apty.io/wp-content/uploads/2024/06/logo.svg" type="image/svg+xml">
+</head>
+<body style="background-color: aliceblue; text-align: center;" class="landing-page" id="home" data-theme="light">
+  
+    <nav style="display: flex; justify-content: space-between; align-items: center;" role="navigation" aria-label="Main Navigation">
+        <div class="logo" id="logo">
+            <img src="https://www.apty.io/wp-content/uploads/2024/06/logo.svg" alt="Apty Logo" width="120" height="40" style="max-width: 100%;">
+        </div>
+        <ul style="display: flex; justify-content: space-between; align-items: center; list-style-type: none;" aria-label="Navigation Links">
+            <li><a href="#about" style="padding-right: 30px; text-decoration: none; color: #000;" title="About Apty" aria-label="About Apty">About</a></li>
+            <li><a href="#features" style="padding-right: 30px; text-decoration: none; color: #000;" title="Explore Features" aria-label="Explore Features">Features</a></li>
+            <li><a href="#contact" style="padding-right: 30px; text-decoration: none; color: #000;" title="Contact Apty" aria-label="Contact Apty">Contact</a></li>
+        </ul>
+    </nav>
+
+    <header class="hero-section" role="banner" aria-label="Apty Introduction">
+        <div class="hero-content">
+            <h1>Welcome to Apty</h1>
+            <p>Apty’s AI-driven in-app guidance streamlines and accelerates software adoption, improves onboarding, reduces IT support costs, and boosts ROI with our Digital Adoption Platform.</p>
+            <a href="#features" style="margin-bottom:30px;" class="cta-link" title="Learn more about Apty's features" aria-label="Learn More">Learn More</a>
+        </div>
+        <div class="hero-media">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/g2s34r4Gw0E?si=tFexIn0_gdBrn9WN" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+    </header>
+
+    <section id="features" role="region" aria-labelledby="features-heading">
+        <h2 id="features-heading">Features</h2>
+        <div class="feature">
+            <h3>Everything You Need to Make Your Digital Adoption a Success</h3>
+            <p>Transform software utilization across your enterprise with guided intelligent recommendations, pre-built resources, automation, insights, and more. Experience all features within Apty’s award-winning digital adoption platform.</p>
+        </div>
+        <div class="feature">
+            <h3>Centralized Knowledge Base</h3>
+            <p>A continuously evolving knowledge base providing users access to important information that supports adoption – easily available on the same dashboard without disrupting the current workflow of users.</p>
+        </div>
+    </section>
+
+    <section id="contact" style="display: flex; flex-direction:column; justify-content: center; align-items: center;" aria-labelledby="contact-heading">
+        <h2 id="contact-heading">Contact Apty</h2>
+        <form id="contact-form" action="/submit-form" method="POST" enctype="multipart/form-data" target="_blank" role="form" aria-labelledby="contact-heading">
+            <label for="name">Name:</label><br/>
+            <input type="text" id="name" name="name" required placeholder="Enter your name" aria-required="true"><br/>
+            
+            <label for="email">Email:</label><br/>
+            <input type="email" id="email" name="email" required placeholder="Enter your email" aria-required="true"><br/>
+            
+            <label for="message">Message:</label><br/>
+            <textarea id="message" name="message" rows="4" required placeholder="Enter your message" aria-required="true"></textarea><br/>
+            
+            <button type="submit" style="background-color: #0056b3; color: white; padding: 10px 20px; border: none; border-radius: 5px;" title="Submit your message" aria-label="Submit">Submit</button>
+        </form>
+    </section>
+
+</body>
+</html>
