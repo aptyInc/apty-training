@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class Timetable and Login</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+        h1 {
+            text-align: center;
+            color: darkcyan;
+        }
+        table {
+            width: 80%;
+            margin: 20px auto;
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 1px solid #ccc;
+            padding: 10px;
+            text-align: center;
+        }
+        th {
+            background-color: #f4f4f4;
+        }
+        caption {
+            margin-bottom: 10px;
+            font-weight: bold;
+            color: darkblue;
+        }
+        .form-container {
+            text-align: center;
+            width: 50%;
+            margin: 20px auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            background-color: #fff;
+            border-radius: 5px;
+        }
+        .form-container label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        .form-container input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .form-container button {
+            width: 100%;
+            padding: 10px;
+            background-color: darkcyan;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .form-container button:hover {
+            background-color: #007b7b;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Class Timetable</h1>
+    <table>
+        <caption>Weekly Class Timetable</caption>
+        <tr>
+            <th>Day</th>
+            <th>9:00 AM - 10:00 AM</th>
+            <th>10:15 AM - 11:15 AM</th>
+            <th>11:30 AM - 12:30 PM</th>
+            <th>1:30 PM - 2:30 PM</th>
+            <th>2:45 PM - 3:45 PM</th>
+        </tr>
+        <tr>
+            <td>Monday</td>
+            <td>Math</td>
+            <td>English</td>
+            <td>Physics</td>
+            <td>Chemistry</td>
+            <td>Sports</td>
+        </tr>
+        <tr>
+            <td>Tuesday</td>
+            <td>Biology</td>
+            <td>Math</td>
+            <td>History</td>
+            <td>Geography</td>
+            <td>Art</td>
+        </tr>
+        <tr>
+            <td>Wednesday</td>
+            <td>Physics</td>
+            <td>Chemistry</td>
+            <td>English</td>
+            <td>Math</td>
+            <td>Computer Science</td>
+        </tr>
+        <tr>
+            <td>Thursday</td>
+            <td>History</td>
+            <td>Biology</td>
+            <td>Geography</td>
+            <td>Math</td>
+            <td>Sports</td>
+        </tr>
+        <tr>
+            <td>Friday</td>
+            <td>English</td>
+            <td>Physics</td>
+            <td>Chemistry</td>
+            <td>Biology</td>
+            <td>Art</td>
+        </tr>
+    </table>
+
+    <div class="form-container">
+        <h2>Login Form</h2>
+        <form>
+            <label for="username">Username</label>
+            <input type="text" id="username" name="username" placeholder="Enter your username" required>
+
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" placeholder="Enter your password" required>
+
+            <button type="submit">Login</button>
+        </form>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Embed YouTube Video and Map</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 20px;
+        }
+        iframe {
+            border: none;
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+    <h1>Embeding Apty YouTube Video, Google Map and targets in a page</h1>
+
+ 
+    <h2>Watch Apty</h2>
+    <iframe 
+        width="560" 
+        height="315" 
+        src="https://www.youtube.com/embed/pd03ULkoTdk?si=5B9hvOjXLyMbE_cz&loop=1&autoplay=1" 
+        title="Apty video player" 
+        allow="accelerometer;  clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+        sandbox="allow-scripts allow-same-origin allow-presentation"
+        allowfullscreen>
+    </iframe>
+
+    <<h2>Embedded Apty Details</h2>
+    <iframe 
+        title="Apty Embedded Details"
+        sandbox="allow-same-origin"
+        srcdoc="
+            <html>
+                <head>
+                    <style>
+                        body {
+                            font-family: Arial, sans-serif;
+                            text-align: center;
+                            color: darkcyan;
+                        }
+                    </style>
+                </head>
+                <body>
+                    <h1>What is Apty?</h1>
+                    <p>
+                        Apty’s AI-driven in-app guidance streamlines and accelerates software adoption,
+                        improves onboarding, reduces IT support costs, and boosts ROI with our Digital Adoption Platform.
+                    </p>
+                </body>
+            </html>">
+    </iframe>
+
+
+    
+    <h2>Apty Location</h2>
+    <iframe 
+        width="600" 
+        height="450" 
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3806.240989780491!2d78.3771196749362!3d17.448175983449435!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb91622133fbc9%3A0x4695b97528d91fe2!2sExcers!5e0!3m2!1sen!2sin!4v1732182623735!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+        allowfullscreen="" 
+        loading="lazy" 
+        referrerpolicy="no-referrer-when-downgrade">
+    </iframe>
+
+    <h2>Embeddig apty to Explore</h2>
+    <iframe name="iframe_a" width="600" height="315">Egar to know click below </iframe>
+    <<a href="https://www.apty.io/" target="iframe_a">Click Here To See What is Apty !</a></p>
+
+    
+</body>
+</html>
