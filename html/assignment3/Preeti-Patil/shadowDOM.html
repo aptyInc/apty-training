@@ -1,28 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Shadow DOM</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-        }
+      body {
+        font-family: Arial, sans-serif;
+      }
     </style>
-</head>
+  </head>
 
-<body>
-
+  <body>
     <div id="shadowDOM">Shadow DOM</div>
 
     <script>
-        // Creating Shadow DOM
-        const shadowHost = document.getElementById('shadowDOM');
-        const shadowRoot = shadowHost.attachShadow({ mode: 'open' });
+      // Creating Shadow DOM
+      const shadowHost = document.getElementById("shadowDOM");
+      const shadowRoot = shadowHost.attachShadow({ mode: "open" });
 
-        // Adding content and styles to the shadow DOM
-        shadowRoot.innerHTML = `
+      // Adding content and styles to the shadow DOM
+      shadowRoot.innerHTML = `
       <style>
         p {
           color: seagreen;
@@ -32,7 +30,5 @@
       <p>Hello, I am a Shadow DOM Element 😁!</p>
     `;
     </script>
-
-</body>
-
+  </body>
 </html>
