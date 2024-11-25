@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <link rel = "stylesheet" href = "form.css"/>
+</head>
+<body>
+    <section>
+        <h1>Registration Form</h1>
+        <form action = "/submit-form">
+            <label for = "name">Full Name:</label>
+            <input type = "text" id = "name" name = "name" required pattern="[A-Za-z\s]+" title = "Only Letters and Numbers are allowed" placeholder = "Enter Your Name" />
+            <label for = "mobile">Mobile No:</label> 
+            <input type = "tel" id = "mobile" name = "mobile"required pattern="^\d{10}$" title = "Phone number should be 10 digits" placeholder="Enter Your Number" />
+            <label for = "email">Email:</label>
+            <input type="email" id = "email" name = "email" required title = "example@email.com" placeholder="Enter Your Email" />
+            <label for = "DOB">Date of Birth:</label>
+            <input type = "date" id = "DOB" name = "DOB" required min="1990-01-01" max="2004-01-01"/>
+            <label for = "gender">Gender:</label>
+            <select id = "gender" name = "gender" required>
+                <option value = "">Enter your gender</option>
+                <option value = "Female">Female</option>
+                <option value = "Male">Male</option>
+                <option value = "Other">Other</option>
+            </select>
+            <label for = "age">Age:</label>
+            <input type = "number" name = "age" id = "age" required min = "18" max = "100" placeholder="Enter your age"/>
+            <label for = "password">Password</label>
+            <input type = "password" id = "password" name = "password" required maxlength="8" placeholder="Enter your password" />
+            <label for = "confirm-password">Confirm Password</label>
+            <input type = "password" id = "confirm-password" name = "confirm-password" required maxlength="8" placeholder="Confirm your password" />
+            <button type = "submit">Register</button>
+        </form>
+    </section>
+</body>
+</html>

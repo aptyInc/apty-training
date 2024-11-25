@@ -1,0 +1,61 @@
+body {
+    margin: 0px;
+    padding: 0px;
+}
+header {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: bold;
+    cursor: pointer;
+}
+ul {
+    display: flex;
+    justify-content: space-around;
+    list-style-type: none;
+    padding-top: 10px;
+}
+.article-container {
+    display: flex;
+}
+article {
+    width: 60%;
+    margin-right: 50px;
+    margin-top: 50px;
+    margin-left: 50px;
+}
+img {
+    width: 100%;
+}
+.recent_posts_section {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+footer {
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: center;
+    gap: 150px;
+}
+.footer_section {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    cursor: pointer;
+}
+.footer_section_1 {
+    text-decoration: underline;
+    font-weight: bold;
+}
+.recent_images {
+    width: 400px;
+    height: 200px;
+}
+section {
+    margin-top: 24px;
+}
+h1 {
+    font-weight: bold;
+    font-size: 35px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+}

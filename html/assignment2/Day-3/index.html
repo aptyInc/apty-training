@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ShadowDom</title>
+</head>
+<body>
+    <template>
+        <h1>Welcome aboard</h1>
+        <p>This is the template card</p>
+    </template>
+    <!--This is the template tag which we can render with the help of js, its like a empty card which we can fill up
+    with multiple things and get number of cards -->
+
+    <div id = "shadow-host"></div>
+    <!--This is the div where the template will go after rendering dynamically-->
+    
+    <script>
+        const template = document.querySelector("template");
+        const shadowHost = document.getElementById("shadow-host");
+        const shadowRoot = shadowHost.attachShadow({mode: "open"})
+
+        shadowRoot.appendChild(template.content)
+    </script>
+</body>
+</html>

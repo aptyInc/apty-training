@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Html project</title>
+    <style>
+        body {
+        background-color: #FFDB18;
+        display: flex;
+        justify-content: center;
+        padding: 60px;
+        }
+        .travel-container {
+            background-color: white;
+            width: 90%;
+        }
+        .header {
+            display: flex;
+            justify-content: space-between;
+            padding-left: 40px;
+            padding-right: 40px;
+            padding-top: 5px;
+            padding-bottom: 5px; 
+        }
+        .travel-content {
+            display: flex;
+            gap: 20px;
+        }
+        .content-1 {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        h1 {
+            font-family: 'Courier New', Courier, monospace;
+            text-align: center;
+            padding-top: 20px;
+            font-size: 55px;
+        }
+        .travel-content-details {
+            font-family: 'Courier New', Courier, monospace;
+            text-align: center;
+            padding: 10px;
+        }
+
+        .travel-image {
+            width: 60%;
+        }
+        button {
+            background-color: #FFDB18;
+            color: white;
+            border: none;
+            padding: 10px;
+            margin-top: 20px;
+            width: 120px;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+        .nav {
+            display: flex;
+            width: 80px;
+            height: 30px;
+            justify-content: center;
+            align-items: center;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+        .nav:hover {
+            background-color: #FFDB18;
+        }
+
+    </style>
+</head>
+<body>
+    <main class = "travel-container">
+        <ul class = "header">
+            <li class = "nav">Trip.com</li>
+            <li class = "nav">Home</li>
+            <li class = "nav">Services</li>
+            <li class = "nav">About</li>
+            <li class = "nav">Contact</li>
+        </ul>
+        <section class = "travel-content">
+            <div class="content-1">
+                <h1>
+                    TIME TO TRAVEL
+                </h1>
+                <p class="travel-content-details">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia augue at orci dictum, in consequat ante interdum.
+                </p>
+                <a href = "https://www.trip.com/" target="_blank">
+                    <button>
+                        Read more
+                    </button>
+                </a>
+            </div>
+            <img src = "https://th.bing.com/th/id/R.50afd69feee722a8bc45f4870c06dd77?rik=LDpPwyotuLnYKA&riu=http%3a%2f%2fgetdrawings.com%2fimages%2fisland-drawing-1.jpg&ehk=Z8woVN8G6wupgg0EK8KKMHPAu6iULhx2VUgtCuTqYAw%3d&risl=&pid=ImgRaw&r=0" alt = "travel" class = "travel-image">
+        </section>
+    </main>
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel = "stylesheet" href = "index.css" />
+</head>
+<body>
+    <main>
+        <header>
+            <nav>
+                <a href = "#about">About</a>
+                <a href = "#skills">Skills</a>
+                <a href = "#contact">Contact</a>
+            </nav>
+        </header>
+        <section id = "about">
+            <div>
+                <p>Hello,</p>
+                <h1>I am Nishma Medagoni</h1>
+                <p>Technical Consultant</p>
+                <p>@Apty</p>
+            </div>  
+        </section>
+        <section id = "skills">
+            <h1>Skills</h1>
+            <ul>
+                <li>
+                    <img src = "https://cdn.pixabay.com/photo/2017/08/05/11/16/logo-2582748_1280.png" class = "image1"/>
+                    <p>HTML</p>
+                </li>
+                <li>
+                    <img src = "https://cdn.pixabay.com/photo/2017/08/05/11/16/logo-2582747_640.png" class = "image2"/>
+                    <p>CSS</p>
+                </li>
+                <li>
+                    <img src = "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/JavaScript-logo.png/768px-JavaScript-logo.png" class = "image3"/>
+                    <p>JavaScript</p>
+                </li>
+                <li>
+                    <img src = "https://www.cdnlogo.com/logos/r/85/react.svg" class = "image4"/>
+                    <p>React</p>
+                </li>
+            </ul>
+        </section>
+        <section id = "contact">
+            <h1>Get in touch</h1>
+            <form action = "/submit">
+                <label for = "name">Name</label>
+                <input type = "text" id = "name" />
+                <label for = "email">Email</label>
+                <input type = "email" id = "email" />
+                <label for = "message">Message</label>
+                <textarea rows = "5" column = "5" id = "message"></textarea>
+                <button type = "submit">Submit</button>
+            </form>
+        </section>
+        <footer class="footer">
+            <p>&copy; 2024 ProductName. All rights reserved.</p>
+        </footer>
+    </main>
+</body>
+</html>
