@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registration Form</title>
+</head>
+<body>
+  <h1>Registration Form</h1>
+  <form>
+    <!-- Name -->
+    Name: <input type="text" name="name" required><br><br>
+
+    <!-- Email -->
+    Email: <input type="email" name="email" required><br><br>
+
+    <!-- Password -->
+    Password: <input type="password" name="password" required minlength="6"><br><br>
+
+    <!-- Date of Birth -->
+    Date of Birth: <input type="date" name="dob" required><br><br>
+
+    <!-- Gender -->
+    Gender: 
+    <input type="radio" name="gender" value="male" required> Male
+    <input type="radio" name="gender" value="female"> Female<br><br>
+
+    <!-- Country -->
+    Country: 
+    <select name="country" required>
+      <option value="">Select</option>
+      <option value="us">United States</option>
+      <option value="uk">United Kingdom</option>
+      <option value="india">India</option>
+    </select><br><br>
+
+    <!-- Terms and Conditions -->
+    <input type="checkbox" name="terms" required> I agree to the terms and conditions<br><br>
+
+    <!-- Submit -->
+    <button type="submit">Register</button>
+  </form>
+</body>
+</html>
