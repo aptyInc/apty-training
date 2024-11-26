@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A sample blog webpage using semantic HTML">
+    <title>GTA 6</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <style>
+
+        *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        }
+
+        body{
+            font-family: 'Arial', sans-serif;
+            line-height: 2;
+            background: linear-gradient(190deg, purple, pink, violet);
+            color: #333;
+        }
+
+        .container{
+            width: 80%;
+            margin: 0 auto;
+        }
+
+        header{
+            background: linear-gradient(190deg, rgb(255, 255, 0), rgb(225, 255, 0), rgb(128, 128, 39));
+            color: rgb(255, 0, 200);
+            
+            padding: 20px 0;
+            text-align: center;
+            text-shadow: 1px 1px 1px black;
+        }
+
+        header h1{
+            text-decoration: underline;
+            margin-bottom: 10px;
+        }
+
+        nav{
+            background-color: #000000;
+            padding: 10px 0;
+            box-shadow: 2px 2px 6px black;
+        }
+
+        nav ul{
+            list-style: none;
+            display: flex;
+            justify-content: center;
+        }
+
+        nav ul li{
+            margin: 0 40px;
+        }
+
+        nav ul li a{
+            text-decoration: none;
+            color: rgb(168, 168, 168);
+            font-weight: bold;
+            transition: color 0.2s;
+        }
+
+        nav ul li a:hover{
+            color: #ffffff;
+            text-decoration: underline;
+        }
+
+        main{
+            padding: 20px 20px;
+        }
+
+        .blog-posts{
+            display: flex;
+            border-radius: 5px;
+            padding: 40px 0;
+            flex-direction: column;
+            align-items: center;
+            align-content: center;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .blog-posts .post:hover{
+            transform: scale(1.02);
+        }
+
+        .blog-posts .post{
+            background-color: #000000;
+            width: 700px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+            box-shadow: 1px 1px 5px 3px rgba(0, 0, 0, 0.507);
+        }
+
+        .blog-posts .post header h2{
+            text-transform: uppercase;
+            border-radius: 5px;
+            font-weight: 800;
+            letter-spacing: 1.5px;
+            text-decoration: underline;
+        }
+
+        .blog-posts .post header h2:hover{
+            cursor: pointer;
+            user-select: none;
+        }
+
+        .blog-posts .post p{
+            font-size: 12pt;
+            padding: 20px;
+            color: #ffffff;
+        }
+
+        .blog-posts .post footer{
+            margin-top: 10px;
+        }
+
+        .blog-posts .post footer a{
+            text-decoration: underline;
+            color: #ffffff;
+            font-weight: bold;
+            transition: color 0.2s;
+        }
+
+
+        .blog-posts .post footer a:hover{
+            color: rgb(255, 0, 166);
+        }
+
+        footer{
+            background-color: #333;
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        footer a{
+            color: white;
+            text-decoration: none;
+        }
+
+        footer a:hover{
+            color: #dcdcdc;
+        }
+
+    </style>
+
+    <header>
+        <div class="container">
+            <h1>Rockstar Games Presents - Grand Theft Auto 6</h1>
+            <p> Grand Theft Auto VI heads to the state of Leonida, home to the neon-soaked streets of Vice City and beyond in the biggest, most immersive evolution of the Grand Theft Auto series yet. Coming 2025 to PlayStation 5 and Xbox Series X|S. </p>
+        </div>
+    </header>
+
+    <nav>
+        <ul>
+        </ul>
+    </nav>
+
+    <main>
+        <section class="blog-posts">
+            <article class="post">
+                <header style="background: black;">
+                    <h2 style="color: rgb(255, 0, 132);">Grand Theft Auto 6</h2>
+                </header>
+                <img src="https://cdn.mos.cms.futurecdn.net/hBWx3UpU2Je2zJqrHLyUQW-970-80.jpg.webp" height="380px" width="100%" alt="">
+                <p>Grand Theft Auto VI is an upcoming video game in development by Rockstar Games. It is due to be the eighth main Grand Theft Auto game, following Grand Theft Auto V (2013), and the sixteenth entry overall. Set within the fictional open world state of Leonida—based on Florida—and its Miami-inspired Vice City, the story is expected to follow the criminal duo of Lucia and her male partner.
+                </p>
+                <footer>
+                    <a href="https://en.wikipedia.org/wiki/Grand_Theft_Auto_VI">Read More</a>
+                </footer>
+            </article>
+
+            <hr>
+
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>The End.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
