@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html 
+    lang="en" 
+    dir="ltr" 
+    translate="yes">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apty Shadow DOM - Digital Adoption Platform Insight</title>
+    <meta name="description" content="Explore Apty's AI-driven Digital Adoption Platform through an interactive Shadow DOM demonstration">
+    <meta name="keywords" content="Apty, Digital Adoption, AI, Platform">
+    <meta name="author" content="Apty Team">
+</head>
+<body 
+    style="display: flex; flex-direction: column; justify-content: center; align-items: center; height: 100vh;"
+    data-page-type="demo"
+    role="application"
+    dir="ltr"
+    draggable="false">
+    <main 
+        id="main-content" 
+        role="main" 
+        aria-label="Apty Platform Demonstration">
+        <template 
+            id="text" 
+            data-template-type="description">
+            <p 
+                style="color: darkcyan; font-size: 20px;"
+                contenteditable="false"
+                data-content-type="platform-description">
+                Apty's AI-driven in-app guidance streamlines and accelerates software
+                adoption, improves onboarding, reduces IT support costs, and boosts
+                ROI with our Digital Adoption Platform
+            </p>
+        </template>
+        
+        <section 
+            role="region" 
+            aria-labelledby="showText">
+            <button 
+                id="showText" 
+                style="background-color: aliceblue; cursor: pointer; color:darkgray; border: none; font-size: 27px; border-radius: 10px; padding: 10px;"
+                type="button" 
+                name="actionButton" 
+                value="ShowText" 
+                title="Click to see what Apty is" 
+                aria-label="What is Apty?" 
+                tabindex="0"
+                autofocus
+                accesskey="A"
+                data-action="show-description"
+                role="button"
+                aria-pressed="false">
+                What is Apty ?
+            </button>
+        
+            <div 
+                id="home"
+                style="margin-top: 20px;"
+                role="region"
+                aria-live="polite"
+                data-container-type="shadow-host">
+            </div>
+        </section>
+    </main>
+
+    <script>
+        const showText = document.getElementById("showText");
+        showText.onclick = function (){
+            const template = document.getElementById("text");
+            const home  = document.getElementById("home").attachShadow({mode:"open"});
+            home.appendChild(template.content);
+            
+            
+            this.setAttribute('aria-pressed', 'true');
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class Timetable and Login</title>
+    <link rel="stylesheet" href="./style.css"> 
+</head>
+
+<body>
+
+    <header>
+        <h1>Class Timetable</h1>
+    </header>
+
+    <section>
+        <table 
+            border="1" 
+            cellpadding="5" 
+            cellspacing="0" 
+            width="100%" 
+            id="class-schedule" 
+            summary="Weekly class schedule showing subjects for each time slot across different days">
+            <caption align="top">Weekly Class Timetable</caption>
+            
+            <colgroup>
+                <col span="1" style="background-color: #f2f2f2;" />
+                <col span="5" style="background-color: #e6f2ff;" />
+            </colgroup>
+
+            <thead>
+                <tr>
+                    <th 
+                        id="day-header" 
+                        scope="col" 
+                        rowspan="2" 
+                        width="15%" 
+                        align="center" 
+                        valign="middle">Day</th>
+                    <th 
+                        id="time-header" 
+                        scope="colgroup" 
+                        colspan="5" 
+                        align="center">Class Timings</th>
+                </tr>
+                <tr>
+                    <th id="time-slot-1" scope="col" headers="time-header">9:00 AM - 10:00 AM</th>
+                    <th id="time-slot-2" scope="col" headers="time-header">10:15 AM - 11:15 AM</th>
+                    <th id="time-slot-3" scope="col" headers="time-header">11:30 AM - 12:30 PM</th>
+                    <th id="time-slot-4" scope="col" headers="time-header">1:30 PM - 2:30 PM</th>
+                    <th id="time-slot-5" scope="col" headers="time-header">2:45 PM - 3:45 PM</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr>
+                    <th scope="row" id="monday-row" headers="day-header">Monday</th>
+                    <td headers="monday-row time-slot-1">Math</td>
+                    <td headers="monday-row time-slot-2">English</td>
+                    <td headers="monday-row time-slot-3">Physics</td>
+                    <td headers="monday-row time-slot-4">Chemistry</td>
+                    <td headers="monday-row time-slot-5">Sports</td>
+                </tr>
+                <tr>
+                    <th scope="row" id="tuesday-row" headers="day-header">Tuesday</th>
+                    <td headers="tuesday-row time-slot-1">Biology</td>
+                    <td headers="tuesday-row time-slot-2">Math</td>
+                    <td headers="tuesday-row time-slot-3">History</td>
+                    <td headers="tuesday-row time-slot-4">Geography</td>
+                    <td headers="tuesday-row time-slot-5">Art</td>
+                </tr>
+                <tr>
+                    <th scope="row" id="wednesday-row" headers="day-header">Wednesday</th>
+                    <td headers="wednesday-row time-slot-1">Physics</td>
+                    <td headers="wednesday-row time-slot-2">Chemistry</td>
+                    <td headers="wednesday-row time-slot-3">English</td>
+                    <td headers="wednesday-row time-slot-4">Math</td>
+                    <td headers="wednesday-row time-slot-5">Computer Science</td>
+                </tr>
+                <tr>
+                    <th scope="row" id="thursday-row" headers="day-header">Thursday</th>
+                    <td headers="thursday-row time-slot-1">History</td>
+                    <td headers="thursday-row time-slot-2">Biology</td>
+                    <td headers="thursday-row time-slot-3">Geography</td>
+                    <td headers="thursday-row time-slot-4">Math</td>
+                    <td headers="thursday-row time-slot-5">Sports</td>
+                </tr>
+                <tr>
+                    <th scope="row" id="friday-row" headers="day-header">Friday</th>
+                    <td headers="friday-row time-slot-1">English</td>
+                    <td headers="friday-row time-slot-2">Physics</td>
+                    <td headers="friday-row time-slot-3">Chemistry</td>
+                    <td headers="friday-row time-slot-4">Biology</td>
+                    <td headers="friday-row time-slot-5">Art</td>
+                </tr>
+            </tbody>
+
+            <tfoot>
+                <tr>
+                    <td colspan="6" align="center">
+                        <small>* Schedule subject to change</small>
+                    </td>
+                </tr>
+            </tfoot>
+        </table>
+    </section>
+
+    <section class="form-container">
+        <h2>Login Form</h2>
+        <form action="#" method="POST">
+            <label for="username">Username</label>
+            <input type="text" id="username" name="username" placeholder="Enter your username" required autofocus>
+
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" placeholder="Enter your password" required>
+
+            <button type="submit">Login</button>
+        </form>
+    </section>
+
+</body>
+
+</html>
