@@ -1,0 +1,17 @@
+button {
+  color: white;
+  background-color: orange;
+  outline: none;
+  border: none;
+  font-weight: bold;
+  font-size: 24px;
+  padding: 10px;
+  border-radius: 10px;
+  margin-top: 20px;
+}
+
+#output {
+  margin-top: 20px;
+  font-family: Arial, sans-serif;
+  line-height: 1.5;
+}
