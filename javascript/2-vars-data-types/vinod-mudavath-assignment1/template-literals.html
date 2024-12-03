@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Template Literals in javascript</title>
+</head>
+
+<body>
+    <main>
+        <h1>Practise on Template Literals in javascript</h1>
+        <div id="template-literal"></div>
+    </main>
+
+    <script>
+
+        let name = "vinod mudavath";
+        let age = 21;
+        let address = { city: "Hyderabad", state: "Telangana" };
+        let elgibleForVote = true;
+        let designation = "I'm techical consultant at Apty!";
+
+        const personDetails = `Hello, My name is ${name} and I'm ${age} years old!.
+         I'm from ${address.city} in ${address.state} and my designation is ${designation}`
+
+        document.getElementById("template-literal").innerHTML += `<h2>${personDetails} </h2>`;
+
+    </script>
+</body>
+
+</html>

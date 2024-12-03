@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Declare javascript variables</title>
+</head>
+
+<body>
+    <main>
+        <h1>Practising with javascript variable</h1>
+        <summary>Using var keyword</summary>
+        <div id="varkeyword-container">
+            <h2 id="varkeyword"></h2>
+        </div>
+
+        <summary>Using let keyword</summary>
+        <div id="letkeyword-container">
+        </div>
+
+        <summary>Using const keyword</summary>
+        <div id="constkeyword-container">
+           
+        </div>
+
+
+        
+    </main>
+    <script>
+
+        // var variable 
+        var a = 13;
+        var a = 12;
+        var b = 14;
+        const varkeywordEle = document.getElementById("varkeyword-container");
+        varkeywordEle.innerHTML += `<span> var a = ${a}, var b = ${b} </span>`;
+        varkeywordEle.innerHTML += `<h2> a + b = ${a + b} </h2>`;
+
+        //let variable 
+
+        let let_a = 12;
+        let let_b = 13;
+        // let let_a = 18;
+
+        const letkeywordEle = document.getElementById("letkeyword-container");
+        letkeywordEle.innerHTML += `<span> let let_a = ${let_a}, let let_b = ${let_b} </span>`;
+        letkeywordEle.innerHTML += `<h2> let_a * let_b = ${let_a * let_b} </h2>`;
+        letkeywordEle.innerHTML += ` <img src="errors-images/consterror.png" alt="constkeyword"/>`
+
+        const constA = 34;
+        const constB = 24;
+        // const constA = 32;
+        
+        //const variables
+        const constkeywordEle = document.getElementById("constkeyword-container");
+        constkeywordEle.innerHTML += `<span> const constA = ${constA}, const constB = ${constB} </span>`;
+        constkeywordEle.innerHTML += `<h2> constA - constB = ${constA - constB} </h2>`;
+        constkeywordEle.innerHTML += `<img src="./errors-images/consterror.png" alt="const keyword" />`
+    </script>
+</body>
+
+</html>
