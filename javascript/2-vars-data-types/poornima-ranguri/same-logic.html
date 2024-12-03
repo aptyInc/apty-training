@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript Load Time Example</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+      p {
+        margin: 10px 0;
+        padding: 5px;
+        border: 1px solid #ccc;
+        width: 500px;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body onload="document.getElementById('inline').innerText = 'Inline Script executed at: ' + new Date().toLocaleTimeString();"></body>
+    <h1>JavaScript Load Time Demonstration</h1>
+
+    <p id="inline">Inline Script: Not Loaded</p>
+    <p id="internal">Internal Script: Not Loaded</p>
+    <p id="external">External Script: Not Loaded</p>
+
+    <!-- Internal Script -->
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        document.getElementById("internal").textContent =
+          "Internal Script executed at: " + new Date().toLocaleTimeString();
+      });
+    </script>
+
+   <!-- External Script -->
+    <script src="./javascript/same-logic.js"></script>
+  </body>
+</html>

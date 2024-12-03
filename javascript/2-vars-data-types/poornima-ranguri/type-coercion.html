@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Type Coercion Demo</title>
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 20px;
+        background-color: #f4f4f4;
+        color: #333;
+      }
+
+      h1 {
+        color: #2c3e50;
+      }
+
+      .results {
+        margin-top: 20px;
+        padding: 15px;
+        background-color: #ffffff;
+        border-radius: 8px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      }
+
+      .result-item {
+        padding: 5px 0;
+        font-size: 1.2em;
+      }
+
+      .result-item span {
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Type Coercion Addition Demo</h1>
+    <div class="results">
+      <div class="result-item">
+        <span>5 + "10" = </span><span id="result1"></span>
+      </div>
+      <div class="result-item">
+        <span>"5" + 10 = </span><span id="result2"></span>
+      </div>
+      <div class="result-item">
+        <span>true + 5 = </span><span id="result3"></span>
+      </div>
+      <div class="result-item">
+        <span>false + "hello" = </span><span id="result4"></span>
+      </div>
+      <div class="result-item">
+        <span>undefined + 5 = </span><span id="result5"></span>
+      </div>
+      <div class="result-item">
+        <span>null + 5 = </span><span id="result6"></span>
+      </div>
+      <div class="result-item">
+        <span>Symbol("A") + "B" = </span><span id="result7"></span>
+      </div>
+      <div class="result-item">
+        <span>{} + "hello" = </span><span id="result8"></span>
+      </div>
+    </div>
+
+    <script src="./javascript/type-coercion.js"></script>
+  </body>
+</html>
