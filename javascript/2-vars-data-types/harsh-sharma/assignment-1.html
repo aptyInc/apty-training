@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Assignment 1 Javscript</title>
+    <link rel="stylesheet" href="./styles/assignment-1.css" />
+  </head>
+  <body
+    onload="let fit_inline = document.getElementById('second_tag'); fit_inline.innerHTML += '<div>Inline Javascript is been called</div>';"
+  >
+    <header>
+      <h1>Assignment 1 Javascript</h1>
+    </header>
+
+    <section>
+      <p id="second_tag"></p>
+    </section>
+
+    <script>
+      let second_inline = document.getElementById("second_tag");
+      second_inline.innerHTML +=
+        "<div>Internal Javascript is been called</div>";
+    </script>
+
+    <script src="./scripts/assignment-1.js"></script>
+
+    <!-- Few Learning
+        1.  Inline Javascript is not called first everytime. If we create a Element while loading it than the inline will be in the last execution.
+        2. In my case the execution looks like: 1. inline 2. internal 3.external
+    -->
+  </body>
+</html>
