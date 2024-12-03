@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comparison of Inline, Internal, and External JavaScript</title>
+    <script>
+        const product = {
+            title: "ball pen",
+            rating: 4,
+            offer: 5,
+            price: 270,
+        };
+        function showProductDetails() {
+            document.getElementById('button-onclick').innerHTML =
+                'Product: ' + product.title + '<br>' +
+                'Rating: ' + product.rating + '<br>' +
+                'Offer: ' + product.offer + '%<br>' +
+                'Price: ₹' + product.price;
+        }
+    </script>
+</head>
+
+<body>
+    <h1>Do you Know Who am I ?</h1>
+
+    <p id="message">Click the button to Know me</p>
+    <!--internal javascript-->
+    <button onclick="showProductDetails()" id="button-onclick">click here to know product details</button>
+    <br><br>
+
+    <!-- inline js-->
+    <button onclick="document.getElementById('message').innerHTML = 'Hello am Anusree!'">
+        Click Me
+    </button>
+    <br><br>
+    <!--external js-->
+    <button id="clickButton">Click Me</button>
+    <script src="../js/external-script.js"></script>
+</body>
+
+</html>
