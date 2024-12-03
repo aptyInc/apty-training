@@ -1,8 +1,8 @@
 document.addEventListener('DOMContentLoaded', function() {
-    // Get the container element
+
     const conversionContainer = document.getElementById("conversionContainer");
 
-    // Define variables of different types
+    
     const stringVariable = "Poornima G";
     const numberVariable = 333;
     const booleanValue = true;
@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const symbolVar = Symbol('id');
     const objectVar = {name: "HP", RAM: "8 GB"};
 
-    // Create template literals for each variable
+    
     const templateLiterals = [
         `The string value is: ${stringVariable}`,
         `The number value is: ${numberVariable}`,
@@ -22,13 +22,13 @@ document.addEventListener('DOMContentLoaded', function() {
         `The object value is: ${JSON.stringify(objectVar)}`
     ];
 
-    // Function to create and append paragraphs
+
     function createParagraph(text) {
         const paragraph = document.createElement("p");
         paragraph.textContent = text;
         conversionContainer.appendChild(paragraph);
     }
 
-    // Display each template literal
+ 
     templateLiterals.forEach(createParagraph);
 });
