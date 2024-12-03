@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript Render Order</title>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const result = document.getElementById("results");
+        const p = document.createElement("p");
+        p.textContent = "Internal JavaScript executed";
+        result.appendChild(p);
+      });
+    </script>
+  </head>
+  <body>
+    <h1>JavaScript Render Order</h1>
+    <div id="results"></div>
+    <script>
+      const result = document.getElementById("results");
+      const p = document.createElement("p");
+      p.textContent = "Inline JavaScript executed";
+      result.appendChild(p);
+    </script>
+    <script src="script.js"></script>
+  </body>
+</html>
