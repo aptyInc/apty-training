@@ -56,3 +56,16 @@ nonPrimitiveContainer.appendChild(paragraphElement8);
 let paragraphElement9 = document.createElement("p");
 paragraphElement9.innerText = "greet function is a " + typeof(greet);
 nonPrimitiveContainer.appendChild(paragraphElement9);
+
+// Using instanceof operator
+let paragraphElement10 = document.createElement("p");
+paragraphElement10.innerText = "fruits is an instance of Array: " + (fruits instanceof Array);
+nonPrimitiveContainer.appendChild(paragraphElement10);
+
+let paragraphElement11 = document.createElement("p");
+paragraphElement11.innerText = "Laptop is an instance of Object: " + (Laptop instanceof Object);
+nonPrimitiveContainer.appendChild(paragraphElement11);
+
+let paragraphElement12 = document.createElement("p");
+paragraphElement12.innerText = "greet is an instance of Function: " + (greet instanceof Function);
+nonPrimitiveContainer.appendChild(paragraphElement12);
