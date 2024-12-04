@@ -3,21 +3,15 @@ let numberVar = 42;
 let booleanVar = true;
 let undefinedVar;
 let nullVar = null;
-let symbolVar = Symbol("unique");
+//let symbolVar = Symbol("unique");
 let objectVar = { key: "value" };
 
-const list = document.getElementById("data-types");
+const output = `${stringVar}:"The datatype is"${typeof stringVar}<br>
+              ${numberVar}:"The datatype is"${typeof numberVar}<br>
+              ${booleanVar}:"The datatype is"${typeof booleanVar}<br>
+               ${undefinedVar}:"The datatype is"${typeof undefinedVar}<br>
+               ${nullVar}:"The datatype is"${typeof nullVar}<br>
+               ${objectVar}:"The datatype is "${typeof objectVar}`;
 
-function displayType(variable, variableName) {
-  const listItem = document.createElement("li");
-  listItem.textContent = `${variableName}: ${typeof variable}`;
-  list.appendChild(listItem);
-}
-
-displayType(stringVar, "String");
-displayType(numberVar, "Number");
-displayType(booleanVar, "Boolean");
-displayType(undefinedVar, "Undefined");
-displayType(nullVar, "Null (special case: typeof is object)");
-displayType(symbolVar, "Symbol");
-displayType(objectVar, "Object");
+const Results = document.getElementById("data-types");
+Results.innerHTML = output;
