@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Largest Number</title>
+    <link
+      rel="stylesheet"
+      href="../../css/conditional-assignments/simple-intrest-calculator.css"
+    />
+  </head>
+  <body>
+    <header>
+      <h1>Simple Intrest Calculator</h1>
+    </header>
+
+    <main>
+      <section class="input-container">
+        <label for="principalAmount">Principal Amount : </label>
+        <input
+          type="number"
+          name="principal amount"
+          id="principalAmount"
+          required
+          aria-label="Finding Simple Intrest"
+          placeholder="enter principal amount"
+        />
+      </section>
+
+      <section class="input-container">
+        <label for="intrestRate">Intrest Rate : </label>
+        <input
+          type="number"
+          name="intrest rate"
+          id="intrestRate"
+          required
+          aria-label="Finding  Principal Amount"
+          placeholder="Intrest Rate"
+        />
+      </section>
+
+      <section class="input-container">
+        <label for="time">Time : </label>
+        <input
+          type="number"
+          name="time"
+          id="time"
+          required
+          aria-label="Finding Principal Amount"
+          placeholder="In years"
+        />
+      </section>
+
+      <section class="buttons-container">
+        <button type="button" onclick="onCalculatingSimpleIntrest()">
+          Calculate Simple Intrest
+        </button>
+        <p id="result"></p>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-content">
+        <p>&copy; 2024 Poornima Ranguri. All Rights Reserved.</p>
+        <p>
+          <a href="https://apty.io" target="_blank">Privacy Policy</a> |
+          <a href="https://apty.io" target="_blank">Terms of Service</a>
+        </p>
+      </div>
+    </footer>
+
+    <script src="../../javascript/conditional-assignments/simple-intrest-calculator.js"></script>
+  </body>
+</html>
