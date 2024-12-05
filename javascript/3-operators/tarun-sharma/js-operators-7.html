@@ -3,14 +3,15 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Comparison Operators</title>
+        <title>Bitwise Operators</title>
         <link rel="stylesheet" href="styles.css">
         
     </head>
     <body>
         <header>
-            Assignment 3 - Comparison Operators
+            Assignment 7 - Bitwise Operators
         </header>
+        <br>
         <p>Enter two numbers:</p>
         <div>
             <input id="value1" type="number" placeholder="First Number">
@@ -25,6 +26,7 @@
                 <br><br>
             </form>
         </div>
+        <br>
         <div>
             <input id="value2" type="number" placeholder="Second Number">
             <br>
@@ -38,18 +40,16 @@
                 <br><br>
             </form>
         </div>
-          
-        <button onclick="equalTo()">==</button>
-        <button onclick="strictEqualTo()">===</button>
-        <button onclick="notEqualTo()">!=</button>
-        <button onclick="strictNotEqual()">!==</button>
-        <button onclick="greaterThan()">></button>
-        <button onclick="lessThan()"><</button>
-        <button onclick="greaterThanOrEqualTo()">>=</button>
-        <button onclick="lessThanOrEqualTo()"><=</button>
-        
+        <br>
+        <button onclick="and()">&</button>
+        <button onclick="or()">|</button>
+        <button onclick="xor()">^</button>
+        <button onclick="not()">~</button>
+        <button onclick="leftShift()"><<</button>
+        <button onclick="rightShift()">>></button>
+        <br>
 
         <div id="output">Result will be displayed here</div>
-        <script src="script/js-operators-3.js"></script>
+        <script src="script/js-operators-7.js"></script>
     </body>
 </html>

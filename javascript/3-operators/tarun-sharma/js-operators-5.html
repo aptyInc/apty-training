@@ -3,14 +3,15 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Comparison Operators</title>
+        <title>Logical Assignment Operators</title>
         <link rel="stylesheet" href="styles.css">
         
     </head>
     <body>
         <header>
-            Assignment 3 - Comparison Operators
+            Assignment 5 - Logical Assignment Operators
         </header>
+        <br>
         <p>Enter two numbers:</p>
         <div>
             <input id="value1" type="number" placeholder="First Number">
@@ -39,17 +40,12 @@
             </form>
         </div>
           
-        <button onclick="equalTo()">==</button>
-        <button onclick="strictEqualTo()">===</button>
-        <button onclick="notEqualTo()">!=</button>
-        <button onclick="strictNotEqual()">!==</button>
-        <button onclick="greaterThan()">></button>
-        <button onclick="lessThan()"><</button>
-        <button onclick="greaterThanOrEqualTo()">>=</button>
-        <button onclick="lessThanOrEqualTo()"><=</button>
+        <button onclick="logicalAndAssignment()">&&=</button>
+        <button onclick="logicalOrAssignment()">||=</button>
+        <button onclick="nullish()">??=</button>
         
 
         <div id="output">Result will be displayed here</div>
-        <script src="script/js-operators-3.js"></script>
+        <script src="script/js-operators-5.js"></script>
     </body>
 </html>
