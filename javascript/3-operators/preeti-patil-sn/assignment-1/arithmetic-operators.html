@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Simple Calculator</title>
+  </head>
+  <body>
+    <h1>Simple Calculator</h1>
+    <p>
+      Enter two input values in the fields below and click on operator buttons
+      to perform arithmetic operations.
+    </p>
+
+    <div>
+      <label for="input1">Input 1:</label>
+      <input type="number" id="input1Field" placeholder="Enter Input 1" />
+    </div>
+    <br />
+    <div>
+      <label for="input2">Input 2:</label>
+      <input type="number" id="input2Field" placeholder="Enter Input 2" />
+    </div>
+    <br />
+
+    <div>
+      <button onclick="addValues()">+</button>
+      <button onclick="subValues()">-</button>
+      <button onclick="mulValues()">*</button>
+      <button onclick="divValues()">/</button>
+      <button onclick="modValues()">%</button>
+      <button onclick="incValues()">++</button>
+      <button onclick="decValues()">--</button>
+      <button onclick="clearValues()">C</button>
+    </div>
+    <br />
+
+    <div id="result"></div>
+
+    <script src="arithmetic-operators.js"></script>
+  </body>
+</html>
