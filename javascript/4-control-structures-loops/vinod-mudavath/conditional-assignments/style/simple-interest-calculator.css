@@ -1,0 +1,25 @@
+
+.input-container input{
+    height: 24px;
+    width: 200px;
+    padding-left: 10px;
+    outline: none;
+}
+
+form {
+    width: 200px;
+    padding: 20px;
+    border: 2px solid #000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    border-radius: 10px;
+}
+
+#result {
+    font-size: 36px;
+    font-weight: 700;
+    font-family: sans-serif;
+    margin-top: 20px;
+}
