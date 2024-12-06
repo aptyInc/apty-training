@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 4 - Array Sum and Average | Prem Rajput</title>
+
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        input{
+            padding: 0.5rem;
+            font-family: monospace;
+            font-weight: 600;
+            width: 53rem;
+        }
+
+        button{
+            border: 0px;
+            background-color: rgb(75, 218, 250);
+            border-radius: 5px;
+            margin: 1rem;
+            font-weight: 700;
+            padding: 1rem;
+            text-transform: uppercase;
+            cursor: pointer;
+        }
+
+        button:hover{
+            background-color: rgb(59, 173, 199);
+        }
+    </style>
+    
+</head>
+<body>
+
+    <h2>Array Sum and Average</h2>
+
+    <input type="text" id="numbers" placeholder="Enter numbers, comma-separated">
+    <button onclick="calculateSumAndAverage()">Calculate</button>
+
+    <p id="sum"></p>
+    <p id="average"></p>
+
+    <script src="./scripts/4-array-sum-n-avg.js"></script>
+
+</body>
+</html>
