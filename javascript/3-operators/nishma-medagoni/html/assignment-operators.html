@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment Operators</title>
+    <script src = "../javascript/assignment-operators.js"></script>
+    <link rel = "stylesheet" href = "../css/assignment-operators.css" />
+</head>
+<body>
+    <header>
+        Assignment Operators - Calculator App 
+    </header>
+    <main>
+        <section>
+            <div>
+                <label for = "value1">Value 1:</label>
+                <input type = "number" id = "value1">
+            </div>
+            <div>
+                <label for = "value2">Value 2:</label>
+                <input type = "number" id = "value2"> 
+            </div>
+            <div>
+                <button onclick="add()">+=</button>
+                <button onclick="subtract()">-=</button>
+                <button onclick="multiply()">*=</button>
+                <button onclick="divide()">/=</button>
+                <button onclick="modulus()">%=</button>
+                <button onclick="increment()">++</button>
+                <button onclick="decrement()">--</button>
+            </div>
+        </section>
+        <div id = "result">Result: </div>
+    </main>
+    <footer>2024 @ JavaScript Assignments</footer>
+</body>
+</html>
