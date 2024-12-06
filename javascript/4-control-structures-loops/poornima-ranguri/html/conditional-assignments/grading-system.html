@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Grading System</title>
+    <link
+      rel="stylesheet"
+      href="../../css/conditional-assignments/grading-system.css"
+    />
+  </head>
+  <body>
+    <header>
+      <h1>Grading System</h1>
+    </header>
+
+    <main>
+      <section class="input-container">
+        <label for="score">Enter Your Score : </label>
+        <input
+          type="number"
+          name="Score"
+          id="score"
+          required
+          aria-label="Getting Marks"
+        />
+      </section>
+
+      <section class="buttons-container">
+        <button type="button" onclick="onCheckStatus()">Check Status</button>
+        <p id="result"></p>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-content">
+        <p>&copy; 2024 Grading System. All Rights Reserved.</p>
+        <p>
+          <a href="https://apty.io" target="_blank">Privacy Policy</a> |
+          <a href="https://apty.io" target="_blank">Terms of Service</a>
+        </p>
+      </div>
+    </footer>
+
+    <script src="../../javascript/conditional-assignments/grading-system.js"></script>
+  </body>
+</html>
