@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Type Coarcion</title>
+  </head>
+  <body>
+    <div>
+      5 + "10" = <span id="result1"></span><br />
+      String(false) + 1 = <span id="result2"></span><br />
+      Number(undefined) + 10 = <span id="result3"></span><br />
+      Boolean(null) + 10 = <span id="result4"></span><br />
+      {} + " is an object" = <span id="result5"></span><br />
+      (function() {}) + " is a function" = <span id="result6"></span><br />
+      [1, 2, 3] + 100 = <span id="result7"></span><br />
+      "123" - "23" = <span id="result8"></span><br />
+      "5" == 5 <span id="result9"></span><br />
+      "10" === 10 <span id="result10"></span><br />
+      null == undefined <span id="result11"></span><br />
+      {} == {} <span id="result12"></span><br />
+    </div>
+    <script src="./type-coercion.js"></script>
+  </body>
+</html>
