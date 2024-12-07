@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bitwise Operators Calculator</title>
+    <link rel="stylesheet" href="../css/logical-calculator.css">
+    <style>
+        .app-buttons {
+            display: grid;
+            grid-template-columns: repeat(3, auto);
+            gap: 2px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h2>Bitwise Operators</h2>
+        <label for="value1">Value1:</label>
+        <input type="number" id="value1">
+        <br><br>
+        <label for="value2">Value2:</label>
+        <input type="number" id="value2">
+        <br><br>
+        <div class="app-buttons">
+            <button onclick="bitwiseAnd()">AND (&)</button>
+            <button onclick="bitwiseOr()">OR (|)</button>
+            <button onclick="bitwiseXor()">XOR (^)</button>
+            <button onclick="bitwiseNot()">NOT (~)</button>
+            <button onclick="bitwiseLeftShift()">Left Shift (<<) </button>
+            <button onclick="bitwiseRightShift()">Right Shift (>>)</button>
+        </div>
+        <div class="result" id="result"></div>
+    </div>
+    <script src="../js/bitwise-operator.js"></script>
+</body>
+
+</html>
