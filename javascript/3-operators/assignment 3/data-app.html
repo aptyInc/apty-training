@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Comparison Operators with Four Inputs</title>
+    <link rel="stylesheet" href="data-app.css" />
+    <script src="data-app.js"></script>
+  </head>
+  <body>
+    <h1>Data Comparison App (4 Inputs)</h1>
+    <div>
+      <input type="text" id="value1" placeholder="Enter Value 1" />
+      <select id="type1">
+        <option value="string">String</option>
+        <option value="number">Number</option>
+        <option value="boolean">Boolean</option>
+      </select>
+    </div>
+    <div>
+      <input type="text" id="value2" placeholder="Enter Value 2" />
+      <select id="type2">
+        <option value="string">String</option>
+        <option value="number">Number</option>
+        <option value="boolean">Boolean</option>
+      </select>
+    </div>
+    <div>
+      <input type="text" id="value3" placeholder="Enter Value 3" />
+      <select id="type3">
+        <option value="string">String</option>
+        <option value="number">Number</option>
+        <option value="boolean">Boolean</option>
+      </select>
+    </div>
+    <div>
+      <input type="text" id="value4" placeholder="Enter Value 4" />
+      <select id="type4">
+        <option value="string">String</option>
+        <option value="number">Number</option>
+        <option value="boolean">Boolean</option>
+      </select>
+    </div>
+    <div>
+      <button onclick="compareEqual()">==</button>
+      <button onclick="compareStrictEqual()">===</button>
+      <button onclick="compareNotEqual()">!=</button>
+      <button onclick="compareStrictNotEqual()">!==</button>
+      <button onclick="compareGreaterThan()">></button>
+      <button onclick="compareLessThan()"><</button>
+      <button onclick="compareGreaterThanOrEqual()">>=</button>
+      <button onclick="compareLessThanOrEqual()"><=</button>
+    </div>
+    <div id="result">Result:</div>
+  </body>
+</html>
