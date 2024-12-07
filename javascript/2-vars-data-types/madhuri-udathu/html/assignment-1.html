@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript-1</title>
+    <link href="../css/assignment1.css" rel="stylesheet">
+    <!--Internal JS-->
+    <script>
+        function myFunction() {
+        document.getElementById("internal").innerHTML = "Internal JavaScript Rendered";
+    }
+    </script>
+</head>
+<body>
+    <h1>Check output for rendor order</h1>
+    <p id="inline"></p>
+    <p id="internal"></p>
+    <p id="external"></p>
+    <!--Inline JS-->
+    <script>
+        document.getElementById("inline").textContent="Inline JavaScript Rendered";
+    </script>
+    <script>
+        myFunction(); /* This line is added to invoke the function*/
+    </script>
+    <!--External JS-->
+    <script src="../js/assignment1.js"></script> 
+</body>
+</html>
