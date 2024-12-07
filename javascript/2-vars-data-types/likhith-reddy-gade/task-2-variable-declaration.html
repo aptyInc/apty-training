@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Variable Declaration</title>
+  </head>
+  <body>
+    <h1>Variable Declaration Example by Likhith</h1>
+    <script>
+      var name = "Likhith";
+      let age = 25;
+      const location1 = "Hyderabad";
+
+      // Attempt to re-declare
+      var name = "Likhith Reddy"; // Re-declared successfully in 'var'
+      // let age = 30; // Uncaught SyntaxError: Identifier 'age' has already been declared
+      // const location1 = "Bangalore"; // Uncaught SyntaxError: Identifier 'location1' has already been declared
+
+      // Change values
+      name = "Likhith Reddy Gade"; // Can change
+      age = 26; // Can change
+      // location1 = "Chennai"; // TypeError: Assignment to constant variable.
+
+      document.write(
+        `var name: ${name}, let age: ${age}, const location1: ${location1}`
+      );
+    </script>
+  </body>
+</html>

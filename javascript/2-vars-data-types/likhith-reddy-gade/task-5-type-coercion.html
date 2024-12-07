@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Type Coercion</title>
+  </head>
+  <body>
+    <h1>Type Coercion Example by Likhith</h1>
+    <script>
+      let num = 5;
+      let str = "10";
+      let bool = true;
+      let undef;
+      let nul = null;
+      let obj = { name: "Likhith" };
+
+      document.write(`5 + "10": ${num + str} <br>`); // String + Number -> String
+      document.write(`5 + true: ${num + bool} <br>`); // Number + Boolean -> Number
+      document.write(`5 + undefined: ${num + undef} <br>`); // Number + Undefined -> NaN
+      document.write(`5 + null: ${num + nul} <br>`); // Number + Null -> Number
+      document.write(`5 + [object Object]: ${num + obj} <br>`); // Number + Object -> String
+    </script>
+  </body>
+</html>
