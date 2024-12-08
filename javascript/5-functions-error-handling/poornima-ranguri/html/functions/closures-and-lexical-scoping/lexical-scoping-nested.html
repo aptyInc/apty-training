@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Lexical Scoping</title>
+    <link
+      rel="stylesheet"
+      href="../../../css/functions/closures-and-lexical-scoping/lexical-scoping-nested.css"
+    />
+  </head>
+  <body>
+    <header style="text-align: center">
+      <h1>Lexical Scoping</h1>
+    </header>
+    <main style="text-align: center">
+      <section>
+        <div>
+          <label for="outerText">Enter Outer Text : </label>
+          <input
+            type="text"
+            name="text"
+            id="outerText"
+            placeholder="enter a string"
+            required
+            aria-placeholder="Enter String"
+          />
+        </div>
+        <div style="margin-top: 30px">
+          <label for="middleText">Enter Middle Text: </label>
+          <input
+            type="text"
+            name="text"
+            id="middleText"
+            placeholder="enter a string"
+            required
+            aria-placeholder="Enter a stirng"
+          />
+        </div>
+
+        <div style="margin-top: 30px">
+          <label for="innerText">Enter Inner Text: </label>
+          <input
+            type="text"
+            name="text"
+            id="innerText"
+            placeholder="enter a string"
+            required
+            aria-placeholder="Enter a stirng"
+          />
+        </div>
+
+        <button onclick="onGetString()">Generate Output</button>
+
+        <div id="result"></div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-content">
+        <p>&copy; 2024 Poornima Ranguri. All Rights Reserved.</p>
+        <p>
+          <a href="https://apty.io" target="_blank">Privacy Policy</a>
+          <a href="https://apty.io" target="_blank">Terms of Service</a>
+        </p>
+      </div>
+    </footer>
+
+    <script src="../../../javascript/functions/closures-and-lexical-scoping/lexical-scoping-nested.js"></script>
+  </body>
+</html>
