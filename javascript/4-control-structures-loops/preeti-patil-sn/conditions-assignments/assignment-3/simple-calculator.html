@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Simple Calculator</title>
+  </head>
+  <body>
+    <h1>Simple Calculator</h1>
+    <p>Enter two input values and click a button to perform the operation.</p>
+
+    <div>
+      <input type="number" id="input1Field" placeholder="Enter Input 1" />
+    </div>
+    <br />
+    <div>
+      <input type="number" id="input2Field" placeholder="Enter Input 2" />
+    </div>
+    <br />
+
+    <div>
+      <button onclick="calculate('+')">+</button>
+      <button onclick="calculate('-')">-</button>
+      <button onclick="calculate('*')">*</button>
+      <button onclick="calculate('/')">/</button>
+      <button onclick="calculate('%')">%</button>
+      <button onclick="calculate('++')">++</button>
+      <button onclick="calculate('--')">--</button>
+      <button onclick="clearValues()">C</button>
+    </div>
+    <br />
+
+    <div id="result"></div>
+
+    <script src="simple-calculator.js"></script>
+  </body>
+</html>

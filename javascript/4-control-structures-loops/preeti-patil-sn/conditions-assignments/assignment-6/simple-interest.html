@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Simple Interest</title>
+  </head>
+  <body>
+    <h1>Simple Interest Calculator</h1>
+    <label for="principal">Principal:</label>
+    <input
+      type="number"
+      id="principal"
+      placeholder="Enter principal amount"
+    /><br /><br />
+
+    <label for="rate">Rate of Interest:</label>
+    <input
+      type="number"
+      id="rate"
+      placeholder="Enter interest rate"
+    /><br /><br />
+
+    <label for="time">Time:</label>
+    <input
+      type="number"
+      id="time"
+      placeholder="Enter time in years"
+    /><br /><br />
+
+    <button onclick="calculateSimpleInterest()">Calculate</button>
+    <div id="result" style="margin-top: 20px; font-weight: bold"></div>
+    <script src="simple-interest.js"></script>
+  </body>
+</html>
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Simple Interest Calculator</title>
+  </head>
+  <body>
+    <script>
+      function calculateSimpleInterest() {
+        // Get input values
+        let principal = document.getElementById("principal").value;
+        let rate = document.getElementById("rate").value;
+        let time = document.getElementById("time").value;
+
+        // Validate inputs
+        if (principal === "" || rate === "" || time === "") {
+          document.getElementById("result").textContent =
+            "Please fill in all fields.";
+          return;
+        }
+
+        // Convert inputs to numbers
+        principal = parseFloat(principal);
+        rate = parseFloat(rate);
+        time = parseFloat(time);
+
+        // Calculate simple interest
+        const simpleInterest = (principal * rate * time) / 100;
+
+        // Display result
+        document.getElementById(
+          "result"
+        ).textContent = `The Simple Interest is: ${simpleInterest}`;
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JS Grade System</title>
+  </head>
+  <body>
+    <h1>Grade Calculator</h1>
+    <p>Enter your marks below to calculate your grade:</p>
+
+    <label for="marks">Marks:</label>
+    <input
+      type="number"
+      id="marks"
+      placeholder="marks"
+      min="0"
+      max="100"
+      width="100%"
+    /><br /><br />
+    <button onclick="calculateGrade()">Calculate Grade</button>
+
+    <p id="result"></p>
+    <script src="grading-system.js"></script>
+  </body>
+</html>
