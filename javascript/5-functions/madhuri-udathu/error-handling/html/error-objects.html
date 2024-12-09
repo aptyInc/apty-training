@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Banking System</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f9f9f9;
+        }
+
+        h2 {
+            color: #333;
+        }
+
+        form {
+            margin-bottom: 20px;
+        }
+
+        input[type="text"],
+        input[type="number"] {
+            padding: 10px;
+            width: 200px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        button {
+            padding: 10px 15px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        #result {
+            margin-top: 20px;
+            font-weight: bold;
+        }
+
+        .error {
+            color: red;
+        }
+
+        .success {
+            color: green;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>Banking System</h2>
+
+    <form>
+        <label for="balance">Enter Account Balance:</label><br>
+        <input type="number" id="balance" placeholder="e.g., 1000"><br><br>
+
+        <label for="withdrawal">Enter Withdrawal Amount:</label><br>
+        <input type="number" id="withdrawal" placeholder="e.g., 500"><br><br>
+
+        <button type="button" onclick="handleWithdrawal()">Withdraw</button>
+    </form>
+
+    <div id="result"></div>
+
+    <script src="../js/error-objects.js"></script>
+</body>
+
+</html>
