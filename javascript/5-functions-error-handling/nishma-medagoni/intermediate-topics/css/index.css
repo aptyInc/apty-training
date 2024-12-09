@@ -1,0 +1,41 @@
+header, footer {
+    text-align: center;
+    margin: 30px;
+    font-weight: bold;
+    font-size: larger;
+}
+main {
+    height: 70vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+section {
+    width: 40%;
+    padding: 60px;
+    border: 1px solid black;
+}
+label {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+input {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 15px;
+}
+button {
+    background-color: black;
+    color: white;
+    padding: 10px;
+    cursor: pointer;
+    margin-bottom: 30px;
+}
+div {
+    padding: 30px;
+}
+#result {
+    border: 1px solid brown;
+    margin-top: 20px;
+    padding: 10px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
