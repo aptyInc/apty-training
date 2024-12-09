@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shadow DOM Example with Template</title>
+</head>
+<body>
+    <header>
+        <h1>Welcome to Shadow DOM</h1>
+    </header>
+
+    <main>
+        <section>
+            <h2>Main Content</h2>
+            <p>This is some content outside the Shadow DOM.</p>
+
+            <div id="shadow-host"></div>
+        </section>
+    </main>
+
+    <template id="shadow-template">
+        <article>
+            <h3>Shadow DOM Content</h3>
+            <p>This content is inside the Shadow DOM, isolated from the rest of the document.</p>
+        </article>
+    </template>
+
+    <script>
+        const shadowHost = document.getElementById('shadow-host');
+        const shadowRoot = shadowHost.attachShadow({ mode: 'open' });
+
+        const template = document.getElementById('shadow-template');
+
+        shadowRoot.appendChild(template.content);
+    </script>
+</body>
+</html>
