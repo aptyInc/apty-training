@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./../css/custom-error.css">
+    <title>Throwing Cutsome Error</title>
+</head>
+<body>
+    <main>
+        <h1>Throwing Custome Error</h1>
+        <form id="form">
+            <div class="input-container">
+                <label for = 'number1'>Number1</label>
+                <input type="text" id = 'number1' placeholder="Enter your number1" />
+            </div>
+            <div class="input-container">
+                <label for = 'number2'>Number2</label>
+                <input type="text" id = 'number2' placeholder="Enter your number2" />
+            </div>
+            
+            <div class="input-container">
+                <label for="operator">Choose an Operator:</label>
+                <select id="operator" required>
+                    <option value="+">+</option>
+                    <option value="-">-</option>
+                    <option value="*">*</option>
+                    <option value="/">/</option>
+                    <option value="%">%</option>
+                </select>
+            </div>
+            <button type="submit">Calculate</button>
+        </form>
+
+        <pre id = "result"></pre>
+    </main>
+
+    <script type="text/javascript" src = "./../script/custome-error.js"></script>
+    
+</body>
+</html>
