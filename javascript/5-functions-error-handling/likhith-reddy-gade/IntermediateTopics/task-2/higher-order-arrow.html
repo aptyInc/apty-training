@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Higher-Order Function with Arrow</title>
+    <script src="higher-order-arrow.js" defer></script>
+  </head>
+  <body>
+    <h1>Filter Numbers</h1>
+    <form id="filter-form">
+      <label for="number-array">Enter Numbers (comma-separated):</label>
+      <input type="text" id="number-array" name="number-array" />
+      <br />
+      <label for="limit">Filter Limit (remove numbers greater than):</label>
+      <input type="number" id="limit" name="limit" />
+      <br />
+      <button type="submit">Filter</button>
+    </form>
+    <p>Filtered Array: <span id="filtered-output"></span></p>
+  </body>
+</html>

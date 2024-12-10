@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lexical Scoping</title>
+    <script src="lexical-scoping.js" defer></script>
+  </head>
+  <body>
+    <h1>Lexical Scoping</h1>
+    <form id="scoping-form">
+      <label for="outer-variable">Outer Variable:</label>
+      <input type="text" id="outer-variable" name="outer-variable" />
+      <br />
+      <label for="middle-variable">Middle Variable:</label>
+      <input type="text" id="middle-variable" name="middle-variable" />
+      <br />
+      <label for="inner-variable">Inner Variable:</label>
+      <input type="text" id="inner-variable" name="inner-variable" />
+      <br />
+      <button type="submit">Generate Output</button>
+    </form>
+    <p id="scoping-output"></p>
+  </body>
+</html>
