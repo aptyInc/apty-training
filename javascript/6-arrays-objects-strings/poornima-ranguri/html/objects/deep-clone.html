@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Deep Clone</title>
+    <link rel="stylesheet" href="../../css/objects/deep-clone.css" />
+  </head>
+  <body>
+    <header style="text-align: center">
+      <h1>Deep Clone</h1>
+    </header>
+    <main style="text-align: center">
+      <section>
+        <textarea
+          id="userInput"
+          rows="5"
+          cols="50"
+          placeholder='Enter a JSON object, e.g., {"a":1, "b":{"c":2}}'
+        ></textarea>
+        <button onclick="handleDeepClone()">Deep Clone</button>
+
+        <h3>Results:</h3>
+        <div
+          id="outputOriginal"
+          style="white-space: pre-wrap; margin: 10px 0"
+        ></div>
+        <div id="outputClone" style="white-space: pre-wrap"></div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-content">
+        <p>&copy; 2024 Poornima Ranguri. All Rights Reserved.</p>
+        <p>
+          <a href="https://apty.io" target="_blank">Privacy Policy</a>
+          <a href="https://apty.io" target="_blank">Terms of Service</a>
+        </p>
+      </div>
+    </footer>
+
+    <script src="../../javascript/objects/deep-clone.js"></script>
+  </body>
+</html>
