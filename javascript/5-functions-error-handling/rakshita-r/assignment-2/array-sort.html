@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sort Array</title>
+  </head>
+  <body>
+    <h1>Sort Numbers in an Array</h1>
+    <form id="sortForm">
+      <label for="numbers">Enter numbers separated by commas:</label><br />
+      <input
+        type="text"
+        id="numbers"
+        name="numbers"
+        placeholder="e.g., 9,7,8,1,4"
+        required
+      />
+      <button type="submit">Sort</button>
+    </form>
+    <h2>Sorted Array</h2>
+    <table border="1">
+      <thead>
+        <tr>
+          <th>Index</th>
+          <th>Value</th>
+        </tr>
+      </thead>
+      <tbody id="resultTable"></tbody>
+    </table>
+    <script src="array-sort.js" defer></script>
+  </body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Array Filter</title>
+  </head>
+  <body>
+    <h1>Filter Array Based on a Limit</h1>
+    <form id="filterForm">
+      <label for="numbers">Enter numbers (comma-separated):</label><br />
+      <input
+        type="text"
+        id="numbers"
+        placeholder="e.g., 10, 20, 30, 40"
+      /><br /><br />
+
+      <label for="limit">Enter limit:</label><br />
+      <input type="number" id="limit" placeholder="e.g., 25" /><br /><br />
+
+      <button type="submit">Filter</button>
+    </form>
+
+    <h2>Result:</h2>
+    <div id="result"></div>
+
+    <script src="high-order-arrow.js"></script>
+  </body>
+</html>

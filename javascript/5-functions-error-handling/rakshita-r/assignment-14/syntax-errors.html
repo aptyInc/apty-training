@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JSON Parser</title>
+  </head>
+  <body>
+    <h1>JSON Parser</h1>
+    <form id="jsonForm">
+      <label for="jsonInput">Enter a JSON string:</label><br />
+      <textarea
+        id="jsonInput"
+        placeholder='e.g., {"key": "value"}'
+        rows="5"
+        cols="50"
+      ></textarea
+      ><br /><br />
+      <button type="submit">Parse JSON</button>
+    </form>
+
+    <h2>Result:</h2>
+    <div id="result"></div>
+
+    <script src="syntax-errors.js"></script>
+  </body>
+</html>
