@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Transpose Matrix</title>
+  </head>
+  <body>
+    <h1>Transpose Matrix</h1>
+    <label for="matrix-input"
+      >Enter a matrix (row by row, comma-separated values; rows separated by
+      semicolons):</label
+    ><br />
+    <textarea
+      id="matrix-input"
+      rows="4"
+      cols="50"
+      placeholder="e.g., 1,2,3;4,5,6;7,8,9"
+    ></textarea
+    ><br /><br />
+    <button onclick="transposeMatrix()">Transpose</button>
+
+    <h2>Result:</h2>
+    <p id="transpose-matrix-result"></p>
+    <script src="transpose-matrix.js"></script>
+  </body>
+</html>
