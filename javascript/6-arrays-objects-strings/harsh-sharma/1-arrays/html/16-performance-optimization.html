@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Performance Optimization - Iteration Methods</title>
+    <link rel="stylesheet" href="../css/global.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Performance Comparison of Iteration Methods</h1>
+    </header>
+
+    <main>
+      <section>
+        <form onsubmit="handleOnSubmit(event)">
+          <textarea
+            placeholder='e.g., [1,2,3,...1000000]'
+            id="array_input"
+          ></textarea>
+          <button type="submit">Compare Performance</button>
+        </form>
+        <p>Input a large array (e.g., [1,2,3,4,...1000000]) for testing performance.</p>
+      </section>
+
+      <section>
+        <h2>Results 📊</h2>
+        <div class="output">Enter input and click to run comparison.</div>
+      </section>
+    </main>
+
+    <script src="../scripts/16-performance-optimization.js"></script>
+  </body>
+</html>

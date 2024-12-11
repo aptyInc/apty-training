@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Object Manipulation with Dynamic Keys</title>
+    <link rel="stylesheet" href="../css/global.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Object Manipulation with Dynamic Keys</h1>
+    </header>
+
+    <main>
+      <section>
+        <form onsubmit="handleOnSubmit(event)">
+          <input
+            type="text"
+            placeholder="Enter key"
+            id="key_input"
+          />
+          <input
+            type="text"
+            placeholder="Enter Value"
+            id="value_input"
+          />
+          <button type="submit">Add to Object</button>
+        </form>
+      </section>
+
+      <section>
+        <h2>Current Object State 🚀</h2>
+        <pre class="output">No entries yet.</pre>
+      </section>
+    </main>
+
+    <script src="../scripts/1-object-manipulation.js"></script>
+  </body>
+</html>
