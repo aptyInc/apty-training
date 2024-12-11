@@ -1,11 +1,12 @@
-function onJoining() {
-  const userTextElement = document.getElementById("userText");
-  const userArray = JSON.parse(Array(userTextElement.value.trim()));
-  const captilizedArray = userArray.map(
-    (eachElement) => eachElement.charAt(0).toUpperCase() + eachElement.slice(1)
-  );
-  const joinedArray = captilizedArray.join(" ");
-  console.log(joinedArray);
+function manipulationOfString() {
+  const firstArrayElement = document.getElementById("firstArray");
+  const firstArray = JSON.parse(Array(firstArrayElement.value.trim()));
 
-  document.getElementById("result").textContent = joinedArray;
+  const secondArrayElement = document.getElementById("secondArray");
+  const secondArray = JSON.parse(Array(secondArrayElement.value.trim()));
+  const mergedArray = [...firstArray, ...secondArray];
+
+  const resultArray = Array.from(new Set(mergedArray));
+
+  document.getElementById("result").textContent = resultArray.join(", ");
 }
