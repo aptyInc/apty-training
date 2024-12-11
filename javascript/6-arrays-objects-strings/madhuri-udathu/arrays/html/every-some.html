@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Scores</title>
+    <style>
+        body {
+          font-family: Arial, sans-serif;
+          background-color: #f0fff0; 
+          color: #007;
+          padding: 20px;
+        }
+    
+        h1 {
+          color: #009; 
+        }
+    
+        input, button {
+          font-size: 16px;
+          padding: 10px;
+          margin: 5px 0;
+          border: 2px solid #03003c; 
+          border-radius: 5px;
+        }
+    
+        button {
+          background-color: #009; 
+          color: white;
+          cursor: pointer;
+          border-bottom: 20px;
+        }
+    
+        button:hover {
+          background-color: #007; 
+        }
+      </style>
+    </style>
+</head>
+<body>
+    <h1>Check Student Scores</h1>
+    <p>Enter student scores as a JSON array:</p>
+    <textarea id="scoreInput" rows="5" cols="50" placeholder='[{"name":"Bob","score":80},{"name":"Alice","score":90}]'></textarea><br>
+    <button onclick="checkScores()">Submit</button>
+    <div id="output"></div>
+
+    <script src="../js/every-some.js"></script>
+</body>
+</html>

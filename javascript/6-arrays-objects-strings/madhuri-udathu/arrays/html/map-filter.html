@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filter Completed Tasks</title>
+    <style>
+        body {
+          font-family: Arial, sans-serif;
+          background-color: #f0fff0; 
+          color: #007;
+          padding: 20px;
+        }
+    
+        h1 {
+          color: #009; 
+        }
+    
+        textarea, button {
+          font-size: 16px;
+          padding: 10px;
+          margin: 5px 0;
+          border: 2px solid #03003c; 
+          border-radius: 5px;
+        }
+    
+        button {
+          background-color: #009; 
+          color: white;
+          cursor: pointer;
+          border-bottom: 20px;
+        }
+    
+        button:hover {
+          background-color: #007; 
+        }
+    </style>
+</head>
+<body>
+    <h1>Filter Completed Tasks</h1>
+    <p>Enter tasks as a JSON array:</p>
+    <textarea id="taskInput" rows="5" cols="50" placeholder='[{"task":"A","completed":true},{"task":"B","completed":false},{"task":"C","completed":true}]'></textarea><br>
+    <button onclick="filterCompletedTasks()">Submit</button>
+    <div id="output"></div>
+
+    <script src="../js/map-filter.js"></script>
+</body>
+</html>

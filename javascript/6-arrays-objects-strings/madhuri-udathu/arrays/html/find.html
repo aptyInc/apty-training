@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Most Frequent Element</title>
+    <style>
+        body {
+          font-family: Arial, sans-serif;
+          background-color: #f0fff0; 
+          color: #004d00;
+          padding: 20px;
+        }
+    
+        h1 {
+          color: #006600; 
+        }
+    
+        input, button {
+          font-size: 16px;
+          padding: 10px;
+          margin: 5px 0;
+          border: 2px solid #004d00; 
+          border-radius: 5px;
+        }
+    
+        button {
+          background-color: #009900; 
+          color: white;
+          cursor: pointer;
+          border-bottom: 20px;
+        }
+    
+        button:hover {
+          background-color: #007a00; 
+        }
+      </style>
+</head>
+<body>
+    <h1>Find Most Frequent Element</h1>
+    <label for="arrayInput">Enter an array (comma-separated):</label>
+    <input type="text" id="arrayInput" placeholder="e.g., 1, 3, 2, 2, 3, 3, 3, 2">
+    <button onclick="findMostFrequent()">Find Most Frequent</button>
+    
+    <h3>Most Frequent Element:</h3>
+    <p id="result"></p>
+
+    <script>
+        // Function to find the most frequent element
+        function mostFrequent(arr) {
+            const frequencyMap = arr.reduce((map, num) => {
+                map[num] = (map[num] || 0) + 1;
+                return map;
+            }, {});
+            
+            let mostFrequentElement = arr[0];
+            let maxCount = 0;
+            
+            for (let key in frequencyMap) {
+                if (frequencyMap[key] > maxCount) {
+                    maxCount = frequencyMap[key];
+                    mostFrequentElement = key;
+                }
+            }
+            
+            return mostFrequentElement;
+        }
+
+        // Function to handle the input and display the result
+        function findMostFrequent() {
+            const input = document.getElementById("arrayInput").value;
+            if (!input.trim()) {
+                alert("Please enter a valid array.");
+                return;
+            }
+
+            // Convert input string to an array of numbers
+            const array = input.split(',').map(Number);
+            
+            // Find the most frequent element
+            const result = mostFrequent(array);
+            
+            // Display the result
+            document.getElementById("result").textContent = `Most Frequent Element: ${result}`;
+        }
+    </script>
+</body>
+</html>
