@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./../css/queue-implementation.css" />
+    <title>Queue Implementation</title>
+</head>
+
+<body>
+    <main>
+        <h1>Dynamic Stack Implementation</h1>
+        <div id="form">
+            <div class="input-container">
+                <label for="queueInput">Enter input below</label>
+                <input type="text" id="queueInput" placeholder="Enter a value">
+            </div>
+
+            <button onclick="enqueueToQueue()">Enqueue</button>
+            <button onclick="dequeueFromQueue()">Dequeue</button>
+            <button onclick="checkIfEmptyQueue()">Check Empty</button>
+            <button onclick="getNextElement()">Get Next</button>
+        </div>
+
+        <div>
+            <p id="currentQueue">Queue: []</p>
+            <p id="result"></p>
+        </div>
+    </main>
+    <script type="text/javascript" src="./../script/queue-implementation.js"></script>
+</body>
+
+</html>
