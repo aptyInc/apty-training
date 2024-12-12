@@ -1,0 +1,20 @@
+
+#form {
+    padding: 10px;
+    width: 300px;
+    border: 2px solid #222221;
+    border-radius: 5px;
+}
+
+.input-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.input-container input {
+    height: 24px;
+    padding-left: 10px;
+    outline: none;
+}
