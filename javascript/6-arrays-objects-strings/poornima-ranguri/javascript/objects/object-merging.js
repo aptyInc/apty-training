@@ -8,7 +8,7 @@ function mergeObjects(firstObject, secondObject) {
   for (const key in secondObject) {
     if (secondObject.hasOwnProperty(key)) {
       // If the key is an object, we need to merge it recursively
-      if (typeof secondObject[key] === "object" && secondObject[key] !== null) {
+      if (typeof secondObject[key] === "object") {
         mergedObject[key] = mergeObjects(mergedObject[key], secondObject[key]); //recursive
       } else {
         mergedObject[key] = secondObject[key];
