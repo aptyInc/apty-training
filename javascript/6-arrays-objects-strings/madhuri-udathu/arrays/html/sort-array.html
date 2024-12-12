@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sort Students by Score (Without sort())</title>
+    <style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f0fff0; 
+        color: #007;
+        padding: 20px;
+      }
+  
+      h1 {
+        color: #009; 
+      }
+  
+      textarea, button {
+        font-size: 16px;
+        padding: 10px;
+        margin: 5px 0;
+        border: 2px solid #03003c; 
+        border-radius: 5px;
+      }
+  
+      button {
+        background-color: #009; 
+        color: white;
+        cursor: pointer;
+        border-bottom: 20px;
+      }
+  
+      button:hover {
+        background-color: #007; 
+      }
+  </style>
+</head>
+<body>
+    <h1>Sort Students by Score (Without using sort())</h1>
+    <p>Enter student data as a JSON array (e.g. [{"name":"Bob", "score":80}, {"name":"Alice", "score":90}]):</p>
+    <textarea id="studentInput" rows="5" cols="50" placeholder='[{"name":"Bob", "score":80}, {"name":"Alice", "score":90}]'></textarea><br>
+    <button onclick="sortStudents()">Sort Students by Score</button>
+    <div id="output"></div>
+
+    <script src="../js/sort.js"></script>
+</body>
+</html>
