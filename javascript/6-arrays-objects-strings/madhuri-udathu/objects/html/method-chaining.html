@@ -1,10 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Deep Clone Object</title>
+    <title>Method Chaining Example</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -38,26 +37,23 @@
         }
     </style>
 </head>
-
 <body>
+    <h1>Person Method Chaining</h1>
 
-    <h1>Deep Clone Nested Object</h1>
-
-    <label for="originalObject">Enter a nested object (in JSON format): </label>
-    <br>
-    <textarea id="originalObject" rows="6" cols="50" placeholder='e.g., {"a": 1, "b": {"c": 2}}'></textarea>
+    <label for="name">Enter Name:</label>
+    <input type="text" id="name" placeholder="Enter name">
     <br><br>
 
-    <button onclick="cloneObject()">Clone Object</button>
+    <label for="age">Enter Age:</label>
+    <input type="number" id="age" placeholder="Enter age">
+    <br><br>
 
-    <h2>Original Object:</h2>
-    <pre id="originalResult"></pre>
+    <button onclick="createPerson()">Create Person</button>
+    <br><br>
 
-    <h2>Cloned Object:</h2>
-    <pre id="clonedResult"></pre>
+    <h2>Output:</h2>
+    <p id="output"></p>
 
-    <script src="../js/nested.js"></script>
-
+    <script src="../js/method-chaining.js"></script>
 </body>
-
 </html>

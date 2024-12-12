@@ -1,7 +1,7 @@
 const Person = {
     name: 'John',
     greet: function () {
-        console.log(`Hello, ${this.name}!`);
+        return `Hello, ${this.name}!`;
     }
 };
 
@@ -9,11 +9,18 @@ const Employee = Object.create(Person);
 
 Employee.job = 'Developer';
 Employee.greet = function () {
-    console.log(`Hello, ${this.name} the ${this.job}!`);
+    return `Hello, ${this.name} the ${this.job}!`;
 };
 
-console.log("Person greets:");
-Person.greet(); // Output: "Hello, John!"
+const outputDiv = document.getElementById('output');
+const personGreetButton = document.getElementById('personGreetButton');
+const employeeGreetButton = document.getElementById('employeeGreetButton');
 
-console.log("Employee greets:");
-Employee.greet();
+// Add event listeners to the buttons
+personGreetButton.addEventListener('click', function () {
+    outputDiv.innerHTML += `<p>${Person.greet()}</p>`;
+});
+
+employeeGreetButton.addEventListener('click', function () {
+    outputDiv.innerHTML += `<p>${Employee.greet()}</p>`;
+});
