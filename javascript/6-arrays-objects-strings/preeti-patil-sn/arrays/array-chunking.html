@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Array Chunking</title>
+  </head>
+  <body>
+    <h1>Array Chunking</h1>
+
+    <label for="arrayInput">Enter an array (e.g., [1, 2, 3, 4, 5]):</label>
+    <input id="arrayInput" type="text" placeholder="[1, 2, 3, 4, 5]" />
+
+    <label for="chunkSize">Enter chunk size (e.g., 2):</label>
+    <input id="chunkSize" type="number" placeholder="2" />
+
+    <button onclick="chunkArray()">Chunk Array</button>
+
+    <h2>Chunked Array:</h2>
+    <pre id="chunkedArray"></pre>
+
+    <script src="./scripts/array-chunking.js"></script>
+  </body>
+</html>
