@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Introductions of Users</title>
+  </head>
+  <body>
+    <h1>Introduce the Users</h1>
+    <div>
+      <p>Enter user details and click the button to introduce them:</p>
+      <div>
+        <label for="name">Name: </label>
+        <input type="text" id="name" placeholder="Enter name" />
+      </div>
+      <div>
+        <label for="age">Age: </label>
+        <input type="number" id="age" placeholder="Enter age" />
+      </div>
+      <button onclick="addUser()">Add User</button>
+      <button onclick="displayUsers()">Introduce Users</button>
+      <div id="result"></div>
+    </div>
+    <script src="../scripts/forEach.js"></script>
+  </body>
+</html>
