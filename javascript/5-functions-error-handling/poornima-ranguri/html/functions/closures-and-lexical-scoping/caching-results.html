@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Caching</title>
+    <link
+      rel="stylesheet"
+      href="../../../css/functions/closures-and-lexical-scoping/caching-results.css"
+    />
+  </head>
+  <body>
+    <header style="text-align: center">
+      <h1>Factorial Calculator with Caching</h1>
+    </header>
+    <main style="text-align: center">
+      <section>
+        <label for="numberInput">Enter the number : </label>
+        <input
+          type="number"
+          name="Number"
+          id="numberInput"
+          min="1"
+          max="20"
+          required
+          placeholder="enter a number"
+          aria-placeholder="Enter a Number"
+        />
+        <button onclick="calculateFactorial()">Generate Factorial</button>
+
+        <div id="result"></div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-content">
+        <p>&copy; 2024 Poornima Ranguri. All Rights Reserved.</p>
+        <p>
+          <a href="https://apty.io" target="_blank">Privacy Policy</a> |
+          <a href="https://apty.io" target="_blank">Terms of Service</a>
+        </p>
+      </div>
+    </footer>
+
+    <script src="../../../javascript/functions/closures-and-lexical-scoping/caching-results.js"></script>
+  </body>
+</html>

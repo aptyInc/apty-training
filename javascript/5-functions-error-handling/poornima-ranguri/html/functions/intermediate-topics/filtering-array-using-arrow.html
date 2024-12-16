@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Filtering an Array</title>
+    <link
+      rel="stylesheet"
+      href="../../../css/functions/intermediate-topics/filtering-array-using-arrow.css"
+    />
+  </head>
+  <body>
+    <header style="text-align: center">
+      <h1>Filtering An Array of Numbers</h1>
+    </header>
+    <main style="text-align: center">
+      <section>
+        <div>
+          <p>
+            Filter keep numbers that are less than or equal to a limit set by
+            the you.
+          </p>
+
+          <p style="font-size: 18px; padding-top: 30px; padding-bottom: 30px">
+            <strong>
+              Original Array : [30, 40, 2, 3, 4, 6, 10, 20, 50, 90, 99, 98, 6,
+              33, 27, 10]
+            </strong>
+          </p>
+
+          <label for="userInput">Enter a Number to set the limit : </label>
+          <input
+            type="number"
+            name="number"
+            id="userInput"
+            placeholder="From 3 to 100"
+            required
+            aria-placeholder="Enter number"
+          />
+        </div>
+
+        <button onclick="onFilterAnArray()">Filter an Array</button>
+
+        <ul id="result"></ul>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-content">
+        <p>&copy; 2024 Poornima Ranguri. All Rights Reserved.</p>
+        <p>
+          <a href="https://apty.io" target="_blank">Privacy Policy</a>
+          <a href="https://apty.io" target="_blank">Terms of Service</a>
+        </p>
+      </div>
+    </footer>
+
+    <script src="../../../javascript/functions/intermediate-topics/filtering-array-using-arrow.js"></script>
+  </body>
+</html>
