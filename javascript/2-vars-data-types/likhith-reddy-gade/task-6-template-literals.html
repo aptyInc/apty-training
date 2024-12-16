@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Template Literals</title>
+  </head>
+  <body>
+    <h1>Template Literals Example by Likhith</h1>
+    <script>
+      let name = "Likhith";
+      let age = 25;
+      let isActive = true;
+      let address;
+      let city = null;
+      let uniqueID = Symbol("id");
+      let profile = { name: "Likhith", age: 25 };
+
+      let message = `Hello, my name is ${name}, I am ${age} years old, my status is ${isActive}, undefined value is ${address}, null value is ${city}, symbol value is ${
+        uniqueID.id
+      }, and my profile is ${JSON.stringify(profile)}.`;
+
+      document.write(message);
+    </script>
+  </body>
+</html>
