@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Template Literals Example</title>
+</head>
+<body>
+    <div id="result"></div>
+
+    <script>
+        // Declare variables of different data types
+        let str = "Hello";
+        let num = 25;
+        let bool = true;
+        let undef;
+        let n = null;
+        let sym = Symbol("sym");
+        let obj = { name: "anu" };
+
+        // Use template literals to combine variables into a string
+        let result = `
+            String: ${str} <br>
+            Number: ${num} <br>
+            Boolean: ${bool} <br>
+            Undefined: ${undef} <br>
+            Null: ${n} <br>
+            Symbol: ${sym.toString()} <br> 
+            note: symbols are not automatically converted to readable form
+            Object: ${obj.name} <br>
+        `;
+        // Display the result on the HTML page
+        document.getElementById("result").innerHTML = result;
+    </script>
+</body>
+</html>
