@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Queue Implementation</title>
+  </head>
+  <body>
+    <div class="queue-container">
+      <h3>Queue Implementation</h3>
+
+      <label for="queueInput">Enter Element to Add:</label>
+      <input type="text" id="queueInput" placeholder="Enter value..." />
+      <button onclick="doqueue()">Add to Queue</button>
+      <button onclick="dequeue()">Remove from Queue</button>
+      <button onclick="checkIfEmpty()">Is Queue Empty?</button>
+      <button onclick="peek()">Next Element</button>
+
+      <p>Queue: <span id="queueDisplay">[]</span></p>
+      <p>Message: <span id="message"></span></p>
+    </div>
+    <script src="../scripts/queue.js"></script>
+  </body>
+</html>
