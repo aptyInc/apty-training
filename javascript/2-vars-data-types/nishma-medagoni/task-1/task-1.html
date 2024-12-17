@@ -18,9 +18,9 @@
 
 </head>
 
-<!--Inlins JS function calling -->
+<!--Inline Js function-->
 
-<body onload="inlineJs()">
+<body onload="document.getElementById('inline').innerText = 'Inline Js executed!'">
     <header>
         Inline vs Internal vs External JavaScript
     </header>
@@ -30,14 +30,7 @@
         <p>Here we are making the inline JS trigger with onLoad attached with body i.e., when the body loads automatically the inline JS appears</p>
         <p id = "inline">Inline Js yet to be executed!</p>
 
-        <!--Inline Js function-->
-
-        <script>
-            function inlineJs() {
-                const result = document.getElementById('inline')
-                result.innerText = "Inline Js executed!"
-            }
-        </script>
+        
     </div>
 
     <div class = "internal-container">
