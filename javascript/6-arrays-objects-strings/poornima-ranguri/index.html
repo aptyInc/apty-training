@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="Javascript" content="Poornima Ranguri Projects" />
+    <title>Arrays, Objects and Strings</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 20px;
+        line-height: 1.6;
+      }
+      .project-links {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 80%;
+        margin: 10px 0;
+      }
+      .project-links a {
+        color: darkcyan;
+        text-decoration: none;
+        font-weight: bold;
+        transition: color 0.3s ease;
+      }
+      .project-links a:hover {
+        color: teal;
+      }
+      details {
+        margin-top: 20px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        padding: 10px;
+      }
+      summary {
+        cursor: pointer;
+        font-size: 1.2em;
+      }
+      iframe {
+        width: 100%;
+        height: 500px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        margin-top: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Poornima Ranguri - Arrays, Objects and Strings</h1>
+    </header>
+
+    <main>
+      <div style="text-align: center">
+        <h3>Arrays</h3>
+      </div>
+
+      <section>
+        <details>
+          <summary>
+            <strong>Custom Array Flattening Function </strong>
+          </summary>
+          <p>
+            Implement a function customFlatten(arr) that takes a deeply nested
+            array and flattens it into a single-level array. Do not use the
+            built-in flat() method. Input: [1, 2, [3, 5], [5, [6,7]]] Output:
+            [1, 2, 3, 4, 5, 6, 7]
+          </p>
+
+          <iframe
+            src="./html/arrays/flatenning-array.html"
+            title="Stack DS Array"
+            loading="lazy"
+            sandbox="allow-scripts allow-same-origin"
+          >
+          </iframe>
+        </details>
+      </section>
+      <section>
+        <details>
+          <summary><strong>Stack Data Structure</strong></summary>
+          <p>
+            Implement a dynamic stack data structure using an array with push to
+            add elements and pop to remove elements. Add functionality to check
+            if the stack is empty and retrieve the top element.
+          </p>
+
+          <iframe
+            src="./html/arrays/stack-data-structure.html"
+            title="Stack DS Array"
+            loading="lazy"
+            sandbox="allow-scripts allow-same-origin"
+          >
+          </iframe>
+        </details>
+      </section>
+
+      <section>
+        <details>
+          <summary><strong>Queue Data Structure</strong></summary>
+          <p>
+            Create a queue implementation using an array where unshift adds
+            elements to the queue and shift removes elements. Add functionality
+            to check if the queue is empty and retrieve the next element.
+          </p>
+
+          <iframe
+            src="./html/arrays/queue-data-structure.html"
+            title="Queue Project"
+            loading="lazy"
+            sandbox="allow-scripts allow-same-origin"
+          >
+          </iframe>
+        </details>
+      </section>
+
+      <section>
+        <details>
+          <summary>
+            <strong> Join Array of Strings</strong>
+          </summary>
+          <p>
+            Write a function to convert an array of words into a sentence, then:
+            Capitalize the first letter of the sentence.
+          </p>
+
+          <iframe
+            src="./html/arrays/join-array-to-strings.html"
+            title="Join Array"
+            loading="lazy"
+            sandbox="allow-scripts allow-same-origin"
+          >
+          </iframe>
+        </details>
+      </section>
+
+      <section>
+        <details>
+          <summary><strong>Slice an Array</strong></summary>
+          <p>
+            Given an array of names ["Alice", "Bob", "Charlie", "Daisy", "Eve"],
+            write a function to: Extract the first three names without modifying
+            the original array. Extract the last two names using negative
+            indices.
+          </p>
+          <iframe
+            src="./html/arrays/slice-an-array.html"
+            title="Array Operation"
+            loading="lazy"
+            sandbox="allow-scripts allow-same-origin"
+          >
+          </iframe>
+        </details>
+      </section>
+
+      <section>
+        <details>
+          <summary>
+            <strong>Splice An Array</strong>
+          </summary>
+          <p>
+            Given an array of colors ["Red", "Blue", "Green", "Yellow"], write a
+            function to: Replace "Blue" with "Purple". Add "Orange" after
+            "Yellow". Remove "Green" without leaving an empty spot in the array.
+          </p>
+          <iframe
+            src="./html/arrays/splice-an-array.html"
+            frameborder="0"
+          ></iframe>
+        </details>
+      </section>
+
+      <section>
+        <details>
+          <summary>
+            <strong>ForEach on Array</strong>
+          </summary>
+          <p>
+            Given an array of objects representing users (e.g., [{name: 'John',
+            age: 30}, {name: 'Jane', age: 25}]), use forEach to log a message
+            introducing each user, such as: "John is 30 years old."
+          </p>
+
+          <iframe
+            src="./html/arrays/intro-message-using-for-each.html"
+            title="into message"
+          >
+          </iframe>
+        </details>
+      </section>
+
+      <section>
+        <details>
+          <summary>
+            <strong>Map and Filter</strong>
+          </summary>
+          <p>
+            Write a function that takes an array of objects representing tasks
+            (e.g., {task: 'A', completed: true}) and filters only the completed
+            tasks, then maps them to their task names.
+          </p>
+
+          <iframe
+            src="./html/arrays/map-and-filter.html"
+            title="Map and Filter"
+          >
+          </iframe>
+        </details>
+      </section>
+
+      <section>
+        <details>
+          <summary><strong>every and some on array</strong></summary>
+          <p>
+            Given an array student scores. Print "All Students Passed" if all
+            students score is above 35 using every function. Print "Some
+            Students Failed" if any one student score is less than 35 using some
+            function.
+          </p>
+
+          <iframe
+            src="./html/arrays/every-and-some-on-array.html"
+            title="Students Dashboard"
+          >
+          </iframe>
+        </details>
+      </section>
+
+      <section>
+        <details>
+          <summary>
+            <strong>Custom array Sorting</strong>
+          </summary>
+          <p>
+            Write a custom function to sort an array of objects by a specific
+            property. For example, sort an array of student objects by their
+            scores:
+          </p>
+
+          <iframe
+            src="./html/arrays/array-sorting.html"
+            title="Sorting An Array"
+          >
+          </iframe>
+        </details>
+      </section>
+
+      <section>
+        <details>
+          <summary><strong>Array Chunking</strong></summary>
+          <p>
+            Create a function chunkArray(arr, size) that splits an array into
+            smaller chunks of the specified size.
+          </p>
+
+          <iframe
+            src="./html/arrays/array-chunking.html"
+            title="Array chunking"
+          >
+          </iframe>
+        </details>
+      </section>
+
+      <section>
+        <details>
+          <summary><strong>Removing Duplicates in an Array</strong></summary>
+          <p>
+            Write a function that removes duplicate values from an array without
+            using Set. Example
+          </p>
+
+          <iframe
+            src="./html/arrays/removing-duplicates.html"
+            title="duplicates removed"
+          >
+          </iframe>
+        </details>
+      </section>
+
+      <section>
+        <details>
+          <summary>
+            <strong>Most Frequent Element</strong>
+          </summary>
+          <p>
+            Write a function mostFrequent(arr) that returns the most frequently
+            occurring element in an array using reduce to create map and find
+            result.
+          </p>
+
+          <iframe
+            src="./html/arrays/most-frequent-element.html"
+            title="Filter Array"
+          >
+          </iframe>
+        </details>
+      </section>
+
+      <section>
+        <details>
+          <summary><strong>Array Destructuring and Swapping</strong></summary>
+          <p>
+            Use array destructuring to swap two variables without using a
+            temporary variable
+          </p>
+
+          <iframe
+            src="./html/arrays/array-destructuring-swapping.html"
+            title="Swapping"
+          >
+          </iframe>
+        </details>
+      </section>
+
+      <section>
+        <details>
+          <summary>
+            <strong>Multi Dimensional Array- Transpose Matrix</strong>
+          </summary>
+          <p>
+            Create a function transposeMatrix(matrix) that takes a 2D array
+            (matrix) and returns its transpose.
+          </p>
+
+          <iframe
+            src="./html/arrays/transpose-matrix.html"
+            title="Transpose Matrix"
+          >
+          </iframe>
+        </details>
+      </section>
+
+      <section>
+        <details>
+          <summary><strong>Performance Optimization</strong></summary>
+          <p>
+            Compare the performance of iterating over a large array using for,
+            for...of, and forEach. Write a report on the results and when to use
+            each method.
+          </p>
+
+          <iframe
+            src="./html/arrays/performance-optimization.html"
+            title="Performace"
+          >
+          </iframe>
+        </details>
+      </section>
+
+      <section>
+        <details>
+          <summary><strong>Array Manipulation</strong></summary>
+          <p>
+            Write a function that takes two arrays and combines them without
+            duplicates using the spread operator.
+          </p>
+
+          <iframe
+            src="./html/arrays/manipulating-array.html"
+            title="Spread and Set"
+          >
+          </iframe>
+        </details>
+      </section>
+
+      <section>
+        <details>
+          <summary><strong>Combining Array Methods</strong></summary>
+          <p>
+            Write a single chain of array methods to perform the following on an
+            array of numbers:
+          </p>
+
+          <iframe
+            src="./html/arrays/combining-array-methods.html"
+            title="Array Methods"
+          >
+          </iframe>
+        </details>
+      </section>
+
+      <div style="text-align: center">
+        <h1>Objects</h1>
+      </div>
+
+      <section>
+        <details>
+          <summary>
+            <strong> Object Manipulation with Dynamic Keys</strong>
+          </summary>
+          <p>
+            Create an object that contains dynamic keys based on user input.
+            Write a function that accepts a key and value and adds them to an
+            object. Handle cases where the key already exists and overwrite its
+            value.
+          </p>
+
+          <iframe
+            src="./html/objects/object-manipulation.html"
+            title="Manipulating Object"
+          >
+          </iframe>
+        </details>
+      </section>
+
+      <section>
+        <details>
+          <summary>
+            <strong>Deep Clone an Object</strong>
+          </summary>
+          <p>
+            Write a function that performs a deep clone of a nested object.
+            Ensure that nested objects or arrays are not referenced but copied
+            by value.
+          </p>
+
+          <iframe
+            src="./html/objects/deep-clone.html"
+            title="Deep clone of an Object"
+          >
+          </iframe>
+        </details>
+      </section>
+
+      <section>
+        <details>
+          <summary>
+            <strong>Object Inheritance Using Prototypes</strong>
+          </summary>
+          <p>
+            Create two objects, Person and Employee, where Employee inherits
+            from Person using prototypes. Add methods to both objects, and
+            demonstrate how inheritance works.
+          </p>
+
+          <iframe
+            src="./html/objects/inheritance-using-prototypes.html"
+            title="Prototypes"
+          >
+          </iframe>
+        </details>
+      </section>
+
+      <section>
+        <details>
+          <summary><strong>Object Merging</strong></summary>
+          <p>
+            Create a function that merges two objects into one, overwriting any
+            properties in the first object with properties from the second
+            object. Ensure it works even if the properties are objects
+            themselves (deep merge).
+          </p>
+
+          <iframe src="./html/objects/object-merging.html" title="Merging">
+          </iframe>
+        </details>
+      </section>
+
+      <section>
+        <details>
+          <summary><strong>Method Chaining in Objects</strong></summary>
+          <p>
+            Write a class-based object that implements method chaining. Create
+            methods like setName(), setAge(), greet(), etc., and ensure that the
+            methods can be chained together.
+          </p>
+
+          <iframe
+            src="./html/objects/chaining-in-objects.html"
+            title="Chaining Methods"
+          >
+          </iframe>
+        </details>
+      </section>
+
+      <div style="text-align: center">
+        <h1>Strings</h1>
+      </div>
+
+      <section>
+        <details>
+          <summary>
+            <strong> String Length</strong>
+          </summary>
+          <p>
+            Write a function that takes a string and returns a new string
+            containing the length of each word in the string.
+          </p>
+
+          <iframe src="./html/strings/string-length.html" title="Length">
+          </iframe>
+        </details>
+      </section>
+
+      <section>
+        <details>
+          <summary>
+            <strong> String Indexing</strong>
+          </summary>
+          <p>
+            Write a function that accepts a string and returns the first and
+            last characters of the string. If the string is empty, return null.
+          </p>
+
+          <iframe src="./html/strings/string-indexing.html" title="Indexing">
+          </iframe>
+        </details>
+      </section>
+
+      <section>
+        <details>
+          <summary>
+            <strong> Escape Sequences</strong>
+          </summary>
+          <p>
+            Create a function that takes a string and returns a new string where
+            every instance of '\n' and '\t' are replaced with their respective
+            escape sequences.
+          </p>
+
+          <iframe
+            src="./html/strings/escape-sequences.html"
+            title="Escape Characters"
+          >
+          </iframe>
+        </details>
+      </section>
+
+      <section>
+        <details>
+          <summary>
+            <strong> String Methods</strong>
+          </summary>
+          <p>
+            Write a function that takes a string and returns a new string with
+            the characters sorted in alphabetical order.
+          </p>
+
+          <iframe src="./html/strings/string-methods.html" title="Methods">
+          </iframe>
+        </details>
+      </section>
+
+      <section>
+        <details>
+          <summary>
+            <strong> Template Literals</strong>
+          </summary>
+          <p>
+            Write a function that accepts a name and age, and returns a greeting
+            message using template literals that includes the name and age
+            dynamically
+          </p>
+
+          <iframe
+            src="./html/strings/template-literals.html"
+            title="Template Literals"
+          >
+          </iframe>
+        </details>
+      </section>
+
+      <section>
+        <details>
+          <summary>
+            <strong> Unicoding and Encoding</strong>
+          </summary>
+          <p>
+            Write a function that takes a string and returns an array of Unicode
+            values for each character in the string
+          </p>
+
+          <iframe src="./html/strings/unicode-encoding.html" title="Characters">
+          </iframe>
+        </details>
+      </section>
+
+      <section>
+        <details>
+          <summary>
+            <strong> String Padding</strong>
+          </summary>
+          <p>
+            Write a function that takes a string and returns the string padded
+            with zeros to ensure that it has a length of 10.
+          </p>
+
+          <iframe src="./html/strings/string-padding.html" title="padding">
+          </iframe>
+        </details>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; 2024 Poornima Ranguri. All rights reserved.</p>
+    </footer>
+  </body>
+</html>
