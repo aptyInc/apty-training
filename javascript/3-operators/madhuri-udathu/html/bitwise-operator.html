@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bitwise Operators</title>
+    <style>
+        body{
+            padding:50px;
+            border:2px solid gray;
+            display:flex;
+            flex-direction: column;
+            justify-content: center;
+            margin-top:50px;
+            width: 200px;
+            height:400px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Bitwise Operators</h1>
+
+    <label for="value1">Value 1 : </label>
+    <input type="number" id="value1"><br><br>
+
+    <label for="value2">Value 2 : </label>
+    <input type="number" id="value2"><br><br>
+
+    <button onclick="bitwiseAND()">AND (&)</button>
+    <button onclick="bitwiseOR()">OR (|)</button>
+    <button onclick="bitwiseXOR()">XOR (^)</button>
+    <button onclick="bitwiseNOT()">NOT (~)</button>
+    <button onclick="bitwiseLeftShift()">Left Shift (<<)</button>
+    <button onclick="bitwiseRightShift()">Right Shift (>>)</button>
+    <div class="result">
+    <h2>Result</h2>
+    <p id="result"></p>
+    </div>
+    <script src="../js/bitwise-operator.js"></script>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ternary Operator</title>
+    <style>
+        body{
+            text-align: center;
+        }
+        .box{
+            display:flex;
+            flex-direction: column;
+            justify-content: center;
+            border:2px solid gray;
+            border-style: double;
+            height:400px;
+            width:50%;
+            padding:10px;
+            input{
+                margin:20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Ternary Operator</h1>
+    <div class="box">
+    <label for="firstname">First Name:</label>
+    <input type="text" id="firstname" placeholder="Enter first name" required>
+    <br><br>
+
+    <label for="lastname">Last Name:</label>
+    <input type="text" id="lastname" placeholder="Enter last name" required>
+    <br><br>
+
+    <label for="age">Age:</label>
+    <input type="number" id="age" placeholder="Enter age" required>
+    <br><br>
+
+    <button onclick="checkAge()">Check Eligibility</button>
+
+    <p id="output"></p>
+    </div>
+    <script src="../js/ternary-operator.js"></script>
+
+</body>
+</html>
