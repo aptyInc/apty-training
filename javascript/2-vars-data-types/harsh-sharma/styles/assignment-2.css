@@ -1,0 +1,15 @@
+body {
+  text-align: center;
+  background-color: rgb(226, 231, 235);
+}
+
+.variable_wrapper {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+}
+
+#let-tag-p {
+  font-size: 1rem;
+  color: rgb(43, 27, 149);
+}

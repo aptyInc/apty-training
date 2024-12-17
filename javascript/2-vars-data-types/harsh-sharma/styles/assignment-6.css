@@ -1,0 +1,10 @@
+body {
+  box-sizing: border-box;
+  text-align: center;
+  background-color: rgb(32, 75, 75);
+  color: azure;
+}
+
+#template_literal {
+  padding: 20px;
+}
