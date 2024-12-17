@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nested Element Counter</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .element-count {
+            margin-top: 20px;
+        }
+        .element-count ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        .element-count li {
+            margin: 5px 0;
+        }
+        .nested {
+            margin-left: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Nested Element Counter</h1>
+
+    <div id="parent1">
+        <p>This is a paragraph inside div 1.</p>
+        <span>This is a span inside div 1.</span>
+        <div>
+            <p>This is a paragraph inside a nested div 1.</p>
+            <span>This is a span inside a nested div 1.</span>
+        </div>
+    </div>
+
+    <p>This is a standalone paragraph.</p>
+
+    <div id="parent2">
+        <div>
+            <p>This is a paragraph inside a nested div 2.</p>
+            <span>This is a span inside a nested div 2.</span>
+        </div>
+    </div>
+
+    <button id="countBtn">Count Elements</button>
+
+    <div class="element-count">
+        <h2>Nested Element Counts:</h2>
+        <ul id="countList">
+            <li>Parent 1: 0 nested elements</li>
+            <li>Parent 2: 0 nested elements</li>
+        </ul>
+    </div>
+
+    <script src="../js/nested-element-count.js"></script>
+</body>
+</html>
