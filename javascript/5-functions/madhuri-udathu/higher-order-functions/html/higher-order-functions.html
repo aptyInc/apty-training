@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Repeat Action Example</title>
+  <style>
+    h2{
+      font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+      font-size: 1.2rem;
+    }
+    box{
+      width:400px;
+      padding:10px;
+    }
+    button{
+      background-color: blanchedalmond;
+    }
+    #list{
+      list-style-type: none;
+    }
+  </style>
+</head>
+
+<body>
+  <h2>Create a List</h2>
+  <div class="box">
+    <form>
+      <label for="item">Enter item text:</label>
+      <input type="text" id="item" placeholder="Enter item"><br><br>
+
+      <label for="times">How many times:</label>
+      <input type="number" id="times" placeholder="Enter number"><br><br>
+
+      <button type="button" onclick="generateList()">Generate List</button>
+    </form>
+
+    <ul id="list"></ul>
+  </div>
+  <script src="../js/higher-order-functions.js"></script>
+</body>
+
+</html>

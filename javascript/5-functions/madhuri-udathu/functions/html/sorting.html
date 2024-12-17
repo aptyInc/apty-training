@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sort Numbers</title>
+  <style>
+    table {
+      width: 50%;
+      border-collapse: collapse;
+      margin-top: 20px;
+    }
+    th, td {
+      border: 1px solid black;
+      padding: 8px;
+      text-align: center;
+    }
+    th {
+      background-color: rgb(145, 159, 174);
+    }
+  </style>
+</head>
+<body>
+  <h1>Sort Array of Numbers</h1>
+  <form id="sortForm">
+    <label for="numbers">Enter numbers (comma-separated):</label><br>
+    <input type="text" id="numbers" name="numbers" placeholder="e.g., 1,2,3,4" required>
+    <button type="submit">Sort</button>
+  </form>
+
+  <h2>Sorted Array</h2>
+  <table id="resultTable">
+    <thead>
+      <tr>
+        <th>Index</th>
+        <th>Value</th>
+      </tr>
+    </thead>
+    <tbody id="tableBody"></tbody>
+  </table>
+
+  <script src="../js/sorting.js"></script>
+</body>
+</html>
