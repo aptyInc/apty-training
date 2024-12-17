@@ -1,16 +1,10 @@
-function callback(text = ' ') {
-    return text.toUpperCase()
+function callback(input = "DEFAULT VALUE") {
+    return input.toUpperCase()
 }
 
-function processText(callback) {
-    const inputText = document.getElementById('inputText').value 
+function mainFunction(callback) {
+    const userInput = document.getElementById("userInput").value.trim()
+    const processedText = callback(userInput || undefined)
 
-    if (inputText.trim() === '') {
-        document.getElementById('result').innerText = 'Please enter some text.'
-        return
-    }
-
-    const resultText = callback(inputText)
-
-    document.getElementById('result').innerText = `Processed Text: ${resultText}`
+    document.getElementById("output").innerText = `Processed Text: ${processedText}`
 }
