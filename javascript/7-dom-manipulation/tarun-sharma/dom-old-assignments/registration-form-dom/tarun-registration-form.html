@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Registration Form with DOM</title>
+    </head>
+    <body>
+        <div></div>
+        <script>
+
+            const mainHeading = document.createElement("h1");
+            mainHeading.textContent = "Register to Apty Portal";
+            document.body.appendChild(mainHeading);
+            mainHeading.style.marginLeft = "100px";
+            mainHeading.style.paddingBottom = "40px"
+
+            //input start
+
+            const box1 = document.createElement("input");
+            box1.setAttribute("placeholder","Enter your Name");
+            box1.style.marginLeft = "150px";
+            box1.style.width = "330px";
+            box1.style.marginBottom = "20px"
+
+            document.body.appendChild(box1);
+
+            const box2 = document.createElement("input");
+            box2.setAttribute("placeholder","Enter your Mobile Number");
+            document.body.appendChild(box2);
+            box2.style.marginLeft = "150px";
+            box2.style.width = "330px";
+            box2.style.marginBottom = "20px"
+
+            const box3 = document.createElement("input");
+            box3.setAttribute("placeholder","Enter your Email ID");
+            document.body.appendChild(box3);
+            box3.style.marginLeft = "150px";
+            box3.style.width = "330px";
+            box3.style.marginBottom = "20px"
+
+            const box5 = document.createElement("input");
+            box5.setAttribute("placeholder","Enter your Password");
+            document.body.appendChild(box5);
+            box5.style.marginLeft = "150px";
+            box5.style.width = "330px";
+            box5.style.marginBottom = "20px"
+            //input end
+
+            //dropdown start
+
+            const dropdown1 = document.createElement("select");
+            dropdown1.style.width = "180px";
+            dropdown1.style.marginLeft = "150px"
+            dropdown1.style.marginBottom = "20px";
+            const values = [
+                {value: "", text: "Select Department" },
+                {value: "dev", text: "Development" },
+                {value: "test", text: "Testing" },
+                {value: "sales", text: "Sales" },
+
+            ]
+            values.forEach((parameter, index) => {
+                let option = document.createElement("option");
+                option.value = parameter.value;
+                option.innerHTML = parameter.text;
+
+                dropdown1.appendChild(option);
+            })
+            
+
+            document.body.appendChild(dropdown1);
+
+            //dropdown end
+
+            // radio start  
+            //male
+            const radio1 = document.createElement("input");
+            radio1.type = "radio"
+            radio1.name = "Gender"
+            radio1.style.marginLeft = "-910px"
+            radio1.style.marginBottom = "10px";
+            const textRadio1 = document.createElement("label");
+            textRadio1.textContent = "Male:";
+            document.body.appendChild(textRadio1);
+            textRadio1.style.marginLeft = "150px";
+            document.body.appendChild(radio1);
+
+            //female
+
+            const radio2 = document.createElement("input");
+            radio2.type = "radio"
+            radio2.name = "Gender"
+            radio2.style.marginLeft = "-910px"
+            radio2.style.marginBottom = "10px"
+            const textRadio2 = document.createElement("label");
+            textRadio2.textContent = "Female:";
+            document.body.appendChild(textRadio2);
+            textRadio2.style.marginLeft = "150px";
+            document.body.appendChild(radio2);
+
+            //radio end
+
+            //checkbox start
+            const checkbox1 = document.createElement("input");
+            checkbox1.type = "checkbox"
+            checkbox1.style.marginLeft = "-910px"
+            
+
+            const name2 = document.createElement("label");
+            name2.textContent = "Check this box if you are a Permanent Employee"
+            name2.style.marginLeft = "150px";
+            document.body.appendChild(name2);
+            document.body.appendChild(checkbox1);
+            //checkbox end
+
+            //submit start
+
+            const submitButton = document.createElement("button");
+            submitButton.textContent = "Submit";
+            submitButton.style.marginLeft = "200px";
+            submitButton.style.width = "70px";
+            submitButton.style.marginBottom = "20px"
+            document.body.appendChild(submitButton);
+
+            //submit button end
+            
+            //body styles
+            document.body.style.display = "flex";
+            document.body.style.flexDirection = "column";
+
+        </script>
+    </body>
+</html>

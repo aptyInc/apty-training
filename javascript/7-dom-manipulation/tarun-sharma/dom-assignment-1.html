@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Accessing and Manipulating Elements</title>
+	</head>
+	<body>
+		<table>
+			<tr>
+				<th>id</th>
+				<th>class mame</th>
+				<th>tag</th>
+				<th>name</th>
+				<th>attribute</th>
+			</tr>
+			<tr>
+				<td>
+					<p id="para1">p1</p>
+					<button onclick="changeTextColor()">change color</button>
+				</td>
+				<td>
+					<p class="sameClass">p1 with class</p>
+					<button onclick="toggleClass()">toggle class</button>
+				</td>
+				<td>
+					<span>span1</span>
+					<button onclick="changeInnerHTML()">change</button>
+				</td>
+				<td>
+					<input type="text" name="user1" value="User 1" />
+					<button onclick="toggleDisabled()">dsable field</button>
+				</td>
+				<td>
+					<p data-custom="value1">open inspect to view output</p>
+					<button onclick="addCustomAttribute()">add attribute</button>
+				</td>
+			</tr>
+		</table>
+
+		<script src="script/dom-assignment-1.js"></script>
+	</body>
+</html>

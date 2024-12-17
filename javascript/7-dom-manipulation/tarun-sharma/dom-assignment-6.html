@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>update items</title>
+</head>
+<body>
+    <ul>
+        <li>item 1</li>
+        <li>item 2</li>
+        <li>item 3</li>
+        <li>item 4</li>
+        <li>item 5</li>
+    </ul>
+    <button id="updateButton">Update</button>
+
+    <script>
+
+        document.getElementById('updateButton').addEventListener('click', function() {
+
+            const listItems = document.querySelectorAll('ul li');
+
+            if (listItems[0]) listItems[0].textContent = 'updated list';
+            if (listItems[4]) listItems[4].textContent = 'updated list 2';
+
+        });
+
+    </script>
+</body>
+</html>

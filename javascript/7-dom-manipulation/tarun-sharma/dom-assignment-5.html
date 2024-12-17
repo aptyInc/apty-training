@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Element Counter</title>
+</head>
+<body>
+    <div>
+        <p>p inside div</p>
+        <span>span inside div</span>
+
+    </div>
+
+    <p>
+        <span>span inside p</span>
+        <div>
+            <span>span inside div, which is inside p tag</span>
+        </div>
+    </p>
+
+    <span>first span</span>
+
+    <iframe src="about:blank">
+        <div>text in iframe</div>
+
+    </iframe>
+
+    <button id="countAll">count elements</button>
+
+    <ul id="output"></ul>
+
+    <script>
+
+        document.getElementById('countAll').addEventListener('click', function() {
+
+            const firstElements = document.body.children; 
+
+            const output = document.getElementById('output');
+            output.innerHTML = '';
+
+            for (let Parent of firstElements) {
+
+                const nestedCount = Parent.getElementsByTagName('*').length; 
+                const listAll = document.createElement('li'); 
+
+                listAll.textContent = `${Parent.tagName.toLowerCase()}: ${nestedCount}`; 
+                output.appendChild(listAll);
+            }
+
+        });
+
+    </script>
+
+
+</body>
+</html>
