@@ -35,13 +35,9 @@ function bitwiseXOR() {
 }
 
 function bitwiseNOT() {
-    const value1 = Number(document.getElementById("value1").value);
-
-    if (isNaN(value1)) {
-        document.getElementById("result").innerText = "Please enter a valid number for Value 1.";
-        return;
-    }
-
+   const values = getValues();
+    if (!values) return;
+    
     const result = ~value1;
     document.getElementById("result").innerText = `Result: ${result}`;
 }
