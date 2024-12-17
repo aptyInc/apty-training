@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Shadow Manipulation of Elements</title>
+    <link rel="stylesheet" href="../css/table-shadow-dom.css" />
+  </head>
+  <body>
+    <header style="text-align: center">
+      <h1>Shadow Dom Manipulation of Elements</h1>
+    </header>
+    <div></div>
+    <main style="text-align: center">
+      <section>
+        <div>
+          <button id="idButton">Change ID Element Color</button>
+          <button id="classButton">Toggle Class Background</button>
+          <button id="tagButton">Change Span Text</button>
+          <button id="nameButton">Toggle Input Disabled</button>
+          <button id="attributeButton">Add Custom Attribute</button>
+        </div>
+        <div style="margin-top: 30px" id="host"></div>
+        <template id="tableShadowDom">
+          <table border="1px">
+            <tr>
+              <th>ID</th>
+              <th>className</th>
+            </tr>
+            <!-- ID Manipulation -->
+            <tr>
+              <td>ID</td>
+              <td>
+                <p id="para">First Paragraph with ID</p>
+                <p id="para">Second Paragraph with ID</p>
+              </td>
+            </tr>
+            <!-- Class Name Manipulation -->
+            <tr>
+              <td>Class Name</td>
+              <td>
+                <p class="colorClass">First Paragraph with Class</p>
+                <p class="colorClass">Second Paragraph with Class</p>
+              </td>
+            </tr>
+            <!-- Tag Manipulation -->
+            <tr>
+              <td>Tag</td>
+              <td>
+                <span>First Span Element</span>
+                <span>Second Span Element</span>
+              </td>
+            </tr>
+
+            <!-- Name Attribute Manipulation -->
+            <tr>
+              <td>Name</td>
+              <td>
+                <input type="text" name="input1" placeholder="First Input" />
+                <input type="text" name="input2" placeholder="Second Input" />
+              </td>
+            </tr>
+            <!-- Custom Attribute Manipulation -->
+            <tr>
+              <td>Attributes</td>
+              <td>
+                <p data-custom="value1">
+                  First Paragraph with Custom Attribute
+                </p>
+                <p data-custom="value2">
+                  Second Paragraph with Custom Attribute
+                </p>
+              </td>
+            </tr>
+          </table>
+        </template>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-content">
+        <p>&copy; 2024 Poornima Ranguri. All Rights Reserved.</p>
+        <p>
+          <a href="https://apty.io" target="_blank">Privacy Policy</a>
+          <a href="https://apty.io" target="_blank">Terms of Service</a>
+        </p>
+      </div>
+    </footer>
+
+    <script src="../javascript/table-shadow-dom.js"></script>
+  </body>
+</html>
