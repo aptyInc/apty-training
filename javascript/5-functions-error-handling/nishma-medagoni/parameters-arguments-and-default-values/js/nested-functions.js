@@ -1,19 +1,22 @@
 function calculateRectangle() {
+    function calculatePerimeter(l = 10, w = 20) {
+        
+        const length = parseFloat(document.getElementById('length').value) || l
+        const width = parseFloat(document.getElementById('width').value) || w
 
-    const length = parseFloat(document.getElementById('length').value) || 10
-    const width = parseFloat(document.getElementById('width').value) || 20
+        function calculateArea() {
+            return length * width
+        }
 
+        const area = calculateArea(); 
+        const perimeter = 2 * (length + width)
 
-    function calculatePerimeter() {
-        return 2 * (length + width)
+        return { perimeter, area } 
     }
 
-    function calculateArea() {
-        return length * width 
-    }
+    // Call calculatePerimeter and get results
+    const { perimeter, area } = calculatePerimeter()
 
-    const perimeter = calculatePerimeter()
-    const area = calculateArea()
-
-    document.getElementById('result').innerText = `Perimeter: ${perimeter} units, Area: ${area} square units`
+    // Display the results
+    document.getElementById('result').innerText =  `Perimeter: ${perimeter} units, Area: ${area} square units`
 }
