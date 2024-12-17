@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comparison Operators</title>
+    <script src = "../javascript/comparision-operators.js"></script>
+    <link rel = "stylesheet" href = "../css/comparision-operators.css" />
+</head>
+<body>
+    <header>
+        Comparison Operators
+    </header>
+    <main>
+        <section>
+            <div>
+                <label for="value1">Value 1:</label>
+                <input type="text" id="value1">
+                <select id="type1">
+                  <option value="string">String</option>
+                  <option value="number">Number</option>
+                  <option value="boolean">Boolean</option>
+                  <option value="object">Object</option>
+                  <option value="undefined">Undefined</option>
+                  <option value="null">Null</option>
+                </select>
+              </div>
+              <div>
+                <label for="value2">Value 2:</label>
+                <input type="text" id="value2">
+                <select id="type2">
+                  <option value="string">String</option>
+                  <option value="number">Number</option>
+                  <option value="boolean">Boolean</option>
+                  <option value="object">Object</option>
+                  <option value="undefined">Undefined</option>
+                  <option value="null">Null</option>
+                </select>
+              </div>
+              <div>
+                <button onclick="equal()">==</button>
+                <button onclick="strictEqual()">===</button>
+                <button onclick="notEqual()">!=</button>
+                <button onclick="strictNotEqual()">!==</button>
+                <button onclick="greaterThan()">&gt;</button>
+                <button onclick="lessThan()">&lt;</button>
+                <button onclick="greaterOrEqual()">&gt;=</button>
+                <button onclick="lessOrEqual()">&lt;=</button>
+            </div>
+        </section>
+        <div id = "result">Result: </div>
+    </main>
+    <footer>2024 @ JavaScript Assignments</footer>
+</body>
+</html>
