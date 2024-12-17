@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Iframe Moving Elements</title>
+    <link rel="stylesheet" href="../css/moving-elements.css" />
+  </head>
+  <body>
+    <header style="text-align: center">
+      <h1>Iframe Moving Elements</h1>
+    </header>
+
+    <main style="text-align: center">
+      <iframe
+        id="tableIframe"
+        height="330"
+        width="500"
+        border="0"
+        style="border: none"
+        srcdoc="
+        <!DOCTYPE
+        html
+      >
+        <html lang='en'>
+          <head>
+            <meta charset='UTF-8' />
+            <meta
+              name='viewport'
+              content='width=device-width, initial-scale=1.0'
+            />
+            <title>Table Inside Iframe</title>
+            <link rel='stylesheet' href='../css/moving-iframe-elements.css' />
+          </head>
+          <body>
+            <table id='myTable' border='1px'>
+              <thead>
+                <tr>
+                  <th>Row Number</th>
+                  <th>Actions</th>
+                </tr>
+              </thead>
+              <tbody id='tableResult'></tbody>
+            </table>
+            <script>
+              let activeRowIndex = null;
+
+              function setActiveRow(rowIndex) {
+                activeRowIndex = rowIndex;
+              }
+
+              function getActiveRowIndex() {
+                return activeRowIndex;
+              }
+            </script>
+          </body>
+        </html>
+        "
+      ></iframe>
+
+      <div id="externalButtons" style="margin-top: 20px">
+        <button id="upBtn">Up</button>
+        <button id="downBtn">Down</button>
+        <button id="topBtn">Top</button>
+        <button id="bottomBtn">Bottom</button>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-content">
+        <p>&copy; 2024 Poornima Ranguri. All Rights Reserved.</p>
+        <p>
+          <a href="https://apty.io" target="_blank">Privacy Policy</a>
+          <a href="https://apty.io" target="_blank">Terms of Service</a>
+        </p>
+      </div>
+    </footer>
+
+    <script src="../javascript/moving-iframe-elements.js"></script>
+  </body>
+</html>

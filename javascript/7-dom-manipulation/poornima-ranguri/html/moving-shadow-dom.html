@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ShadowDom Moving Elements</title>
+    <link rel="stylesheet" href="../css/moving-shadow-dom.css" />
+  </head>
+  <body>
+    <header style="text-align: center">
+      <h1>Shadow Dom Moving Elements</h1>
+    </header>
+
+    <main style="text-align: center">
+      <div id="result"></div>
+      <template id="host">
+        <table id="myTable" border="1px">
+          <thead>
+            <tr>
+              <th>Row Number</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody id="tableResult"></tbody>
+        </table>
+      </template>
+
+      <div id="externalButtons" style="margin-top: 20px">
+        <button id="upBtn">Up</button>
+        <button id="downBtn">Down</button>
+        <button id="topBtn">Top</button>
+        <button id="bottomBtn">Bottom</button>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-content">
+        <p>&copy; 2024 Poornima Ranguri. All Rights Reserved.</p>
+        <p>
+          <a href="https://apty.io" target="_blank">Privacy Policy</a>
+          <a href="https://apty.io" target="_blank">Terms of Service</a>
+        </p>
+      </div>
+    </footer>
+
+    <script src="../javascript/moving-shadow-dom.js"></script>
+  </body>
+</html>

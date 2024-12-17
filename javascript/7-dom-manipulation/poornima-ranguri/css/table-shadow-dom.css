@@ -1,0 +1,137 @@
+/* body{
+  background-color:aliceblue;
+}
+
+
+.toggle{
+  color: brown;
+}
+
+#result {
+  text-align: center;
+  font-size: 24px;
+  padding: 20px;
+}
+
+button {
+  border: 0px;
+  background-color: rgb(48, 186, 217);
+  border-radius: 5px;
+  margin: 1rem;
+  font-weight: 700;
+  padding: 1rem;
+  text-transform: uppercase;
+  cursor: pointer;
+  opacity: 0.6;
+}
+
+button:hover {
+  background-color: rgb(59, 173, 199);
+}
+
+footer {
+  width: 98vw;
+  background-color: darkcyan;
+  margin-top: 350px;
+  padding: 20px 0;
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+}
+
+.footer-content p {
+  margin: 5px 0;
+  font-size: 14px;
+  text-align: center;
+}
+
+.footer-content a {
+  text-decoration: none;
+  margin: 0 5px;
+  font-weight: bold;
+}
+
+.footer-content a:hover {
+  text-decoration: underline;
+} */
+
+body {
+  background-color: aliceblue;
+  font-family: Arial, sans-serif;
+  width: 100vw;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+th, td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: center;
+}
+
+th {
+  background-color: #f2f2f2;
+}
+
+
+
+.highlight {
+background-color: lightcoral;
+font-weight: bold;
+}
+
+button {
+  border: 0px;
+  background-color: rgb(48, 186, 217);
+  border-radius: 5px;
+  margin: 1rem;
+  font-weight: 700;
+  padding: 1rem;
+  text-transform: uppercase;
+  cursor: pointer;
+  opacity: 0.6;
+}
+
+button:hover {
+  background-color: rgb(59, 173, 199);
+}
+
+footer {
+  width: 98vw;
+  background-color: darkcyan;
+  margin-top: 120px;
+  padding: 20px 0;
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+}
+
+.footer-content p {
+  margin: 5px 0;
+  font-size: 14px;
+  text-align: center;
+}
+
+.footer-content a {
+  text-decoration: none;
+  margin: 0 5px;
+  font-weight: bold;
+}
+
+.footer-content a:hover {
+  text-decoration: underline;
+}
