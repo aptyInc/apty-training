@@ -1,49 +1,19 @@
+function countElements() {
+            
+            
+	let divCount = document.querySelectorAll('div').length;
+	let pCount = document.querySelectorAll('p').length;
+	let spanCount = document.querySelectorAll('span').length;
+	let iframeCount = document.querySelectorAll('iframe').length;
 
-function changeTextColor() {
-
-	const paragraphs = document.querySelectorAll('p[id^="para"]');
-	paragraphs.forEach((p) => {
-		p.style.color = `#${Math.floor(Math.random() * 16777215).toString(16)}`;
-	});
-
-}
-
-function toggleClass() {
-
-	const elements = document.getElementsByClassName("sameClass");
-	Array.from(elements).forEach((element) => {
-		element.classList.toggle("highlight");
-
-	});
-}
-
-function changeInnerHTML() {
-
-	const spans = document.getElementsByTagName("span");
-	Array.from(spans).forEach((span) => {
-		span.innerHTML = "Updated Content";
-
-	});
-
-}
-
-function toggleDisabled() {
-
-	const inputs = document.getElementsByName("user1");
-	inputs.forEach((input) => {
-
-		input.disabled = !input.disabled;
-	});
-}
-
-function addCustomAttribute() {
-
-	const elements = document.querySelectorAll("[data-custom]");
-	elements.forEach((element) => {
-
-		element.setAttribute("data-new", "new-value");
-
-		console.log(element.getAttribute("data-new"));
-	});
 	
+	let result = `
+		<li>div's: ${divCount}</li>
+		<li>p tags: ${pCount}</li>
+		<li>span's: ${spanCount}</li>
+		<li>Iframe: ${iframeCount}</li>
+	`;
+	
+	
+	document.getElementById('result').innerHTML = result;
 }

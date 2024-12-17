@@ -14,34 +14,24 @@ const iframeHTML = `
                 </tr>
                 <tr>
                     <td>
-                        <p id="para1">Paragraph 1 with id="para1"</p>
-                        <p id="para2">Paragraph 2 with id="para2"</p>
-                        <p id="para3">Paragraph 3 with id="para3"</p>
-                        <button id="changeTextColor">Change Text Color</button>
+                        <p id="para1">p1</p>
+                        <button id="changeTextColor">Change Color</button>
                     </td>
                     <td>
-                        <p class="sameClass">Paragraph 1 with class="sameClass"</p>
-                        <p class="sameClass">Paragraph 2 with class="sameClass"</p>
-                        <p class="sameClass">Paragraph 3 with class="sameClass"</p>
+                        <p class="sameClass">P1</p>
                         <button id="toggleClass">Toggle Class</button>
                     </td>
                     <td>
-                        <span>Span 1</span>
-                        <span>Span 2</span>
-                        <span>Span 3</span>
+                        <span>Span1</span>
                         <button id="changeInnerHTML">Change InnerHTML</button>
                     </td>
                     <td>
-                        <input type="text" name="user1" value="User  1" />
-                        <input type="text" name="user2" value="User  2" />
                         <input type="text" name="user1" value="User  1" />
                         <button id="toggleDisabled">Toggle Disabled</button>
                     </td>
                     <td>
                         <p data-custom="value1">Paragraph with data-custom="value1"</p>
-                        <p data-custom="value2">Paragraph with data-custom="value2"</p>
-                        <p data-custom="value3">Paragraph with data-custom="value3"</p>
-                        <button id="addCustomAttribute">Add Custom Attribute</button>
+                        <button id="addCustomAttribute">Add Attribute</button>
                     </td>
                 </tr>
             </table>
