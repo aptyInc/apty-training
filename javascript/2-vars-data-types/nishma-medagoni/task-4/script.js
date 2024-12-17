@@ -26,7 +26,8 @@ function typeConversions() {
     document.getElementById("string").innerHTML = `
         String to Number: ${conversion(stringVar, Number)}<br>
         String to Boolean: ${conversion(stringVar, Boolean)}<br>
-        String to String: ${conversion(stringVar, String)}
+        String to Symbol: ${conversion(stringVar, Symbol)}<br>
+        String to Object: ${conversion(stringVar, Object)}<br>
     `
 
     // Convert number
@@ -34,7 +35,8 @@ function typeConversions() {
     document.getElementById("number").innerHTML = `
         Number to String: ${conversion(numberVar, String)} <br>
         Number to Boolean: ${conversion(numberVar, Boolean)} <br>
-        Number to Number: ${conversion(numberVar, Number)}
+        Number to Object: ${conversion(numberVar, Object)}<br>
+        Number to Symbol: ${conversion(numberVar, Symbol)}
     `
 
     // Convert boolean
@@ -42,7 +44,8 @@ function typeConversions() {
     document.getElementById("boolean").innerHTML = `
         Boolean to String: ${conversion(booleanVar, String)} <br>
         Boolean to Number: ${conversion(booleanVar, Number)} <br>
-        Boolean to Boolean: ${conversion(booleanVar, Boolean)}
+        Boolean to Symbol: ${conversion(booleanVar, Symbol)} <br>
+        Boolean to Object: ${conversion(booleanVar, Object)} <br>
     `
 
     // Convert Undefined
@@ -65,7 +68,7 @@ function typeConversions() {
 
     document.getElementById("symbol").innerHTML = `
         Symbol to String: ${conversion(symbolVar, String)} <br>
-        Symbol to Number: ${conversion(symbolVar, Number)} <br>
+        Symbol to Object: ${conversion(symbolVar, Object)} <br>
         Symbol to Boolean: ${conversion(symbolVar, Boolean)}
     `
 
