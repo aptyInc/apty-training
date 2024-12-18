@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accessing and manipulating shadowDOM elements</title>
+</head>
+
+<body>
+    <template id='shadow-template'>
+        <link rel="stylesheet" href="./../css/accessing-manipulating-shadowdom.css">
+        <main>
+            <h1>Accessing and manipulating elements using javascript</h1>
+            <table>
+                <tr>
+                    <th>ID</th>
+                    <th>CLASS NAME</th>
+                    <th>TAG</th>
+                    <th>NAME</th>
+                    <th>ATTRIBUTE</th>
+                </tr>
+                <tr>
+                    <td id="iddata">
+                        <p id='first'>First paragraph</p>
+                        <p id='second'>Second paragraph</p>
+                        <p id='third'>Thrid paragraph</p>
+                        <p id='fourth'>Fourth paragraph</p>
+
+                    </td>
+                    <td id="class-data">
+                        <p class='bgcolor'>First paragraph</p>
+                        <p class='bgcolor'>Second paragraph</p>
+                        <p class='bgcolor'>Thrid paragraph</p>
+                        <p class='bgcolor'>Fourth paragraph</p>
+
+                    </td>
+                    <td>
+                        <span>span1</span>
+                        <span>span2</span>
+                        <span>span3</span>
+                        <span>span4</span>
+                    </td>
+                    <td>
+                        <div class="input-container">
+                            <label for='username'>USERNAME</label>
+                            <input type="text" id="username" placeholder="Enter username here" name='username'
+                                value="vinod muadvath">
+                        </div>
+                        <div class="input-container">
+                            <label for='email'>EMAIL</label>
+                            <input type="email" id="email" placeholder="Enter email here" name='email'
+                                value="vinodmudavat123@gamail.com">
+                        </div>
+                        <div class="input-container">
+                            <label for='password'>PASSWORD</label>
+                            <input type="password" id="password" placeholder="Enter password here" name='password'
+                                value="12345">
+                        </div>
+
+                    </td>
+                    <td>
+                        <p data-name="para">First paragraph</p>
+                        <p data-name="para">Second paragraph</p>
+                        <p data-name="para">Thrid paragraph</p>
+                        <p data-name="para">Fourth paragraph</p>
+                    </td>
+                </tr>
+            </table>
+        </main>
+    </template>
+
+    <button id='changecolor'>Change Color</button>
+    <button id='change-bgcolor'>Change backgroundcolor</button>
+    <button id='change-content'>Change content</button>
+    <button id="disable-input">Disable input</button>
+    <button id="add-custom-attribute">Add Custom Attribute</button>
+
+    <div id="shadow-host"></div>
+    <script type="text/javascript" src="./../script/accessing-manipulating-shadowdom.js"></script>
+</body>
+
+</html>
