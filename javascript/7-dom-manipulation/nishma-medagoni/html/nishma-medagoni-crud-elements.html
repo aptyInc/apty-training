@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Complex DOM Manipulation Challenges</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      margin: 20px;
+    }
+    h1 {
+      color: #333;
+    }
+    .section {
+      margin-bottom: 20px;
+      padding: 15px;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      background-color: #f9f9f9;
+    }
+    ul {
+      list-style-type: none;
+      padding: 0;
+    }
+    li {
+      padding: 5px 10px;
+      background-color: #eee;
+      margin-bottom: 5px;
+      display: flex;
+      justify-content: space-between;
+    }
+    button {
+      padding: 5px 10px;
+      background-color: #007BFF;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #0056b3;
+    }
+    .btn {
+      background-color: green;
+      color: white;
+      padding: 10px;
+      margin: 10px 0;
+      border-radius: 4px;
+    }
+    .container {
+      margin: 10px 0;
+      padding: 10px;
+      border: 1px solid #ccc;
+    }
+    .table-container {
+      margin-top: 20px;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+    table, th, td {
+      border: 1px solid black;
+    }
+    th, td {
+      padding: 10px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <h1>DOM Manipulation Challenges</h1>
+
+  <!-- Main Document Section -->
+  <div class="section">
+    <h2>Main Document</h2>
+    <ul id="main-list">
+      <li>Item 1 <button class="delete-item">Delete</button></li>
+      <li>Item 2 <button class="delete-item">Delete</button></li>
+    </ul>
+    <div class="button-container"></div>
+    <div class="container" id="clone-container">
+      <div class="card">Card Content</div>
+    </div>
+    <p id="existing-paragraph">Existing Paragraph</p>
+    <div class="table-container"></div>
+  </div>
+  <script>
+
+    //Add New List Item
+
+    const new_list_item = document.createElement('li')
+    new_list_item.textContent = 'New Item'
+    const delete_button = document.createElement('button')
+    delete_button.textContent = 'Delete'
+    delete_button.classList.add('delete-item')
+    new_list_item.appendChild(delete_button)
+    document.getElementById('main-list').appendChild(new_list_item)
+
+
+    // Remove Child Element
+
+    const last_element = document.querySelector('.container')
+    if (last_element.lastElementChild) {
+        last_element.removeChild(last_element.lastElementChild)
+    }
+
+    // Create and Style Button
+
+    const button_element = document.createElement('button')
+    button_element.textContent = "Click Me"
+    button_element.classList.add('btn')
+    button_element.style.backgroundColor = 'green'
+    document.querySelector('.button-container').appendChild(button_element)
+
+    // Insert Before
+
+    const new_paragraph = document.createElement('p')
+    new_paragraph.textContent = 'New Paragraph'
+    const existing_paragraph = document.getElementById('existing-paragraph')
+    existing_paragraph.parentNode.insertBefore(new_paragraph,existing_paragraph)
+
+    // Dynamic Table
+
+    const table_container = document.querySelector('.table-container')
+    const table = document.createElement('table')
+    let cellValue = 1
+    for (let i = 0; i < 3; i++) {
+        const row = document.createElement('tr')
+        for (let j = 0; j < 3; j++) {
+            const cell = document.createElement('td')
+            cell.textContent = cellValue++
+            row.appendChild(cell)
+        }
+        table.appendChild(row)
+    }
+    table_container.appendChild(table)
+
+    // Event-Based Element Creation
+
+    const random_color_button = document.createElement('button')
+    random_color_button.textContent = 'Create Random Div'
+    random_color_button.style.marginTop = '10px'
+    random_color_button.style.marginLeft = '30px'
+    document.querySelector('.button-container').appendChild(random_color_button)
+    random_color_button.addEventListener('click', () => {
+        const random_div = document.createElement('div')
+        random_div.style.width = '100px'
+        random_div.style.height = '100px'
+        random_div.style.backgroundColor = `#${Math.floor(Math.random() * 16777215).toString(16)}`
+        random_div.style.margin = '10px 0'
+        document.body.appendChild(random_div)
+    })
+
+    
+
+    // Delete Specific List Item
+
+    const list_items = document.querySelectorAll('#main-list li')
+    list_items.forEach(item => {
+        const delete_item = item.querySelector('.delete-item')
+        delete_item.addEventListener('click', () => {
+            item.remove()
+        })
+    })
+
+    // Dynamic Attribute Setter
+
+    const input_field = document.createElement('input')
+    input_field.setAttribute('type','text')
+    input_field.setAttribute('placeholder', 'Enter your name')
+    const form_element = document.createElement('form')
+    form_element.appendChild(input_field)
+    document.body.appendChild(form_element)
+
+  </script>
+</body>
+</html>

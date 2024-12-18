@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login and Registration Page</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+        }
+        .input-form {
+            display: flex;
+            flex-direction: column;
+            padding: 15px;
+        }
+        .label-name {
+            padding-bottom: 10px;
+            padding-top: 20px;
+            font-size: 17px;
+            font-family: 'Times New Roman', Times, serif;
+        }
+        .input-name {
+            padding: 10px;
+            border: solid 1px black;
+            border-radius: 10px;
+        }
+        .button {
+            margin-top: 50px;
+            padding: 10px;
+            border-radius: 10px;
+            background-color: black;
+            color: white;
+            cursor: pointer;
+        }
+        .error-message {
+            font-size: 15px;
+            color: red;
+            padding-top: 5px;
+        }
+        .success-message {
+            color: green;
+            padding-top: 20px;
+            font-size: 15px;
+        }
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div id="page-container"></div>
+</body>
+<script>
+    const pageContainer = document.getElementById('page-container');
+
+    // Function to create input fields
+    const createInputField = (labelText, id, type, placeholder, parent) => {
+        const label = document.createElement('label');
+        label.textContent = labelText;
+        label.setAttribute('for', id);
+        label.classList.add('label-name');
+        parent.appendChild(label);
+
+        const input = document.createElement('input');
+        input.setAttribute('type', type);
+        input.setAttribute('id', id);
+        input.setAttribute('placeholder', placeholder);
+        input.classList.add('input-name');
+        input.required = true;
+        parent.appendChild(input);
+
+        const validationMessage = document.createElement('span');
+        validationMessage.classList.add('error-message');
+        parent.appendChild(validationMessage);
+
+        return { input, validationMessage };
+    };
+
+    // Registration Page
+    const createRegistrationPage = () => {
+        const formContainer = document.createElement('form');
+        formContainer.style.backgroundColor = 'lightgray';
+        formContainer.style.marginTop = '50px';
+        formContainer.style.width = '400px';
+        formContainer.style.padding = '20px';
+        formContainer.style.border = 'solid';
+        pageContainer.appendChild(formContainer);
+
+        const formHeading = document.createElement('h1');
+        formHeading.textContent = 'Registration Form';
+        formHeading.style.textAlign = 'center';
+        formContainer.appendChild(formHeading);
+
+        const inputForm = document.createElement('div');
+        inputForm.classList.add('input-form');
+        formContainer.appendChild(inputForm);
+
+        // Input fields
+        const nameField = createInputField('Username', 'username', 'text', 'Enter your name', inputForm);
+        const emailField = createInputField('Email', 'email', 'email', 'Enter your email', inputForm);
+        const passwordField = createInputField('Password', 'password', 'password', 'Enter your password', inputForm);
+        const phoneField = createInputField('Phone Number', 'phone', 'tel', 'Enter your phone number', inputForm);
+        const dobField = createInputField('Date of Birth', 'dob', 'date', '', inputForm);
+
+        // Gender
+        const genderLabel = document.createElement('label');
+        genderLabel.textContent = 'Gender';
+        genderLabel.classList.add('label-name');
+        inputForm.appendChild(genderLabel); // Corrected variable name
+
+        const genderContainer = document.createElement('div');
+        genderContainer.style.display = 'flex';
+        genderContainer.style.gap = '10px';
+        inputForm.appendChild(genderContainer); // Corrected variable name
+
+        const genderArray = ['Male', 'Female', 'Other'];
+
+        genderArray.forEach((gender) => {
+            const genderRadio = document.createElement('input');
+            genderRadio.setAttribute('type', 'radio');
+            genderRadio.setAttribute('name', 'gender');
+            genderRadio.setAttribute('value', gender);
+            genderRadio.setAttribute('id', gender.toLowerCase());
+
+            const genderRadioLabel = document.createElement('label');
+            genderRadioLabel.textContent = gender;
+            genderRadioLabel.setAttribute('for', gender.toLowerCase());
+
+            genderContainer.appendChild(genderRadio);
+            genderContainer.appendChild(genderRadioLabel);
+        });
+
+
+        const registerButton = document.createElement('button');
+        registerButton.setAttribute('type', 'submit');
+        registerButton.textContent = 'Register';
+        registerButton.classList.add('button');
+        inputForm.appendChild(registerButton);
+
+        const successMessage = document.createElement('span');
+        successMessage.classList.add('success-message');
+        inputForm.appendChild(successMessage);
+
+        // Form submission and validation
+        formContainer.addEventListener('submit', (event) => {
+            event.preventDefault();
+            let isValid = true;
+
+            // Validate username
+            if (nameField.input.value.trim().length < 3) {
+                nameField.validationMessage.textContent = 'Username must be at least 3 characters.';
+                isValid = false;
+            } else {
+                nameField.validationMessage.textContent = '';
+            }
+
+            // Validate email
+            const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailPattern.test(emailField.input.value.trim())) {
+                emailField.validationMessage.textContent = 'Invalid email address.';
+                isValid = false;
+            } else {
+                emailField.validationMessage.textContent = '';
+            }
+
+            // Validate phone number
+            const phonePattern = /^[0-9]{10}$/;
+            if (!phonePattern.test(phoneField.input.value.trim())) {
+                phoneField.validationMessage.textContent = 'Phone number must be 10 digits.';
+                isValid = false;
+            } else {
+                phoneField.validationMessage.textContent = '';
+            }
+
+            // Validate password
+            if (passwordField.input.value.trim().length < 6) {
+                passwordField.validationMessage.textContent = 'Password must be at least 6 characters.';
+                isValid = false;
+            } else {
+                passwordField.validationMessage.textContent = '';
+            }
+
+            // Validate date of birth
+            if (!dobField.input.value) {
+                dobField.validationMessage.textContent = 'Date of birth is required.';
+                isValid = false;
+            } else {
+                dobField.validationMessage.textContent = '';
+            }
+
+            // Success message and transition
+            if (isValid) {
+                successMessage.textContent = 'Registration Successful!';
+                setTimeout(() => {
+                    pageContainer.innerHTML = '';
+                    createLoginPage();
+                }, 1000);
+            } else {
+                successMessage.textContent = '';
+            }
+        });
+    };
+
+    // Login Page
+    const createLoginPage = () => {
+        const formContainer = document.createElement('form');
+        formContainer.style.backgroundColor = 'lightgray';
+        formContainer.style.marginTop = '50px';
+        formContainer.style.width = '400px';
+        formContainer.style.padding = '20px';
+        formContainer.style.border = 'solid';
+        pageContainer.appendChild(formContainer);
+
+        const formHeading = document.createElement('h1');
+        formHeading.textContent = 'Login Form';
+        formHeading.style.textAlign = 'center';
+        formContainer.appendChild(formHeading);
+
+        const inputForm = document.createElement('div');
+        inputForm.classList.add('input-form');
+        formContainer.appendChild(inputForm);
+
+        const nameField = createInputField('Username', 'login-username', 'text', 'Enter your name', inputForm);
+        const emailField = createInputField('Email', 'login-email', 'email', 'Enter your email', inputForm);
+
+        const loginButton = document.createElement('button');
+        loginButton.setAttribute('type', 'submit');
+        loginButton.textContent = 'Login';
+        loginButton.classList.add('button');
+        inputForm.appendChild(loginButton);
+
+        const loginMessage = document.createElement('span');
+        loginMessage.classList.add('success-message');
+        inputForm.appendChild(loginMessage);
+
+        // Login form submission
+        formContainer.addEventListener('submit', (event) => {
+            event.preventDefault();
+            let isValid = true;
+
+            if (nameField.input.value.trim().length < 3) {
+                nameField.validationMessage.textContent = 'Username must be at least 3 characters.';
+                isValid = false;
+            } else {
+                nameField.validationMessage.textContent = '';
+            }
+
+            const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailPattern.test(emailField.input.value.trim())) {
+                emailField.validationMessage.textContent = 'Invalid email address.';
+                isValid = false;
+            } else {
+                emailField.validationMessage.textContent = '';
+            }
+
+            if (isValid) {
+                loginMessage.textContent = 'Login Successful!';
+            }
+        });
+    };
+
+    // Initialize Registration Page
+    createRegistrationPage();
+</script>
+</html>
