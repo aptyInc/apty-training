@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nested Elements Counter</title>
+    <link rel="stylesheet" href="./../css/nested-element-count.css">
+</head>
+<body>
+    <h1>Nested Elements Counter</h1>
+    <button id="countButton">Count Elements</button>
+    <div id="output"></div>
+    
+    <div class="container" id="parent1">
+        <p>
+            <span>Text in span</span>
+        </p>
+        <iframe src="about:blank"></iframe>
+    </div>
+
+    <div class="container" id="parent2">
+        <p>
+            <span>
+                <strong>Bold text in span</strong>
+            </span>
+        </p>
+        <div>
+            <p>Another paragraph</p>
+        </div>
+    </div>
+
+    <div class="container" id="parent3">
+        <p>Just a paragraph</p>
+    </div>
+
+    <script type="text/javascript" src="./../script/nested-element-count.js"></script>
+</body>
+</html>
