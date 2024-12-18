@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 3 - Nested Functions | Prem Rajput</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+        input {
+            padding: 5px;
+            font-size: 14px;
+            width: 300px;
+        }
+        button {
+            padding: 5px 10px;
+            font-size: 14px;
+        }
+        p {
+            font-size: 18px;
+        }
+    </style>
+
+</head>
+<body>
+
+    <h2>Calculate Perimeter and Area of a Rectangle</h2>
+
+    <form onsubmit="calculateRectangle(event)">
+        <label for="length">Enter Length (default: 10):</label>
+        <br>
+        <input type="number" id="length" placeholder="e.g., 15">
+        <br><br>
+        <label for="width">Enter Width (default: 5):</label>
+        <br>
+        <input type="number" id="width" placeholder="e.g., 8">
+        <br><br>
+        <button type="submit">Calculate</button>
+    </form>
+
+    <p id="result"></p>
+
+    <script src="./script/3-nested-functions.js"></script>
+
+</body>
+</html>
