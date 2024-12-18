@@ -1,22 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>toggle visibility</title>
-</head>
-<body>
-
-    <div id="div1">div1</div>
-    <div id="div2">div2</div>
-    <div id="div3">div3</div>
-
-
-    <button id="trigger">trigger</button>
-
-    <script>
-
-        let visibleIndex = 0;
+let visibleIndex = 0;
         document.getElementById('trigger').addEventListener('click', function() {
 
             const divs = document.querySelectorAll('div');
@@ -41,7 +23,3 @@
             div.style.display = index === 0 ? 'block' : 'none';
 
         });
-
-    </script>
-</body>
-</html>
