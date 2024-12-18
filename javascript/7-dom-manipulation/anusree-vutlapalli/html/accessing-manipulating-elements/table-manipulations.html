@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Manipulation</title>
+    <style>
+        .highlight {
+            background-color: yellow;
+        }
+
+        td {
+            text-align: center;
+            vertical-align: middle;
+            padding:20px;
+        }
+    </style>
+</head>
+
+<body>
+    <table border="1" style="border-collapse: collapse;">
+        <thead>
+            <tr>
+                <th>id</th>
+                <th>className</th>
+                <th>tag</th>
+                <th>name</th>
+                <th>attribute</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>
+                    <p id="para1">text color change 1</p>
+                    <p id="para2">text color change 2</p>
+                    <button onclick="changeTextColor()">Change Text Color</button>
+                </td>
+                <td>
+                    <p class="sameClass">text background 1</p>
+                    <p class="sameClass">text background 2</p>
+                    <button onclick="toggleClassName()">Toggle Background</button>
+                </td>
+                <td>
+                    <span>Span 1</span>
+                    <span>Span 2</span>
+                    <button onclick="changeSpanText()">Change Text</button>
+                </td>
+                <td>
+                    <input type="text" name="input1" value="Input 1">
+                    <input type="text" name="input2" value="Input 2">
+                    <input type="text" name="input3" value="Input 3">
+                    <br><br>
+                    <button onclick="toggleDisabled()">Toggle Disabled</button>
+                </td>
+                <td>
+                    <p data-custom="value1">Custom Attribute 1</p>
+                    <p data-custom="value2">Custom Attribute 2</p>
+                    <button onclick="addCustomAttribute()">Add Attribute</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <script src="/javascript/7-dom-manipulation/anusree-vutlapalli/js/accessing-manipulating-elements/a.table-manipulaltions.js"></script>
+</body>
+
+</html>
