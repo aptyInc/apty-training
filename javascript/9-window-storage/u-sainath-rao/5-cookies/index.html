@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Cookies</title>
+	</head>
+	<body>
+		<h1>Cookie Operations</h1>
+
+		<div>
+			<h2>Set Cookie</h2>
+			<input type="text" id="cookieName" placeholder="Cookie Name" required />
+			<input type="text" id="cookieValue" placeholder="Cookie Value" required />
+			<button id="setCookie">Set Cookie</button>
+		</div>
+
+		<div>
+			<h2>Get Cookie</h2>
+			<input
+				type="text"
+				id="getCookieName"
+				placeholder="Cookie Name"
+				required
+			/>
+			<button id="getCookie">Get Cookie</button>
+			<p id="cookieResult"></p>
+		</div>
+
+		<div>
+			<h2>Delete Cookie</h2>
+			<input
+				type="text"
+				id="deleteCookieName"
+				placeholder="Cookie Name"
+				required
+			/>
+			<button id="deleteCookie">Delete Cookie</button>
+		</div>
+
+		<script src="./index.js"></script>
+	</body>
+</html>
