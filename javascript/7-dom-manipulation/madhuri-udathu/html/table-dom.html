@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Table with Dynamic Element Manipulation</title>
+  <style>
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    th, td {
+      border: 1px solid #ccc;
+      padding: 10px;
+      text-align: center;
+    }
+    thead{
+        background-color: rgb(197, 134, 249);
+    }
+    tbody{
+        background-color: rgb(236, 216, 252);
+    }
+    .highlight {
+      background-color: yellow;
+    }
+
+  </style>
+</head>
+<body>
+  <table>
+    <thead>
+      <tr>
+        <th>id</th>
+        <th>className</th>
+        <th>tag</th>
+        <th>name</th>
+        <th>attribute</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <!-- Column: id -->
+        <td>
+          <p id="p1">Paragraph 1</p>
+          <p id="p2">Paragraph 2</p>
+          <p id="p3">Paragraph 3</p>
+          <button onclick="changeColorById()">Change Color by ID</button>
+        </td>
+
+        <!-- Column: className -->
+        <td>
+          <p class="group">Group Paragraph 1</p>
+          <p class="group">Group Paragraph 2</p>
+          <p class="group">Group Paragraph 3</p>
+          <button onclick="toggleClassByClassName()">Toggle Background by Class</button>
+        </td>
+
+        <!-- Column: tag -->
+        <td>
+          <span>Span 1</span>
+          <span>Span 2</span>
+          <span>Span 3</span>
+          <button onclick="changeInnerHTMLByTag()">Change InnerHTML by Tag</button>
+        </td>
+
+        <!-- Column: name -->
+        <td>
+          <input type="text" name="input1" value="Input 1">
+          <input type="text" name="input2" value="Input 2">
+          <input type="text" name="input3" value="Input 3">
+          <button onclick="toggleDisabledByName()">Toggle Disabled by Name</button>
+        </td>
+
+        <!-- Column: attribute -->
+        <td>
+          <p data-custom="val1">Custom Attribute 1</p>
+          <p data-custom="val2">Custom Attribute 2</p>
+          <p data-custom="val3">Custom Attribute 3</p>
+          <button onclick="addCustomAttribute()">Add Custom Attribute</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <script src="../js/table-dom.js"></script>
+</body>
+</html>
