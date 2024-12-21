@@ -25,3 +25,9 @@ async function fetchProductById(productId) {
 		alert("There was an error loading the product.");
 	}
 }
+
+(async function init() {
+	const products = await fetchAllProducts();
+
+	displayProducts(products);
+})();

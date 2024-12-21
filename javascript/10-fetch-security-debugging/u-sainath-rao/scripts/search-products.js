@@ -29,9 +29,3 @@ async function searchProducts(query) {
 		alert("There was an error with the search.");
 	}
 }
-
-(async function init() {
-	const products = await fetchAllProducts();
-
-	displayProducts(products);
-})();
