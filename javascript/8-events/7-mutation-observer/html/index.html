@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inline Editing with MutationObserver</title>
+    <style>
+        .editable {
+            display: inline-block;
+            padding: 10px;
+            border: 1px solid #ccc;
+            background-color: #f9f9f9;
+            position: relative;
+        }
+
+        .editable p {
+            margin: 3px;
+        }
+
+        .icon {
+            cursor: pointer;
+            margin-left: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="editable" class="editable">
+        <p id="editableText">This is some default text <span class="icon">✏️</span></p>
+    </div>
+
+    <script src="../js/script.js"></script>
+
+</body>
+
+</html>
