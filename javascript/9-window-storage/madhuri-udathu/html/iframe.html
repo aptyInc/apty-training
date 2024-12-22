@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Communication Between Two Iframes</title>
+    <style>
+    .controls {
+        background-color: white;
+        padding: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        display:flex;
+        gap:20px;
+    }
+    iframe{
+        border-style: groove;
+    }
+    </style>
+</head>
+
+<body>
+    <h1>Parent Window with Two Iframes</h1>
+    <div class="controls">
+        <iframe id="iframe1" src="about:blank" width="400" height="300"></iframe>
+        <iframe id="iframe2" src="about:blank" width="400" height="300"></iframe>
+    </div>
+    <script src="../js/iframe.js"></script>
+</body>
+
+</html>
