@@ -3,50 +3,32 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
     <link rel="stylesheet" href="../css/snake-game.css" />
-    <title>Snake Game</title>
   </head>
 
   <body>
     <header>
-      <h1 style="text-align: center; color: #fff; margin-bottom: 20px">
-        Enjoy to play snake game
-      </h1>
-      <div class="score-container">
-        <div class="score-box">
-          <img src="./../html/sanke-game-accets/apple.png" class="food-img" />
-          <span id="score">0</span>
-        </div>
-        <div class="high-score-box">
-          <img src="./../html/sanke-game-accets/prize.png" class="food-img" />
-          <span id="highScore">0</span>
-        </div>
-      </div>
+      <h1>SNAKE GAME</h1>
     </header>
+    <section class="runningArea"></section>
 
-    <main>
-      <div class="snake-board" id="snakeboard"></div>
-      <div class="game-over-card" id="gameovercard">
-        <div class="card">
-          <div id="foodscore">
-            <img src="./../html/sanke-game-accets/apple.png" class="food-img" />
-            <span id="cardscore">0</span>
-          </div>
-          <div id="highscorecontainer">
-            <img src="./../html/sanke-game-accets/prize.png" class="food-img" />
-            <span id="cardhighscore">0</span>
-          </div>
-        </div>
-        <button id="playBtn">Play</button>
+    <!--  window before and after games -->
+    <section class="modul">
+      <div class="start">
+        <span>New Game</span>
       </div>
-      <ul class="guidcontainer">
-        <li>Press the left arrow to move left.</li>
-        <li>Press the right arrow to move right.</li>
-        <li>Press the up arrow to move up.</li>
-        <li>Press the down arrow to move down.</li>
-      </ul>
-    </main>
+    </section>
 
-    <script type="text/javascript" src="../javascript/snake-game.js"></script>
+    <footer class="footer">
+      <div class="footer-content">
+        <p>&copy; 2024 Poornima Ranguri. All Rights Reserved.</p>
+        <p>
+          <a href="https://apty.io" target="_blank">Privacy Policy</a>
+          <a href="https://apty.io" target="_blank">Terms of Service</a>
+        </p>
+      </div>
+    </footer>
+    <script src="../javascript/snake-game.js"></script>
   </body>
 </html>
