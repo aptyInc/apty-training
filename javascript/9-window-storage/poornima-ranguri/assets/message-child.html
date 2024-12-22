@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Iframe Messaging</title>
+    <link rel="stylesheet" href="../css/messaging.css" />
+  </head>
+  <body>
+    <header style="text-align: center">
+      <h1>Iframe Messaging</h1>
+    </header>
+
+    <main style="text-align: center">
+      <p id="receivedFromParent" style="margin-top: 20px; color: blue"></p>
+      <input
+        type="text"
+        id="iframeMessage"
+        placeholder="Type message to send to parent"
+      />
+      <button id="sendToParent">Send to Parent</button>
+    </main>
+
+    <script src="./message-child.js"></script>
+  </body>
+</html>

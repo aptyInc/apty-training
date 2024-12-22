@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Parent and Top Messaging</title>
+    <link rel="stylesheet" href="../css/window-relationships.css" />
+  </head>
+  <body>
+    <header style="text-align: center">
+      <h1>Topmost Parent Window</h1>
+    </header>
+
+    <main style="text-align: center">
+      <iframe
+        id="childIframe"
+        src="../assets/relationship-child.html"
+        style="width: 500px; height: 300px; border: 1px solid #ddd"
+      ></iframe>
+      <p id="messageFromChild" style="color: green; margin-top: 20px"></p>
+      <button id="sendToChild">Send Message to Child</button>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-content">
+        <p>&copy; 2024 Poornima Ranguri. All Rights Reserved.</p>
+        <p>
+          <a href="https://apty.io" target="_blank">Privacy Policy</a>
+          <a href="https://apty.io" target="_blank">Terms of Service</a>
+        </p>
+      </div>
+    </footer>
+
+    <script src="../javascript/window-relationships.js"></script>
+  </body>
+</html>
