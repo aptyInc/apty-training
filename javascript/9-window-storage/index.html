@@ -79,12 +79,18 @@
             bottom: 0;
             width: 100%;
         }
+
+        details {
+            details {
+                margin-left: 10px;
+            }
+        }
     </style>
 </head>
 
 <body>
     <header>
-        <h1>Window and Storage</h1>
+        <h1>Window Objects, Methods, and APIs</h1>
     </header>
     <div class="container">
         <div class="header">
@@ -96,69 +102,251 @@
                         window or tab. It provides access to the browser’s features, including the DOM, the console, and
                         other properties and methods for interacting with the browser's environment. It is the root
                         object in the browser, and almost everything in JavaScript is a property of the
-                        <code>window</code> object.</p>
+                        <code>window</code> object.
+                    </p>
 
                     <details>
-                        <summary><strong>1. Global Object</strong></summary>
+                        <summary><strong>Global Object</strong></summary>
                         <p>In the browser environment, the <code>window</code> object serves as the global object. This
                             means that all global variables, functions, and objects are properties of the
-                            <code>window</code> object.</p>
-                        <pre><code>var a = 10; // window.a = 10;</code></pre>
-                        <p>Similarly, functions like <code>alert()</code> and <code>setTimeout()</code> are methods of
-                            the <code>window</code> object.</p>
+                            <code>window</code> object.
+                        </p>
+                        <pre><code>var x = 10; console.log(window.x); // 10</code></pre>
+                        <pre><code>function greet() { console.log("Hello!"); } window.greet(); // "Hello!"</code></pre>
                     </details>
 
                     <details>
-                        <summary><strong>2. Properties of window</strong></summary>
-                        <p>The <code>window</code> object has several important properties, including:</p>
+                        <summary><strong>Browser Information</strong></summary>
                         <ul>
-                            <li><code>window.document</code>: Represents the DOM (Document Object Model) of the webpage.
+                            <li><code>navigator</code>: Provides information about the browser and operating system.
                             </li>
-                            <li><code>window.location</code>: Represents the current URL of the page. It provides
-                                methods to get and set the URL.</li>
-                            <li><code>window.navigator</code>: Contains information about the browser and operating
-                                system.</li>
-                            <li><code>window.history</code>: Allows you to manipulate the browser history.</li>
-                            <li><code>window.screen</code>: Provides information about the screen (width, height, etc.).
-                            </li>
-                            <li><code>window.localStorage</code> and <code>window.sessionStorage</code>: Store data in
-                                the browser’s storage system.</li>
+                            <pre><code>// Example
+console.log(navigator.userAgent); // Outputs the browser's user agent string
+            </code></pre>
+
+                            <li><code>location</code>: Contains the current URL and allows navigation.</li>
+                            <pre><code>// Example
+console.log(location.href); // Logs the current URL
+location.reload(); // Reloads the page
+            </code></pre>
+
+                            <li><code>history</code>: Lets you navigate through the browser's session history.</li>
+                            <pre><code>// Example
+history.back(); // Goes back one page
+history.forward(); // Goes forward one page
+            </code></pre>
                         </ul>
                     </details>
 
                     <details>
-                        <summary><strong>3. Methods of window</strong></summary>
-                        <p>The <code>window</code> object has several useful methods:</p>
+                        <summary><strong>Window Dimensions</strong></summary>
                         <ul>
-                            <li><code>window.alert()</code>: Displays an alert dialog box with a specified message.</li>
-                            <li><code>window.confirm()</code>: Displays a confirmation dialog box.</li>
-                            <li><code>window.prompt()</code>: Displays a dialog box with a text input.</li>
-                            <li><code>window.setTimeout()</code>: Executes a function after a specified delay.</li>
-                            <li><code>window.setInterval()</code>: Executes a function repeatedly with a specified time
-                                interval.</li>
+                            <li><code>window.screen</code>: Provides information about the screen (width, height, etc.).
+                            </li>
+                            <li><code>innerWidth</code> and <code>innerHeight</code>: Dimensions of the content area.
+                            </li>
+                            <pre><code>// Example
+console.log(window.innerWidth, window.innerHeight); // Logs the width and height of the content area
+            </code></pre>
+
+                            <li><code>outerWidth</code> and <code>outerHeight</code>: Total dimensions including
+                                toolbars.</li>
+                            <pre><code>// Example
+console.log(window.outerWidth, window.outerHeight); // Logs the total width and height
+            </code></pre>
+                        </ul>
+                    </details>
+
+                    <details>
+                        <summary><strong>Scrolling</strong></summary>
+                        <ul>
+                            <li><code>scrollX</code> and <code>scrollY</code>: Get the current scroll positions.</li>
+                            <pre><code>// Example
+console.log(window.scrollX, window.scrollY); // Logs the horizontal and vertical scroll positions
+            </code></pre>
+
+                            <li><code>scrollTo</code>: Scrolls to a specific position.</li>
+                            <pre><code>// Example
+window.scrollTo(0, 500); // Scrolls to 500px from the top
+            </code></pre>
+                        </ul>
+                    </details>
+
+                    <details>
+                        <summary><strong>Timers</strong></summary>
+                        <ul>
+                            <li><code>setTimeout</code>: Executes a function after a specified delay.</li>
+                            <pre><code>// Example
+setTimeout(() => {
+    console.log("Timeout executed!");
+}, 2000); // Executes after 2 seconds
+            </code></pre>
+
+                            <li><code>setInterval</code>: Repeatedly executes a function at a set interval.</li>
+                            <pre><code>// Example
+let intervalId = setInterval(() => {
+    console.log("Interval executed!");
+}, 1000); // Executes every second
+clearInterval(intervalId); // Stops the interval
+            </code></pre>
                             <li><code>window.clearTimeout()</code>: Cancels a timeout set by <code>setTimeout()</code>.
                             </li>
                             <li><code>window.clearInterval()</code>: Cancels an interval set by
-                                <code>setInterval()</code>.</li>
+                                <code>setInterval()</code>.
+                            </li>
                         </ul>
                     </details>
 
                     <details>
-                        <summary><strong>4. Event Handlers</strong></summary>
-                        <p>The <code>window</code> object can be used to handle global events such as:</p>
+                        <summary><strong>Event Handlers</strong></summary>
                         <ul>
                             <li><code>window.onload</code>: Fired when the page and all of its resources have finished
                                 loading.</li>
-                            <li><code>window.onresize</code>: Fired when the window is resized.</li>
-                            <li><code>window.onscroll</code>: Fired when the user scrolls the window.</li>
-                            <li><code>window.onbeforeunload</code>: Fired before the user leaves the page.</li>
-                            <li><code>window.onfocus</code> and <code>window.onblur</code>: Fired when the window gains
-                                or loses focus.</li>
+                            <li><code>onresize</code>: Executes when the window is resized.</li>
+                            <pre><code>// Example
+window.onresize = () => {
+    console.log("Window resized!");
+};
+            </code></pre>
+
+                            <li><code>onscroll</code>: Executes when the window is scrolled.</li>
+                            <pre><code>// Example
+window.onscroll = () => {
+    console.log("Scrolling detected!");
+};
+            </code></pre>
+
+                            <li><code>onfocus</code> and <code>onblur</code>: Detects focus and blur events.</li>
+                            <pre><code>// Example
+window.onfocus = () => console.log("Window focused!");
+window.onblur = () => console.log("Window blurred!");
+            </code></pre>
+
+                            <li><code>onbeforeunload</code>: Prompts before leaving the page.</li>
+                            <pre><code>// Example
+window.onbeforeunload = () => {
+    return "Are you sure you want to leave?";
+};
+            </code></pre>
                         </ul>
                     </details>
 
                     <details>
-                        <summary><strong>5. Window Methods for Browser Control</strong></summary>
+                        <summary><strong>Pop-ups</strong></summary>
+                        <ul>
+                            <li><code>alert</code>: Displays a message in an alert dialog.</li>
+                            <li><code>window.confirm()</code>: Displays a confirmation dialog box.</li>
+                            <li><code>window.prompt()</code>: Displays a dialog box with a text input.</li>
+
+                        </ul>
+                    </details>
+
+                    <details>
+                        <summary><strong>Messaging</strong></summary>
+                        <ul>
+                            <li><code>postMessage</code>: Sends messages between windows.</li>
+                            <pre><code>// Example
+// In the source window:
+window.postMessage("Hello!", "*");
+
+// In the target window:
+window.onmessage = (event) => {
+    console.log(event.data); // Logs "Hello!"
+};
+            </code></pre>
+                        </ul>
+                    </details>
+
+                    <details>
+                        <summary><strong>Window Relationships</strong></summary>
+                        <ul>
+                            <li><code>window.frames</code>: Returns a collection of all iframes in the current window.
+                            </li>
+                            <li><code>parent</code>: Refers to the parent window of an iframe.</li>
+                            <pre><code>// Example
+console.log(window.parent); // Logs the parent window
+            </code></pre>
+
+                            <li><code>top</code>: Refers to the topmost window.</li>
+                            <pre><code>// Example
+console.log(window.top); // Logs the topmost window
+            </code></pre>
+                        </ul>
+                    </details>
+
+                    <details>
+                        <summary><strong>Storage</strong></summary>
+                        <ul>
+                            <li><code>localStorage</code>: Persistent storage in the browser.</li>
+                            <pre><code>// Example
+localStorage.setItem("key", "value");
+console.log(localStorage.getItem("key")); // Logs "value"
+            </code></pre>
+
+                            <li><code>sessionStorage</code>: Temporary storage cleared when the browser is closed.</li>
+                            <pre><code>// Example
+sessionStorage.setItem("sessionKey", "sessionValue");
+console.log(sessionStorage.getItem("sessionKey")); // Logs "sessionValue"
+            </code></pre>
+
+                            <li> Cookies
+                                <details>
+                                    <summary>Setting Cookies</summary>
+                                    <pre>
+document.cookie = "username=JohnDoe; expires=Fri, 31 Dec 2024 23:59:59 UTC; path=/";
+        </pre>
+                                    <p>Example: <code>setCookie("username", "JohnDoe", 7)</code></p>
+                                </details>
+
+                                <details>
+                                    <summary>Reading Cookies</summary>
+                                    <pre>
+console.log(document.cookie);
+        </pre>
+                                    <p>Example: <code>getCookies()</code> parses cookies into a JavaScript object.</p>
+                                </details>
+
+                                <details>
+                                    <summary>Deleting Cookies</summary>
+                                    <pre>
+document.cookie = "username=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/";
+        </pre>
+                                    <p>Example: <code>deleteCookie("username")</code> removes the cookie.</p>
+                                </details>
+
+                                <details>
+                                    <summary>Cookie Attributes</summary>
+                                    <ul>
+                                        <li><strong>Path:</strong> Specifies the path where the cookie is accessible.
+                                        </li>
+                                        <pre>
+document.cookie = "theme=dark; path=/admin";
+            </pre>
+
+                                        <li><strong>Domain:</strong> Defines the domain where the cookie is accessible.
+                                        </li>
+                                        <pre>
+document.cookie = "sessionId=12345; domain=example.com";
+            </pre>
+
+                                        <li><strong>Secure:</strong> Sends cookies only over HTTPS.</li>
+                                        <pre>
+document.cookie = "authToken=abcdef; secure";
+            </pre>
+
+                                        <li><strong>HttpOnly:</strong> Prevents access to cookies via JavaScript (set on
+                                            the server).</li>
+                                        <pre>
+Set-Cookie: sessionToken=123456; HttpOnly
+            </pre>
+                                    </ul>
+                                </details>
+                            </li>
+                        </ul>
+                    </details>
+
+                    <details>
+                        <summary><strong>Browser Control</strong></summary>
                         <p>The <code>window</code> object provides several methods for controlling the browser window,
                             including:</p>
                         <ul>
@@ -166,53 +354,28 @@
                             <li><code>window.close()</code>: Closes the current browser window.</li>
                             <li><code>window.resizeTo()</code>: Resizes the browser window to a specified width and
                                 height.</li>
-                            <li><code>window.scrollTo()</code>: Scrolls the window to a specific position on the page.
-                            </li>
                         </ul>
                     </details>
 
-                    <details>
-                        <summary><strong>6. Global Variables</strong></summary>
-                        <p>Since <code>window</code> is the global object, all global variables declared with
-                            <code>var</code>, as well as functions, are properties of the <code>window</code> object.
-                        </p>
-                        <pre><code>var x = 10; console.log(window.x); // 10</code></pre>
-                        <pre><code>function greet() { console.log("Hello!"); } window.greet(); // "Hello!"</code></pre>
-                    </details>
+
 
                     <details>
-                        <summary><strong>7. Window vs Global Object</strong></summary>
-                        <p>In the browser, <code>window</code> is the global object, while in Node.js, the global object
-                            is named <code>global</code>.</p>
-                    </details>
-
-                    <details>
-                        <summary><strong>8. Accessing Other Windows</strong></summary>
-                        <p>The <code>window</code> object provides access to other windows or frames:</p>
+                        <summary><strong>DOM</strong></summary>
                         <ul>
-                            <li><code>window.frames</code>: Returns a collection of all iframes in the current window.
+                            <li><code>window.document</code>: Represents the DOM (Document Object Model) of the webpage.
                             </li>
-                            <li><code>window.parent</code>: Refers to the parent window if the current window is an
-                                iframe.</li>
-                            <li><code>window.top</code>: Refers to the topmost window in the hierarchy.</li>
+
                         </ul>
                     </details>
 
                     <details>
-                        <summary><strong>9. Browser Compatibility</strong></summary>
-                        <p>The <code>window</code> object is supported in all modern browsers, but some methods and
-                            properties may vary in behavior across different browsers. Testing across platforms is
-                            essential to ensure consistent behavior.</p>
-                    </details>
-
-                    <details>
-                        <summary><strong>10. Security Considerations</strong></summary>
+                        <summary><strong>Security Considerations</strong></summary>
                         <p>Cross-Origin Restrictions: The <code>window</code> object is subject to security
                             restrictions, particularly in the context of cross-origin (CORS) requests. JavaScript in one
                             window may not be able to access the properties of another window if they come from
-                            different origins.</p>
-                        <p><code>postMessage()</code>: A method to safely send messages between windows (or iframes) in
-                            a cross-origin environment.</p>
+                            different origins. In this case the only way to communicate is using
+                            <code>postMessage</code> and <code>onmessage</code> methods
+                        </p>
                     </details>
                 </div>
             </div>
@@ -223,7 +386,71 @@
                 <h5 style="color: red">Note: Must take inputs for all assignments from HTML and print results back to
                     HTML</h5>
 
-                <div></div>
+                <div>
+                    <details>
+                        <summary>1. Browser Information</summary>
+                        <p>Take URL as input and navigate user to that URL. Implement custom function to Go back,
+                            forward and reload the page.</p>
+                    </details>
+
+                    <!-- Assignment: Window Dimensions -->
+                    <details>
+                        <summary>2. Window Dimensions</summary>
+                        <p>Listen to the window resize event and print width, height and other screen properties on
+                            screen</p>
+                    </details>
+
+                    <!-- Assignment: Scrolling -->
+                    <details>
+                        <summary>3. Scrolling</summary>
+                        <p>Take x and y inputs from the user and scroll to given position. And create two button to
+                            scroll up and scroll down by 10px when clicked</p>
+                    </details>
+
+                    <!-- Assignment: Timers -->
+                    <details>
+                        <summary>4. Timers</summary>
+                        <p>Create a countdown timer and a stopwatch using <code>setTimeout</code> and
+                            <code>setInterval</code>.
+                        </p>
+                    </details>
+
+                    <!-- Assignment: Cookies -->
+                    <details>
+                        <summary>5. Cookies</summary>
+                        <p>Create functions to set, read, and delete cookies.</p>
+                    </details>
+
+                    <!-- Assignment: Messaging -->
+                    <details>
+                        <summary>6. Messaging</summary>
+                        <p>Send and receive messages between iframe windows using <code>postMessage</code> and
+                            <code>onmessage</code>
+                        </p>
+                    </details>
+
+                    <!-- Assignment: Window Relationships -->
+                    <details>
+                        <summary>7. Window Relationships</summary>
+                        <p>Use <code>parent</code> and <code>top</code> properties to interact with other windows
+                            with messaging</p>
+                    </details>
+
+                    <!-- Assignment: Storage -->
+                    <details>
+                        <summary>8. Storage</summary>
+                        <p>Use <code>localStorage</code> and <code>sessionStorage</code> to store the data. Print
+                            <code>localStorage</code> and <code>sessionStorage</code> data in HTML on screen reload
+                        </p>
+                    </details>
+
+                    <!-- Assignment: Browser Control -->
+                    <details>
+                        <summary>9. Browser Control</summary>
+                        <p>Create Open, close, and resize buttons to control the browser windows using JavaScript.
+                        </p>
+                    </details>
+                </div>
 
             </div>
         </div>
