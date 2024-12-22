@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./../css/cookies.css">
+    <title>Cookie Management</title>
+
+</head>
+
+<body>
+    <h1>Cookie Management</h1>
+
+    <label for="cookieName">Cookie Name:</label>
+    <input type="text" id="cookieName" placeholder="Enter cookie name">
+    <br>
+
+    <label for="cookieValue">Cookie Value:</label>
+    <input type="text" id="cookieValue" placeholder="Enter cookie value">
+    <br>
+
+    <label for="cookieDays">Expiry Days:</label>
+    <input type="number" id="cookieDays" placeholder="Enter days (optional)">
+    <br>
+
+    <button id = "setcookie">Set Cookie</button>
+    <button id = "readcookie">Read Cookie</button>
+    <button id = "deletecookie">Delete Cookie</button>
+
+    <div class="result" id="result"></div>
+
+    <script type="text/javascript" src="./../script/cookies.js"></script>
+</body>
+
+</html>
