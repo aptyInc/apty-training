@@ -1,0 +1,27 @@
+.countdown-timer-container {
+    width: 400px;
+    border-radius: 10px;
+    border: 2px solid #2221;
+    padding: 20px;
+}
+
+h2,h3 {
+    text-align: center;
+}
+
+.input-container {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.input-container input {
+    height: 24px;
+    outline: none;
+    padding-left: 10px;
+    font-family: sans-serif;
+}
+
+button {
+    margin-top: 12px;
+}
