@@ -1,4 +1,121 @@
-body {
+@media screen and (max-width: 576px) {
+  body {
+    background-color: aliceblue;
+    width: 98vw;
+    font-family: Arial, sans-serif;
+  }
+
+  nav{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 30px;
+    
+  }
+
+  nav ul{
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 20px;
+    
+  }
+
+  nav ul li {
+    padding-right: 20px;
+  }
+
+  nav ul li a{
+    text-decoration: none;
+    cursor: pointer;
+    color: #476669;
+    font-size: 20px;
+    font-weight: 500;
+  }
+
+
+#home-container{
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 30px;
+
+}
+
+#home-container img{
+  width: 50%;
+  margin-top: 50px;
+  margin-bottom: 30px;
+}
+
+
+#home-container div{
+  width: 50%;
+  font-size: 20px;
+  color: #647488;
+}
+
+#home-container div h1{
+  color: #000;
+}
+
+button{
+  background-color: #0967D2;
+  color: #fff;
+  padding: 10px 30px 10px 30px;
+  border: none;
+  cursor: pointer;
+  border-radius: 10px;
+  font-weight: bold;
+}
+
+button a {
+  color: #fff;
+  text-decoration: none;
+}
+
+
+  footer {
+    width: 98vw;
+    background-color: darkcyan;
+    margin-top: 30px;
+    padding: 20px 0;
+  }
+
+  .footer-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+  }
+
+  .footer-content p {
+    margin: 5px 0;
+    font-size: 14px;
+    text-align: center;
+  }
+
+  .footer-content a {
+    text-decoration: none;
+    margin: 0 5px;
+    font-weight: bold;
+  }
+
+  .footer-content a:hover {
+    text-decoration: underline;
+  }
+
+  
+}
+
+
+/* Desktop */
+@media screen and (min-width: 768px){
+  body {
     background-color: aliceblue;
     width: 98vw;
     font-family: Arial, sans-serif;
@@ -103,3 +220,6 @@ button a {
   .footer-content a:hover {
     text-decoration: underline;
   }
+
+  
+}
