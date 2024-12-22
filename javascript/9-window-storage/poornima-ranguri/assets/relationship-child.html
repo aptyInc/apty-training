@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Iframe Messaging</title>
+    <link rel="stylesheet" href="../css/messaging.css" />
+  </head>
+  <body>
+    <header style="text-align: center">
+      <h1>Child Window</h1>
+    </header>
+
+    <main style="text-align: center">
+      <button id="sendToParent">Send Message to Parent</button>
+      <button id="sendToTop">Send Message to Top</button>
+      <p id="messageFromParent" style="color: blue; margin-top: 20px"></p>
+    </main>
+
+    <script>
+      const sendToParentButton = document.getElementById("sendToParent");
+      const sendToTopButton = document.getElementById("sendToTop");
+      const messageFromParent = document.getElementById("messageFromParent");
+
+      sendToParentButton.addEventListener("click", () => {
+        parent.postMessage("Hello Parent from Child!", "*");
+      });
+
+      sendToTopButton.addEventListener("click", () => {
+        top.postMessage("Hello Topmost Window from Child!", "*");
+      });
+
+      window.addEventListener("message", (event) => {
+        if (event.origin !== window.location.origin) return; // Ensure same origin
+        messageFromParent.textContent = `Message from Parent/Top: ${event.data}`;
+      });
+    </script>
+  </body>
+</html>
