@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Messaging</title>
+</head>
+<body>
+    <h1>PostMessage Communication</h1>
+    <div class="controls">
+      <label for="messageInput">Message to iframe:</label>
+      <input type="text" id="messageInput" placeholder="Enter message">
+      <button onclick="sendMessageToIframe()">Send Message</button>
+    </div>
+  
+    <div id="output">
+      <h3>Message Logs:</h3>
+      <div id="messageLogs">No messages yet.</div>
+    </div>
+  
+    <iframe id="childIframe" srcdoc="
+      <!DOCTYPE html>
+      <html>
+      <head>
+        <style>
+          body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+          }
+          input, button {
+            margin: 5px;
+            padding: 8px;
+          }
+          #output {
+            margin-top: 20px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            background-color: #f9f9f9;
+          }
+        </style>
+      </head>
+      <body>
+        <h1>Iframe Window</h1>
+        <label for='iframeMessageInput'>Message to Parent:</label>
+        <input type='text' id='iframeMessageInput' placeholder='Enter message'>
+        <button onclick='sendMessageToParent()'>Send Message</button>
+        
+        <div id='output'>
+          <h3>Received Messages:</h3>
+          <div id='receivedMessages'>No messages yet.</div>
+        </div>
+  
+        <script>
+          // Send message to parent window
+          function sendMessageToParent() {
+            const message = document.getElementById('iframeMessageInput').value;
+            window.parent.postMessage(message, '*');
+          }
+  
+          // Receive message from parent
+          window.addEventListener('message', (event) => {
+            const receivedMessages = document.getElementById('receivedMessages');
+            receivedMessages.innerHTML += '<p>From Parent: ' + event.data + '</p>';
+          });
+        </script>
+      </body>
+      </html>
+    "></iframe>
+    <script src="./script.js" > </script>
+</body>
+</html>
