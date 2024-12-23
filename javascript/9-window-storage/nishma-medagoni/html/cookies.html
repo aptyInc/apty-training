@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cookies Management</title>
+    <link rel="stylesheet" href="../css/cookies.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Cookie Management</h1>
+
+      <div class="input-group1">
+        <label for="cookieName">Cookie Name:</label>
+        <input type="text" id="cookieName" placeholder="Enter name" />
+        <label for="cookieValue">Cookie Value:</label>
+        <input type="text" id="cookieValue" placeholder="Enter value" />
+        <button onclick="setCookie()">Set Cookie</button>
+      </div>
+
+      <!-- Cookie Reading -->
+      <div class="input-group">
+        <label for="cookieToRead">Read Cookie Name:</label>
+        <input type="text" id="cookieToRead" placeholder="Enter name" />
+        <button onclick="readCookie()">Read Cookie</button>
+      </div>
+
+      <!-- Cookie Deletion -->
+      <div class="input-group">
+        <label for="cookieToDelete">Delete Cookie Name:</label>
+        <input type="text" id="cookieToDelete" placeholder="Enter name" />
+        <button onclick="deleteCookie()">Delete Cookie</button>
+      </div>
+
+      <!-- Display Cookies -->
+      <div id="cookieDisplay">
+        <h3>Cookies:</h3>
+        <p id="cookiesOutput">No cookies to display.</p>
+      </div>
+    </div>
+
+    <script src="../js/cookies.js"></script>
+  </body>
+</html>
