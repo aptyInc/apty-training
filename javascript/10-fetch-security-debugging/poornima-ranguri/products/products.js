@@ -113,10 +113,21 @@ function renderEachProduct(product) {
 
 function renderingProducts(productsList) {
   productsContainer.innerHTML = "";
-  productsList.products.map((eachProduct) => {
-    renderEachProduct(eachProduct);
-    console.log(eachProduct.images);
-  });
+  if (productsList.products.length === 0) {
+    productsContainer.style.justifyContent = "center";
+
+    let paragraphElementNotFound = document.createElement("h1");
+    paragraphElementNotFound.style.fontSize = "57px";
+    paragraphElementNotFound.style.color = "orangered";
+    paragraphElementNotFound.style.padding = "30px";
+    paragraphElementNotFound.textContent = "Products Not Found";
+    productsContainer.appendChild(paragraphElementNotFound);
+  } else {
+    productsList.products.map((eachProduct) => {
+      renderEachProduct(eachProduct);
+      console.log(eachProduct.images);
+    });
+  }
 }
 
 let filteredProducts = [];
@@ -135,23 +146,35 @@ const fetchAllProducts = async () => {
 
 fetchAllProducts();
 
+const fetchSearchedProducts = async (searchInputValue) => {
+  try {
+    const response = await fetch(
+      `https://dummyjson.com/products/search?q=${searchInputValue}`
+    );
+    const data = await response.json();
+    filteredProducts = data;
+    renderingProducts(filteredProducts);
+  } catch (error) {
+    console.log(error.message);
+  }
+};
+
+const debouncedFetchSearchedProducts = debounce(fetchSearchedProducts, 300);
+
+function debounce(callback, delay) {
+  let timeoutId;
+  return (...args) => {
+    if (timeoutId) {
+      clearTimeout(timeoutId);
+    }
+    timeoutId = setTimeout(() => {
+      callback(...args);
+    }, delay);
+  };
+}
+
 const searchInput = document.getElementById("searchInput");
 
 searchInput.addEventListener("input", (event) => {
-  const searchInputValue = event.target.value;
-
-  const fetchSearchedProducts = async () => {
-    try {
-      const response = await fetch(
-        `https://dummyjson.com/products/search?q=${searchInputValue}`
-      );
-      const data = await response.json();
-      filteredProducts = data;
-      renderingProducts(filteredProducts);
-    } catch (error) {
-      console.log(error.message);
-    }
-  };
-
-  fetchSearchedProducts();
+  debouncedFetchSearchedProducts(event.target.value);
 });
