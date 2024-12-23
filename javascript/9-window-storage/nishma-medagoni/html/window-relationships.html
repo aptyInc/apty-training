@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Window Relationships</title>
+    <link rel="stylesheet" href="../css/window-relationships.css" />
+  </head>
+  <body>
+    <h1>Window Relationships with Messaging</h1>
+    <div class="container">
+      <iframe
+        id="childFrame"
+        srcdoc="<!DOCTYPE html><html><head><title>Child Frame</title></head><body><h2>Child Frame</h2><div class='message-box'><input type='text' id='childMsgInput' placeholder='Type a message'><button onclick='sendMessageToParent()'>Send to Parent</button></div><p id='receivedMsg'>No messages received</p><script>function sendMessageToParent() { const msg = document.getElementById('childMsgInput').value; window.parent.postMessage(msg, '*'); } window.addEventListener('message', (event) => { document.getElementById('receivedMsg').innerText = `Received: ${event.data}`; });</script></body></html>"
+      ></iframe>
+    </div>
+
+    <div class="message-box">
+      <input type="text" id="parentMsgInput" placeholder="Type a message" />
+      <button onclick="sendMessageToChild()">Send to Child</button>
+    </div>
+    <p id="parentReceivedMsg">No messages received</p>
+
+    <script src="../js/window-relationships.js"></script>
+  </body>
+</html>

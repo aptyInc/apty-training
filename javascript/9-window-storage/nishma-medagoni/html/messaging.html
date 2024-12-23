@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Iframe Messaging</title>
+    <link rel="stylesheet" href="../css/messaging.css" />
+  </head>
+  <body>
+    <h1>Iframe Messaging</h1>
+    <div class="container">
+      <iframe
+        id="iframe1"
+        srcdoc="<!DOCTYPE html><html><head><title>Iframe 1</title></head><body><h2>Iframe 1</h2><div class='message-box'><input type='text' id='msgInput1' placeholder='Type a message'><button onclick='sendMessage()'>Send</button></div><p id='receivedMsg'>No messages received</p><script>function sendMessage() { const msg = document.getElementById('msgInput1').value; window.parent.postMessage(msg, '*'); } window.addEventListener('message', (event) => { document.getElementById('receivedMsg').innerText = `Received: ${event.data}`; });</script></body></html>"
+      ></iframe>
+      <iframe
+        id="iframe2"
+        srcdoc="<!DOCTYPE html><html><head><title>Iframe 2</title></head><body><h2>Iframe 2</h2><div class='message-box'><input type='text' id='msgInput2' placeholder='Type a message'><button onclick='sendMessage()'>Send</button></div><p id='receivedMsg'>No messages received</p><script>function sendMessage() { const msg = document.getElementById('msgInput2').value; window.parent.postMessage(msg, '*'); } window.addEventListener('message', (event) => { document.getElementById('receivedMsg').innerText = `Received: ${event.data}`; });</script></body></html>"
+      ></iframe>
+    </div>
+
+    <script src="../js/messaging.js"></script>
+  </body>
+</html>
