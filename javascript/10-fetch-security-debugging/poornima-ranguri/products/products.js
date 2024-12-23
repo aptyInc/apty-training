@@ -1,6 +1,6 @@
-function renderEachProduct(product) {
-  const productsContainer = document.getElementById("products-container");
+const productsContainer = document.getElementById("products-container");
 
+function renderEachProduct(product) {
   const productCardContainer = document.createElement("div");
   productCardContainer.addEventListener("click", (event) => {
     console.log(event.target.tagName);
@@ -112,18 +112,21 @@ function renderEachProduct(product) {
 }
 
 function renderingProducts(productsList) {
-  console.log(productsList);
-  console.log(productsList.products[0]);
+  productsContainer.innerHTML = "";
   productsList.products.map((eachProduct) => {
     renderEachProduct(eachProduct);
+    console.log(eachProduct.images);
   });
 }
+
+let filteredProducts = [];
 
 const fetchAllProducts = async () => {
   try {
     const response = await fetch("https://dummyjson.com/products");
     const data = await response.json();
-    renderingProducts(data);
+    filteredProducts = data;
+    renderingProducts(filteredProducts);
   } catch (error) {
     console.log(error.message);
     return error;
@@ -136,15 +139,15 @@ const searchInput = document.getElementById("searchInput");
 
 searchInput.addEventListener("input", (event) => {
   const searchInputValue = event.target.value;
-  console.log(searchInputValue);
 
   const fetchSearchedProducts = async () => {
     try {
       const response = await fetch(
-        `'https://dummyjson.com/products/search?q=${searchInputValue}'`
+        `https://dummyjson.com/products/search?q=${searchInputValue}`
       );
-      const data = response.json();
-      renderingProducts(data);
+      const data = await response.json();
+      filteredProducts = data;
+      renderingProducts(filteredProducts);
     } catch (error) {
       console.log(error.message);
     }
