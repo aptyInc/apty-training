@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Password Validation</title>
+  <link rel="stylesheet" href="../styles/assignment.css" />
+</head>
+<body>
+
+    <header>
+        <h1>Password Validation Form</h1>
+    </header>
+
+    <main>
+        <section>
+            <form id="passwordForm">
+                <div class="form-group">
+                  <label for="password">Password:</label>
+                  <input type="password" id="password" name="password" />
+                  <div class="error" id="passwordError"></div>
+                </div>
+                
+                <div class="form-group">
+                  <label for="confirmPassword">Confirm Password:</label>
+                  <input type="password" id="confirmPassword" name="confirmPassword" />
+                  <div class="error" id="confirmPasswordError"></div>
+                </div>
+            
+                <button type="submit" id="submitBtn">Submit</button>
+              </form>            
+        </section>
+    </main>
+
+  
+  <script src="index.js"></script>
+</body>
+</html>
