@@ -1,0 +1,21 @@
+header,footer {
+    text-align: center;
+    margin: 30px;
+    font-size: 20px;
+    font-weight: bold;
+}
+.error {
+    color: red;
+}
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+#myForm {
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    margin: 50px;
+}
