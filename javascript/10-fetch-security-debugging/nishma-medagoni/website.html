@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simple E-Commerce Application</title>
+  <link rel = 'stylesheet' href = './website.css'/>
+</head>
+<body>
+  <div class="container">
+    <h1>Simple E-Commerce Application</h1>
+
+    <!-- Search Bar and Buttons -->
+    <div class="search-container">
+      <input type="text" id="searchInput" placeholder="Search for products...">
+      <button onclick="searchProducts()">Search</button>
+      <button onclick="listAllProducts()">All Products</button>
+    </div>
+
+    <h2>Products</h2>
+    <div id="productList" class="product-list">No products to display</div>
+
+    <h2 id="errorMessage" class="error"></h2>
+
+    <!-- Product Details -->
+    <div id="productDetails">
+      <img id="productImage" src="" alt="">
+      <h3 id="productTitle"></h3>
+      <p id="productPrice"></p>
+      <p id="productDescription"></p>
+      <button class="go-back-button" onclick="goBack()">Go Back to Products</button>
+    </div>
+  </div>
+  <script src = './website.js'>
+  </script>
+</body>
+</html>
