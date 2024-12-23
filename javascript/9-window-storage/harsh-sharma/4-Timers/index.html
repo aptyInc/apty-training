@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Timers</title>
+        <link rel="stylesheet" href="../style/assignment.css" />
+    </head>
+    <body>
+        <header>
+            <h1>Timers</h1>
+        </header>
+        <main>
+            <section>
+                <div>Timer</div>
+                <div class="input-field">
+                    <input
+                        type="number"
+                        id="inputMinutes"
+                        placeholder="Min"
+                        min="0"
+                    />
+                    :
+                    <input
+                        type="number"
+                        id="inputSeconds"
+                        placeholder="Sec"
+                        min="0"
+                        max="59"
+                    />
+                </div>
+                <div class="display_countdown">00:00</div>
+                <button onclick="countdown_start()">Start</button>
+                <button onclick="countdown_reset()">Reset</button>
+            </section>
+            <section>
+                <div>Stopwatch</div>
+                <div class="display_stopwatch">00:00</div>
+                <button onclick="stopwatch()">Start/Pause Stopwatch</button>
+            </section>
+        </main>
+        <script src="script.js"></script>
+    </body>
+</html>
