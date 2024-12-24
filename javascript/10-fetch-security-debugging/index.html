@@ -1,0 +1,683 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript Training Topics</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            background-color: #f4f4f9;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 20px;
+            text-align: center;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+            background: #fff;
+        }
+
+        .container .header {
+            display: flex;
+            flex-wrap: wrap;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .container iframe {
+            width: 100%;
+            height: 100vh;
+        }
+
+        .topics,
+        .assignments {
+            flex: 1;
+            min-width: 300px;
+            margin: 10px;
+        }
+
+        h2 {
+            color: #333;
+            border-bottom: 2px solid #f4f4f9;
+            padding-bottom: 5px;
+        }
+
+        ul {
+            padding: 0;
+            margin: 10px 0;
+            list-style: none;
+        }
+
+        ul li {
+            padding: 5px 0;
+        }
+
+        ul li::before {
+            content: "•";
+            color: #333;
+            font-weight: bold;
+            display: inline-block;
+            width: 20px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px;
+            background: #333;
+            color: #fff;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+
+        details {
+            summary {
+                font-weight: bold
+            }
+
+            details {
+                margin-left: 10px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Window Objects, Methods, and APIs</h1>
+    </header>
+    <div class="container">
+        <div class="header">
+            <div class="topics">
+                <h2>Topics</h2>
+                <div>
+                    <h3>Fetch API and Async/Await</h3>
+
+                    <details>
+                        <summary><strong>Fetch API</strong></summary>
+                        <p>The Fetch API is a modern interface for making HTTP requests. It replaces the older
+                            XMLHttpRequest and uses Promises for easier syntax.</p>
+
+                        <h4>Basic Fetch Example</h4>
+                        <code>
+fetch('https://jsonplaceholder.typicode.com/posts/1')<br>
+    .then(response => response.json())<br>
+    .then(data => console.log(data))<br>
+    .catch(error => console.error('Error:', error));
+        </code>
+
+                        <h4>POST Request Example</h4>
+                        <code>
+fetch('https://jsonplaceholder.typicode.com/posts', {<br>
+    method: 'POST',<br>
+    headers: { 'Content-Type': 'application/json' },<br>
+    body: JSON.stringify({ title: 'Hello World', body: 'Post body', userId: 1 })<br>
+})<br>
+    .then(response => response.json())<br>
+    .then(data => console.log(data))<br>
+    .catch(error => console.error('Error:', error));
+        </code>
+
+                        <h4>Fetching with Headers</h4>
+                        <code>
+fetch('https://api.example.com/data', {<br>
+    method: 'GET',<br>
+    headers: {<br>
+        'Authorization': 'Bearer YOUR_TOKEN',<br>
+        'Accept': 'application/json'<br>
+    }<br>
+})<br>
+    .then(response => response.json())<br>
+    .then(data => console.log(data))<br>
+    .catch(error => console.error('Error:', error));
+        </code>
+                    </details>
+
+                    <details>
+                        <summary><strong>Async/Await</strong></summary>
+                        <p>Async/Await provides a cleaner, more synchronous way to handle asynchronous operations using
+                            Promises.</p>
+
+                        <h4>Basic Async/Await Example</h4>
+                        <code>
+async function fetchData() {<br>
+    try {<br>
+        const response = await fetch('https://jsonplaceholder.typicode.com/posts/1');<br>
+        const data = await response.json();<br>
+        console.log(data);<br>
+    } catch (error) {<br>
+        console.error('Error:', error);<br>
+    }<br>
+}<br>
+fetchData();
+        </code>
+
+                        <h4>POST Request with Async/Await</h4>
+                        <code>
+async function createPost() {<br>
+    try {<br>
+        const response = await fetch('https://jsonplaceholder.typicode.com/posts', {<br>
+            method: 'POST',<br>
+            headers: { 'Content-Type': 'application/json' },<br>
+            body: JSON.stringify({ title: 'Async/Await Example', body: 'This is async', userId: 1 })<br>
+        });<br>
+        const data = await response.json();<br>
+        console.log('Post created:', data);<br>
+    } catch (error) {<br>
+        console.error('Error creating post:', error);<br>
+    }<br>
+}<br>
+createPost();
+        </code>
+                    </details>
+
+                    <details>
+                        <summary><strong>Combining Fetch API with Async/Await</strong></summary>
+                        <p>Async/Await makes handling multiple fetch requests cleaner and easier to follow.</p>
+
+                        <h4>Fetching Multiple Resources</h4>
+                        <code>
+async function fetchPostsAndComments() {<br>
+    try {<br>
+        const postsResponse = await fetch('https://jsonplaceholder.typicode.com/posts');<br>
+        const posts = await postsResponse.json();<br>
+
+        const commentsResponse = await fetch('https://jsonplaceholder.typicode.com/comments');<br>
+        const comments = await commentsResponse.json();<br>
+
+        console.log('Posts:', posts);<br>
+        console.log('Comments:', comments);<br>
+    } catch (error) {<br>
+        console.error('Error fetching data:', error);<br>
+    }<br>
+}<br>
+fetchPostsAndComments();
+        </code>
+                    </details>
+
+                    <details>
+                        <summary><strong>Error Handling in Fetch with Async/Await</strong></summary>
+                        <p>Use <code>try...catch</code> for robust error handling in async/await functions.</p>
+
+                        <code>
+async function fetchWithErrorHandling() {<br>
+    try {<br>
+        const response = await fetch('https://jsonplaceholder.typicode.com/invalid-endpoint');<br>
+        if (!response.ok) {<br>
+            throw new Error(`HTTP Error: ${response.status}`);<br>
+        }<br>
+        const data = await response.json();<br>
+        console.log(data);<br>
+    } catch (error) {<br>
+        console.error('Fetch error:', error.message);<br>
+    }<br>
+}<br>
+fetchWithErrorHandling();
+        </code>
+                    </details>
+
+
+                    <h3>Security</h3>
+
+                    <p>Understanding and Preventing XSS (Cross-Site Scripting)</p>
+                    <details>
+                        <summary>What is XSS?</summary>
+                        <p>Cross-Site Scripting (XSS) is a vulnerability that allows attackers to inject malicious
+                            scripts into webpages that are viewed by other users. The injected scripts run in the
+                            context of the user's browser, which can lead to data theft (like stealing cookies or
+                            session tokens), performing malicious actions (like submitting forms without the user's
+                            knowledge), or delivering malware to users.</p>
+                    </details>
+
+                    <details>
+                        <summary>Types of XSS</summary>
+                        <ul>
+                            <li><strong>Reflected XSS</strong>: The malicious script is reflected off a web server and
+                                executed immediately after being injected by the attacker. This usually happens via
+                                URLs.</li>
+                            <li><strong>Stored XSS</strong>: The malicious script is stored on the server (in a
+                                database, for example) and is executed every time the data is retrieved and rendered by
+                                the browser.</li>
+                            <li><strong>DOM-based XSS</strong>: This occurs when JavaScript in the browser dynamically
+                                modifies the DOM (Document Object Model) based on untrusted input, allowing the
+                                attacker’s script to run.</li>
+                        </ul>
+                    </details>
+
+                    <details>
+                        <summary>How to Prevent XSS</summary>
+                        <ul>
+                            <li><strong>Escape User Input</strong>: Always escape special characters in user input
+                                before displaying them on a webpage to prevent them from being interpreted as code.</li>
+                            <li><strong>Use Safe APIs</strong>: Avoid using <code>eval()</code>,
+                                <code>setTimeout()</code> or <code>setInterval()</code> with string inputs. These can
+                                execute arbitrary code, creating a security risk.
+                            </li>
+                            <li><strong>Sanitize Input</strong>: Use libraries such as <a
+                                    href="https://github.com/cure53/DOMPurify" target="_blank">DOMPurify</a> to sanitize
+                                user input before it is inserted into the DOM.</li>
+                            <li><strong>Set Content Security Policy (CSP)</strong>: Implement a CSP header to restrict
+                                which sources can provide scripts to the page, reducing the risk of malicious content
+                                being executed from unauthorized sources.</li>
+                            <li><strong>Use HttpOnly and Secure Cookies</strong>: Ensure session cookies are flagged as
+                                <code>HttpOnly</code> and <code>Secure</code> to prevent them from being accessed via
+                                JavaScript, thus protecting them from being stolen via XSS.
+                            </li>
+                        </ul>
+                    </details>
+
+                    <p>Content Security Policy (CSP)</p>
+
+                    <details>
+                        <summary>What is CSP?</summary>
+                        <p>Content Security Policy (CSP) is a security feature that allows you to control the sources
+                            from which a webpage can load resources, including scripts, styles, images, and more. It
+                            helps to prevent attacks like XSS by restricting the domains from which content can be
+                            loaded.</p>
+                    </details>
+
+                    <details>
+                        <summary>Basic CSP Example</summary>
+                        <pre><code>
+        Content-Security-Policy: default-src 'self'; script-src 'self' https://apis.example.com;
+        </code></pre>
+                        <p>This CSP policy does the following:</p>
+                        <ul>
+                            <li><strong>default-src 'self'</strong>: Allows resources (like images, stylesheets, etc.)
+                                to be loaded only from the same domain as the page.</li>
+                            <li><strong>script-src 'self' https://apis.example.com</strong>: Allows scripts to be loaded
+                                from the same domain and <code>apis.example.com</code>. No scripts can be loaded from
+                                other sources.</li>
+                        </ul>
+                    </details>
+
+                    <details>
+                        <summary>Key Directives in CSP</summary>
+                        <ul>
+                            <li><strong>default-src</strong>: Specifies the default policy for loading content (used for
+                                most types of content).</li>
+                            <li><strong>script-src</strong>: Restricts where JavaScript can be loaded from.</li>
+                            <li><strong>style-src</strong>: Restricts where stylesheets can be loaded from.</li>
+                            <li><strong>img-src</strong>: Restricts where images can be loaded from.</li>
+                            <li><strong>connect-src</strong>: Restricts where XMLHttpRequest (AJAX requests),
+                                WebSockets, and EventSource connections can be made to.</li>
+                            <li><strong>frame-src</strong>: Specifies from where iframes can be embedded.</li>
+                            <li><strong>object-src</strong>: Specifies allowed sources for Flash, Java, and other
+                                plugins.</li>
+                            <li><strong>report-uri</strong>: Defines where violation reports should be sent if the
+                                policy is violated.</li>
+                        </ul>
+                    </details>
+
+                    <details>
+                        <summary>Benefits of CSP</summary>
+                        <ul>
+                            <li><strong>Mitigates XSS:</strong> By restricting the sources of JavaScript and other
+                                resources, CSP can help prevent the execution of malicious scripts.</li>
+                            <li><strong>Limits Resource Injection:</strong> Even if an attacker tries to inject scripts,
+                                CSP can block them from being executed if they are loaded from untrusted sources.</li>
+                            <li><strong>Granular Control:</strong> You can specify exactly which sources are trusted,
+                                providing fine-grained control over what can be loaded and executed on your pages.</li>
+                        </ul>
+                    </details>
+
+                    <details>
+                        <summary>How to Implement CSP</summary>
+                        <ul>
+                            <li>Add the CSP header in your server configuration or in your HTML
+                                <code>&lt;meta&gt;</code> tag.
+                            </li>
+                            <li>Server-side (e.g., Apache):
+                                <pre><code>Header set Content-Security-Policy "default-src 'self'; script-src 'self';"</code></pre>
+                            </li>
+                            <li>Using the <code>meta</code> tag in HTML (not recommended for complex policies):
+                                <pre><code>&lt;meta http-equiv="Content-Security-Policy" content="default-src 'self';"&gt;</code></pre>
+                            </li>
+                        </ul>
+                    </details>
+
+                    <p>Preventing CSRF (Cross-Site Request Forgery)</p>
+
+                    <details>
+                        <summary>What is CSRF?</summary>
+                        <p>Cross-Site Request Forgery (CSRF) is an attack where a malicious website tricks a user into
+                            performing an action (such as changing a password or making a purchase) on another website
+                            where the user is authenticated. The attacker exploits the user's authentication (usually by
+                            sending a request with the user's credentials or cookies).</p>
+                    </details>
+
+                    <details>
+                        <summary>How to Prevent CSRF</summary>
+                        <ul>
+                            <li><strong>Anti-CSRF Tokens:</strong> The most common way to prevent CSRF is by using
+                                anti-CSRF tokens. These tokens are unique for each request and are embedded in each form
+                                or AJAX request. The server then checks the token to ensure that the request is
+                                legitimate.</li>
+                            <li><strong>SameSite Cookies:</strong> The <code>SameSite</code> cookie attribute helps
+                                prevent CSRF by restricting when cookies are sent with cross-site requests. If you set
+                                <code>SameSite=Lax</code> or <code>SameSite=Strict</code>, the browser will only send
+                                cookies when the request originates from the same site.
+                            </li>
+                            <li><strong>Custom Headers:</strong> When making AJAX requests, use custom headers that are
+                                not included automatically by browsers with cross-origin requests. The server can then
+                                check for the presence of these headers to validate the request.</li>
+                            <li><strong>Use Secure HTTP Methods:</strong> CSRF attacks typically exploit the use of
+                                unsafe HTTP methods such as <code>GET</code> for state-changing actions (like submitting
+                                a form). Always use secure methods like <code>POST</code>, <code>PUT</code>,
+                                <code>DELETE</code> for actions that modify data or change the state on the server.
+                            </li>
+                            <li><strong>Same-Origin Policy:</strong> The Same-Origin Policy (SOP) ensures that a webpage
+                                can only make requests to the same domain that served the page. This prevents attackers
+                                from sending unauthorized requests from a different domain using the user's cookies.
+                            </li>
+                        </ul>
+                    </details>
+
+
+                    <h3>JavaScript Debugging Techniques and Tools</h3>
+
+                    <p>Debugging JavaScript directly in the browser is an essential skill for developers. Modern
+                        browsers come equipped with powerful Developer Tools (DevTools) that enable you to troubleshoot
+                        and debug JavaScript code. Below, we'll walk you through various debugging techniques and tools
+                        available in browser environments, particularly focusing on the Google Chrome Developer Tools.
+                    </p>
+
+                    <details>
+                        <summary>1. Console Logging with <code>console.log()</code>, <code>console.error()</code>, and
+                            <code>console.warn()</code></summary>
+                        <p><strong>Purpose:</strong> The most basic and common debugging technique. By logging
+                            variables, errors, and warnings to the browser's console, you can easily inspect your code
+                            at runtime.</p>
+                        <p><strong>How to Use:</strong></p>
+                        <ul>
+                            <li><code>console.log()</code>: Prints general information.</li>
+                            <li><code>console.error()</code>: Logs errors with a red-colored output.</li>
+                            <li><code>console.warn()</code>: Logs warnings with a yellow-colored output.</li>
+                        </ul>
+                        <p><strong>Example:</strong></p>
+                        <pre><code>
+let number = 10;
+console.log("Current number:", number); // Logs to console
+console.error("An error occurred"); // Logs as error
+console.warn("This is a warning!"); // Logs as warning
+  </code></pre>
+                    </details>
+
+                    <details>
+                        <summary>2. Setting Breakpoints in the Source Code</summary>
+                        <p><strong>Purpose:</strong> A breakpoint allows you to pause code execution at a specific line,
+                            so you can inspect the state of the application (variables, call stack, etc.).</p>
+                        <p><strong>How to Use:</strong></p>
+                        <ul>
+                            <li>Open DevTools (Ctrl + Shift + I or F12).</li>
+                            <li>Go to the <strong>Sources</strong> tab.</li>
+                            <li>Find the JavaScript file you want to debug.</li>
+                            <li>Click on the line number where you want to set the breakpoint.</li>
+                        </ul>
+                        <p><strong>Example:</strong> After setting a breakpoint in your code, the execution will pause
+                            at that line, allowing you to inspect the value of variables and step through the code.</p>
+                    </details>
+
+                    <details>
+                        <summary>3. Using the <code>debugger</code> Statement</summary>
+                        <p><strong>Purpose:</strong> The <code>debugger</code> statement pauses code execution at the
+                            point where it's invoked. It works just like a breakpoint in DevTools.</p>
+                        <p><strong>How to Use:</strong></p>
+                        <ul>
+                            <li>Insert the <code>debugger</code> statement in your code where you want to pause
+                                execution.</li>
+                            <li>When the code hits the <code>debugger</code> statement, it will pause in DevTools.</li>
+                        </ul>
+                        <p><strong>Example:</strong></p>
+                        <pre><code>
+function testFunction() {
+  let a = 5;
+  debugger; // Execution will pause here
+  let b = 10;
+  console.log(a + b);
+}
+testFunction();
+  </code></pre>
+                    </details>
+
+                    <details>
+                        <summary>4. Stepping Through Code</summary>
+                        <p><strong>Purpose:</strong> Step through code to see exactly how it executes. This helps you
+                            understand the flow of control and inspect variable values at each step.</p>
+                        <p><strong>How to Use:</strong></p>
+                        <ul>
+                            <li>Once a breakpoint is hit or the <code>debugger</code> statement is encountered, you can
+                                use DevTools controls to step through the code.</li>
+                            <li><strong>Step over (F10)</strong>: Executes the current line and moves to the next line.
+                            </li>
+                            <li><strong>Step into (F11)</strong>: Enters any function calls that are on the current
+                                line.</li>
+                            <li><strong>Step out (Shift + F11)</strong>: Skips out of the current function and moves to
+                                the calling code.</li>
+                        </ul>
+                    </details>
+
+                    <details>
+                        <summary>5. Inspecting Variables and Call Stack</summary>
+                        <p><strong>Purpose:</strong> Inspect the state of your application while debugging. You can
+                            examine local variables, global variables, and the call stack (how functions are called).
+                        </p>
+                        <p><strong>How to Use:</strong></p>
+                        <ul>
+                            <li>In DevTools, once the code execution pauses (via a breakpoint or <code>debugger</code>),
+                                you can view variables in the <strong>Scope</strong> section.</li>
+                            <li>The <strong>Call Stack</strong> panel shows the sequence of function calls that led to
+                                the current line of code.</li>
+                        </ul>
+                        <p><strong>Example:</strong> The <strong>Scope</strong> section shows local variables, and the
+                            <strong>Call Stack</strong> shows the functions in the current execution context.</p>
+                    </details>
+
+                    <details>
+                        <summary>6. Console and Watch Expressions</summary>
+                        <p><strong>Purpose:</strong> Evaluate expressions and inspect variables in real-time while
+                            debugging.</p>
+                        <p><strong>How to Use:</strong></p>
+                        <ul>
+                            <li>In DevTools, go to the <strong>Console</strong> tab and interact with the application by
+                                typing JavaScript expressions directly in the console.</li>
+                            <li><strong>Watch Expressions</strong> allow you to add specific expressions you want to
+                                monitor throughout debugging.</li>
+                        </ul>
+                        <p><strong>Example:</strong> In the <strong>Watch</strong> panel, you can add an expression like
+                            <code>myArray.length</code> to see its value during debugging.</p>
+                    </details>
+
+                    <details>
+                        <summary>7. Network Tab to Monitor Requests</summary>
+                        <p><strong>Purpose:</strong> The <strong>Network</strong> tab allows you to inspect network
+                            requests made by your JavaScript code (such as API calls).</p>
+                        <p><strong>How to Use:</strong></p>
+                        <ul>
+                            <li>Open DevTools and go to the <strong>Network</strong> tab.</li>
+                            <li>Reload the page or trigger the network request.</li>
+                            <li>Inspect details of HTTP requests such as URL, method, status code, response body, and
+                                headers.</li>
+                        </ul>
+                        <p><strong>Example:</strong> When making an API call with <code>fetch</code>, you can monitor
+                            the request and response in the <strong>Network</strong> tab.</p>
+                    </details>
+
+                    <details>
+                        <summary>8. Monitoring Events (Event Listeners)</summary>
+                        <p><strong>Purpose:</strong> Monitor specific events, such as clicks, key presses, or window
+                            resizing.</p>
+                        <p><strong>How to Use:</strong></p>
+                        <ul>
+                            <li>In the <strong>Elements</strong> tab of DevTools, right-click on an element and select
+                                <strong>Inspect</strong>.</li>
+                            <li>Go to the <strong>Event Listeners</strong> tab, and you can see all events attached to
+                                the element (like <code>click</code>, <code>resize</code>, <code>keypress</code>).</li>
+                        </ul>
+                        <p><strong>Example:</strong> You can break on a specific event listener, such as a click event,
+                            to see how the event is handled.</p>
+                    </details>
+
+                    <details>
+                        <summary>Browser Developer Tools: Debugging Tabs</summary>
+
+                        <details>
+                            <summary>1. Elements Tab</summary>
+                            <p><strong>What it is:</strong> This tab lets you inspect and manipulate the DOM and CSS of
+                                a webpage.</p>
+                            <p><strong>How to Use:</strong> You can click on an element in the page and view its HTML
+                                structure. You can also edit HTML and CSS live to test changes.</p>
+                        </details>
+
+                        <details>
+                            <summary>2. Console Tab</summary>
+                            <p><strong>What it is:</strong> The Console tab is where you can log output, run JavaScript
+                                commands, and view errors, warnings, and logs from your code.</p>
+                            <p><strong>How to Use:</strong> You can interact with your page using JavaScript directly in
+                                the console. It also displays <code>console.log()</code> messages, errors, and warnings.
+                            </p>
+                        </details>
+
+                        <details>
+                            <summary>3. Sources Tab</summary>
+                            <p><strong>What it is:</strong> The Sources tab is where you can view, edit, and set
+                                breakpoints in the JavaScript files loaded by the browser.</p>
+                            <p><strong>How to Use:</strong> You can set breakpoints, step through your code, and inspect
+                                variables during execution.</p>
+                        </details>
+
+                        <details>
+                            <summary>4. Network Tab</summary>
+                            <p><strong>What it is:</strong> The Network tab lets you monitor all the network requests
+                                made by your page, including API calls, image requests, and scripts.</p>
+                            <p><strong>How to Use:</strong> You can view request details, such as HTTP status codes,
+                                request headers, and response data.</p>
+                        </details>
+
+                        <details>
+                            <summary>5. Performance Tab</summary>
+                            <p><strong>What it is:</strong> The Performance tab helps you analyze the runtime
+                                performance of your page.</p>
+                            <p><strong>How to Use:</strong> You can record and view a timeline of page rendering and
+                                script execution.</p>
+                        </details>
+                    </details>
+                </div>
+            </div>
+        </div>
+        <div class="header">
+            <div class="assignments">
+                <h2>Assignments</h2>
+                <h5 style="color: red">Note: Must take inputs for all assignments from HTML and print results back to
+                    HTML</h5>
+
+                <div>
+                    <details>
+                        <summary>Implement Simple E-Commerce Application</summary>
+                        <div>
+                            Write functions for Search, All Products and Get Product API's using dummy API's <a
+                                href="https://dummyjson.com/docs/products"
+                                target="_blank">https://dummyjson.com/docs/products</a>. Implement with Async/Await and
+                            error handling <br />
+                            Implement Search Products, List Products and View Product pages using HTML, CSS and JS
+                        </div>
+                    </details>
+
+                </div>
+
+            </div>
+        </div>
+        <div>
+            <h2>Assignment Submissions</h2>
+            <details>
+                <summary onclick="showContent(event)">Likhith Reddy Gade</summary>
+                <iframe data-src="./likhith-reddy-gade/index.html"></iframe>
+            </details>
+            <details>
+                <summary onclick="showContent(event)">U Sainath Rao</summary>
+                <iframe data-src="./u-sainath-rao/index.html"></iframe>
+            </details>
+            <details>
+                <summary onclick="showContent(event)">Prem Rajput</summary>
+                <iframe data-src="./prem-rajput/index.html"></iframe>
+            </details>
+            <details>
+                <summary onclick="showContent(event)">Tarun Sharma</summary>
+                <iframe data-src="./tarun-sharma/index.html"></iframe>
+            </details>
+            <details>
+                <summary onclick="showContent(event)">Rohith Kotipalli</summary>
+                <iframe data-src="./rohith-kotipalli/index.html"></iframe>
+            </details>
+            <details>
+                <summary onclick="showContent(event)">Poornima Ranguri</summary>
+                <iframe data-src="./poornima-ranguri/index.html"></iframe>
+            </details>
+            <details>
+                <summary onclick="showContent(event)">Anusree Vutlapalli</summary>
+                <iframe data-src="./anusree-vutlapalli/index.html"></iframe>
+            </details>
+            <details>
+                <summary onclick="showContent(event)">Madhuri Udathu</summary>
+                <iframe data-src="./madhuri-udathu/index.html"></iframe>
+            </details>
+            <details>
+                <summary onclick="showContent(event)">Pranathi Akula</summary>
+                <iframe data-src="./pranathi-akula/index.html"></iframe>
+            </details>
+            <details>
+                <summary onclick="showContent(event)">Preeti Patil SN</summary>
+                <iframe data-src="./preeti-patil-sn/index.html"></iframe>
+            </details>
+            <details>
+                <summary onclick="showContent(event)">Rakshita R</summary>
+                <iframe data-src="./rakshita-r/index.html"></iframe>
+            </details>
+            <details>
+                <summary onclick="showContent(event)">Vinod Mudavath</summary>
+                <iframe data-src="./vinod-mudavath/index.html"></iframe>
+            </details>
+            <details>
+                <summary onclick="showContent(event)">Ram Karthik</summary>
+                <iframe data-src="./ram-karthik/index.html"></iframe>
+            </details>
+            <details>
+                <summary onclick="showContent(event)">Nishma Medagoni</summary>
+                <iframe data-src="./nishma-medagoni/index.html"></iframe>
+            </details>
+            <details>
+                <summary onclick="showContent(event)">Mohammed Abdul Awaiz</summary>
+                <iframe data-src="./mohammed-abdul-awaiz/index.html"></iframe>
+            </details>
+            <details>
+                <summary onclick="showContent(event)">Harsh Sharma</summary>
+                <iframe data-src="./harsh-sharma/index.html"></iframe>
+            </details>
+        </div>
+    </div>
+    <footer>
+        <p>&copy; 2024 Javascript Training Program</p>
+    </footer>
+    <script type="text/javascript">
+        // Function to display the selected content
+        function showContent(event) {
+            const iframes = document.getElementsByTagName('iframe');
+            Array.from(iframes).forEach(iframe => {
+                iframe.src = '';
+            });
+            event.target.nextElementSibling.src = event.target.nextElementSibling.dataset.src;
+        }
+    </script>
+</body>
+
+</html>
