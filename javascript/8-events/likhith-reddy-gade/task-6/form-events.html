@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form Events</title>
+    <style>
+      form {
+        max-width: 400px;
+        margin: 20px auto;
+        font-family: Arial, sans-serif;
+      }
+
+      .form-group {
+        margin-bottom: 15px;
+      }
+
+      label {
+        display: block;
+        margin-bottom: 5px;
+      }
+
+      input {
+        width: 100%;
+        padding: 8px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+      }
+
+      .error {
+        color: red;
+        font-size: 12px;
+        margin-top: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <form id="registration-form">
+      <div class="form-group">
+        <label for="username">Username</label>
+        <input
+          type="text"
+          id="username"
+          name="username"
+          placeholder="Enter username"
+        />
+        <div class="error" id="username-error"></div>
+      </div>
+
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" placeholder="Enter email" />
+        <div class="error" id="email-error"></div>
+      </div>
+
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input
+          type="password"
+          id="password"
+          name="password"
+          placeholder="Enter password"
+        />
+        <div class="error" id="password-error"></div>
+      </div>
+
+      <button type="submit">Register</button>
+    </form>
+    <script src="form-events.js"></script>
+  </body>
+</html>
