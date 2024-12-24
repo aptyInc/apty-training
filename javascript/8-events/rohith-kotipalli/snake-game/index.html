@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./styles.css">
+  <title>Snake Game </title>
+</head>
+
+<body>
+  <header>
+    <h1 style="text-align: center; color: #fff; margin-bottom:  20px;">Enjoy to play snake game</h1>
+    <div class="score-container">
+      <div class="score-box">
+        <img src="./snake-game-assets/apple.png" class="food-img" />
+        <span id="score">0</span>
+      </div>
+      <div class="high-score-box">
+        <img src="./snake-game-assets/prize.png" class="food-img" />
+        <span id="highScore">0</span>
+      </div>
+    </div>
+  </header>
+
+  <main>
+
+    <div class="snake-board" id="snakeboard"></div>
+    <div class="game-over-card" id="gameovercard">
+      <div class="card">
+        <div id="foodscore">
+          <img src="./snake-game-assets/apple.png" class="food-img" />
+          <span id="cardscore">0</span>
+        </div>
+        <div id="highscorecontainer">
+          <img src="./snake-game-assets/prize.png" class="food-img" />
+          <span id="cardhighscore">0</span>
+        </div>
+
+      </div>
+      <button id="playBtn">Play</button>
+    </div>
+    <ul class="guidcontainer">
+      <li>Press the left arrow to move left.</li>
+      <li>Press the right arrow to move right.</li>
+      <li>Press the up arrow to move up.</li>
+      <li>Press the down arrow to move down.</li>
+    </ul>
+
+  </main>
+
+  <script type="text/javascript" src="./script.js"></script>
+</body>
+
+</html>
