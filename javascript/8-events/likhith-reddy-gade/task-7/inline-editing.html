@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Inline Editing</title>
+    <style>
+      #editable-div {
+        border: 1px solid #ccc;
+        padding: 10px;
+        border-radius: 4px;
+        display: flex;
+        align-items: center;
+        max-width: 300px;
+        margin: 20px auto;
+        font-family: Arial, sans-serif;
+        cursor: pointer;
+      }
+
+      #editable-div span {
+        margin-left: 8px;
+        color: gray;
+      }
+
+      textarea {
+        width: 100%;
+        padding: 8px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        font-family: Arial, sans-serif;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="editable-div">Default Text <span>✏️</span></div>
+    <script src="inline-editing.js"></script>
+  </body>
+</html>
