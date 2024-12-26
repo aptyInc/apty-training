@@ -1,0 +1,30 @@
+
+div {
+    height: 200px;
+    width: 300px;
+    margin: 20px;
+    color: #fff;
+    text-align: center;
+    box-sizing: border-box;
+    padding: 20px;
+    font-size: 24px;
+}
+
+#box1 {
+    background-color: blueviolet;
+}
+
+#box2 {
+    background-color: gold;
+}
+
+#box3 {
+    background-color: green;
+}
+
+
+button {
+    margin: 20px;
+    padding: 10px;
+    font-size: 16px;
+}
