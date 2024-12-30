@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Move Table Row</title>
+    <style>
+      table {
+        width: 100%;
+        border-collapse: collapse;
+      }
+      th,
+      td {
+        padding: 8px;
+        text-align: center;
+        border: 1px solid #ddd;
+      }
+      button {
+        padding: 5px 10px;
+        margin: 2px;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <table id="myTable">
+      <thead>
+        <tr>
+          <th>Row</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- Rows will be dynamically added here -->
+      </tbody>
+    </table>
+
+    <script>
+      // Function to create the table rows with buttons
+      function createTableRow(rowNum) {
+        const tableBody = document.querySelector("#myTable tbody");
+        const row = document.createElement("tr");
+
+        const cell1 = document.createElement("td");
+        cell1.textContent = rowNum;
+        row.appendChild(cell1);
+
+        const cell2 = document.createElement("td");
+        const upBtn = document.createElement("button");
+        upBtn.textContent = "Up";
+        upBtn.onclick = () => moveRow(row, "up");
+        cell2.appendChild(upBtn);
+
+        const downBtn = document.createElement("button");
+        downBtn.textContent = "Down";
+        downBtn.onclick = () => moveRow(row, "down");
+        cell2.appendChild(downBtn);
+
+        const topBtn = document.createElement("button");
+        topBtn.textContent = "Top";
+        topBtn.onclick = () => moveRow(row, "top");
+        cell2.appendChild(topBtn);
+
+        const bottomBtn = document.createElement("button");
+        bottomBtn.textContent = "Bottom";
+        bottomBtn.onclick = () => moveRow(row, "bottom");
+        cell2.appendChild(bottomBtn);
+
+        row.appendChild(cell2);
+        tableBody.appendChild(row);
+      }
+
+      // Function to move the row
+      function moveRow(row, direction) {
+        const rows = Array.from(document.querySelectorAll("#myTable tbody tr"));
+        const index = rows.indexOf(row);
+
+        switch (direction) {
+          case "up":
+            if (index > 0) {
+              row.parentNode.insertBefore(row, rows[index - 1]);
+            }
+            break;
+          case "down":
+            if (index < rows.length - 1) {
+              row.parentNode.insertBefore(row, rows[index + 1].nextSibling);
+            }
+            break;
+          case "top":
+            row.parentNode.insertBefore(row, rows[0]);
+            break;
+          case "bottom":
+            row.parentNode.appendChild(row);
+            break;
+        }
+      }
+
+      // Create 10 rows initially
+      for (let i = 1; i <= 10; i++) {
+        createTableRow(i);
+      }
+    </script>
+  </body>
+</html>
