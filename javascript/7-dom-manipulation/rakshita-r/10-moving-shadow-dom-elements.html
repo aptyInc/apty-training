@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Move Table Row</title>
+    <style>
+      table {
+        width: 100%;
+        border-collapse: collapse;
+      }
+      th,
+      td {
+        padding: 8px;
+        text-align: center;
+        border: 1px solid #ddd;
+      }
+      button {
+        padding: 5px 10px;
+        margin: 2px;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="shadow-root-host"></div>
+
+    <script>
+      class TableWithShadowDOM extends HTMLElement {
+        constructor() {
+          super();
+
+          const shadowRoot = this.attachShadow({ mode: "open" });
+
+          shadowRoot.innerHTML = `
+<table id="myTable">
+<thead>
+<tr>
+<th>Row</th>
+<th>Action</th>
+</tr>
+</thead>
+<tbody>
+<!-- Rows will be dynamically added here -->
+</tbody>
+</table>
+<style>
+                    table {
+                        width: 100%;
+                        border-collapse: collapse;
+                    }
+                    th, td {
+                        padding: 8px;
+                        text-align: center;
+                        border: 1px solid #ddd;
+                    }
+                    button {
+                        padding: 5px 10px;
+                        margin: 2px;
+                        cursor: pointer;
+                    }
+</style>
+            `;
+
+          this.addRows();
+        }
+
+        addRows() {
+          const tableBody = this.shadowRoot.querySelector("#myTable tbody");
+          for (let i = 1; i <= 10; i++) {
+            const row = document.createElement("tr");
+            row.innerHTML = `
+<td>${i}</td>
+<td>
+<button class="up">Up</button>
+<button class="down">Down</button>
+<button class="top">Top</button>
+<button class="bottom">Bottom</button>
+</td>
+                `;
+            tableBody.appendChild(row);
+          }
+
+          this.shadowRoot.querySelectorAll("button").forEach((button) => {
+            button.addEventListener("click", (event) => this.moveRow(event));
+          });
+        }
+
+        moveRow(event) {
+          const row = event.target.closest("tr");
+          const tableBody = this.shadowRoot.querySelector("#myTable tbody");
+          const rows = Array.from(tableBody.rows);
+          const index = rows.indexOf(row);
+
+          switch (event.target.textContent) {
+            case "Up":
+              if (index > 0) tableBody.insertBefore(row, rows[index - 1]);
+              break;
+            case "Down":
+              if (index < rows.length - 1)
+                tableBody.insertBefore(row, rows[index + 1].nextSibling);
+              break;
+            case "Top":
+              tableBody.insertBefore(row, rows[0]);
+              break;
+            case "Bottom":
+              tableBody.appendChild(row);
+              break;
+          }
+        }
+      }
+
+      customElements.define("table-with-shadow", TableWithShadowDOM);
+
+      const host = document.getElementById("shadow-root-host");
+      const tableElement = document.createElement("table-with-shadow");
+      host.appendChild(tableElement);
+    </script>
+  </body>
+</html>

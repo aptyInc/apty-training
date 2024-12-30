@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shadow DOM Assignment</title>
+  </head>
+  <body>
+    <h1>Shadow DOM Assignment</h1>
+    <div id="shadowHost"></div>
+
+    <script>
+      const shadowHTML = `
+        <style>
+          .highlight {
+            background-color: lightblue;
+          }
+          .text-highlight {
+            color: red;
+            font-weight: bold;
+          }
+        </style>
+        <table border="1" cellspacing="0" cellpadding="10">
+          <thead>
+            <tr>
+              <th>Id</th>
+              <th>ClassName</th>
+              <th>Tag</th>
+              <th>Name</th>
+              <th>Attribute</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>
+                <p id="para1">Paragraph 1</p>
+                <p id="para2">Paragraph 2</p>
+                <button id="btnRow1">Apply Row 1 Styles</button>
+              </td>
+              <td>
+                <p class="sameClass">Class Element 1</p>
+                <p class="sameClass">Class Element 2</p>
+                <button id="btnRow2">Apply Row 2 Styles</button>
+              </td>
+              <td>
+                <span>Span Element 1</span><br />
+                <span>Span Element 2</span><br />
+                <button id="btnRow3">Apply Row 3 Styles</button>
+              </td>
+              <td>
+                <input name="input1" value="Input 1" />
+                <input name="input2" value="Input 2" />
+                <button id="btnRow4">Apply Row 4 Styles</button>
+              </td>
+              <td>
+                <p custom-attr="first">Custom Attribute 1</p>
+                <p custom-attr="second">Custom Attribute 2</p>
+                <button id="btnRow5">Apply Row 5 Styles</button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      `;
+
+      const shadowHost = document.getElementById("shadowHost");
+      const shadowRoot = shadowHost.attachShadow({ mode: "open" });
+      shadowRoot.innerHTML = shadowHTML;
+
+      const addRowStyleListeners = () => {
+        shadowRoot.getElementById("btnRow1").addEventListener("click", () => {
+          const row1 = shadowRoot.querySelectorAll("#para1, #para2");
+          row1.forEach((el) => el.classList.add("text-highlight"));
+        });
+
+        shadowRoot.getElementById("btnRow2").addEventListener("click", () => {
+          const row2 = shadowRoot.querySelectorAll(".sameClass");
+          row2.forEach((el) => el.classList.add("highlight"));
+        });
+
+        shadowRoot.getElementById("btnRow3").addEventListener("click", () => {
+          const row3 = shadowRoot.querySelectorAll("span");
+          row3.forEach((el) => {
+            el.style.color = "green";
+            el.style.fontStyle = "italic";
+          });
+        });
+
+        shadowRoot.getElementById("btnRow4").addEventListener("click", () => {
+          const row4 = shadowRoot.querySelectorAll("input");
+          row4.forEach((el) => {
+            el.style.border = "2px solid orange";
+            el.style.backgroundColor = "lightyellow";
+          });
+        });
+
+        shadowRoot.getElementById("btnRow5").addEventListener("click", () => {
+          const row5 = shadowRoot.querySelectorAll("[custom-attr]");
+          row5.forEach((el) => {
+            el.style.backgroundColor = "pink";
+            el.style.borderRadius = "5px";
+          });
+        });
+      };
+
+      addRowStyleListeners();
+    </script>
+  </body>
+</html>

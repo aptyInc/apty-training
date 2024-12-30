@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Toggle Div Visibility</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 20px;
+      }
+      .toggle-div {
+        width: 100%;
+        padding: 20px;
+        margin: 10px 0;
+        color: white;
+        font-size: 16px;
+        text-align: center;
+      }
+      #div1 {
+        background-color: #f44336;
+      }
+      #div2 {
+        background-color: #4caf50;
+      }
+      #div3 {
+        background-color: #2196f3;
+      }
+      button {
+        padding: 10px 15px;
+        background-color: #555;
+        color: white;
+        border: none;
+        cursor: pointer;
+      }
+      button:hover {
+        background-color: #333;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Toggle Div Visibility</h1>
+    <div id="div1" class="toggle-div">This is Div 1</div>
+    <div id="div2" class="toggle-div">This is Div 2</div>
+    <div id="div3" class="toggle-div">This is Div 3</div>
+
+    <button id="toggleButton">Toggle Divs</button>
+
+    <script>
+      const divs = document.querySelectorAll(".toggle-div");
+      let currentIndex = 0;
+
+      document.getElementById("toggleButton").addEventListener("click", () => {
+        divs.forEach((div) => (div.style.display = "none"));
+
+        divs[currentIndex].style.display = "block";
+
+        currentIndex = (currentIndex + 1) % divs.length;
+      });
+
+      divs.forEach((div, index) => {
+        div.style.display = index === 0 ? "block" : "none";
+      });
+    </script>
+  </body>
+</html>
