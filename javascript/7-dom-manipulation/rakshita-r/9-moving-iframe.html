@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Moving iframe elements</title>
+  </head>
+
+  <body>
+    <button id="upBtn">Up</button>
+    <button id="downBtn">Down</button>
+    <button id="topBtn">Top</button>
+    <button id="bottomBtn">Bottom</button>
+    <iframe
+      height="600"
+      width="100%"
+      id="iframe"
+      srcdoc='<!DOCTYPE html>
+        <html lang=" en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <link rel="stylesheet" href="./../css/moving-iframe-elements.css">
+            <title>Moving iframe elements</title>
+        </head>
+        <body>
+            <main>
+                <h1>Moving iframe elements</h1>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Row Number</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tablebody"></tbody>
+                </table>
+            </main>
+        </body>
+</html>'
+    ></iframe>
+    <script>
+      const iframe = document.getElementById("iframe").contentDocument;
+      console.log(iframe);
+
+      const tableBody = iframe.getElementById("tablebody");
+
+      for (let i = 1; i <= 10; i++) {
+        const row = iframe.createElement("tr");
+        row.setAttribute("id", `row-${i}`);
+        row.innerHTML = `
+        <td>Row ${i}</td>`;
+        tableBody.appendChild(row);
+
+        function moveElement(action, rowNum) {
+          const row = iframe.getElementById(`row-${rowNum}`);
+          const allRows = Array.from(tableBody.rows);
+          const rowIndex = allRows.indexOf(row);
+
+          switch (action) {
+            case "up":
+              if (rowIndex > 0) {
+                tableBody.insertBefore(row, allRows[rowIndex - 1]);
+              }
+              break;
+            case "down":
+              if (rowIndex < allRows.length - 1) {
+                tableBody.insertBefore(row, allRows[rowIndex + 2]);
+              }
+              break;
+            case "top":
+              tableBody.insertBefore(row, allRows[0]);
+              break;
+            case "bottom":
+              tableBody.appendChild(row);
+              break;
+          }
+        }
+      }
+
+      document
+        .getElementById("upBtn")
+        .addEventListener("click", () => moveElement("up", 1));
+      document
+        .getElementById("downBtn")
+        .addEventListener("click", () => moveElement("down", 1));
+      document
+        .getElementById("topBtn")
+        .addEventListener("click", () => moveElement("top", 1));
+      document
+        .getElementById("bottomBtn")
+        .addEventListener("click", () => moveElement("bottom", 1));
+    </script>
+  </body>
+</html>
