@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Window Control Example</title>
+    <script src="../scripts/browser-control.js" defer></script>
+  </head>
+  <body>
+    <h1>Browser Window Control</h1>
+
+    <!-- Section to Open a New Window -->
+    <div>
+      <h2>Open a New Window</h2>
+      <label for="windowURL">URL:</label>
+      <input type="text" id="windowURL" placeholder="https://example.com" />
+      <label for="windowName">Window Name:</label>
+      <input type="text" id="windowName" placeholder="myWindow" />
+      <button onclick="openWindow()">Open Window</button>
+    </div>
+
+    <!-- Section to Resize the Window -->
+    <div>
+      <h2>Resize Window</h2>
+      <label for="windowWidth">Width:</label>
+      <input type="number" id="windowWidth" placeholder="800" />
+      <label for="windowHeight">Height:</label>
+      <input type="number" id="windowHeight" placeholder="600" />
+      <button onclick="resizeWindow()">Resize Window</button>
+    </div>
+
+    <!-- Section to Close the Window -->
+    <div>
+      <h2>Close Window</h2>
+      <button onclick="closeWindow()">Close Window</button>
+    </div>
+
+    <!-- Section to Display Window Status -->
+    <div>
+      <h2>Window Status</h2>
+      <p id="windowStatus">No window opened yet.</p>
+    </div>
+  </body>
+</html>

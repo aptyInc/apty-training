@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LocalStorage and SessionStorage Example</title>
+    <script src="../scripts/storage.js" defer></script>
+  </head>
+  <body>
+    <h1>Storage Example</h1>
+
+    <!-- Input for LocalStorage -->
+    <div>
+      <h2>LocalStorage</h2>
+      <label for="localStorageKey">Key:</label>
+      <input type="text" id="localStorageKey" />
+      <label for="localStorageValue">Value:</label>
+      <input type="text" id="localStorageValue" />
+      <button onclick="storeLocal()">Store in LocalStorage</button>
+      <p><strong>Stored LocalStorage Data:</strong></p>
+      <ul id="localStorageData"></ul>
+    </div>
+
+    <!-- Input for SessionStorage -->
+    <div>
+      <h2>SessionStorage</h2>
+      <label for="sessionStorageKey">Key:</label>
+      <input type="text" id="sessionStorageKey" />
+      <label for="sessionStorageValue">Value:</label>
+      <input type="text" id="sessionStorageValue" />
+      <button onclick="storeSession()">Store in SessionStorage</button>
+      <p><strong>Stored SessionStorage Data:</strong></p>
+      <ul id="sessionStorageData"></ul>
+    </div>
+  </body>
+</html>
