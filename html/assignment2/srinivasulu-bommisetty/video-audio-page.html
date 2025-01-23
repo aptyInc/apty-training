@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Video and Audio with Captions and Descriptions</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      background-color: #f4f4f4;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .media-container {
+      width: 80%;
+      max-width: 900px;
+      margin-bottom: 40px;
+      text-align: center;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    video, audio {
+      width: 100%;
+      max-width: 800px;
+    }
+
+    .description {
+      margin-top: 10px;
+      font-size: 1rem;
+      color: #333;
+    }
+
+  </style>
+</head>
+<body>
+
+  <h1>Media with Captions and Descriptions</h1>
+
+  <div class="media-container">
+    <h2>Sample Video with Captions</h2>
+    <video controls>
+      <source src="https://v.ftcdn.net/08/55/39/30/700_F_855393036_syFRrsiVRnaOSk4sQm4YzcEE1Egz5pHI_ST.mp4" type="video/mp4" />
+    </video>
+    <div class="description">
+      <p>This is a sample video that demonstrates how to include captions and descriptions.</p>
+    </div>
+  
+
+  <div class="media-container">
+    <h2>Sample Audio Clip with Description</h2>
+    <audio controls muted>
+      <source src="./assests/audio.mp3" type="audio/mp3" />
+      Your browser does not support the audio element.
+    </audio>
+    <div class="description">
+      <p>This is a sample audio clip. It contains a description of the sound, the music, or the speech you are hearing.</p>
+    </div>
+  </div>
+
+</body>
+</html>
