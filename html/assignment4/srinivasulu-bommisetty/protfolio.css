@@ -1,0 +1,121 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+header {
+  width: 100vw;
+  height: 60px;
+  background-color: #333;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+header h1 {
+  color: #f1f1f1;
+}
+nav {
+  width: 50vw;
+}
+
+nav ul {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+li {
+  list-style: none;
+}
+
+li a {
+  text-decoration: none;
+  color: #c79973;
+}
+
+li a:hover {
+  color: chocolate;
+}
+
+/* about section styles */
+
+#about {
+  background-color: #e9f7f6;
+  padding: 40px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+#about h2 {
+  font-size: 2rem;
+  text-align: center;
+  color: #333;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+#about p {
+  font-size: 1.1rem;
+  color: #555;
+  margin-bottom: 15px;
+  text-align: justify;
+}
+
+/*  Skills section styles*/
+#skills {
+  padding: 20px;
+  background-color: #f4f4f4;
+}
+
+#skills h2 {
+  text-align: center;
+  font-size: 32px;
+}
+
+.skills-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 20px;
+  padding: 20px;
+}
+
+.skill-card {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  width: 250px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 0px 8px rgba(0, 0, 0, 0.1);
+}
+
+.skill-card:hover {
+  scale: 1.1;
+}
+
+/* contact info styles */
+
+#contact {
+  background-color: #e9f7f6;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  gap: 10px;
+}
+#contact h2 {
+  text-align: center;
+}
+
+#contact ul {
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
