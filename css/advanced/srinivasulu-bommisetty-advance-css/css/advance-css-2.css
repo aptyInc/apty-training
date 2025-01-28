@@ -1,0 +1,95 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+header{
+    width: 100vw;
+    height: 60px;
+    background-color: #333;
+}
+
+header h1{
+    color: #f1f1f1;
+    text-align: center;
+}
+main{
+    width: 100vw;
+    height: calc(100vh - 60px - 60px);
+    background-color: aliceblue;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.cir{
+    margin-top: 200px;
+    margin-left: 30px;
+}
+div{
+    width: 70px;
+    height: 70px;
+    background: green;
+    border-radius: 50%;
+}
+#cir1{
+    animation-name: loader;
+    animation-duration: 0.8s;
+    animation-iteration-count:infinite;
+    animation-timing-function: ease-in;
+    animation-direction: alternate;
+    
+}
+#cir2{
+    animation-name: loader;
+    animation-duration: 0.8s;
+    animation-iteration-count:infinite;
+    animation-timing-function: ease-in;
+    animation-direction: alternate;
+    animation-delay: 0.1s;
+    
+}
+#cir3{
+    animation-name: loader;
+    animation-duration: 0.8s;
+    animation-iteration-count:infinite;
+    animation-timing-function: ease-in;
+    animation-direction: alternate;
+    animation-delay: 0.2s;
+    
+}
+#cir4{
+    animation-name: loader;
+    animation-duration: 0.8s;
+    animation-iteration-count:infinite;
+    animation-timing-function: ease-in;
+    animation-direction: alternate;
+    animation-delay: 0.3s;
+    
+}
+@keyframes loader {
+    0%{
+        background-color: aqua;
+        transform: translatey(0px);
+    }
+    50%{
+        background-color: bisque;
+        transform: translateY(-100px);
+    }
+    100%{
+        background-color: rgb(152, 101, 39);
+        transform: translateY(0px);
+    }
+    
+}
+
+footer{
+    width: 100vw;
+    height: 60px;
+    background-color: #333;
+    color: #f1f1f1;
+    text-align: center;
+    padding-top: 20px;
+    font-size: larger;
+    font-weight: 500;
+}
