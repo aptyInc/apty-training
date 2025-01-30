@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>diff js</title>
+</head>
+<body>
+    <button id="inline-btn" onclick="inline()">inline</button>
+    <button id="internal">internal</button>
+    <button id="external">external</button>
+<h2 id="result"></h2>
+    <script>
+function inline(){
+    document.getElementById("result").innerText=`i'm from inline`
+}
+
+document.getElementById("internal").addEventListener("click",()=>{
+    document.getElementById("result").innerText=`i'm from internal`
+
+})
+
+    </script>
+    <script src="./scripts/external.js"></script>
+</body>
+</html>
