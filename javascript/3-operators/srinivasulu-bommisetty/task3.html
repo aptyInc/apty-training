@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Data Comparison</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        padding: 20px;
+      }
+      .input-container {
+        margin-bottom: 15px;
+      }
+      .button-container {
+        margin-top: 20px;
+      }
+      .result {
+        margin-top: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Data Comparison</h1>
+
+    <div class="input-container">
+      <label for="value1">Value 1:</label>
+      <input type="text" id="value1" />
+    </div>
+
+    <div class="input-container">
+      <label for="type1">Type 1:</label>
+      <select id="type1">
+        <option value="string">String</option>
+        <option value="number">Number</option>
+        <option value="boolean">Boolean</option>
+        <option value="null">Null</option>
+      </select>
+    </div>
+
+    <div class="input-container">
+      <label for="value2">Value 2:</label>
+      <input type="text" id="value2" />
+    </div>
+
+    <div class="input-container">
+      <label for="type2">Type 2:</label>
+      <select id="type2">
+        <option value="string">String</option>
+        <option value="number">Number</option>
+        <option value="boolean">Boolean</option>
+        <option value="null">Null</option>
+      </select>
+    </div>
+
+    <div class="button-container">
+      <button onclick="compareValues('==')">==</button>
+      <button onclick="compareValues('===')">===</button>
+      <button onclick="compareValues('!=')">!=</button>
+      <button onclick="compareValues('!==')">!==</button>
+      <button onclick="compareValues('>')">&gt;</button>
+      <button onclick="compareValues('<')">&lt;</button>
+      <button onclick="compareValues('>=')">&gt;=</button>
+      <button onclick="compareValues('<=')">&lt;=</button>
+    </div>
+
+    <div class="result" id="result">
+      <p><strong>Result:</strong> <span id="resultValue"></span></p>
+    </div>
+
+    <script src="./scripts/comparison.js"></script>
+  </body>
+</html>
