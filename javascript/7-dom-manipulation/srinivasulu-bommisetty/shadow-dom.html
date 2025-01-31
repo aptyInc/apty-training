@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shadow DOM Manipulation</title>
+    <style>
+      .highlight {
+        background-color: yellow;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Shadow DOM Manipulation</h1>
+
+    <button onclick="changeColor()">Change Text Color</button>
+    <button onclick="toggleBackground()">Toggle Background</button>
+    <button onclick="updateText()">Update Text</button>
+    <button onclick="toggleDisable()">Toggle Disable</button>
+    <button onclick="addAttribute()">Add Attribute</button>
+
+    <div id="shadowHost"></div>
+
+    <script src="./scripts/shadow-dom.js"></script>
+  </body>
+</html>

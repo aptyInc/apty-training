@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Move Table Rows inside Shadow DOM</title>
+    <style>
+      table {
+        width: 100%;
+        border-collapse: collapse;
+      }
+      th,
+      td {
+        border: 1px solid black;
+        padding: 8px;
+        text-align: center;
+      }
+      button {
+        margin: 2px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Move Table Rows Inside Shadow DOM</h1>
+
+    <div id="container"></div>
+
+    <button onclick="moveRowInShadowDOM('up')">Move Row Up</button>
+    <button onclick="moveRowInShadowDOM('down')">Move Row Down</button>
+    <button onclick="moveRowInShadowDOM('top')">Move Row to Top</button>
+    <button onclick="moveRowInShadowDOM('bottom')">Move Row to Bottom</button>
+
+    <script src="./scripts/move-elements-shadow-dom.js"></script>
+  </body>
+</html>
