@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <table border="1">
+        <tr>
+            <th>id</th>
+            <th>className</th>
+            <th>tag</th>
+            <th>name</th>
+            <th>attribute</th>
+        </tr>
+        
+        <tr>
+            <td>
+                <p id="p1">This is p1</p>
+                <p id="p2">This is p2</p>
+                <button onclick="changeTextColor()">Change Text Color</button>
+            </td>
+            
+            <!-- Column ClassName -->
+            <td>
+                <p class="colorChange">Text 1</p>
+                <p class="colorChange">Text 2</p>
+                <p class="colorChange">Text 3</p>
+                <button onclick="toggleClassName()">Toggle Background Color</button>
+            </td>
+            
+            <!-- Column Tag -->
+            <td>
+                <span>This is a span 1</span>
+                <span>This is a span 2</span>
+                <span>This is a span 3</span>
+                <button onclick="changeInnerHTML()">Change InnerHTML of all Spans</button>
+            </td>
+            
+            <!-- Column Name -->
+            <td>
+                <input type="text" name="input1" value="Value 1">
+                <input type="text" name="input2" value="Value 2">
+                <input type="text" name="input3" value="Value 3">
+                <button onclick="toggleDisabled()">Toggle Disabled</button>
+            </td>
+            
+            <!-- Column Attribute -->
+            <td>
+                <p data-custom="custom1">Custom attribute 1</p>
+                <p data-custom="custom2">Custom attribute 2</p>
+                <p data-custom="custom3">Custom attribute 3</p>
+                <button onclick="addCustomAttribute()">Add Custom Attribute</button>
+            </td>
+        </tr>
+    </table>
+
+    <script src="task1.js">
+      
+    </script>
+</body>
+</html>
