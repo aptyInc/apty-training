@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Most Frequent Element</title>
+</head>
+<body>
+    <input id="v1" type="text" onchange="pro()">
+    <div id="res"></div>
+</body>
+<script>
+    function mostFrequent(arr) {
+        
+        const frequencyMap = arr.reduce((map, num) => {
+            map[num] = (map[num] || 0) + 1;
+            return map;
+        }, {});
+
+        const mostFrequentElem = Object.entries(frequencyMap).reduce((max, [key, value]) => {
+            return value > max[1] ? [key, value] : max;
+        }, [null, 0]);
+
+       
+        return mostFrequentElem[0];
+    }
+
+    function pro() {
+        let input = document.getElementById('v1').value;
+        let res = document.getElementById('res');
+
+        const arr = input.split(',').map(num => parseInt(num.trim()));
+
+        
+        const result = mostFrequent(arr);
+        
+    
+        res.innerHTML = `Most Frequent Element: ${result}`;
+    }
+</script>
+</html>

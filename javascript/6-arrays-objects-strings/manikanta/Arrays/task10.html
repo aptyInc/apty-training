@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sort Students</title>
+</head>
+<body>
+    <input id="v1" type="text" onchange="pro()">
+    <div id="res"></div>
+</body>
+<script>
+    function pro() {
+        let input = document.getElementById('v1').value;
+        let res = document.getElementById('res');
+        
+       
+        const students = JSON.parse(input);
+
+        
+        function compare(a, b) {
+            if (a.score < b.score) {
+                return -1;  
+            }
+            if (a.score > b.score) {
+                return 1;  
+            }
+            return 0;  
+        }
+
+        
+        students.sort(compare);
+
+       
+        let result = "Sorted Students by Score:<br>";
+        students.forEach(student => {
+            result += `${student.name}: ${student.score}<br>`;
+        });
+
+        res.innerHTML = result;
+    }
+</script>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transpose Matrix</title>
+</head>
+<body>
+    <input id="v1" type="text" onchange="pro()">
+    <div id="res"></div>
+</body>
+<script>
+    function transposeMatrix(matrix) {
+        
+        return matrix[0].map((_, colIndex) => matrix.map(row => row[colIndex]));
+    }
+
+    function pro() {
+        let input = document.getElementById('v1').value;
+        let res = document.getElementById('res');
+        
+        const matrix = JSON.parse(input);
+
+        
+        const result = transposeMatrix(matrix);
+
+       
+        res.innerHTML = `<pre>${JSON.stringify(result, null, 4)}</pre>`;
+    }
+</script>
+</html>
