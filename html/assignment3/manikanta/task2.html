@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shadow DOM with Template</title>
+</head>
+<body>
+
+
+  <template id="my-card-template">
+    <style>
+      .card {
+        border: 1px solid #ccc;
+        padding: 20px;
+        border-radius: 8px;
+        max-width: 200px;
+        background-color: #f9f9f9;
+      }
+      .card h2 {
+        font-size: 1.5em;
+        margin-bottom: 10px;
+      }
+      .card p {
+        color: #555;
+      }
+    </style>
+    <div class="card">
+      <h2></h2>
+      <p></p>
+    </div>
+  </template>
+
+  <!-- Use the custom component -->
+  <my-card></my-card>
+  <my-card></my-card>
+
+  <script>
+    
+    class MyCard extends HTMLElement {
+      constructor() {
+        super();
+
+    
+        const template = document.getElementById('my-card-template');
+        const templateContent = template.content;
+
+        
+        const shadowRoot = this.attachShadow({mode: 'open'});
+
+        
+        shadowRoot.appendChild(templateContent.cloneNode(true));
+
+        
+        const cardTitle = shadowRoot.querySelector('h2');
+        const cardText = shadowRoot.querySelector('p');
+        
+        cardTitle.textContent = 'Custom Card';
+        cardText.textContent = 'This is a custom card created using Shadow DOM and <template>.';
+      }
+    }
+
+    
+    customElements.define('my-card', MyCard);
+  </script>
+
+</body>
+</html>
