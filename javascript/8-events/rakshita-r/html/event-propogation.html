@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Event Phases Demo</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 20px;
+      }
+
+      .level1,
+      .level2,
+      .level3 {
+        padding: 20px;
+        border: 2px solid black;
+        margin: 10px;
+      }
+
+      .level1 {
+        background-color: #f8d7da;
+      }
+
+      .level2 {
+        background-color: #d1ecf1;
+      }
+
+      .level3 {
+        background-color: #d4edda;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="level1">
+      Level 1
+      <div class="level2">
+        Level 2
+        <div class="level3">Level 3 (Click me)</div>
+      </div>
+    </div>
+
+    <script src="../scripts/event-propogation.js"></script>
+  </body>
+</html>

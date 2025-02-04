@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Inline Editing Component</title>
+    <style>
+      .editable-div {
+        border: 1px solid #ccc;
+        padding: 10px;
+        min-width: 200px;
+        display: inline-flex;
+        align-items: center;
+        cursor: pointer;
+      }
+      .editable-div:hover {
+        background-color: #f9f9f9;
+      }
+      .icon {
+        margin-left: 10px;
+        font-size: 16px;
+        color: #888;
+        cursor: pointer;
+      }
+      textarea {
+        width: 100%;
+        min-height: 50px;
+        resize: none;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="editableContainer">
+      <div class="editable-div" id="editableDiv">
+        This is editable text <span class="icon">✏️</span>
+      </div>
+    </div>
+
+    <script src="../scripts/inline-editing.js"></script>
+  </body>
+</html>
