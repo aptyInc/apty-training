@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Bitwise Operators</title>
+        <link rel="stylesheet" href="styles.css">
+        
+    </head>
+    <body>
+        <header>
+            Assignment 7 - Bitwise Operators
+        </header>
+        <br>
+        <p>Enter two numbers:</p>
+        <div>
+            <input id="value1" type="number" placeholder="First Number">
+            <br>
+            <form>
+                <label for="firstNumber">Select</label>
+                <select name="firstNumber" id="type1">
+                <option value="string">String</option>
+                <option value="number">Number</option>
+                <option value="boolean">Boolean</option>
+                </select>
+                <br><br>
+            </form>
+        </div>
+        <br>
+        <div>
+            <input id="value2" type="number" placeholder="Second Number">
+            <br>
+            <form>
+                <label for="secondNumber">Select</label>
+                <select name="secondNumber" id="type2">
+                <option value="string">String</option>
+                <option value="number">Number</option>
+                <option value="boolean">Boolean</option>
+                </select>
+                <br><br>
+            </form>
+        </div>
+        <br>
+        <button onclick="and()">&</button>
+        <button onclick="or()">|</button>
+        <button onclick="xor()">^</button>
+        <button onclick="not()">~</button>
+        <button onclick="leftShift()"><<</button>
+        <button onclick="rightShift()">>></button>
+        <br>
+
+        <div id="output">Result will be displayed here</div>
+        <script src="js-operators-7.js"></script>
+    </body>
+</html>

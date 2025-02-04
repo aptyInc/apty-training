@@ -1,0 +1,26 @@
+button{
+    width: 70px;
+    height: 60px;
+    border-radius: 50px;
+    border: none;
+    background-color: rgb(48, 45, 42);
+    color: white;
+    font-size: 40px;
+    cursor: pointer;
+}
+
+body{
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+button:hover{
+    background-color: aquamarine;
+    color: black;
+}
+
+button:active{
+    background-color: blue;
+}
