@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Custom Array Sorting</title>
+  </head>
+  <body>
+    <h1>Custom Array Sorting</h1>
+
+    <h2>Enter Students:</h2>
+    <label for="students-input"
+      >Enter student names and scores (format: Name,Score; e.g., Alice,90;
+      Bob,80):</label
+    ><br />
+    <textarea
+      id="students-input"
+      rows="4"
+      cols="50"
+      placeholder="e.g., Alice,90; Bob,80"
+    ></textarea
+    ><br /><br />
+
+    <button onclick="sortStudents()">Sort Students</button>
+
+    <h2>Result:</h2>
+    <p id="custom-sort-result"></p>
+
+    <script src="custom-array-sorting.js"></script>
+  </body>
+</html>
