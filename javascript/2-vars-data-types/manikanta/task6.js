@@ -1,0 +1,9 @@
+let num=1;
+let str="A";
+let bol=true;
+let un=undefined;
+let nu=null;
+let sy=Symbol();
+let ob={1:2}
+let ans=`number ${num},string ${str},bollean ${bol},undefined ${un},null ${nu},object ${ob}`;
+document.getElementById('an').innerHTML=ans;

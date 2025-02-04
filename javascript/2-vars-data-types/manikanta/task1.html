@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   
+</head>
+<body>
+    <div id="internal"></div>
+    <div id="external"></div>
+    <div id="inline" onclick="document.getElementById('inline').innerHTML='Im interanl js executed at '+ new Date();">click me im in line js</div>
+</body>
+
+<script>
+    let el=document.getElementById("internal");
+      el.innerHTML="I'm interanl js executed at "+ new Date();
+     
+</script>
+<script src="task1.js"></script>
+</html>
