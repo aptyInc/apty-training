@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sort Objects by Property</title>
+    <script src = "../js/array-sorting.js"></script>
+    <link rel="stylesheet" href="../css/index.css">
+</head>
+<body>
+    <header>
+        Sort Array of Objects by Property
+    </header>
+    <main>
+        <section>
+            <p>Enter an array of student objects (name and score):</p>
+            <textarea id="studentInput" placeholder='[{"name": "Bob", "score": 80}, {"name": "Alice", "score": 90}]' rows="5" cols="50"></textarea><br><br>
+
+            <button onclick="sortStudentsByScore()">Sort Students</button>
+
+            <h3>Sorted Result:</h3>
+            <p id="result">The sorted student list will appear here.</p>
+        </section>
+    </main>
+    <footer>
+        2024@JavaScript Assignment
+    </footer>
+</body>
+</html>
