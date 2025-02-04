@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Storage Example</title>
+</head>
+<body>
+    <h1>Storage Example</h1>
+    <input type="text" id="username" placeholder="Enter your name">
+    <button onclick="saveData()">Save Data</button>
+    
+    <h2>Stored Data:</h2>
+    <div id="displayData"></div>
+
+    <script>
+        // Function to save data to localStorage and sessionStorage
+        function saveData() {
+            const username = document.getElementById('username').value;
+            localStorage.setItem('username', username); // Store in localStorage
+            sessionStorage.setItem('sessionData', username); // Store in sessionStorage
+            displayData(); // Call function to display data
+        }
+
+        // Function to display stored data on page load
+        function displayData() {
+            const storedUsername = localStorage.getItem('username');
+            const storedSessionData = sessionStorage.getItem('sessionData');
+
+            const displayDiv = document.getElementById('displayData');
+            displayDiv.innerHTML = `
+                <p>Username (from localStorage): ${storedUsername ? storedUsername : 'No data'}</p>
+                <p>Session Data (from sessionStorage): ${storedSessionData ? storedSessionData : 'No data'}</p>
+            `;
+        }
+
+        // Display data when the page loads
+        window.onload = displayData;
+    </script>
+</body>
+</html>
