@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Access and Manipulate Elements</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <table border="1">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Class Name</th>
+          <th>Tag</th>
+          <th>Name</th>
+          <th>Attribute</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>
+            <p id="id1">ID Element 1</p>
+            <p id="id2">ID Element 2</p>
+            <button id="changeColor">Change Text Color</button>
+          </td>
+          <td>
+            <p class="class1">Class Element 1</p>
+            <p class="class1">Class Element 2</p>
+            <button id="toggleClass">Toggle Background</button>
+          </td>
+          <td>
+            <span>Tag Element 1</span>
+            <span>Tag Element 2</span>
+            <button id="changeText">Change Text</button>
+          </td>
+          <td>
+            <input type="text" name="name1" value="Value 1" />
+            <input type="text" name="name2" value="Value 2" />
+            <button id="toggleDisabled">Toggle Disabled</button>
+          </td>
+          <td>
+            <p custom-attr="attr1">Custom Attribute 1</p>
+            <p custom-attr="attr2">Custom Attribute 2</p>
+            <button id="addAttribute">Add Attribute</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+    <script src="access-manipulate-elements.js"></script>
+  </body>
+</html>
