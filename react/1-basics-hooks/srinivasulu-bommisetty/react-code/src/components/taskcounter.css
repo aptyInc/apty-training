@@ -1,0 +1,13 @@
+/* Task Counter */
+.task-counter {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  z-index: 1000;
+  transition: all 0.3s ease-in-out;
+}
+
+.task-counter p {
+  margin: 0;
+  font-size: 18px;
+}
