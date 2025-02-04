@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Accessing and Manipulating Elements</title>
+  <style>
+    .toggle-background {
+      background-color: yellow;
+    }
+    table,th,td{
+        border: 1px solid;
+        border-collapse: collapse;
+    }
+  </style>
+</head>
+<body>
+  <h1>Accessing and Manipulating Elements</h1>
+
+  <table>
+    <thead>
+      <tr>
+        <th>id</th>
+        <th>className</th>
+        <th>tag</th>
+        <th>name</th>
+        <th>attribute</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>
+          <p id="para1">Paragraph 1</p>
+          <p id="para2">Paragraph 2</p>
+          <button onclick="changeTextColor()">Change Text Color</button>
+        </td>
+        <td>
+          <p class="class1">Class 1 Element 1</p>
+          <p class="class1">Class 1 Element 2</p>
+          <button onclick="toggleClassName()">Toggle Background Color</button>
+        </td>
+        <td>
+          <span>somthing text 1</span>
+          <span>somthing text 2</span>
+          <button onclick="changeInnerHTML()">Change InnerHTML</button>
+        </td>
+        <td>
+          <input type="text" name="input1" value="Input 1">
+          <input type="text" name="input2" value="Input 2">
+          <button onclick="toggleDisabled()">Toggle Disabled</button>
+        </td>
+        <td>
+          <p custom-attr="value1">Paragraph with custom attribute 1</p>
+          <p custom-attr="value2">Paragraph with custom attribute 2</p>
+          <button onclick="addCustomAttribute()">Add Custom Attribute</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <script src="./scripts/dom-manipulating.js">
+    
+  </script>
+</body>
+</html>

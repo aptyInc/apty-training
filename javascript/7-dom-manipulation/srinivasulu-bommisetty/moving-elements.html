@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Move Table Rows</title>
+    <style>
+      table {
+        width: 100%;
+        border-collapse: collapse;
+      }
+      th,
+      td {
+        border: 1px solid black;
+        padding: 8px;
+        text-align: center;
+      }
+      button {
+        margin: 2px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Move Table Rows</h1>
+
+    <table id="table">
+      <thead>
+        <tr>
+          <th>Row</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Row 1</td>
+          <td>
+            <button onclick="moveRow(this, 'up')">Up</button>
+            <button onclick="moveRow(this, 'down')">Down</button>
+            <button onclick="moveRow(this, 'top')">Top</button>
+            <button onclick="moveRow(this, 'bottom')">Bottom</button>
+          </td>
+        </tr>
+        <tr>
+          <td>Row 2</td>
+          <td>
+            <button onclick="moveRow(this, 'up')">Up</button>
+            <button onclick="moveRow(this, 'down')">Down</button>
+            <button onclick="moveRow(this, 'top')">Top</button>
+            <button onclick="moveRow(this, 'bottom')">Bottom</button>
+          </td>
+        </tr>
+        <tr>
+          <td>Row 3</td>
+          <td>
+            <button onclick="moveRow(this, 'up')">Up</button>
+            <button onclick="moveRow(this, 'down')">Down</button>
+            <button onclick="moveRow(this, 'top')">Top</button>
+            <button onclick="moveRow(this, 'bottom')">Bottom</button>
+          </td>
+        </tr>
+        <tr>
+          <td>Row 4</td>
+          <td>
+            <button onclick="moveRow(this, 'up')">Up</button>
+            <button onclick="moveRow(this, 'down')">Down</button>
+            <button onclick="moveRow(this, 'top')">Top</button>
+            <button onclick="moveRow(this, 'bottom')">Bottom</button>
+          </td>
+        </tr>
+        <tr>
+          <td>Row 5</td>
+          <td>
+            <button onclick="moveRow(this, 'up')">Up</button>
+            <button onclick="moveRow(this, 'down')">Down</button>
+            <button onclick="moveRow(this, 'top')">Top</button>
+            <button onclick="moveRow(this, 'bottom')">Bottom</button>
+          </td>
+        </tr>
+        <tr>
+          <td>Row 6</td>
+          <td>
+            <button onclick="moveRow(this, 'up')">Up</button>
+            <button onclick="moveRow(this, 'down')">Down</button>
+            <button onclick="moveRow(this, 'top')">Top</button>
+            <button onclick="moveRow(this, 'bottom')">Bottom</button>
+          </td>
+        </tr>
+        <tr>
+          <td>Row 7</td>
+          <td>
+            <button onclick="moveRow(this, 'up')">Up</button>
+            <button onclick="moveRow(this, 'down')">Down</button>
+            <button onclick="moveRow(this, 'top')">Top</button>
+            <button onclick="moveRow(this, 'bottom')">Bottom</button>
+          </td>
+        </tr>
+        <tr>
+          <td>Row 8</td>
+          <td>
+            <button onclick="moveRow(this, 'up')">Up</button>
+            <button onclick="moveRow(this, 'down')">Down</button>
+            <button onclick="moveRow(this, 'top')">Top</button>
+            <button onclick="moveRow(this, 'bottom')">Bottom</button>
+          </td>
+        </tr>
+        <tr>
+          <td>Row 9</td>
+          <td>
+            <button onclick="moveRow(this, 'up')">Up</button>
+            <button onclick="moveRow(this, 'down')">Down</button>
+            <button onclick="moveRow(this, 'top')">Top</button>
+            <button onclick="moveRow(this, 'bottom')">Bottom</button>
+          </td>
+        </tr>
+        <tr>
+          <td>Row 10</td>
+          <td>
+            <button onclick="moveRow(this, 'up')">Up</button>
+            <button onclick="moveRow(this, 'down')">Down</button>
+            <button onclick="moveRow(this, 'top')">Top</button>
+            <button onclick="moveRow(this, 'bottom')">Bottom</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+    <script src="./scripts/moving-elements.js"></script>
+  </body>
+</html>

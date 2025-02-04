@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nested Element Count</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+      }
+      #result {
+        margin-top: 20px;
+      }
+      #result ul {
+        list-style-type: none;
+        padding: 0;
+      }
+      #result li {
+        padding: 5px 0;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Nested Element Count</h1>
+
+    <button onclick="countElements()">Count Elements</button>
+
+    <div>
+      <div>
+        <p>This is a paragraph inside a div.</p>
+        <span>This is a span inside a div.</span>
+      </div>
+      <p>This is a paragraph outside a div.</p>
+      <span>This is a span element.</span>
+      <iframe
+        src="https://www.example.com"
+        style="width: 200px; height: 100px"
+      ></iframe>
+    </div>
+
+    <div id="result">
+      <h3>Element Counts:</h3>
+      <ul id="elementCounts"></ul>
+    </div>
+
+    <script src="./scripts/nested-element-count.js"></script>
+  </body>
+</html>
