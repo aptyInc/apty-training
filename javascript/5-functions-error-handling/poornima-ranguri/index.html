@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="Javascript" content="Poornima Ranguri Projects" />
+    <title>Functions and Error Handling</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 20px;
+        line-height: 1.6;
+      }
+      .project-links {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 80%;
+        margin: 10px 0;
+      }
+      .project-links a {
+        color: darkcyan;
+        text-decoration: none;
+        font-weight: bold;
+        transition: color 0.3s ease;
+      }
+      .project-links a:hover {
+        color: teal;
+      }
+      details {
+        margin-top: 20px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        padding: 10px;
+      }
+      summary {
+        cursor: pointer;
+        font-size: 1.2em;
+      }
+      iframe {
+        width: 100%;
+        height: 500px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        margin-top: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Poornima Ranguri - Functions and Error Handling</h1>
+    </header>
+
+    <main>
+      <div style="text-align: center">
+        <h3>Function Declaration, Expression, and Arrow Functions</h3>
+      </div>
+      <section>
+        <details>
+          <summary>
+            <strong>Recursion with Function Declaration</strong>
+          </summary>
+          <p>
+            Write a recursive function declared using a **function declaration**
+            to calculate the Fibonacci series up to a given number. The input
+            should be taken from an HTML form, and the results should be
+            displayed back in HTML
+          </p>
+
+          <iframe
+            src="./html/functions/declaration-arrow-expressions/recursive-function.html"
+            title="recursive function"
+          >
+          </iframe>
+        </details>
+      </section>
+
+      <section>
+        <details>
+          <summary><strong>Function Expression for Sorting</strong></summary>
+          <p>
+            Create a **function expression** to sort an array of numbers. The
+            array should be taken as inputs from an HTML form, and the sorted
+            array should be displayed in a table on the HTML page.
+          </p>
+
+          <iframe
+            src="./html/functions/declaration-arrow-expressions/expression-for-sorting.html"
+            title="Sorting Array"
+            loading="lazy"
+            sandbox="allow-scripts allow-same-origin"
+          >
+          </iframe>
+        </details>
+      </section>
+
+      <section>
+        <details>
+          <summary><strong>Arrow Function for Event Handling</strong></summary>
+          <p>
+            Implement a button in HTML that uses an **arrow function** to handle
+            its click event. The function should update a counter displayed on
+            the HTML page every time the button is clicked.
+          </p>
+
+          <iframe
+            src="./html/functions/declaration-arrow-expressions/arrow-counter.html"
+            title="Counter Project"
+            loading="lazy"
+            sandbox="allow-scripts allow-same-origin"
+          >
+          </iframe>
+        </details>
+      </section>
+
+      <section>
+        <details>
+          <summary>
+            <strong> Immediately Invoked Function Expressions (IIFE)</strong>
+          </summary>
+          <p>
+            Create an **IIFE** (Immediately Invoked Function Expression) to
+            initialize a set of default values on the page. For example, it
+            should set default text in an input box.
+          </p>
+
+          <iframe
+            src="./html/functions/declaration-arrow-expressions/immediately-invoked.html"
+            title="IIFE"
+            loading="lazy"
+            sandbox="allow-scripts allow-same-origin"
+          >
+          </iframe>
+        </details>
+      </section>
+
+      <div style="text-align: center">
+        <h3>Parameters, Arguments, and Default Values</h3>
+      </div>
+
+      <section>
+        <details>
+          <summary><strong>Function with Default Paramenters</strong></summary>
+          <p>
+            Write a function that calculates the area of a rectangle. Use
+            default values for length and width if they are not provided. The
+            user should input values through an HTML form, and the result should
+            display back on the page.
+          </p>
+          <iframe
+            src="./html/functions/parameters-arguments-default-value/area-of-rectangle.html"
+            title="Area of Rectangle"
+            loading="lazy"
+            sandbox="allow-scripts allow-same-origin"
+          >
+          </iframe>
+        </details>
+      </section>
+
+      <section>
+        <details>
+          <summary>
+            <strong>Rest Parameters for variable Arguments</strong>
+          </summary>
+          <p>
+            Create a function that takes a dynamic number of arguments using the
+            rest parameter. The function should return the sum of all arguments
+            passed. Take input from an HTML form as a comma-separated list and
+            display the sum on the page.
+          </p>
+          <iframe
+            src="./html/functions/parameters-arguments-default-value/rest-parameter.html"
+            frameborder="0"
+          ></iframe>
+        </details>
+      </section>
+
+      <section>
+        <details>
+          <summary>
+            <strong>Nested Functions with Default Values</strong>
+          </summary>
+          <p>
+            Create a nested function setup where the outer function calculates
+            the perimeter of a rectangle using default values for length and
+            width. The inner function calculates the area of the rectangle using
+            the same parameters. Display both results on the page based on user
+            input or defaults..
+          </p>
+
+          <iframe
+            src="./html/functions/parameters-arguments-default-value/perimeter-area-nested.html"
+            title="Perimeter of a recatngle"
+          >
+          </iframe>
+        </details>
+      </section>
+
+      <section>
+        <details>
+          <summary>
+            <strong>Callback Functions with Default Parameters</strong>
+          </summary>
+          <p>
+            Write a function that accepts another function as a parameter (a
+            callback). The callback function should take a default value if not
+            provided and process user input (e.g., convert a string to
+            uppercase). Show the final processed string on the page.
+          </p>
+
+          <iframe
+            src="./html/functions/parameters-arguments-default-value/call-back-function.html"
+            title="Call Back to chancge case"
+          >
+          </iframe>
+        </details>
+      </section>
+
+      <div style="text-align: center">
+        <h3>Closures and Lexical Scoping</h3>
+      </div>
+      <section>
+        <details>
+          <summary><strong>Private variables with Closures</strong></summary>
+          <p>
+            Write a function that acts as a bank account. The function should
+            have private variables for balance and methods to deposit, withdraw,
+            and check balance. Ensure balance manipulation is only possible
+            through these methods. Add HTML inputs for user actions.
+          </p>
+
+          <iframe
+            src="./html/functions/closures-and-lexical-scoping/bank-account.html"
+            title="Bank Account"
+          >
+          </iframe>
+        </details>
+      </section>
+
+      <section>
+        <details>
+          <summary>
+            <strong>Lexical Scoping in Nested Functions</strong>
+          </summary>
+          <p>
+            Write a function that has three levels of nested functions. The
+            innermost function should access variables defined in the outer
+            functions and return a concatenated string. Allow the user to set
+            the variables in the HTML form and display the output.
+          </p>
+
+          <iframe
+            src="./html/functions/closures-and-lexical-scoping/lexical-scoping-nested.html"
+            title="Concatenation String"
+          >
+          </iframe>
+        </details>
+      </section>
+
+      <section>
+        <details>
+          <summary><strong>Cachning Results</strong></summary>
+          <p>
+            Create a function that caches the results of expensive calculations.
+            Use a closure to store previously computed results. For example, a
+            function that calculates the factorial of a number should cache the
+            results for faster computation of repeated inputs. Allow the user to
+            input numbers and display results on the page.
+          </p>
+
+          <iframe
+            src="./html/functions/closures-and-lexical-scoping/caching-results.html"
+            title="Caching Results"
+          >
+          </iframe>
+        </details>
+      </section>
+
+      <div style="text-align: center">
+        <h3>Intermediate Topics</h3>
+      </div>
+
+      <section>
+        <details>
+          <summary><strong>High-Order Functions</strong></summary>
+          <p>
+            Write a higher-order function `repeatAction` that takes a function
+            and a number `n` as arguments and executes the function `n` times.
+            Use this to dynamically create a list of items on an HTML page with
+            user input.
+          </p>
+
+          <iframe
+            src="./html/functions/intermediate-topics/repeat-action-high-order.html"
+            title="High Order Functions"
+          >
+          </iframe>
+        </details>
+      </section>
+
+      <section>
+        <details>
+          <summary>
+            <strong>High Order Function with Arrow Functions</strong>
+          </summary>
+          <p>
+            Write a **higher-order function** that takes a callback function as
+            an argument. Use an **arrow function** as the callback to filter an
+            array of numbers (e.g., removing all numbers greater than a
+            user-defined limit). The input should come from an HTML form, and
+            the filtered array should be displayed back to the HTML page.
+          </p>
+
+          <iframe
+            src="./html/functions/intermediate-topics/filtering-array-using-arrow.html"
+            title="Filter Array"
+          >
+          </iframe>
+        </details>
+      </section>
+
+      <div style="text-align: center">
+        <h3>Error Handling</h3>
+      </div>
+
+      <section>
+        <details>
+          <summary><strong>Syntax Errors</strong></summary>
+          <p>
+            Create a function parseJSON() that takes a JSON string as input and
+            attempts to parse it. Handle all invalid parameter cases. Example
+            JSON: "{key: 'value'}" (missing quotes around key). Extend the
+            function to catch such errors and provide meaningful feedback.
+          </p>
+
+          <iframe
+            src="./html/error-handling/syntax-errors.html"
+            title="Syntax Errors"
+          >
+          </iframe>
+        </details>
+      </section>
+
+      <section>
+        <details>
+          <summary>
+            <strong>Runtime Errors</strong>
+          </summary>
+          <p>
+            Write a program to take user_name as input from html page and print
+            the city of the user back on html page ex:const users = {"lucky": {
+            "address" : { "city": "Hyderabad"} } }. You will get results with
+            users[name_input].address.city. If the input is not part of object
+            you will get error. Catch the error and print back to html page
+          </p>
+
+          <iframe
+            src="./html/error-handling/runtime-errors.html"
+            title="Errors"
+          >
+          </iframe>
+        </details>
+      </section>
+      <section>
+        <details>
+          <summary><strong>Finally Block</strong></summary>
+          <p>
+            Improve previous assignment by having default const default_city =
+            "Pune" in variable and print it in html using finally when the error
+            occurs.
+          </p>
+
+          <iframe
+            src="./html/error-handling/finally-block.html"
+            title="Finally Block"
+          >
+          </iframe>
+        </details>
+      </section>
+
+      <section>
+        <details>
+          <summary><strong>Throwing Custom Errors</strong></summary>
+          <p>
+            Create a calculator function calculate() that takes two numbers and
+            an operator as input
+          </p>
+
+          <iframe
+            src="./html/error-handling/throw-custom-errors.html"
+            title="Custom Errors"
+          >
+          </iframe>
+        </details>
+      </section>
+
+      <section>
+        <details>
+          <summary><strong>Error Objects</strong></summary>
+          <p>
+            Create a program to simulate a banking system. Write a function
+            withdrawAmount() that accepts an account balance and withdrawal
+            amount. If the withdrawal amount exceeds the balance, throw an error
+            object with properties like errorCode and errorMessage. Display
+            these properties to the user.
+          </p>
+
+          <iframe
+            src="./html/error-handling/error-objects.html"
+            title="Error Objects"
+          >
+          </iframe>
+        </details>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; 2024 Poornima Ranguri. All rights reserved.</p>
+    </footer>
+  </body>
+</html>
