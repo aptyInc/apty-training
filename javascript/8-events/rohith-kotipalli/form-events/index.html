@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Events</title>
+</head>
+<body>
+    <h1>Registration Form</h1>
+  <form id="registrationForm">
+    <div class="form-group">
+      <label for="username">Username:</label>
+      <input type="text" id="username" name="username" placeholder="Enter your username">
+      <div id="usernameError" class="error"></div>
+    </div>
+    <div class="form-group">
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" placeholder="Enter your email">
+      <div id="emailError" class="error"></div>
+    </div>
+    <div class="form-group">
+      <label for="password">Password:</label>
+      <input type="password" id="password" name="password" placeholder="Enter your password">
+      <div id="passwordError" class="error"></div>
+    </div>
+    <div class="form-group">
+      <label for="confirmPassword">Confirm Password:</label>
+      <input type="password" id="confirmPassword" name="confirmPassword" placeholder="Confirm your password">
+      <div id="confirmPasswordError" class="error"></div>
+    </div>
+    <button type="submit">Register</button>
+  </form>
+  <div id="formFeedback" style="margin-top: 20px;"></div>
+
+    <script src="./index.js" ></script>
+</body>
+</html>
