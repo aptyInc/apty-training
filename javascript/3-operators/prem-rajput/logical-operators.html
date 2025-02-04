@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logical Operators</title>
+    <style>
+
+        button {
+        margin: 5px;
+        background-color: #4CAF50;
+        color: white;
+        border: none;
+        padding: 10px;
+        border-radius: 5px;
+        font-size: 18px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+        background-color: #45a049;
+    }
+    
+    </style>
+</head>
+    
+<body>
+
+    <h2>Logical Operators</h2>
+
+    <label>Value 1: <input type="text" id="value1"></label>
+    <label>Type 1: 
+        <select id="type1">
+            <option value="string">String</option>
+            <option value="number">Number</option>
+            <option value="boolean">Boolean</option>
+            <option value="symbol">Symbol</option>
+        </select>
+    </label>
+    <br><br>
+    <label>Value 2: <input type="text" id="value2"></label>
+    <label>Type 2: 
+        <select id="type2">
+            <option value="string">String</option>
+            <option value="number">Number</option>
+            <option value="boolean">Boolean</option>
+            <option value="symbol">Symbol</option>
+        </select>
+    </label>
+    <br><br>
+
+    <button onclick="logicalAnd()">&&</button>
+    <button onclick="logicalOr()">||</button>
+    <button onclick="logicalNot()">!</button>
+
+    <p id="result"></p>
+
+    <script src="./scripts/logical-operators.js"></script>
+
+</body>
+</html>
