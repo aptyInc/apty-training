@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Deep Clone Object</title>
+    <link rel="stylesheet" href="/javascript/6-arrays-objects-strings/anusree-vutlapalli/css/objects/task1-objmanipulation.css">
+</head>
+<body>
+    <h1>Deep Clone Example</h1>
+    <label for="userInput">Enter Object (in JSON format):</label><br>
+    <textarea id="userInput" rows="5" cols="50" placeholder='e.g., {"a": 1, "b": {"c": 2}}'></textarea><br><br>
+    
+    <label for="modifyKey">Key to Modify in Clone:</label>
+    <input id="modifyKey" placeholder="e.g., b.c"><br>
+    
+    <label for="modifyValue">New Value:</label>
+    <input id="modifyValue" placeholder="e.g., 3"><br><br>
+
+    <button onclick="processObject()">Deep Clone and Modify</button>
+    
+    <h2>Result:</h2>
+    <pre id="output"></pre>
+
+    <script src="/javascript/6-arrays-objects-strings/anusree-vutlapalli/js/objects/task2-cloneobj.js"></script>
+</body>
+</html>
