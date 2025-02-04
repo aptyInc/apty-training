@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input id="v1" type="text" onchange="pro()">
+    <div id="res"></div>
+</body>
+<script>
+    function pro() {
+        let input = document.getElementById('v1').value;
+        let res = document.getElementById('res');
+        
+        
+        const students =JSON.parse(input);
+        
+        const allPassed = students.every(student => student.score > 35);
+        
+
+        const someFailed = students.some(student => student.score < 35);
+        
+        
+        let result;
+        if (allPassed) {
+            result = "All Students Passed";
+        } else if (someFailed) {
+            result = "Some Students Failed";
+        }
+
+        
+        res.innerHTML = result;
+    }
+</script>
+</html>

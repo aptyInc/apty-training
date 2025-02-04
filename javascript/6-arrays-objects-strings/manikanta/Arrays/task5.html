@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input id="v1" type="text" onchange="pro()">
+    <div id="res"></div>
+</body>
+<script>
+   
+    function getFirstThreeNames(names) {
+        return names.slice(0, 3);
+    }
+
+    
+    function getLastTwoNames(names) {
+        return names.slice(-2);
+    }
+
+function pro(){
+    const namesArray = JSON.parse(document.getElementById('v1').value);
+    console.log(namesArray);
+    
+    const firstThreeNames = getFirstThreeNames(namesArray);
+    console.log("First three names:", firstThreeNames); 
+    
+    
+    const lastTwoNames = getLastTwoNames(namesArray);
+    console.log("Last two names:", lastTwoNames); 
+    const resultElement = document.getElementById('res');
+    resultElement.innerHTML = `
+        <p>First three names: ${firstThreeNames.join(', ')}</p>
+        <p>Last two names: ${lastTwoNames.join(', ')}</p>
+    `;
+}
+</script>
+</html>
