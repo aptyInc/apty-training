@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Window Resize Listener</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 20px;
+      }
+      #resizeDetails {
+        margin-top: 20px;
+        padding: 10px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        background-color: #f9f9f9;
+      }
+      label,
+      input {
+        display: block;
+        margin-bottom: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Window Resize Event Listener</h1>
+
+    <form id="resizeForm">
+      <label for="extraProperty"
+        >Enter additional screen property (e.g., 'devicePixelRatio'):</label
+      >
+      <input
+        type="text"
+        id="extraProperty"
+        placeholder="Enter property name (optional)"
+      />
+      <button type="button" onclick="addProperty()">Add Property</button>
+    </form>
+
+    <div id="resizeDetails">
+      <h2>Screen Properties:</h2>
+      <p><strong>Width:</strong> <span id="screenWidth"></span></p>
+      <p><strong>Height:</strong> <span id="screenHeight"></span></p>
+      <p>
+        <strong>Additional Property:</strong>
+        <span id="additionalPropertyValue">N/A</span>
+      </p>
+    </div>
+    <script src="../scripts/window-dimension.js"></script>
+  </body>
+</html>
