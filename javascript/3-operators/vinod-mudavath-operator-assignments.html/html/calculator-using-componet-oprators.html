@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Calculator using component operators</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Simple Calculator</h1>
+    <form onsubmit="event.preventDefault()">
+        <label for="num1">Number 1:</label>
+        <input type="number" id="num1" placeholder="Enter first number">
+        <br><br>
+        <label for="num2">Number 2:</label>
+        <input type="number" id="num2" placeholder="Enter second number">
+        <br><br>
+        <button onclick="addOperator()">+</button>
+        <button onclick="subtractOperator()">-</button>
+        <button onclick="multiplyOperator()">*</button>
+        <button onclick="divideOperator()">/</button>
+        <button onclick="modulloOperator()">%</button>
+        <button onclick="incrementOperator()">++</button>
+        <button onclick="decrementOperator()">--</button>
+        <h2>Result: <span id="result">0</span></h2>
+    </form>
+    <script  type="text/javascript" src="./../script/calculator-using-oprators.js">
+        
+    </script>
+</body>
+
+</html>
