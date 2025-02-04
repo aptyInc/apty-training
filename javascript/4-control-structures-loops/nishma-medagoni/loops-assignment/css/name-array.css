@@ -1,0 +1,31 @@
+header, footer {
+    text-align: center;
+    margin: 30px;
+    font-weight: bold;
+    font-size: larger;
+}
+main {
+    height: 70vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+section {
+    width: 40%;
+    padding: 60px;
+    border: 1px solid black;
+}
+
+button {
+    background-color: black;
+    color: white;
+    padding: 10px;
+    cursor: pointer;
+}
+div {
+    padding: 30px;
+}
+#screenshot {
+    width: 300px;
+    height: 90px;
+}
