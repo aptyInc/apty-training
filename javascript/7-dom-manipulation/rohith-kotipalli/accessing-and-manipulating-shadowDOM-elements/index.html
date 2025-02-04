@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accessing and Manipulating shadowDOM Elements</title>
+
+</head>
+<body>
+    <div id="shadowHost"></div>
+    <template id="tempEle">
+        <link rel="stylesheet" href="./styles.css" />
+        <table border="1" style="width: 100%; text-align: center;">
+            <thead>
+                <tr>
+                    <th>id</th>
+                    <th>className</th>
+                    <th>tag</th>
+                    <th>name</th>
+                    <th>attribute</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <p id="p1">Paragraph 1</p>
+                        <p id="p2">Paragraph 2</p>
+                    </td>
+                    <td>
+                        <p class="same-class">Paragraph 1</p>
+                        <p class="same-class">Paragraph 2</p>
+                    </td>
+                    <td>
+                        <span>Span 1</span>
+                        <span>Span 2</span>
+                    </td>
+                    <td>
+                        <input type="text" disabled name="input1" value="Input 1">
+                        <input type="text" name="input2" value="Input 2">
+                    </td>
+                    <td>
+                        <p data-attr="attr1">Custom Attribute 1</p>
+                        <p data-attr="attr2">Custom Attribute 2</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </template>
+    <button onclick="changeTextColorById()">Change Text Color</button>
+    <button onclick="toggleBackgroundByClass()">Toggle Background</button>
+    <button onclick="changeInnerHTMLByTag()">Change InnerHTML</button>
+    <button onclick="toggleDisabledByName()">Toggle Disabled</button>
+    <button onclick="addCustomAttribute()">Add Attribute</button>
+
+    <script src="./script.js" ></script>
+</body>
+</html>

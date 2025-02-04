@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Accessing Elements</title>
+  <style>
+    .highlighted {
+      background-color: yellow;
+    }
+    .container {
+      border: 1px solid #ccc;
+      padding: 10px;
+      margin: 10px 0;
+    }
+    .nested {
+      margin-left: 20px;
+    }
+    span {
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <!-- Question: Implement all functionalities with challenging selectors -->
+  <h1>Accessing Elements</h1>
+
+  <!-- Paragraphs Section -->
+  <section id="paragraph-section">
+    <p id="highlight">Find and Highlight Me!</p>
+    <div>
+      <p>Paragraph in a div</p>
+      <p class="nested">Another nested paragraph</p>
+    </div>
+  </section>
+
+  <!-- List Section -->
+  <section>
+    <ul id="unordered-list">
+      <li>Item A</li>
+      <li>Item B</li>
+      <li class="special">Special Item</li>
+    </ul>
+    <ol>
+      <li>Ordered Item 1</li>
+      <li>Ordered Item 2</li>
+    </ol>
+  </section>
+  <section>
+    <div class="container">
+      <div class="nested-container">
+        <span>Find this nested span</span>
+        <p>This is a nested paragraph inside a container.</p>
+      </div>
+    </div>
+    <div class="container">
+      <p>This is another container paragraph.</p>
+    </div>
+  </section>
+
+  <div>
+    <div>Outer Div 1</div>
+    <div>Outer Div 2</div>
+  </div>
+  <script>
+    // 1. Find and Highlight
+document.getElementById("highlight").style.backgroundColor = "yellow"
+// 2. Select All Paragraphs
+let nodeList = document.querySelectorAll("p") 
+for(let i=0;i<nodeList.length;i++){
+     console.log(nodeList[i].textContent)
+}
+// 3. Change First List Item
+document.querySelector("ul > li").textContent = "First Item Modified"
+// 4. Count Elements
+let nodeList_2 = document.querySelectorAll("div")
+let newElement = document.createElement("span")
+newElement.textContent = nodeList_2.length 
+document.body.appendChild(newElement)
+// 5. Nested Element Selection
+document.querySelector("div.nested-container > span").style.backgroundColor = "red"
+  </script>
+</body>
+</html>
