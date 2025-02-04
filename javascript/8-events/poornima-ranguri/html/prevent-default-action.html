@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Prevention of Form</title>
+    <link rel="stylesheet" href="../css/prevent-default-action.css" />
+  </head>
+  <body>
+    <header style="text-align: center">
+      <h1>Preventing Form Submission</h1>
+    </header>
+    <main style="text-align: center">
+      <section>
+        <form id="registrationForm">
+          <label for="username">Username:</label>
+          <input type="text" id="username" name="username" required />
+          <br />
+          <span id="usernameError" class="error"></span>
+          <br /><br />
+
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required />
+          <br />
+          <br />
+          <span id="emailError" class="error"></span>
+          <br /><br />
+
+          <label for="password">Password:</label>
+          <input type="password" id="password" name="password" required />
+          <br />
+          <span id="passwordError" class="error"></span>
+          <br /><br />
+
+          <button type="submit">Submit</button>
+        </form>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-content">
+        <p>&copy; 2024 Poornima Ranguri. All Rights Reserved.</p>
+        <p>
+          <a href="https://apty.io" target="_blank">Privacy Policy</a>
+          <a href="https://apty.io" target="_blank">Terms of Service</a>
+        </p>
+      </div>
+    </footer>
+
+    <script src="../javascript/prevent-default-action.js"></script>
+  </body>
+</html>
