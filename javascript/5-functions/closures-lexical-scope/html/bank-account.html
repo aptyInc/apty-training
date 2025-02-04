@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./../css/bank-account.css" />
+    <title>Bank Account</title>
+
+</head>
+
+<body>
+    <h1>Bank Account Simulator</h1>
+    <div id="form">
+        <div class="action">
+            <label for="depositAmount">Deposit Amount:</label><br/>
+            <input type="number" id="depositAmount" />
+            <button id="depositBtn">Deposit</button>
+        </div>
+
+        <div class="action">
+            <label for="withdrawAmount">Withdraw Amount:</label><br/>
+            <input type="number" id="withdrawAmount"  />
+            <button id="withdrawBtn">Withdraw</button>
+        </div>
+
+        <div class="action">
+            <button id="checkBalanceBtn" type="button">Check Balance</button>
+        </div>
+    </div>
+
+    <pre id="result"></pre>
+
+    <script type="text/javascript" src="./../script/bank-account.js"></script>
+</body>
+
+</html>
