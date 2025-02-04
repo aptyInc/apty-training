@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inline vs Internal vs External JavaScript</title>
+    <link rel = "stylesheet" href = "task-1.css"/>
+    <script src = "script.js"></script>
+
+    <!--Internal JS function-->
+
+    <Script>
+        function Internaljs() {
+            const result = document.getElementById('internal')
+            result.innerText = "changed Text is Here!"
+        }
+    </Script>
+
+</head>
+
+<!--Inline Js function-->
+
+<body onload="document.getElementById('inline').innerText = 'Inline Js executed!'">
+    <header>
+        Inline vs Internal vs External JavaScript
+    </header>
+    <div class = "inline-container">
+        <p>This is inline JavaScript</p>
+        <p>This is executed when the event tied to it (example like onload or onclick) triggers</p>
+        <p>Here we are making the inline JS trigger with onLoad attached with body i.e., when the body loads automatically the inline JS appears</p>
+        <p id = "inline">Inline Js yet to be executed!</p>
+
+        
+    </div>
+
+    <div class = "internal-container">
+        <p>This is internal JavaScript</p>
+        <p>It executes when it is explicitly called or it is tied to an event (like the button click etc..)</p>
+        <p id = "internal">The text will change due to Internal Js when clicked on the button</p>
+        <button onclick="Internaljs()">Click Me for Internal JavaScript</button>
+    </div>
+
+    <div class = "external-container">
+        <p>This is External JavaScript</p>
+        <p>The browser loads the external JS after parsing the HTML</p>
+        <p id = "external">The Text will be changed after clicking the button</p>
+        <button onClick = "externalJs()">Click Me for External Js</button>
+    </div>
+
+    <!-- External Js page linked -->
+    <footer>
+        <p>&copy; 2024 JavaScript Execution Types Demo</p>
+    </footer>
+</body>
+</html>
