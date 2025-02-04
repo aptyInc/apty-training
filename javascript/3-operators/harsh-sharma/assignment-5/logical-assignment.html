@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logical Assignment</title>
+</head>
+<body>
+    <header>
+        <h1>Assignment 5: Logical Assignment Operators</h1>
+    </header>
+    <section>
+        <div>
+            <form id="logic-form">
+                <input type="text" name="input_1" id="input_1" required>
+                <select name="type_1" id="type_1" required>
+                    <option value="symbol">Symbol</option>
+                    <option value="boolean">Boolean</option>
+                    <option value="string">String</option>
+                    <option value="bigInt">BigInt</option>
+                    <option value="number">Number</option>
+                </select>
+                <input type="text" name="input_2" id="input_2" required>
+                <select name="type_2" id="type_2" required>
+                    <option value="symbol">Symbol</option>
+                    <option value="boolean">Boolean</option>
+                    <option value="string">String</option>
+                    <option value="bigInt">BigInt</option>
+                    <option value="number">Number</option>
+                </select>
+            </form>
+            <button id="and-assign">&&=</button>
+            <button id="or-assign">||=</button>
+            <button id="nullish-assign">??=</button>
+        </div>
+    </section>
+
+    <section>
+        <div class="final_results"></div>
+    </section>
+
+    <script src="./logical-assignment.js"></script>
+</body>
+</html>
