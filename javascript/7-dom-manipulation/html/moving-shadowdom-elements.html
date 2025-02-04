@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moving shadowDOM elements</title>
+</head>
+
+<body>
+    <main>
+        <h1>Moving shadowDOM elements</h1>
+
+        <button id="upBtn">Up</button>
+        <button id="downBtn">Down</button>
+        <button id="topBtn">Top</button>
+        <button id="bottomBtn">Bottom</button>
+        <template id='shadow-template'>
+            <link rel="stylesheet" href="./../css/moving-shadowdom-elements.css">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Row Number</th>
+                    </tr>
+                </thead>
+                <tbody id='tablebody'></tbody>
+            </table>
+        </template>
+
+        <div id="shadow-host"></div>
+    </main>
+</body>
+<script type="text/javascript" src="./../script/moving-shadowdom-elements.js"></script>
+
+</html>
