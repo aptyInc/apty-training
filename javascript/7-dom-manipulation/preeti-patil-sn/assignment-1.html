@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Accessing and Manipulating Elements</title>
+  </head>
+  <body>
+    <h1>Accessing and Manipulating Elements</h1>
+    <table border="1" cellspacing="0" cellpadding="10">
+      <thead>
+        <tr>
+          <th>Id</th>
+          <th>ClassName</th>
+          <th>Tag</th>
+          <th>Name</th>
+          <th>Attribute</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <!-- Column 1: ID -->
+          <td>
+            <p id="para1">Paragraph 1</p>
+            <p id="para2">Paragraph 2</p>
+            <button onclick="changeTextColor()">Change Text Color</button>
+          </td>
+
+          <!-- Column 2: ClassName -->
+          <td>
+            <p class="sameClass">Class Element 1</p>
+            <p class="sameClass">Class Element 2</p>
+            <button onclick="toggleBackground()">Toggle Background</button>
+          </td>
+
+          <!-- Column 3: Tag -->
+          <td>
+            <span>Span Element 1</span><br />
+            <span>Span Element 2</span><br />
+            <button onclick="changeSpanContent()">Change Content</button>
+          </td>
+
+          <!-- Column 4: Name -->
+          <td>
+            <input name="input1" value="Input 1" />
+            <input name="input2" value="Input 2" />
+            <button onclick="toggleDisabled()">Toggle Disabled</button>
+          </td>
+
+          <!-- Column 5: Attribute -->
+          <td>
+            <p custom-attr="first">Custom Attribute 1</p>
+            <p custom-attr="second">Custom Attribute 2</p>
+            <button onclick="highlightCustomAttr()">Highlight Custom</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+    <script>
+      // 1. Change text color of <p> by ID
+      function changeTextColor() {
+        const para1 = document.getElementById("para1");
+        const para2 = document.getElementById("para2");
+
+        // Random color
+        const randomColor = `#${Math.floor(Math.random() * 16777215).toString(
+          16
+        )}`;
+        para1.style.color = randomColor;
+        para2.style.color = randomColor;
+      }
+
+      // 2. Toggle background color of elements with same class name
+      function toggleBackground() {
+        const elements = document.getElementsByClassName("sameClass");
+
+        for (let i = 0; i < elements.length; i++) {
+          elements[i].classList.toggle("highlight");
+        }
+      }
+
+      // 3. Change content of all <span> tags
+      function changeSpanContent() {
+        const spans = document.getElementsByTagName("span");
+        for (let i = 0; i < spans.length; i++) {
+          spans[i].innerHTML = `Updated Content ${i + 1}`;
+        }
+      }
+
+      // 4. Toggle disabled attribute of input elements by name
+      function toggleDisabled() {
+        const inputs = document.getElementsByName("input1");
+        const inputs2 = document.getElementsByName("input2");
+
+        for (let i = 0; i < inputs.length; i++) {
+          inputs[i].disabled = !inputs[i].disabled;
+        }
+        for (let i = 0; i < inputs2.length; i++) {
+          inputs2[i].disabled = !inputs2[i].disabled;
+        }
+      }
+
+      // 5. Highlight elements with custom attributes
+      function highlightCustomAttr() {
+        const customElements = document.querySelectorAll("[custom-attr]");
+
+        for (let i = 0; i < customElements.length; i++) {
+          customElements[i].style.backgroundColor = "yellow";
+        }
+      }
+    </script>
+
+    <style>
+      /* Basic style for toggle background */
+      .highlight {
+        background-color: lightblue;
+      }
+    </style>
+  </body>
+</html>
