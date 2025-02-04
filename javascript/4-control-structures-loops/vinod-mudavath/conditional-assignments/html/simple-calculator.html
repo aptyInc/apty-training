@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./../style/simple-calculator.css" />
+    <title>Simple calculator using conditional statements</title>
+</head>
+
+<body>
+    <main>
+        <h1>simple calculator using conditional statements</h1>
+        <div class ="form">
+            <div class="input-container">
+                <lable for="number1">Number1</lable><br />
+                <input type="number" id="number1" required placeholder="Enter number here" />
+            </div>
+            <div class="input-container">
+                <lable for="number2">Number2</lable><br />
+                <input type="number" id="number2" required placeholder="Enter number here" />
+            </div>
+            <div class="btn-container">
+                <button onclick="calculate('+')">+</button>
+                <button onclick="calculate('-')">-</button>
+                <button onclick="calculate('*')">*</button>
+                <button onclick="calculate('/')">/</button>
+                <button onclick="calculate('%')">%</button>
+                <button onclick="calculate('--')">--</button>
+                <button onclick="calculate('++')">++</button>
+            </div>
+        </div>
+        <div id="result"></div>
+    </main>
+
+    <script type="text/javascript" src="./../script/simple-calculator.js"></script>
+</body>
+
+</html>
