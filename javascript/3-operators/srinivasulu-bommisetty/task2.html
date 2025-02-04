@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Arithmetic Assignment Operators Calculator</title>
+  </head>
+  <body>
+    <div class="calculator">
+      <h2>Arithmetic Assignment Operators Calculator</h2>
+      <input type="number" id="value1" placeholder="Enter value 1" />
+      <input type="number" id="value2" placeholder="Enter value 2" />
+
+      <div>
+        <button onclick="addAssign()">+=</button>
+        <button onclick="subtractAssign()">-=(Value1)</button>
+        <button onclick="multiplyAssign()">*=(Value1)</button>
+        <button onclick="divideAssign()">/=(Value1)</button>
+        <button onclick="modulusAssign()">%=(Value1)</button>
+        <button onclick="incrementAssign()">++ (Value1)</button>
+        <button onclick="decrementAssign()">-- (Value1)</button>
+      </div>
+
+      <div class="result" id="result"></div>
+    </div>
+
+    <script src="./scripts/assignment-operator.js"></script>
+  </body>
+</html>
