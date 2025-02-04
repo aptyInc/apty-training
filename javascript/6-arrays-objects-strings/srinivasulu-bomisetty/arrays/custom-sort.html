@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sort Students by Score</title>
+</head>
+<body>
+    <h1>Sorted Student Scores</h1>
+    <pre id="sortedScores"></pre>
+
+    <script>
+        function sortByProperty(arr, property) {
+            return arr.sort((a, b) => b[property] - a[property]); // Sorting in descending order
+        }
+
+        const students = [
+            { name: 'Bob', score: 80 },
+            { name: 'Alice', score: 90 }
+        ];
+
+        const sortedStudents = sortByProperty(students, 'score');
+
+        document.getElementById("sortedScores").innerText = JSON.stringify(sortedStudents, null, 2);
+    </script>
+</body>
+</html>
