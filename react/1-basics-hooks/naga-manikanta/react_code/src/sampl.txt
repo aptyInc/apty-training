@@ -1,0 +1,21 @@
+const [taskname,settaskname]=useState('');
+    const [state,dispatch]=useReducer(reducer,intialstate);
+    useEffect(()=>{
+      console.log(state);
+    })
+    return <>
+    
+    <input type="text" value={taskname} onChange={(e)=>{settaskname(e.target.value)}}></input>
+    <button onClick={()=>{dispatch({type:'ADD_TASK',payload:taskname})}}> ADD</button>
+    <table>
+      <thead>
+        <th>Task name</th>
+        <th> Status</th>
+      </thead>
+      {state.map((i)=>{
+        return<tr>
+          <td>{i.task_name}</td>
+          <td>{i.status?'Completed':'Not Completed' }</td>
+        </tr>
+      })}
+    </table>
