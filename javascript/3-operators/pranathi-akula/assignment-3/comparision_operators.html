@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Comparision operators</title>
+    <link rel="stylesheet" href="./comparision.css">
+  </head>
+  <body>
+    <h1>Data Comparison - Comparision operators</h1>
+    <div>
+      <input type="text" id="value1" placeholder="Enter first value" />
+      <select id="type1">
+        <option value="string">String</option>
+        <option value="number">Number</option>
+        <option value="boolean">Boolean</option>
+      </select>
+      <br />
+      <input type="text" id="value2" placeholder="Enter second value" />
+      <select id="type2">
+        <option value="string">String</option>
+        <option value="number">Number</option>
+        <option value="boolean">Boolean</option>
+      </select>
+    </div>
+    <div>
+      <button onclick="Equal()">==</button>
+      <button onclick="StrictEqual()">===</button>
+      <button onclick="NotEqual()">!=</button>
+      <button onclick="StrictNotEqual()">!==</button>
+      <button onclick="GreaterThan()">&gt;</button>
+      <button onclick="LessThan()">&lt;</button>
+      <button onclick="GreaterThanOrEqual()">&gt;=</button>
+      <button onclick="LessThanOrEqual()">&lt;=</button>
+    </div>
+    <div id="result">Result:</div>
+
+    <script src="./comparision.js"></script>
+    <footer><p>© 2024 Javascript</p></footer>
+  </body>
+</html>
