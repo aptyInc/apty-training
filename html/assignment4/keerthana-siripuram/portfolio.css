@@ -1,0 +1,152 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #b292ff;
+    width: 100%;
+}
+
+/* nav bar stylings */
+nav {
+    width: 430px;
+    margin: auto;
+    background-color: black;
+    color: white;
+    border-radius: 50px;
+}
+
+nav ul {
+    display: flex;
+    justify-content: space-around;
+}
+
+nav ul li {
+    list-style-type: none;
+    color: white;
+}
+
+nav ul li a {
+    text-decoration: none;
+}
+
+nav ul li a p {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/* header stylings */
+header {
+    padding: 60px 50px 0px 50px;
+}
+
+header h1 {
+    font-size: 70px;
+}
+
+header p {
+    font-size: 40px;
+}
+
+main {
+    margin: 80px 50px;
+    background-color: #0c0c0d;
+    border-radius: 50px;
+}
+
+main h1 {
+    color: white;
+    font-size: 40px;
+}
+
+section {
+    padding: 35px 62px;
+}
+
+hr {
+    border-bottom: 1px solid white;
+    height: 0.5px;
+    border-radius: 22px;
+    background-color: white;
+}
+
+/* about section stylings */
+.about-me {
+    color: white;
+    display: flex;
+    gap: 40px;
+    justify-content: space-between;
+}
+
+.about-me p {
+    padding-top: 20px;
+}
+
+.bg-img {
+    background-image: url('./assets/image2.jpeg');
+    background-position: 100% 100%;
+    background-size: contain;
+    border-radius: 5px;
+    height: 20vh;
+    width: 100%;
+    background-repeat: no-repeat;
+}
+
+img {
+    height: 130px;
+    border-radius: 20px;
+}
+
+/* skill section stylings */
+.skill {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 20px;
+    color: white;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.container .card {
+    border: 2px solid #b292ff;
+    border-radius: 5px;
+    background-color: #5fb9b0;
+    color: white;
+    text-align: center;
+}
+
+.card img {
+    height: 163px;
+    width: 225px;
+}
+
+/* contact stylings */
+.contact {
+    color: white;
+}
+
+ul {
+    padding: 10px 30px;
+}
+
+/* footer stylings */
+footer {
+    text-align: center;
+    color: white;
+    padding: 5px;
+}
+
+span {
+    color: #b292ff;
+}
