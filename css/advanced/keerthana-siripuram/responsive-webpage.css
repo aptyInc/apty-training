@@ -1,0 +1,59 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: grey;
+    padding: 15px;
+    text-align: center;
+    color: white;
+}
+
+.book-container {
+    border: 2px solid black;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px;
+    justify-content: center;
+    gap: 10px;
+}
+
+.book-container .card {
+    border: 2px solid grey;
+    flex: 1 1 calc(25% - 20px);
+}
+
+.card img {
+    width: 100%;
+}
+
+.card h2,
+p {
+    text-align: center;
+}
+
+span {
+    color: blueviolet
+}
+
+footer {
+    background-color: grey;
+    padding: 10px;
+    text-align: center;
+}
+
+/* responsive code */
+@media (max-width:768px) {
+    .book-container .card {
+        border: 2px solid grey;
+        flex: 1 1 calc(50% - 20px);
+    }
+}
+
+@media (max-width:480px) {
+    .book-container .card {
+        border: 2px solid grey;
+        flex: 1 1 calc(100% - 20px);
+    }
+}
