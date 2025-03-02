@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fun with Default parameters</title>
+    <style>
+        main {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container {
+            width: 300px;
+            height: 300px;
+            padding: 10px;
+            border: 2px solid grey;
+            border-radius: 5px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <h1>Function with Default Paramaters!!</h1>
+        <section class="container">
+            <label for="length">Length:</label>
+            <input id="length" type="number" placeholder="Enter length" />
+            <label for="breadth">Num2:</label>
+            <input id="breadth" type="number" placeholder="Enter breadth" />
+            <button onclick="findAreaOfRectangle()">Area Of Rectangle</button>
+            <p id="res"></p>
+        </section>
+    </main>
+    <script src="./scripts/fun-default-params.js">
+
+    </script>
+</body>
+
+</html>

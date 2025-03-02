@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Syntax Error</title>
+    <style>
+        main {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container {
+            width: 300px;
+            padding: 10px;
+            border: 2px solid grey;
+            border-radius: 5px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <h1>Syntax Error!!</h1>
+        <section class="container">
+            <label for="json-string">Json String:</label>
+            <textarea id="json-string" type="text" required>{"a":1,"b":{"c":2}}</textarea>
+            <button onclick="parseJSONString()">Parse the JSON String</button>
+            <p id="res"></p>
+        </section>
+    </main>
+    <script src="./scripts/syntax-err.js">
+        
+    </script>
+</body>
+
+</html>

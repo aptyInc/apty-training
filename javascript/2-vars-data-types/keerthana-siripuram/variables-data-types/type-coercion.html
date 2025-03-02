@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Type coercion</title>
+    <style>
+        main {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container {
+            padding: 10px;
+            border: 2px solid grey;
+            border-radius: 5px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        table,
+        td,
+        th {
+            border: 1px solid black;
+            border-collapse: collapse;
+            padding: 5px;
+        }
+
+        thead tr {
+            background-color: rgb(186, 180, 180) !important;
+        }
+
+        td {
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <h1>Type coercion!!</h1>
+        <section class="container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Datatype-1</th>
+                        <th>Datatype-2</th>
+                        <th>Result</th>
+                    </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+            <button onclick="performTypeCoercion()">perform Type Coercion</button>
+        </section>
+    </main>
+    <script src="./type-coercion.js"></script>
+</body>
+
+</html>

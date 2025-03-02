@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leap Year Checker</title>
+    <style>
+        main {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container {
+            width: 300px;
+            height: 300px;
+            padding: 10px;
+            border: 2px solid grey;
+            border-radius: 5px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <h1>Leap Year Checker!!</h1>
+        <section class="container">
+            <label for="year">Year:</label>
+            <input id="year" type="number" placeholder="Enter year" required />
+            <button onclick="checkLeapYear()">Validate</button>
+            </div>
+            <p id="res"></p>
+        </section>
+    </main>
+    <script src="./scripts/leap-year.js">
+
+    </script>
+</body>
+
+</html>

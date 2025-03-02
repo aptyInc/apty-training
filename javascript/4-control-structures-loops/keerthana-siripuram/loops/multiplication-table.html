@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multiplication Table Generator</title>
+    <style>
+        main {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container {
+            width: 300px;
+            padding: 10px;
+            border: 2px solid grey;
+            border-radius: 5px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        table,
+        td,
+        th {
+            border: 1px solid black;
+            border-collapse: collapse;
+            padding: 5px;
+        }
+
+        thead tr {
+            background-color: rgb(186, 180, 180);
+        }
+
+        td {
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <h1>Multiplication Table Generator!!</h1>
+        <section class="container">
+            <label for="num">Num:</label>
+            <input id="num" type="number" placeholder="Enter a number" required />
+            <button onclick="genMultiplicationTable()">Generate Multiplication Table</button>
+            <table>
+                <thead>
+                    <tr>
+                        <th>num</th>
+                        <th>*</th>
+                        <th>num</th>
+                        <th>=</th>
+                        <th>res</th>
+                    </tr>
+                </thead>
+                <tbody>
+
+                </tbody>
+            </table>
+        </section>
+    </main>
+    <script src="./scripts/multiplication-table.js">
+
+    </script>
+</body>
+
+</html>

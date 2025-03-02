@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Higher Order with Arrow functions</title>
+    <style>
+        main {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container {
+            padding: 10px;
+            border-radius: 5px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        form {
+            border: 2px solid black;
+            border-radius: 2px;
+            width: 100%;
+            padding: 40px;
+            margin: auto;
+        }
+
+        .form-ele {
+            display: flex;
+            flex-direction: column;
+            padding: 3px;
+        }
+        label {
+            padding-bottom: 5px;
+        }
+
+        input {
+            padding-bottom: 2px;
+            padding: 5px;
+            border: 2px solid #ccc;
+            border-radius: 5px;
+            outline: none;
+        }
+
+        input:focus {
+            border-color: #007bff;
+            box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+        }
+
+        button {
+            padding: 10px 20px;
+            color: white;
+            background: linear-gradient(45deg, #ff416c, #ff4b2b);
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <h1>Higher Order Fun with Arrow Fun!!</h1>
+        <section class="container">
+            <form id="my-form">
+                <div class="form-ele">
+                <label for="str">Numeric String:</label>
+                <input id="str" type="text" place="Enter Numeric String" required />
+                </div>
+                <div class="form-ele">
+                    <label for="num">Number:</label>
+                    <input id="num" type="number" placeholder="Enter Num" required />
+                </div>
+                <button type="submit">Usage Of Higher Ord Fun</button>
+            </form>
+            <p id="res"></p>
+        </section>
+    </main>
+    <script src="./scripts/higher-ord-with-arrow-fun.js">
+
+    </script>
+</body>
+
+</html>
