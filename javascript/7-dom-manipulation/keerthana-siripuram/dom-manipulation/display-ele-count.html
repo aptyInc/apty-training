@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display Element Count</title>
+    <style>
+        main {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container {
+            padding: 10px;
+            border: 2px solid grey;
+            border-radius: 5px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <section class="container">
+            <div>
+                <div>
+                    <h1>Hey!!</h1>
+                    <p>paragraph....</p>
+                    <p>paragraph....</p>
+                </div>
+            </div>
+            <button onclick="countElements()">Count Elements</button>
+            <p id="output"></p>
+        </section>
+    </main>
+    <script src="./display-ele-count.js"></script>
+</body>
+
+</html>

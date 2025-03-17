@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Timers</title>
+  <style>
+    main {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .container {
+      width: 300px;
+      padding: 10px;
+      border: 2px solid grey;
+      border-radius: 5px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+  </style>
+</head>
+
+<body>
+  <main>
+    <h1>Timers!!</h1>
+    <section class="container">
+      <div id="timer"></div>
+      <div id="stop-watch"></div>
+      <button id="timer-btn" onclick="setTimer()">set Timer for 1 Minute</button>
+      <button id="stop-watch-btn" onclick="setStopWatch()">set StopWatch for 1 Minute</button>
+    </section>
+  </main>
+  <script src="./timers.js">
+  </script>
+</body>
+
+</html>

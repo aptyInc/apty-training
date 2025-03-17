@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Keyboard Events</title>
+    <style>
+        #key-up, #key-down{
+            width:300px;
+            height:50px;
+            border:2px solid red
+        }
+    </style>
+</head>
+<body>
+    <div id="key-up">
+        keyboard-Up div
+    </div>
+    <div id="key-down">
+        Keyboard-dowm div
+    </div>
+    <script>
+        const keyUpDiv=document.getElementById("key-up")
+        const keyDownDiv=document.getElementById("key-down")
+        window.addEventListener("keyup",(event)=>{
+            keyUpDiv.innerHTML+=`<p>Key Up:${getKeyCombination(event)}</p>`
+        })
+        window.addEventListener("keydown",(event)=>{
+            keyDownDiv.innerHTML+=`<p>Key Down:${getKeyCombination(event)}</p>`
+        })
+        function getKeyCombination(event)
+        {
+            let combo=[]
+            if(event.ctrlKey) combo.push("Ctrl")
+            if(event.shiftKey) combo.push("Shift")
+            if(event.altKey) combo.push("Alt")
+            combo.push(event.key)
+            return combo.join("+")
+        }
+    </script>
+</body>
+</html>
