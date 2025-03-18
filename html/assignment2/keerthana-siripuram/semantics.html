@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Usage of Semantic Elements</title>
+    <style>
+        body {
+            padding: 0;
+            margin: 0;
+        }
+
+        header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: grey;
+            padding: 5px 20px;
+            color: white;
+        }
+
+        nav ul {
+            display: flex;
+            gap: 10px;
+        }
+
+        nav ul li {
+            list-style-type: none;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+        }
+
+        main {
+            display: flex;
+            padding: 5px 20px;
+        }
+
+        .left {
+            flex: 4;
+        }
+
+        h3 {
+            line-height: 1px;
+        }
+
+        aside {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            border: 2px solid grey;
+        }
+
+        aside p {
+            text-decoration: underline;
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: gray;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h2>Semantic Webpage</h2>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="left">
+            <section id="#about">
+                <h3>About US</h3>
+                <p>W3Schools is a popular online platform that provides web development tutorials and
+                    references for various web technologies. It serves as a comprehensive resource for
+                    individuals who are learning or looking to enhance their skills in HTML, CSS, JavaScript,
+                    and other related technologies.</p>
+            </section>
+            <hr>
+            <section>
+                <h3>Latest Article</h3>
+                <article>
+                    <h4>Javascript</h4>
+                    <p>JavaScript is the programming language of the Web. JavaScript is easy to learn.
+                        This tutorial will teach you JavaScript from basic to advanced.</p>
+                </article>
+            </section>
+        </section>
+        <aside>
+            <p>Related Topics</p>
+            <ul>
+                <li>HTML</li>
+                <li>CSS</li>
+            </ul>
+        </aside>
+    </main>
+
+    <footer>&copy; All rights reserved</footer>
+</body>
+
+</html>

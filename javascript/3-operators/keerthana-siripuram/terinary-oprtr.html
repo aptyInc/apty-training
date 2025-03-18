@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terinary Operator</title>
+    <style>
+        form {
+            border: 2px solid black;
+            border-radius: 2px;
+            width: 25%;
+            padding: 40px;
+            margin: auto;
+        }
+
+        .form-ele {
+            display: flex;
+            flex-direction: column;
+            padding: 3px;
+        }
+
+        label {
+            padding-bottom: 5px;
+        }
+
+        input {
+            padding-bottom: 2px;
+            padding: 5px;
+            border: 2px solid #ccc;
+            border-radius: 5px;
+            outline: none;
+        }
+
+        input:focus {
+            border-color: #ff416c;
+            box-shadow: 0 0 5px rgba(255, 60, 0, 0.5);
+        }
+
+        button {
+            padding: 10px 20px;
+            color: white;
+            background: linear-gradient(45deg, #ff416c, #ff4b2b);
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <h1>Terinary Operator!!</h1>
+        <form id="apty-form">
+            <div class="form-ele">
+                <label for="fname">First Name:</label>
+                <input id="fname" type="text" placeholder="Enter First Name" required />
+            </div>
+            <div class="form-ele">
+                <label for="lname">Last Name:</label>
+                <input id="lname" type="text" placeholder="Enter Last Name" required />
+            </div>
+            <div class="form-ele">
+                <label for="age">Age:</label>
+                <input id="age" type="number" placeholder="Enter Age" required />
+            </div>
+            <button type="submit">Submit</button>
+            <p id="res"></p>
+        </form>
+    </main>
+    <script src="./scripts/terinary-oprtr.js">
+    </script>
+</body>
+
+</html>

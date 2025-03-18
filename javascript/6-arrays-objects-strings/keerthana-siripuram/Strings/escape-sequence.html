@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Escape Sequence!</title>
+    <style>
+        main {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container {
+            width: 300px;
+            padding: 10px;
+            border: 2px solid grey;
+            border-radius: 5px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <h1>Escape Sequence!!!</h1>
+        <section class="container">
+            <label for="str">String:</label>
+            <textarea  id="str" placeholder="Enter Something"></textarea>
+            <button onclick="escapeString()">submit</button>
+            <p id="res"></p>
+        </section>
+    </main>
+    <script src="./scripts/escape-sequence.js">
+
+    </script>
+</body>
+
+</html>

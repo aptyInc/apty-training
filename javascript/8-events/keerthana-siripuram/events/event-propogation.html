@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Propogation</title>
+    <style>
+        #level-1,
+        #level-2,
+        #level-3 {
+            padding: 20px;
+            border: 2px solid black;
+            margin: 10px
+        }
+
+        #level-1 {
+            background-color: antiquewhite;
+        }
+
+        #level-2 {
+            background-color: aqua;
+        }
+
+        #level-3 {
+            background-color: blue;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="level-1">
+        <div id="level-2">
+            <div id="level-3">
+                <p>Event Propogation</p>
+            </div>
+        </div>
+    </div>
+    <script>
+        const level1 = document.getElementById("level-1")
+        level1.addEventListener("click", (event) => {
+            alert('Target')
+        })
+        const level2 = document.getElementById("level-2")
+        level2.addEventListener("click", (event) => {
+            alert('bubble')
+        }, false)
+        const level3 = document.getElementById("level-3")
+        level3.addEventListener("click", (event) => {
+            alert('capturing')
+
+        }, true)
+    </script>
+</body>
+
+</html>

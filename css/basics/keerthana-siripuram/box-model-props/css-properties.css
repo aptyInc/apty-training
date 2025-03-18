@@ -1,0 +1,25 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.box {
+    width: 400px;
+    height: 300px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border: 2px solid black;
+    border-radius: 15px;
+    padding: 20px;
+    text-align: center;
+    background: repeating-linear-gradient(45deg, red, yellow 10%, green 20%);
+}
+
+.box p {
+    text-align: justify;
+    color: blueviolet;
+    font-family: 'Courier New', Courier, monospace;
+}

@@ -1,0 +1,131 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+    gap: 20px;
+    background-color: pink;
+}
+
+.card {
+    flex: 1 1 calc(33.33% - 20px);
+    background: linear-gradient(pink, lightblue);
+    height: 300px;
+    box-shadow: 2px 3px 2px deeppink;
+}
+
+.text-center {
+    text-align: center;
+    padding: 20px;
+}
+
+/*animations*/
+.fade-in:hover {
+    animation: fadeIn 2s ease-in-out;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.slide-in:hover {
+    animation: slideIn 5s linear;
+}
+
+@keyframes slideIn {
+    0% {
+        transform: translateY(-100%);
+    }
+
+    100% {
+        transform: translate(0);
+    }
+}
+
+.bounce:hover {
+    animation: bounce 2s ease-in-out;
+}
+
+@keyframes bounce {
+
+    0%,
+    50% {
+        transform: translateX(0);
+    }
+
+    80% {
+        transform: translateY(-30px);
+    }
+
+    90% {
+        transform: translateY(50px);
+    }
+}
+
+.rotate:hover {
+    animation: rotate 2s ease-in-out;
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg)
+    }
+
+    100% {
+        transform: rotate(360deg)
+    }
+}
+
+.flip:hover {
+    animation: flip 2s ease-in-out;
+}
+
+@keyframes flip {
+    0% {
+        transform: rotateY(0deg)
+    }
+
+    100% {
+        transform: rotateY(180deg)
+    }
+}
+
+.zoom:hover {
+    animation: zoom 0.5s linear;
+}
+
+@keyframes zoom {
+    0% {
+        transform: scale(0)
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+/*responsive code*/
+@media (max-width:768px) {
+    .card {
+        border: 2px solid grey;
+        flex: 1 1 calc(50% - 20px);
+    }
+}
+
+@media (max-width:480px) {
+    .card {
+        border: 2px solid grey;
+        flex: 1 1 calc(100% - 20px);
+    }
+}

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prevent Default Actions</title>
+    <style>
+        .form-ele {
+            display: flex;
+            flex-direction: column;
+            padding: 3px;
+        }
+
+        label {
+            padding-bottom: 5px;
+        }
+
+        input {
+            padding-bottom: 2px;
+            padding: 5px;
+            border: 2px solid #ccc;
+            border-radius: 5px;
+            outline: none;
+        }
+
+        input:focus {
+            border-color: #007bff;
+            box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+        }
+
+        button {
+            padding: 10px 20px;
+            color: white;
+            background: linear-gradient(45deg, #ff416c, #ff4b2b);
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <form id="form-submit">
+        <div class="form-ele">
+            <label for="name">Name</label>
+            <input id="name" type="text" placeholder="Enter name" required />
+        </div>
+        <div class="form-ele">
+            <label for="pswd">Password</label>
+            <input id="pswd" type="password" placeholder="Enter password upto 10 chars" required />
+        </div>
+        <button type="submit">Submit</button>
+    </form>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const form = document.getElementById("form-submit")
+            form.addEventListener('submit', function (event) {
+                const pswd = document.getElementById("pswd").value
+                if (pswd.length < 10) {
+                    event.preventDefault()
+                    alert('Please fill out required details correctly')
+                }
+            })
+        })
+
+    </script>
+</body>
+
+</html>

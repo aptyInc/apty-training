@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arithmetic Calculator</title>
+    <style>
+        main {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .calculator {
+            width: 300px;
+            height: 300px;
+            padding: 10px;
+            border: 2px solid grey;
+            border-radius: 5px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <h1>Arithmetic Calculator!!</h1>
+        <section class="calculator">
+            <label for="num1">Number1:</label>
+            <input id="num1" type="number" placeholder="Enter number1" required />
+            <label for="num2">Number2:</label>
+            <input id="num2" type="number" placeholder="Enter number2" required />
+            <div>
+                <p>Arithmetic Operators</p>
+                <button onclick="calculate('*')">*</button>
+                <button onclick="calculate('/')">/</button>
+                <button onclick="calculate('%')">%</button>
+                <button onclick="calculate('+')">+</button>
+                <button onclick="calculate('-')">-</button>
+                <p>Increment/Decrement Operators</p>
+                <button onclick="calculate('++')">++</button>
+                <button onclick="calculate('--')">--</button>
+            </div>
+            <p id="res"></p>
+        </section>
+    </main>
+    <script src="./scripts/clone-calculator.js"></script>
+</body>
+
+</html>

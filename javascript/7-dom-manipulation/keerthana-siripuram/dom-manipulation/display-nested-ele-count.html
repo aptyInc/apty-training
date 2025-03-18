@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display Nested Elements Count</title>
+</head>
+
+<body>
+    <h1>Nested Elements Counter</h1>
+    <div class="container">
+        <p>Para1 in parent1</p>
+        <span>span 1 in parent1</span>
+    </div>
+    <div class="container">
+        <p>Para1 in parent2</p>
+        <span>span 1 in parent2</span>
+    </div>
+    <div class="container">
+        <div>
+            <span>span 1 in paremt3</span>
+        </div>
+    </div>
+    <button onclick="countNestedElements()">count Nested elements</button>
+    <p id="res"></p>
+</body>
+<script>
+    function countNestedElements() {
+        const firstLevelParents = document.querySelectorAll(".container")
+        let output = ""
+        firstLevelParents.forEach((parent, index) => {
+            const count = parent.querySelectorAll("*").length
+            output += `parent${index + 1}:${count}<br>`
+        })
+        document.getElementById("res").innerHTML = output
+    }
+</script>
+
+</html>

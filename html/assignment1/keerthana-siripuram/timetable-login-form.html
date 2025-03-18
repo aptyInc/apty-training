@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Form | Time Table</title>
+    <style>
+        /* time table stylings */
+        .table-section{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+        table,
+        td,
+        th {
+            border: 1px solid black;
+            border-collapse: collapse;
+            padding: 5px;
+        }
+
+        thead tr {
+            background-color: rgb(186, 180, 180) !important;
+        }
+
+        td {
+            text-align: center;
+        }
+
+        .vertical-align {
+            writing-mode: vertical-rl;
+            text-orientation: upright;
+        }
+
+        .text-center {
+            text-align: center;
+        }
+
+        /* login form stylings */
+        form {
+            border: 2px solid black;
+            border-radius: 2px;
+            width: 25%;
+            padding: 40px;
+            margin: auto;
+        }
+
+        .form-ele {
+            display: flex;
+            flex-direction: column;
+            padding: 3px;
+        }
+
+        label {
+            padding-bottom: 5px;
+        }
+
+        input {
+            padding-bottom: 2px;
+            padding: 5px;
+            border: 2px solid #ccc;
+            border-radius: 5px;
+            outline: none;
+        }
+
+        input:focus {
+            border-color: #ea1144;
+            box-shadow: 0 0 5px rgba(244, 5, 45, 0.5);
+        }
+
+        button {
+            padding: 10px 20px;
+            color: white;
+            background: linear-gradient(45deg, #ff416c, #ff4b2b);
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- TIME TABLE -->
+    <main>
+        <section class="table-section">
+            <table>
+                <caption>Time Table for Grade 4</caption>
+                <colgroup>
+                    <col span="1">
+                    <col span="1" style="background-color: pink">
+                    <col span="2">
+                    <col span="1" style="background-color: pink">
+                    <col span="2">
+                    <col span="1" style="background-color: pink">
+                    <col span="1">
+                    <col span="1" style="background-color: pink">
+                </colgroup>
+                <thead>
+                    <tr>
+                        <th>GRADE 4</th>
+                        <th>9:00-9:45</th>
+                        <th>9:45-10:30</th>
+                        <th>10:30-11:15</th>
+                        <th>11:15-11:30</th>
+                        <th>11:30-12:15</th>
+                        <th>12:15-1:00</th>
+                        <th>1:00-2:00</th>
+                        <th>2:00-2:45</th>
+                        <th>2:45-3:30</th>
+                        <th>3:30-4:00</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th>MON</th>
+                        <td class="vertical-align" rowspan="5">ASSEMBLY</td>
+                        <td>MATHS</td>
+                        <td>SCI</td>
+                        <td class="vertical-align" rowspan="5">BREAK</td>
+                        <td>ENG</td>
+                        <td>SOC</td>
+                        <td class="vertical-align" rowspan="5">LUNCH</td>
+                        <td>TEL</td>
+                        <td class="vertical-align" rowspan="5">BREAK</td>
+                        <td>GAMES</td>
+                    </tr>
+                    <tr>
+                        <th>TUES</th>
+                        <td>ENG</td>
+                        <td>SCI</td>
+                        <td>MATHS</td>
+                        <td>SOC</td>
+                        <td>HIN</td>
+                        <td>GK</td>
+                    </tr>
+                    <tr>
+                        <th>WED</th>
+                        <td>SOC</td>
+                        <td>HIN</td>
+                        <td>MATHS</td>
+                        <td>SCI</td>
+                        <td>GK</td>
+                        <td>COMP</td>
+                    </tr>
+                    <tr>
+                        <th>THU</th>
+                        <td>ENG</td>
+                        <td>SCI</td>
+                        <td>MATHS</td>
+                        <td>SOC</td>
+                        <td>HIN</td>
+                        <td>GK</td>
+                    </tr>
+                    <tr>
+                        <th>FRI</th>
+                        <td>SOC</td>
+                        <td>HIN</td>
+                        <td>MATHS</td>
+                        <td>SCI</td>
+                        <td>GK</td>
+                        <td>COMP</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+        <hr>
+        <!-- LOGIN FORM -->
+        <section class="form-section">
+            <h2 class="text-center">Login Form</h2>
+            <form>
+                <div class="form-ele">
+                    <label for="email">Email</label>
+                    <input id="email" type="email" placeholder="Enter email" required />
+                </div>
+                <div class="form-ele">
+                    <label for="pswd">Password</label>
+                    <input id="pswd" type="password" placeholder="Enter password" required />
+                </div>
+                <button type="button">Submit</button>
+            </form>
+        </section>
+    </main>
+</body>
+
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Window Dimensions</title>
+</head>
+<style>
+    main {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .container {
+        width: 300px;
+        padding: 10px;
+        border: 2px solid grey;
+        border-radius: 5px;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+</style>
+
+<body>
+    <main>
+        <h1>Browser info!!</h1>
+        <section class="container">
+            <p id="dimensions"></p>
+        </section>
+    </main>
+    <script>
+        window.onresize = () => {
+            const innerHeight = window.innerHeight
+            const innerWidth = window.innerWidth
+            const outerHeight = window.outerHeight
+            const outerWidth = window.outerWidth
+            document.getElementById("dimensions").innerHTML = `InnerHeight:${innerHeight}<br>`
+            document.getElementById("dimensions").innerHTML += `InnerWidth:${innerWidth}<br>`
+            document.getElementById("dimensions").innerHTML += `OuterHeight:${outerHeight}<br>`
+            document.getElementById("dimensions").innerHTML += `outerWidth:${outerWidth}<br>`
+        };
+    </script>
+</body>
+
+</html>

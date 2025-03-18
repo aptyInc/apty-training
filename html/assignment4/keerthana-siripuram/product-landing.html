@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prdocut Landing Page</title>
+    <link rel="stylesheet" href="./product-landing.css" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+</head>
+
+<body>
+    <header>
+        <div class="nav-left">
+            <h2>LOGO</h2>
+        </div>
+        <nav class="nav-right">
+            <ul>
+
+                <a href="#about"><span class="material-symbols-outlined">group</span>
+                    <li>ABOUT</li>
+                </a>
+                <a href="#books"><span class="material-symbols-outlined">paid</span>
+                    <li>TEAM</li>
+                </a>
+                </a>
+                <a href="#contact"><span class="material-symbols-outlined">group</span>
+                    <li>
+                        <p>Contact</p>
+                    </li>
+                </a>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <!--bg section-->
+        <section class="bg-img" id="about">
+            <div class="content">
+                <h1>Start something that matters</h1>
+                <p>Stop wasting valuable time with proects that just isn't you.</p>
+                <button class="light-btn learn">Learn more and start today</button>
+            </div>
+        </section>
+
+        <!-- book section -->
+        <section class="book-container" id="books">
+            <h1>Best selling Books</h1>
+            <div class="book-cards-container">
+                <div class="card">
+                    <div class="card-img">
+                        <img src="./assets/alchemist.png" alt="alchemist" />
+                    </div>
+                    <p>The Alchemist</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque, hic aperiam dolorem maiores
+                        voluptate velit ad!</p>
+                    <button class="light-btn">
+                        <p>Buy Now</p>
+                    </button>
+                </div>
+                <div class="card">
+                    <div class="card-img">
+                        <img src="./assets/ikigai.png" alt="ikigai" />
+                    </div>
+                    <p>IKIGAI</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque, hic aperiam dolorem maiores
+                        voluptate velit ad!</p>
+                    <button class="light-btn">
+                        <p>Buy Now</p>
+                    </button>
+                </div>
+                <div class="card">
+                    <div class="card-img">
+                        <img src="./assets/ikigai.png" alt="ikigai" />
+                    </div>
+                    <p>IKIGAI</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque, hic aperiam dolorem maiores
+                        voluptate velit ad!</p>
+                    <button class="light-btn">
+                        <p>Buy Now</p>
+                    </button>
+                </div>
+                <div class="card">
+                    <div class="card-img">
+                        <img src="./assets/too-good.png" alt="too-good" />
+                    </div>
+                    <p>Too good to be true</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque, hic aperiam dolorem maiores
+                        voluptate velit ad!</p>
+                    <button class="light-btn">
+                        <p>Buy Now</p>
+                    </button>
+                </div>
+            </div>
+        </section>
+        <!-- form container -->
+        <section class="form-container" id="contact">
+            <h1>CONTACT</h1>
+            <p>Lets get in touch.Send us a message:</p>
+            <form>
+                <div class="form-wrapper">
+                    <div class="form-content">
+                        <div class="form-ele">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" />
+                        </div>
+                        <div class="form-ele">
+                            <label for="msg">Message</label>
+                            <textarea id="msg" rows="10"></textarea>
+                        </div>
+                    </div>
+                    <div class="form-btn">
+                        <button class="dark-btn">Send</button>
+                    </div>
+                </div>
+            </form>
+        </section>
+    </main>
+</body>
+
+</html>

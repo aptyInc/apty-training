@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Swap using Array Destructing</title>
+    <style>
+        main {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container {
+            width: 300px;
+            height: 300px;
+            padding: 10px;
+            border: 2px solid grey;
+            border-radius: 5px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <h1>Swap using Array Destructing!!</h1>
+        <section class="container">
+            <label for="num1">Num1:</label>
+            <input id="num1" type="number" placeholder="Enter num1" required />
+            <label for="num2">Num2:</label>
+            <input id="num2" type="number" placeholder="Enter num2" required />
+            <button onclick="swapNumbers()">Swap Numbers</button>
+            <p id="beforeSwap"></p>
+            <p id="afterSwap"></p>
+        </section>
+    </main>
+    <script src="./scripts/arr-destructring-swaping.js">
+
+    </script>
+</body>
+
+</html>

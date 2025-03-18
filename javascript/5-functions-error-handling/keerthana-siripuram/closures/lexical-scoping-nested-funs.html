@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nested Functions Example</title>
+</head>
+
+<body>
+  <h2>Set Variables for Nested Functions</h2>
+  <form id="nestedFunctionForm">
+    <label for="var1">Outer Variable:</label>
+    <input type="text" id="var1" placeholder="Enter Outer Variable"><br><br>
+
+    <label for="var2">Middle Variable:</label>
+    <input type="text" id="var2" placeholder="Enter Middle Variable"><br><br>
+
+    <label for="var3">Inner Variable:</label>
+    <input type="text" id="var3" placeholder="Enter Inner Variable"><br><br>
+
+    <button type="button" id="submit">Display Output</button>
+  </form>
+
+  <h3>Output:</h3>
+  <p id="output"></p>
+
+  <script>
+    function nestedFunctions(outerVar) {
+      function middleFunction(middleVar) {
+        function innerFunction(innerVar) {
+          return `Outer: ${outerVar}, Middle: ${middleVar}, Inner: ${innerVar}`;
+        }
+        return innerFunction;
+      }
+      return middleFunction;
+    }
+
+    document.getElementById("submit").addEventListener("click", function () {
+      const outerVar = document.getElementById("var1").value;
+      const middleVar = document.getElementById("var2").value;
+      const innerVar = document.getElementById("var3").value;
+
+      const middle = nestedFunctions(outerVar);
+      const inner = middle(middleVar);
+      const output = inner(innerVar);
+
+      document.getElementById("output").textContent = output;
+    });
+  </script>
+</body>
+
+</html>
