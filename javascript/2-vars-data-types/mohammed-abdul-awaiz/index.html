@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>js variables & data types by Awaiz</title>
+    <script defer src="js/inline-internal-external.js"></script>
+    <script defer src="js/declare-variables.js"></script>
+    <script defer src="js/data-types.js"></script>
+    <script defer src="js/type-conversion.js"></script>
+    <script defer src="js/type-coercion.js"></script>
+    <!-- <script defer src="js/template_literals_and_data_types.js"></script> -->
+  </head>
+  <body
+    onload='const inline_p = document.createElement("p");
+  inline_p.innerText = "inline js ...";
+  document.getElementById("inline_internal_external").appendChild(inline_p)'
+  >
+    <!-- its all about execution time. If I dont create a p tag & just add the string using innerHTML then that will execute first -->
+    <!-- onload is supported by only following tags - <body>, <frame>, <frameset>, <iframe>, <img>, <input type="image">, <link>, <script> and <style> -->
+    <section id="inline_internal_external">
+      <h3>types of js linking</h3>
+    </section>
+    <section id="declare_variables">
+      <h3>types of variables</h3>
+    </section>
+    <section id="data_types">
+      <h3>data types</h3>
+    </section>
+
+    <section id="type_conversion">
+      <h3>type conversion</h3>
+    </section>
+    <section id="type_coercion">
+      <h3>type coercion</h3>
+    </section>
+    <section id="template_literals_and_data_types">
+      <h3>template literals and data types</h3>
+      <p>
+        used template variables to create strings that are part of all sections
+        from "types of variables" section
+      </p>
+    </section>
+    <script>
+      const internal_p = document.createElement("p");
+      internal_p.innerText = "internal js ...";
+      document
+        .getElementById("inline_internal_external")
+        .appendChild(internal_p);
+    </script>
+  </body>
+</html>
