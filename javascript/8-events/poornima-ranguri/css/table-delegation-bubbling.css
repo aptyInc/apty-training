@@ -1,0 +1,64 @@
+body {
+    background-color: aliceblue;
+    font-family: Arial, sans-serif;
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+  }
+  
+  th, td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
+  }
+
+  tr{
+    padding: 30px;
+    
+  }
+  
+  th {
+    background-color: #f2f2f2;
+  }
+  
+  .highlight {
+    background-color: lightgreen;
+    transition: background-color 0.3s ease;
+  }
+  
+
+  
+  footer {
+    width: 98vw;
+    background-color: darkcyan;
+    margin-top: 100px;
+    padding: 20px 0;
+  }
+  
+  .footer-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+  }
+  
+  .footer-content p {
+    margin: 5px 0;
+    font-size: 14px;
+    text-align: center;
+  }
+  
+  .footer-content a {
+    text-decoration: none;
+    margin: 0 5px;
+    font-weight: bold;
+  }
+  
+  .footer-content a:hover {
+    text-decoration: underline;
+  }
+  
