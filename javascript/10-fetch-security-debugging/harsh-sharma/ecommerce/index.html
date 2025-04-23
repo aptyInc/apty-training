@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products List</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Products List</h1>
+
+    <div class="search-box">
+        <input type="text" id="searchInput" placeholder="Search products...">
+        <button onclick="searchProducts()">Search</button>
+    </div>
+
+    <div id="loading" class="loading" style="display: none;">Loading products...</div>
+    <div id="error" class="error" style="display: none;"></div>
+    <div id="productsGrid" class="products-grid"></div>
+    <div id="productDetail" class="product-detail"></div>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
