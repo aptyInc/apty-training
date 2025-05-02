@@ -1,0 +1,107 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100vw;
+}
+main {
+  background: url(https://www.apty.io/wp-content/uploads/2024/06/bg-hero.svg);
+  width: 100%;
+  height: 180vh;
+  display: flex;
+  padding: 10vw;
+  color: #ffff;
+}
+.main-content {
+  flex: 3;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+.main-content h1 {
+  font-size: 50px;
+}
+.main-content p {
+  line-height: 25px;
+}
+.main-content-images img {
+  margin-right: 50px;
+}
+
+.main-form {
+  flex: 2;
+
+  background-color: #241c34;
+  padding: 2vw;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  font-size: 15px;
+  font-weight: 100;
+  font-family: "poppins";
+  font-style: normal;
+}
+
+.form input {
+  flex: 1;
+  border-radius: 5px;
+  border: 0px;
+  background-color: #3c3444;
+  color: white;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  height: 3rem;
+  text-align: center;
+}
+.name,
+.email,
+.phoneNo,
+.job-tittle {
+  display: flex;
+  gap: 5px;
+}
+.feedback input {
+  width: 100%;
+}
+
+.form-btn .btn {
+  margin-top: 1rem;
+  padding: 0.8rem 1.5rem;
+  background: linear-gradient(90deg, #ff6a3a, #ff4cf8);
+  border-radius: 10px !important;
+  border: none;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.feedback input {
+  height: 100px;
+}
+.form-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.box {
+  position: relative;
+}
+.box label {
+  margin-left: 30px;
+  position: absolute;
+  top: 18px;
+}
+.companies-labels-container {
+  width: 100vw;
+  height: 40vh;
+  padding: 5% 0;
+}
