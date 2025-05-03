@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 1- Inline, Internal, External JavaScript Test</title>
+    <style>
+
+        body {
+            margin: 20px;
+        }
+
+        .output {
+            margin-top: 10px;
+        }
+
+    </style>
+
+    <script>
+
+        function internalJS() {
+            document.getElementById("output-internal").innerText = "Internal JS executed!";
+        }
+        window.onload = internalJS;
+
+    </script>
+
+</head>
+<body>
+    <h1>Assignment 1 - Prem Rajput</h1>
+
+    <p id="output-inline" class="output"></p>
+    <p id="output-internal" class="output"></p>
+    <p id="output-external" class="output"></p>
+
+    <script>
+        document.getElementById('output-inline').innerText = 'Inline JS executed!';
+    </script>
+
+    <script src="./scripts/inline-int-ext.js"></script>
+</body>
+</html>
