@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grades</title>
+    <style>
+        .container{
+            display:flex;
+            flex-direction: column;
+            justify-content: center;
+            height:200px;
+            width:200px;
+            padding:20px;
+            border:2px solid palevioletred;
+            border-style: groove;
+        }
+        button{
+            padding:10px;
+            width:100px;
+            background-color: brown;
+            margin-top:10px;
+            margin-left:40px;
+            text-align: center;
+        }
+    </style>
+    
+</head>
+<body>
+    <h1>Get grades from marks</h1>
+    <div class="container">
+    <label for="marks">Marks: </label>
+    <input type="text" id="marks" name="marks" placeholder="Enter Marks">
+    <button onclick="grade()">Check Grade</button>
+    <p id="result"></p>
+    </div>
+    <script src="/javascript/4-control-structures-loops/madhuri-udathu/js/control-statements-js/grade.js"></script>
+</body>
+</html>
