@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Parent Window</title>
+    <script src="../scripts/assignment-6/parent-window.js" defer></script>
+  </head>
+  <body>
+    <h1>Parent Window</h1>
+    <input type="text" id="parentMessage" placeholder="Message to iframe" />
+    <button id="sendToIframe">Send to Iframe</button>
+    <p>
+      <strong>Message from iframe:</strong> <span id="iframeMessage"></span>
+    </p>
+
+    <!-- Iframe -->
+    <iframe
+      id="childFrame"
+      src="iframe-window.html"
+      width="400"
+      height="200"
+    ></iframe>
+  </body>
+</html>
