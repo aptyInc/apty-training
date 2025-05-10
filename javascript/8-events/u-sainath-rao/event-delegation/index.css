@@ -1,0 +1,8 @@
+td {
+	padding: 1rem;
+}
+
+.highlight-column,
+.highlight-row {
+	background-color: yellow;
+}
