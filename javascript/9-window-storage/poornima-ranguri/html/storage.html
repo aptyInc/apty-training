@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Storage</title>
+    <link rel="stylesheet" href="../css/storage.css" />
+  </head>
+  <body>
+    <header style="text-align: center">
+      <h1>Local Storage and Session Storage</h1>
+    </header>
+
+    <main style="text-align: center">
+      <div>
+        <label for="localInput">LocalStorage Input:</label>
+        <input type="text" id="localInput" />
+        <button id="saveLocal">Save to LocalStorage</button>
+      </div>
+
+      <div>
+        <label for="sessionInput">SessionStorage Input:</label>
+        <input type="text" id="sessionInput" />
+        <button id="saveSession">Save to SessionStorage</button>
+      </div>
+
+      <div class="storage-container">
+        <h3>Stored Data</h3>
+        <div id="localStorageData" class="storage-data"></div>
+        <div id="sessionStorageData" class="storage-data"></div>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-content">
+        <p>&copy; 2024 Poornima Ranguri. All Rights Reserved.</p>
+        <p>
+          <a href="https://apty.io" target="_blank">Privacy Policy</a>
+          <a href="https://apty.io" target="_blank">Terms of Service</a>
+        </p>
+      </div>
+    </footer>
+
+    <script src="../javascript/storage.js"></script>
+  </body>
+</html>
