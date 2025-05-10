@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Map and Filter</title>
+  </head>
+  <body>
+    <h1>Filter Completed Tasks</h1>
+
+    <label for="taskArray"
+      >Enter an array of tasks (e.g., [{"task": "A", "completed": true},
+      {"task": "B", "completed": false}]):</label
+    >
+    <input
+      id="taskArray"
+      type="text"
+      placeholder='[{"task": "A", "completed": true}, {"task": "B", "completed": false}]'
+    />
+
+    <button onclick="filterAndMapTasks()">Get Completed Tasks</button>
+
+    <h2>Completed Tasks:</h2>
+    <p id="completedTasks"></p>
+
+    <script src="./scripts/map-filter.js"></script>
+  </body>
+</html>
