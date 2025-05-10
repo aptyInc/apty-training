@@ -1,0 +1,199 @@
+/* General Layout Styling */
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+    background-color: #f7f7f7;
+}
+
+
+
+
+
+
+
+/* For devices with widths 768px or smaller (tablets and smaller devices) */
+@media (max-width: 768px) {
+    /* Adjust Timer and Task Counter positions */
+    .timer-container {
+        width: 180px;
+        height: 90px;
+        top: 10px;
+        right: 10px; /* Move closer to the edge */
+    }
+
+    .task-counter {
+        top: 100px;
+        left: 10px;
+        width: 100%;
+        padding: 15px 10px;
+    }
+
+    /* Form adjustments */
+    .form {
+        width: 90%;
+        padding: 20px;
+        margin-top: 140px; /* Give space below the timer */
+    }
+
+    table {
+        font-size: 14px;
+    }
+
+    table td, table th {
+        padding: 10px;
+    }
+
+    .material-symbols-outlined {
+        font-size: 20px;
+    }
+
+    button {
+        padding: 10px 16px;
+        font-size: 16px;
+    }
+}
+
+/* For devices with widths 480px or smaller (smartphones) */
+@media (max-width: 480px) {
+    /* Adjust Timer and Task Counter positions */
+    .timer-container {
+        width: 5vw;
+        height: auto;
+        top: 10px;
+        right: 0;
+    }
+
+    .task-counter {
+        top: 120px;
+        left: 10px;
+        width: 5vw;
+        padding: 15px;
+    }
+
+    /* Adjust form for smaller screens */
+    .form {
+        width: 95%;
+        padding: 10px;
+        margin-top: 150px; /* Give space for timer and task counter */
+    }
+
+    .form input[type="text"] {
+        font-size: 14px;
+    }
+
+    .form input[type="submit"] {
+        font-size: 16px;
+        padding: 14px 22px;
+    }
+
+    table {
+        font-size: 12px;
+    }
+
+    .material-symbols-outlined {
+        font-size: 18px;
+    }
+}
+
+/* Additional Styling for Tables */
+table {
+    width: 100%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+table thead {
+    background-color: #f4f4f4;
+    font-weight: bold;
+}
+
+table thead th {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 2px solid #ccc;
+}
+
+table tr {
+    background-color: #fff;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+table tr:hover {
+    background-color: #f9f9f9; 
+}
+
+table td {
+    padding: 12px;
+    text-align: left;
+    vertical-align: middle;
+}
+
+/* Material Icon Styling */
+.material-symbols-outlined {
+    font-size: 24px;
+    color: #007bff;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.material-symbols-outlined:hover {
+    color: #0056b3;
+}
+
+/* Button Styling */
+button {
+    padding: 10px 16px;
+    font-size: 16px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Button Hover and Active states */
+button:hover {
+    background-color: #0056b3;
+}
+
+button:active {
+    background-color: #004085;
+}
+
+button:focus {
+    outline: none;
+}
+
+/* Specific Button Styles (for different actions) */
+button:nth-child(2) {
+    background-color: #28a745; 
+}
+
+button:nth-child(2):hover {
+    background-color: #218838;
+}
+
+button:nth-child(2):active {
+    background-color: #1e7e34;
+}
+
+button:nth-child(3) {
+    background-color: #dc3545; 
+}
+
+button:nth-child(3):hover {
+    background-color: #c82333;
+}
+
+button:nth-child(3):active {
+    background-color: #bd2130;
+}
+
+/* Icon Marked Styling */
+.icon-marked {
+    color: #1e7e34;
+}
