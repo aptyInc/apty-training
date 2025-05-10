@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Student Scores</title>
+  </head>
+  <body>
+    <h1>Student Scores</h1>
+    <div>
+      <p>Enter student names and scores:</p>
+      <div id="inputContainer">
+        <div>
+          <input type="text" placeholder="Student Name" class="nameInput" />
+          <input type="number" placeholder="Score" class="scoreInput" />
+        </div>
+      </div>
+      <button onclick="addStudent()">Add Another Student</button>
+      <button onclick="evaluateScores()">Evaluate Scores</button>
+      <div id="result"></div>
+    </div>
+    <script src="../scripts/everySome.js"></script>
+  </body>
+</html>
