@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Combine Arrays Without Duplicates</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0fff0;
+            color: #007;
+            padding: 20px;
+        }
+
+        h1 {
+            color: #009;
+        }
+
+        input,
+        button {
+            font-size: 16px;
+            padding: 10px;
+            margin: 5px 0;
+            border: 2px solid #03003c;
+            border-radius: 5px;
+        }
+
+        button {
+            background-color: #009;
+            color: white;
+            cursor: pointer;
+            border-bottom: 20px;
+        }
+
+        button:hover {
+            background-color: #007;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Combine Two Arrays Without Duplicates</h1>
+
+    <label for="array1">Enter the first array (comma-separated): </label>
+    <input type="text" id="array1" placeholder="e.g., 1,2,3">
+    <br><br>
+
+    <label for="array2">Enter the second array (comma-separated): </label>
+    <input type="text" id="array2" placeholder="e.g., 3,4,5">
+    <br><br>
+
+    <button onclick="combineArrays()">Combine Arrays</button>
+
+    <h2>Result:</h2>
+    <div id="result"></div>
+
+    <script>
+        function combineArrays() {
+            const input1 = document.getElementById("array1").value;
+            const input2 = document.getElementById("array2").value;
+
+            const arr1 = input1.split(',').map(Number);
+            const arr2 = input2.split(',').map(Number);
+
+            const combined = [...new Set([...arr1, ...arr2])];
+            document.getElementById("result").textContent = `Combined Array: [${combined.join(', ')}]`;
+        }
+    </script>
+
+</body>
+
+</html>

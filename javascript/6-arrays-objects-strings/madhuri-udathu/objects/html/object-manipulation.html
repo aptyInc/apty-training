@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Object Keys</title>
+    <style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f0fff0; 
+        color: #004d00;
+        padding: 20px;
+      }
+  
+      h1 {
+        color: #024622; 
+      }
+  
+      input, button {
+        font-size: 16px;
+        padding: 10px;
+        margin: 5px 0;
+        border: 2px solid #013117; 
+        border-radius: 5px;
+      }
+  
+      button {
+        background-color:#046e35; 
+        color: white;
+        cursor: pointer;
+        border-bottom: 20px;
+      }
+  
+      button:hover {
+        background-color: #02391c; 
+      }
+    </style>
+</head>
+
+<body>
+
+    <h1>Dynamic Object Updater</h1>
+
+    <label for="key">Enter Key: </label>
+    <input type="text" id="key" placeholder="e.g., name">
+    <br><br>
+
+    <label for="value">Enter Value: </label>
+    <input type="text" id="value" placeholder="e.g., Alice">
+    <br><br>
+
+    <button onclick="addOrUpdateKey()">Add/Update Key</button>
+
+    <h2>Object:</h2>
+    <pre id="result">{}</pre>
+
+    <script src="../js/object-manipulation.js"></script>
+
+</body>
+
+</html>
