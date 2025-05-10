@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fibonacci Series</title>
+  <style>
+    body {
+      text-align: center;
+    }
+
+    .container {
+      #fibnociiForm {
+        border: 2px solid grey;
+        margin: 10px auto;
+      }
+
+      button {
+        padding: 10px;
+        background-color: aquamarine;
+        margin: 10px ;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Fibonacci Series</h1>
+  <div class="container">
+    <form id="fibonacciForm">
+      <label for="number">Enter a number:</label>
+      <input type="number" id="number" name="number" required>
+      <button type="submit">Calculate</button>
+    </form>
+    <h2>Results:</h2>
+    <div id="results"></div>
+  </div>
+  <script src="../js/fibnocii.js"></script>
+</body>
+
+</html>

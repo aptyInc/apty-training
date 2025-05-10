@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rectangle Area Calculator</title>
+    <style>
+        body {
+            text-align: center;
+        }
+
+        .container {
+
+            border: 2px solid grey;
+            margin: 10px;
+            padding: 20px;
+            display: inline-block;
+
+
+            button {
+                padding: 10px;
+                background-color: palevioletred;
+                margin: 10px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <h2>Rectangle Area Calculator</h2>
+    <div class="container">
+        <form id="areaForm">
+            <label for="length">Length (default: 5):</label>
+            <input type="number" id="length" placeholder="Enter length"><br><br>
+
+            <label for="width">Width (default: 3):</label>
+            <input type="number" id="width" placeholder="Enter width"><br><br>
+
+            <button type="button" onclick="calculateArea()">Calculate Area</button>
+        </form>
+        <h3 id="result"></h3>
+    </div>
+    <script src="../js/rectangle-area.js"></script>
+</body>
+
+</html>
