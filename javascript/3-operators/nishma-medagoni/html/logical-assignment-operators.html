@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logical Assignment Operators</title>
+    <script src="../javascript/logical-assignment-operators.js"></script>
+    <link rel="stylesheet" href="../css/logical-assignment-operators.css" />
+</head>
+<body>
+    <header>
+        Logical Assignment Operators - App
+    </header>
+    <main>
+        <section>
+            <div>
+                <label for="value1">Value 1:</label>
+                <input type="text" id="value1">
+            </div>
+            <div>
+                <label for="type1">Type 1:</label>
+                <select id="type1">
+                    <option value="string">String</option>
+                    <option value="number">Number</option>
+                    <option value="boolean">Boolean</option>
+                    <option value="object">Object</option>
+                    <option value="undefined">Undefined</option>
+                    <option value="null">Null</option>
+                </select>
+            </div>
+            <div>
+                <label for="value2">Value 2:</label>
+                <input type="text" id="value2">
+            </div>
+            <div>
+                <label for="type2">Type 2:</label>
+                <select id="type2">
+                    <option value="string">String</option>
+                    <option value="number">Number</option>
+                    <option value="boolean">Boolean</option>
+                    <option value="object">Object</option>
+                    <option value="undefined">Undefined</option>
+                    <option value="null">Null</option>
+                </select>
+            </div>
+            <div>
+                <button onclick="andAssignment()">&&=</button>
+                <button onclick="orAssignment()">||=</button>
+                <button onclick="nullishAssignment()">??=</button>
+            </div>
+        </section>
+        <div id="result">Result: </div>
+    </main>
+    <footer>2024 @ Logical Operators Assignment</footer>
+</body>
+</html>
