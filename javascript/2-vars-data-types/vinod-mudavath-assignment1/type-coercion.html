@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Type coercion in javascript</title>
+</head>
+<body>
+    <main>
+        <h1>Type Coercion in javascript</h1>
+        <div id = "type-coercion"></div>
+    </main>
+
+    <script>
+
+        let number = 21;
+        let str = "3"
+
+        let boolean = true;
+
+        let objectType = {num1:12, num2:13};
+
+        document.write(`${number} + '${str}' = ${number + str} <br/>`);
+        document.write(`${boolean} + '${str}' = ${boolean + str}<br/>`);
+        document.write(`${boolean} + ${number} = ${boolean + number}<br/>`);
+        document.write(`${boolean} + ${null} = ${boolean + null}<br/>`);
+
+        document.write(`${objectType} + ${str} = ${objectType + str}`);
+    </script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Types in JavaScript</title>
+</head>
+<body>
+    <h1>JavaScript Data Types</h1>
+    <div id="output"></div>
+
+    <script>
+        // Declare variables of different data types
+        const stringVar = "Hello, World!";      // String
+        const numberVar = 42;                  // Number
+        const booleanVar = true;               // Boolean
+        let undefinedVar;                      // Undefined
+        const nullVar = null;                  // Null
+        const symbolVar = Symbol("unique");    // Symbol
+        const objectVar = { name: "Vinod" };   // Object
+
+        function appendResult(description, value, type) {
+            const outputDiv = document.getElementById("output");
+            const p = document.createElement("p");
+            p.innerHTML = `<strong>${description}:</strong> ${value} (Type: <code>${type}</code>)`;
+            outputDiv.appendChild(p);
+        }
+
+        appendResult("String Variable", stringVar, typeof stringVar);
+        appendResult("Number Variable", numberVar, typeof numberVar);
+        appendResult("Boolean Variable", booleanVar, typeof booleanVar);
+        appendResult("Undefined Variable", undefinedVar, typeof undefinedVar);
+        appendResult("Null Variable", nullVar, typeof nullVar); 
+        appendResult("Symbol Variable", symbolVar.toString(), typeof symbolVar);
+        appendResult("Object Variable", JSON.stringify(objectVar), typeof objectVar);
+    </script>
+</body>
+</html>
