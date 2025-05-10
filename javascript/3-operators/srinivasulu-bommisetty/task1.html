@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Arithmetic Operators Calculator</title>
+  </head>
+  <body>
+    <div class="calculator">
+      <h2>Simple Calculator</h2>
+      <input type="number" id="value1" placeholder="Enter value 1" />
+      <input type="number" id="value2" placeholder="Enter value 2" />
+
+      <div>
+        <button onclick="add()">+</button>
+        <button onclick="subtract()">-</button>
+        <button onclick="multiply()">*</button>
+        <button onclick="divide()">/</button>
+        <button onclick="modulus()">%</button>
+        <button onclick="increment()">++ (Value1)</button>
+        <button onclick="decrement()">-- (Value1)</button>
+      </div>
+
+      <div class="result" id="result"></div>
+    </div>
+
+    <script src="./scripts/simple-calculator.js"></script>
+  </body>
+</html>
