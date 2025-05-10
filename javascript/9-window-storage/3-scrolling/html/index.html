@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Scroll to Position</title>
+  <style>
+    body {
+      height: 2000px; /* Add height to make the page scrollable */
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+    .controls {
+      position: fixed;
+      top: 20px;
+      left: 20px;
+      background: #f9f9f9;
+      padding: 10px;
+      border: 1px solid #ccc;
+    }
+    button {
+      margin: 5px;
+    }
+  </style>
+</head>
+<body>
+  <div class="controls">
+    <h3>Scroll Controls</h3>
+    <label for="xInput">X Position:</label>
+    <input type="number" id="xInput" placeholder="Enter X coordinate">
+    <br><br>
+    <label for="yInput">Y Position:</label>
+    <input type="number" id="yInput" placeholder="Enter Y coordinate">
+    <br><br>
+    <button id="scrollToPosition">Scroll to Position</button>
+    <button id="scrollUp">Scroll Up</button>
+    <button id="scrollDown">Scroll Down</button>
+  </div>
+
+  <script src="../js/script.js"></script>
+</body>
+</html>
