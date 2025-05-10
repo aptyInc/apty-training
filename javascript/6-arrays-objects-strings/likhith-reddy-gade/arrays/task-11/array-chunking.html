@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Array Chunking</title>
+  </head>
+  <body>
+    <h1>Array Chunking</h1>
+    <label for="chunk-array-input"
+      >Enter array elements (comma-separated):</label
+    ><br />
+    <input
+      type="text"
+      id="chunk-array-input"
+      placeholder="e.g., 1,2,3,4,5"
+    /><br /><br />
+    <label for="chunk-size">Enter chunk size:</label><br />
+    <input type="number" id="chunk-size" placeholder="e.g., 2" /><br /><br />
+    <button onclick="chunkArray()">Chunk Array</button>
+
+    <h2>Result:</h2>
+    <p id="chunking-result"></p>
+    <script src="array-chunking.js"></script>
+  </body>
+</html>
