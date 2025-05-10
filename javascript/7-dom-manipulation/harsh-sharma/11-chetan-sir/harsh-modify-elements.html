@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM Practice with Iframes and Shadow Roots</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 20px;
+        line-height: 1.6;
+      }
+      h1 {
+        color: #333;
+      }
+      .section {
+        border: 1px solid #ddd;
+        margin-bottom: 20px;
+        padding: 15px;
+        border-radius: 8px;
+        background-color: #f9f9f9;
+      }
+      iframe {
+        width: 100%;
+        height: 300px;
+        border: 1px solid #ccc;
+        margin-top: 15px;
+      }
+      .box {
+        width: 200px;
+        height: 100px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #ddd;
+        border-radius: 8px;
+        text-align: center;
+      }
+      .box.active {
+        background-color: lightgreen;
+        color: white;
+        font-weight: bold;
+      }
+      .external-link {
+        color: #007bff;
+        text-decoration: none;
+      }
+      .external-link:hover {
+        text-decoration: underline;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 id="main-heading">Original Heading</h1>
+
+    <!-- Section: Image -->
+    <div class="section">
+      <h2>Parent Page - Update Image Source</h2>
+      <img
+        id="main-image"
+        src="https://via.placeholder.com/150"
+        alt="Placeholder Image"
+      />
+    </div>
+
+    <!-- Section: Paragraph -->
+    <div class="section">
+      <h2>Parent Page - Style Modification</h2>
+      <p id="main-paragraph">This is a paragraph to be styled dynamically.</p>
+    </div>
+
+    <!-- Section: Toggle Classes -->
+    <div class="section">
+      <h2>Parent Page - Toggle Classes</h2>
+      <div class="box" id="main-box">Parent Box</div>
+      <button id="toggle-parent-box-btn">Toggle Parent Box</button>
+    </div>
+
+    <!-- Section: External Link -->
+    <div class="section">
+      <h2>Parent Page - Dynamic Link Update</h2>
+      <a class="external-link" href="#" id="main-link">Original Parent Link</a>
+    </div>
+
+    <!-- Iframe Section -->
+    <div class="section">
+      <h2>Iframe Content</h2>
+      <iframe
+        id="iframe1"
+        srcdoc="
+      <!DOCTYPE html>
+      <html lang='en'>
+      <head>
+        <style>
+          body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+          }
+          .box {
+            width: 200px;
+            height: 100px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #ddd;
+            border-radius: 8px;
+            text-align: center;
+          }
+          .box.active {
+            background-color: lightcoral;
+            color: white;
+            font-weight: bold;
+          }
+          .external-link {
+            color: #007BFF;
+            text-decoration: none;
+          }
+          .external-link:hover {
+            text-decoration: underline;
+          }
+        </style>
+      </head>
+      <body>
+        <h1 id='iframe-heading'>Iframe Heading</h1>
+        <img id='iframe-image' src='https://via.placeholder.com/100' alt='Iframe Placeholder Image'>
+        <p id='iframe-paragraph'>This is a paragraph inside the iframe.</p>
+        <div class='box' id='iframe-box'>Iframe Box</div>
+        <a class='external-link' href='#' id='iframe-link'>Original Iframe Link</a>
+      </body>
+      </html>
+    "
+      ></iframe>
+    </div>
+
+    <!-- Shadow Root Section -->
+    <div class="section">
+      <h2>Shadow DOM Content</h2>
+      <div id="shadow-host"></div>
+    </div>
+
+    <script>
+      // 1. Main - Change Heading Text
+      document.querySelector("h1").innerText = "Welcome to the DOM Practice!";
+
+      // 2. Main - Update Image Source
+      document.querySelector("#main-image").src =
+        "https://www.apty.io/wp-content/uploads/2024/08/workday-dashboard.svg";
+
+      // 3. Main - Style Modification
+      document.querySelector("p").style.cssText =
+        "color: blue; font-size: 18px; background-color: lightgray;";
+
+      // 4. Main - Toggle Classes
+      document
+        .querySelector("#toggle-parent-box-btn")
+        .addEventListener("click", () => {
+          document.querySelector(".box").classList.toggle("active");
+        });
+
+      // 5. Main - Dynamic Link Update
+      function change_the_a(document_value) {
+        document_value.href = "https://www.apty.io";
+        document_value.innerText = "Visit Example";
+      }
+      const external_link = document.querySelector(".external-link");
+      change_the_a(external_link);
+
+      // Access Iframe Content for above above functionality
+      const iframe_access = document.querySelector("iframe");
+      iframe_access.onload = () => {
+        const iframe_document =
+          iframe_access.contentDocument || iframe_access.contentWindow.document;
+
+        iframe_document.querySelector("h1").innerHTML =
+          "Welcome to the DOM Practice!";
+        iframe_document.querySelector("#iframe-image").src =
+          "https://www.apty.io/wp-content/uploads/2024/08/workday-dashboard.svg";
+        iframe_document.querySelector("p").style.cssText =
+          "color: blue; font-size: 18px; background-color: lightgray;";
+        const iframe_div_box = iframe_document.querySelector(".box");
+        iframe_div_box.style.cursor = "pointer";
+        iframe_div_box.addEventListener("click", () => {
+          iframe_div_box.classList.toggle("active");
+        });
+        function change_the_a_iframe(document_value) {
+          document_value.href = "https://www.apty.io";
+          document_value.innerText = "Visit Example";
+        }
+        const external_link2 = iframe_document.querySelector(".external-link");
+        change_the_a_iframe(external_link2);
+      };
+
+      // Shadow Root Content
+      const shadow_host = document.querySelector("#shadow-host");
+      const shadow_root = shadow_host.attachShadow({ mode: "open" });
+
+      const create_element_h1 = document.createElement("h1");
+      create_element_h1.innerText = "Shadow DOM Heading";
+      const create_element_p = document.createElement("p");
+      create_element_p.innerText = "This is a paragraph inside the Shadow DOM";
+      create_element_h1.style.color = "purple";
+      const anchor_tag = document.createElement("a");
+      anchor_tag.href = "https://www.apty.io/";
+      anchor_tag.textContent = "Shadow Apty Website";
+      anchor_tag.className = "shadow_a";
+      shadow_root.appendChild(create_element_h1);
+      shadow_root.appendChild(create_element_p);
+      shadow_root.appendChild(anchor_tag);
+    </script>
+  </body>
+</html>

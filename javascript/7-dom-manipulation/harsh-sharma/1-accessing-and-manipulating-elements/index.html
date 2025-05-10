@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Access & Manipulate Dom</title>
+        <link rel="stylesheet" href="../styles/assignment.css" />
+    </head>
+    <body>
+        <header>
+            <h1>Accessing and Manipulation Elements</h1>
+        </header>
+
+        <main>
+            <section>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>id</th>
+                            <th>className</th>
+                            <th>tag</th>
+                            <th>name</th>
+                            <th>attribute</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <p id="p1">Paragraph 1</p>
+                                <p id="p2">Paragraph 2</p>
+                                <p id="p3">Paragraph 3</p>
+                                <button onclick="changeColor()">Change Text Color</button>
+                            </td>
+            
+                            <td>
+                                <p class="textClass">Text 1</p>
+                                <p class="textClass">Text 2</p>
+                                <p class="textClass">Text 3</p>
+                                <button onclick="toggleBackgroundColor()">Toggle Background Color</button>
+                            </td>
+            
+                            <td>
+                                <span>Span 1</span>
+                                <span>Span 2</span>
+                                <span>Span 3</span>
+                                <button onclick="changeSpanText()">Change Span Text</button>
+                            </td>
+            
+                            <td>
+                                <input type="text" name="user" value="User 1">
+                                <input type="text" name="user" value="User 2">
+                                <input type="text" name="user" value="User 3">
+                                <button onclick="toggleInputDisabled()">Toggle Disabled</button>
+                            </td>
+            
+                            <td>
+                                <p data-custom="123">Custom Attribute 1</p>
+                                <p data-custom="456">Custom Attribute 2</p>
+                                <p data-custom="789">Custom Attribute 3</p>
+                                <button onclick="addCustomAttribute()">Add Custom Attribute</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+        </main>
+
+        <script src="script.js"></script>
+    </body>
+</html>
