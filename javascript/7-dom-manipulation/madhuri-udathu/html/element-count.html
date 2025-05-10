@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Element Count</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .element-count {
+            margin-top: 20px;
+        }
+        .element-count ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        .element-count li {
+            margin: 5px 0;
+        }
+    </style>
+</head>
+<body>
+    <h1>Element Counter</h1>
+    
+    <div id="div1">
+        <p>This is a paragraph inside a div.</p>
+        <span>This is a span inside a div.</span>
+    </div>
+
+    <p>This is another paragraph.</p>
+    <iframe width="300" height="100"></iframe><br>
+    <span>This is a standalone span.</span>
+    <button id="countBtn">Count Elements</button>
+
+    <div class="element-count">
+        <h2>Element Counts:</h2>
+        <ul id="countList">
+            <li>Divs: 0</li>
+            <li>Paragraphs: 0</li>
+            <li>Spans: 0</li>
+            <li>Iframes: 0</li>
+        </ul>
+    </div>
+
+    <script src="../js/element-count.js"></script>
+</body>
+</html>

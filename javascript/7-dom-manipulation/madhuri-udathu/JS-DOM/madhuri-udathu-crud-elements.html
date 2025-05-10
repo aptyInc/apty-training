@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Complex DOM Manipulation Challenges</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        .section {
+            margin-bottom: 20px;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            background-color: #f9f9f9;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        li {
+            padding: 5px 10px;
+            background-color: #eee;
+            margin-bottom: 5px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        button {
+            padding: 5px 10px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        .btn {
+            background-color: green;
+            color: white;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 4px;
+        }
+
+        .container {
+            margin: 10px 0;
+            padding: 10px;
+            border: 1px solid #ccc;
+        }
+
+        .table-container {
+            margin-top: 20px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        table,
+        th,
+        td {
+            border: 1px solid black;
+        }
+
+        th,
+        td {
+            padding: 10px;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>DOM Manipulation Challenges</h1>
+
+    <!-- Main Document Section -->
+    <div class="section">
+        <h2>Main Document</h2>
+        <ul id="main-list">
+            <li>Item 1 <button class="delete-item">Delete</button></li>
+            <li>Item 2 <button class="delete-item">Delete</button></li>
+        </ul>
+        <div class="button-container"></div>
+        <div class="container" id="clone-container">
+            <div class="card">Card Content</div>
+        </div>
+        <p id="existing-paragraph">Existing Paragraph</p>
+        <div class="table-container"></div>
+    </div>
+    <script>
+        //Add New List Item
+        const mainList = document.getElementById("main-list");
+        const newListItem = document.createElement("li");
+        newListItem.textContent = "New Item";
+        const deleteButton = document.createElement("button");
+        deleteButton.textContent = "Delete";
+        deleteButton.className = "delete-item";
+        newListItem.appendChild(deleteButton);
+        mainList.appendChild(newListItem);
+
+        // Remove Child Element
+        const container = document.getElementById("clone-container");
+        if (container.lastElementChild) {
+            container.removeChild(container.lastElementChild);
+        }
+
+        // Create and Style Button
+        const buttonContainer = document.querySelector(".button-container");
+        const newButton = document.createElement("button");
+        newButton.textContent = "Click Me";
+        newButton.className = "btn";
+        newButton.style.backgroundColor = "green";
+        buttonContainer.appendChild(newButton);
+
+        // Insert Before
+        const existingParagraph = document.getElementById("existing-paragraph");
+        const newParagraph = document.createElement("p");
+        newParagraph.textContent = "New Paragraph";
+        existingParagraph.parentNode.insertBefore(newParagraph, existingParagraph);
+
+        // Dynamic Table
+        const tableContainer = document.querySelector(".table-container");
+        const table = document.createElement("table");
+        for (let i = 0; i < 3; i++) {
+            const row = document.createElement("tr");
+            for (let j = 1; j <= 3; j++) {
+                const cell = document.createElement("td");
+                cell.textContent = i * 3 + j;
+                row.appendChild(cell);
+            }
+            table.appendChild(row);
+        }
+        tableContainer.appendChild(table);
+
+        // Event-Based Element Creation
+        const createDivButton = document.createElement("button");
+        createDivButton.textContent = "Create Random Div";
+        document.body.appendChild(createDivButton);
+        createDivButton.addEventListener("click", () => {
+            const randomDiv = document.createElement("div");
+            randomDiv.style.width = "100px";
+            randomDiv.style.height = "100px";
+            randomDiv.style.backgroundColor = `#${Math.floor(Math.random() * 16777215).toString(16)}`;
+            randomDiv.style.margin = "10px";
+            document.body.appendChild(randomDiv);
+        });
+
+        // Delete Specific List Item
+        const deleteButtons = document.querySelectorAll('.delete-item');
+        deleteButtons.forEach(button => {
+            button.addEventListener('click', function () {
+                this.parentElement.remove();
+            });
+        });
+
+        // Dynamic Attribute Setter
+        const inputField = document.createElement("input");
+        inputField.setAttribute("type", "text");
+        inputField.setAttribute("placeholder", "Enter your name");
+        document.body.appendChild(inputField);
+
+        // Generate Nested Elements
+        const nestedContainer = document.createElement("div");
+        nestedContainer.className = "nested-container";
+        const heading = document.createElement("h3");
+        heading.textContent = "Nested Heading";
+        nestedContainer.appendChild(heading);
+        const paragraph = document.createElement("p");
+        paragraph.textContent = "This is a nested paragraph.";
+        nestedContainer.appendChild(paragraph);
+        document.body.appendChild(nestedContainer);
+    </script>
+</body>
+
+</html>
