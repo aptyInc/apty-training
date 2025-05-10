@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Remove Duplicates</title>
+</head>
+<body>
+    <input id="v1" type="text" onchange="pro()">
+    <div id="res"></div>
+</body>
+<script>
+    function removeDuplicates(arr) {
+        
+        let uniqueArray = [];
+        
+
+        for (let i = 0; i < arr.length; i++) {
+            
+            if (!uniqueArray.includes(arr[i])) {
+                uniqueArray.push(arr[i]);
+            }
+        }
+        
+        return uniqueArray;
+    }
+
+    function pro() {
+        let input = document.getElementById('v1').value;
+        let res = document.getElementById('res');
+        
+        
+        const arr =JSON.parse(input);
+
+        
+        const result = removeDuplicates(arr);
+        
+        // Display the result
+        res.innerHTML = `Output: [${result.join(', ')}]`;
+    }
+</script>
+</html>

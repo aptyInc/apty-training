@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input id="v1" type="text" onchange="pro()">
+    <div id="res"></div>
+</body>
+<script>
+    function pro(){
+        let input=JSON.parse(document.getElementById('v1').value);
+        let res=document.getElementById('res');
+        let result;
+        /* add operations here */
+       result=input.filter((i)=>{
+            return i%2==0
+        }).map((i)=>{
+            return i*2;
+        }).reduce((p,i)=>{
+              return p+i;
+        })
+        res.innerHTML=result;
+    }
+</script>
+</html>

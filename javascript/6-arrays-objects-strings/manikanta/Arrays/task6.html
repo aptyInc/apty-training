@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input id="v1" type="text" onchange="pro()">
+    <div id="res"></div>
+</body>
+<script>
+    function pro(){
+        let input = document.getElementById('v1').value;
+        let res = document.getElementById('res');
+        
+        
+        let colorsArray =JSON.parse(input);
+        
+        
+        const blueIndex = colorsArray.indexOf("Blue");
+        if (blueIndex !== -1) {
+            colorsArray[blueIndex] = "Purple";
+        }
+
+       
+        const yellowIndex = colorsArray.indexOf("Yellow");
+        if (yellowIndex !== -1) {
+            colorsArray.splice(yellowIndex + 1, 0, "Orange");
+        }
+
+     
+        const greenIndex = colorsArray.indexOf("Green");
+        if (greenIndex !== -1) {
+            colorsArray.splice(greenIndex, 1);
+        }
+
+       
+        let result = `Updated colors: ${colorsArray.join(', ')}`;
+        
+       
+        res.innerHTML = result;
+    }
+</script>
+</html>
