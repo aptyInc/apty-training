@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Messaging</title>
+  </head>
+  <body>
+    <h1>Parent Window</h1>
+    <label for="message-input">Enter Message:</label>
+    <input type="text" id="message-input" />
+    <button id="send-message-btn">Send Message</button>
+
+    <iframe
+      src="messaging-child.html"
+      id="child-frame"
+      style="width: 100%; height: 200px"
+    ></iframe>
+
+    <p id="received-message">Message from child: None</p>
+
+    <script src="messaging.js"></script>
+  </body>
+</html>
