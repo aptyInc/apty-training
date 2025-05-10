@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Storage</title>
+</head>
+<body>
+    <h1>LocalStorage and SessionStorage Demo</h1>
+  <div class="controls">
+    <label for="localStorageKey">Key for LocalStorage:</label>
+    <input type="text" id="localStorageKey" placeholder="Enter key">
+    <label for="localStorageValue">Value for LocalStorage:</label>
+    <input type="text" id="localStorageValue" placeholder="Enter value">
+    <button onclick="saveToLocalStorage()">Save to LocalStorage</button>
+  </div>
+
+  <div class="controls">
+    <label for="sessionStorageKey">Key for SessionStorage:</label>
+    <input type="text" id="sessionStorageKey" placeholder="Enter key">
+    <label for="sessionStorageValue">Value for SessionStorage:</label>
+    <input type="text" id="sessionStorageValue" placeholder="Enter value">
+    <button onclick="saveToSessionStorage()">Save to SessionStorage</button>
+  </div>
+
+  <div id="output">
+    <h3>Stored Data:</h3>
+    <div class="storage-section" id="localStorageData">
+      <h4>LocalStorage Data:</h4>
+      <p>No data in localStorage yet.</p>
+    </div>
+    <div class="storage-section" id="sessionStorageData">
+      <h4>SessionStorage Data:</h4>
+      <p>No data in sessionStorage yet.</p>
+    </div>
+  </div>
+    <script src="./script.js" > </script>
+</body>
+</html>
