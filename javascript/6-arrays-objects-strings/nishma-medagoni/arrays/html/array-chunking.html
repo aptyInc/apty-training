@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Chunking</title>
+    <script src = "../js/array-chunking.js"></script>
+    <link rel="stylesheet" href="../css/index.css">
+</head>
+<body>
+    <header>
+        Array Chunking
+    </header>
+    <main>
+        <section>
+            <label for="arrayInput">Enter an array (JSON format):</label><br>
+            <textarea id="arrayInput" placeholder="[1, 2, 3, 4, 5]" rows="5" cols="50"></textarea><br><br>
+
+            <label for="chunkSize">Enter chunk size:</label><br>
+            <input type="number" id="chunkSize" placeholder="2"><br><br>
+
+            <button onclick="chunkArray()">Chunk Array</button>
+
+            <h3>Chunked Result:</h3>
+            <p id="result">The chunked array will appear here.</p>
+        </section>
+    </main>
+    <footer>
+        2024@JavaScript Assignment
+    </footer>
+</body>
+</html>
