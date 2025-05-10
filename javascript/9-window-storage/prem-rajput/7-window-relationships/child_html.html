@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 7 - Window Relationships (Child HTML) | Prem Rajput</title>
+</head>
+<body>
+    <h1>Iframe Window</h1>
+    <input type="text" id="iframeMessage" placeholder="Message for parent">
+    <button id="sendToParent">Send to Parent</button>
+    <p><strong>Message from parent:</strong> <span id="iframeReceivedMessage"></span></p>
+
+    <script>
+
+        document.getElementById('sendToParent').addEventListener('click', () => {
+            const message = document.getElementById('iframeMessage').value.trim();
+            if (message) {
+                parent.postMessage(message, '*');
+            }
+        });
+
+        window.addEventListener('message', (event) => {
+            if (event.source === parent) {
+                document.getElementById('iframeReceivedMessage').textContent = event.data;
+            }
+        });
+    </script>
+</body>
+</html>
