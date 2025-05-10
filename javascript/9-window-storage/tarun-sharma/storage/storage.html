@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Storage</title>
+</head>
+<body>
+    <div>
+
+        LocalStorage <input type="text" id="localInput">
+        <button onclick="saveToLocal()">Save</button>
+
+        <br>
+        <br>
+
+        SessionStorage <input type="text" id="sessionInput">
+        <button onclick="saveToSession()">Save</button>
+        <br>
+        
+        <br>
+
+        <h3>Stored Data:</h3>
+
+        <p id="localDisplay"></p>
+
+
+        <p id="sessionDisplay"></p>
+    </div>
+    
+    <script src="storage.js"></script>
+</body>
+</html>
