@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Interactive Table with Shadow DOM</title>
+    <style>
+      .toggle-bg {
+        background-color: yellow;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Accessing and Manipulating shadowDOM Elements</h1>
+    <div id="shadow-host"></div>
+    <div>
+      <button onclick="changeTextColorById()">Change Text Color</button>
+      <button onclick="toggleClassName()">Toggle Background</button>
+      <button onclick="changeInnerHTML()">Change InnerHTML</button>
+      <button onclick="toggleDisabledByName()">Toggle Disabled</button>
+      <button onclick="addCustomAttribute()">Add Custom Attribute</button>
+    </div>
+    <script src="/javascript/7-dom-manipulation/pranathi-akula/scripts/access-manipulate-shadowdom.js"></script>
+  </body>
+</html>
