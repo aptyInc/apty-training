@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Phases</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        .level {
+            border: 2px solid #ccc;
+            margin: 10px;
+            padding: 20px;
+        }
+        .level1 {
+            background-color: #f8d7da;
+        }
+        .level2 {
+            background-color: #d4edda;
+        }
+        .level3 {
+            background-color: #d1ecf1;
+        }
+    </style>
+</head>
+<body>
+    <div class="level level1" id="level1">
+        Level 1
+        <div class="level level2" id="level2">
+            Level 2
+            <div class="level level3" id="level3">
+                Level 3
+            </div>
+        </div>
+    </div>
+
+    <script src="../js/event-propagation.js"></script>
+</body>
+</html>
