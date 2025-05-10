@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Assignment 5 - Stop Event Propagation | Prem Rajput</title>
+        <style>
+
+            .parent {
+                width: 300px;
+                height: 300px;
+                background-color: rgb(39, 142, 177);
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                text-align: center;
+                border: 2px solid black;
+                align-items: center;
+            }
+            .child {
+                border: 3px solid black;
+                width: 150px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 150px;
+                background-color: rgb(84, 228, 84);
+            }
+
+        </style>
+    </head>
+    <body>
+        <div class="parent" id="parentDiv">
+            Parent Div
+            <div class="child" id="childDiv">Child Div</div>
+        </div>
+        <script src="./scripts/5-stop-propagation.js"></script>
+    </body>
+</html>
