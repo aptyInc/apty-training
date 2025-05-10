@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comparison App</title>
+    <link rel="stylesheet" href="../css/comparision-operator.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <h2>Data Comparison App</h2>
+        <label for="value1">Value 1:</label>
+        <input type="text" id="value1">
+        <br><br>
+        <label for="type1">Type 1:</label>
+        <select id="type1">
+            <option value="string">String</option>
+            <option value="number">Number</option>
+            <option value="boolean">Boolean</option>
+        </select>
+
+        <br><br>
+
+        <label for="value2">Value 2:</label>
+        <input type="text" id="value2">
+        <br><br>
+        <label for="type2">Type 2:</label>
+        <select id="type2">
+            <option value="string">String</option>
+            <option value="number">Number</option>
+            <option value="boolean">Boolean</option>
+        </select>
+
+        <br><br>
+        <div class="app-buttons">
+        <!-- Comparison Operators -->
+        <button onclick="compareEqual()">==</button>
+        <button onclick="compareStrictEqual()">===</button>
+        <button onclick="compareNotEqual()">!=</button>
+        <button onclick="compareStrictNotEqual()">!==</button>
+        <button onclick="compareGreaterThan()">></button>
+        <button onclick="compareLessThan()"><</button>
+        <button onclick="compareGreaterThanOrEqual()">>=</button>
+        <button onclick="compareLessThanOrEqual()"><=</button>
+        </div>
+        <div class="result" id="result"></div>
+       
+    </div>
+
+    <script src="../js/comparasion-operator.js"></script>
+</body>
+
+</html>
+
