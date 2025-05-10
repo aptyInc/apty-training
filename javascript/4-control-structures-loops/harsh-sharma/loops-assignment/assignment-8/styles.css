@@ -1,0 +1,11 @@
+body{
+    text-align: center;
+    background-color: #FFCFEF;
+    color: #2A3335;
+}
+
+img{
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.209);
+    height: 200px;
+    width: 80%;
+}
