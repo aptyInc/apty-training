@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 1 - Private Variables | Prem Rajput</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+        input {
+            padding: 5px;
+            font-size: 14px;
+            width: 200px;
+        }
+        button {
+            padding: 5px 10px;
+            font-size: 14px;
+            margin: 5px;
+        }
+        p {
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+    <h2>Bank Account Simulation</h2>
+
+    <label for="amount">Enter Amount:</label>
+    <br>
+    <input type="number" id="amount" placeholder="e.g., 100">
+    <br><br>
+    <button onclick="deposit()">Deposit</button>
+    <button onclick="withdraw()">Withdraw</button>
+    <button onclick="checkBalance()">Check Balance</button>
+
+    <p id="result"></p>
+
+    <script src="./script/1-private-vars.js"></script>
+</body>
+</html>
