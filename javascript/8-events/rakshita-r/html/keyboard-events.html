@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Key Events Demo</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 20px;
+      }
+
+      h1 {
+        text-align: center;
+      }
+
+      .event-div {
+        border: 1px solid #ccc;
+        padding: 20px;
+        margin: 20px 0;
+        border-radius: 5px;
+        background-color: #f9f9f9;
+      }
+
+      .event-div h2 {
+        margin-top: 0;
+        text-align: center;
+      }
+
+      ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+        max-height: 200px;
+        overflow-y: auto;
+      }
+
+      li {
+        padding: 5px 10px;
+        border-bottom: 1px solid #ddd;
+      }
+
+      li:last-child {
+        border-bottom: none;
+      }
+
+      .event-div {
+        height: 300px;
+        overflow: auto;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Key Event Listener</h1>
+    <div id="keydownDiv" class="event-div">
+      <h2>Keydown Events</h2>
+      <ul id="keydownList"></ul>
+    </div>
+    <div id="keyupDiv" class="event-div">
+      <h2>Keyup Events</h2>
+      <ul id="keyupList"></ul>
+    </div>
+    <script src="../scripts/keyboard-events.js"></script>
+  </body>
+</html>
