@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>localStorage and sessionStorage Example</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .storage-display {
+            margin-top: 20px;
+            padding: 10px;
+            border: 1px solid #ccc;
+        }
+    </style>
+</head>
+<body>
+    <h1>Using localStorage and sessionStorage</h1>
+
+    <label for="localStorageInput">Enter data for localStorage:</label>
+    <input type="text" id="localStorageInput">
+    <button onclick="saveToLocalStorage()">Save to localStorage</button>
+    
+    <br><br>
+
+    <label for="sessionStorageInput">Enter data for sessionStorage:</label>
+    <input type="text" id="sessionStorageInput">
+    <button onclick="saveToSessionStorage()">Save to sessionStorage</button>
+
+    <div class="storage-display">
+        <h3>Stored Data:</h3>
+        <p><strong>localStorage Data:</strong> <span id="localStorageData">No data</span></p>
+        <p><strong>sessionStorage Data:</strong> <span id="sessionStorageData">No data</span></p>
+    </div>
+
+    <script src="../js/storage.js"></script>
+</body>
+</html>

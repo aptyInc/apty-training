@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Messaging with Parent and Top</title>
+    <style>
+        iframe {
+            width: 100%;
+            height: 200px;
+            border: 1px solid black;
+        }
+    </style>
+    <script src="../js/window-relationships.js"></script>
+</head>
+<body>
+    <h1>Top Window</h1>
+    <iframe id="childFrame" srcdoc="
+        <!DOCTYPE html>
+        <html lang='en'>
+        <head>
+            <title>Child Frame</title>
+        </head>
+        <body>
+            <h2>Child Frame</h2>
+            <button onclick='sendMessageToParent()'>Send Message to Parent</button>
+            <button onclick='sendMessageToTop()'>Send Message to Top Window</button>
+            <script>
+                // Send a message to the parent window
+                function sendMessageToParent() {
+                    parent.postMessage('Hello from Child', '*');
+                    console.log('Child sent: Hello from Child to Parent');
+                }
+
+                // Send a message to the top window
+                function sendMessageToTop() {
+                    top.postMessage('Hello from Child', '*');
+                    console.log('Child sent: Hello from Child to Top');
+                }
+
+                // Listen for messages in the child frame
+                window.addEventListener('message', (event) => {
+                    console.log('Child received:', event.data);
+                });
+            </script>
+        </body>
+        </html>
+    "></iframe>
+</body>
+</html>
