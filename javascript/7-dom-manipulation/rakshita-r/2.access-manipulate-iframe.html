@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Accessing and manipulating Iframe using DOM Manipulation</title>
+  </head>
+
+  <body>
+    <main>
+      <h1>Accessing and manipulating Iframe using DOM Manipulation</h1>
+      <p class="bgcolor">First paragraph</p>
+      <p class="bgcolor">Second paragraph</p>
+      <span>span1</span>
+      <span>span2</span>
+      <iframe
+        height="600"
+        width="100%"
+        srcdoc='<!DOCTYPE html>
+            <html lang=" en">
+            <head>
+                <meta charset="UTF-8">
+                <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                <link rel="stylesheet" href="./../css/accessing-manipulating-elements.css">
+                <title>Accessing and manipulating elements using javascript</title>
+            </head>
+            <body>
+                <main>
+                    <h1>Accessing and manipulating elements using javascript</h1>
+                    <table>
+                        <tr>
+                            <th>ID</th>
+                            <th>CLASS NAME</th>
+                            <th>TAG</th>
+                            <th>NAME</th>
+                            <th>ATTRIBUTE</th>
+                        </tr>
+                        <tr>
+                            <td id="iddata">
+                                <p id="first">First paragraph</p>
+                                <p id="second">Second paragraph</p>
+                                <p id="third">Thrid paragraph</p>
+                                <p id="fourth">Fourth paragraph</p>
+                                
+                            </td>
+                            <td id="class-data">
+                                <p class="bgcolor">First paragraph</p>
+                                <p class="bgcolor">Second paragraph</p>
+                                <p class="bgcolor">Thrid paragraph</p>
+                                <p class="bgcolor">Fourth paragraph</p>
+                            </td>
+                            <td>
+                                <span>span1</span>
+                                <span>span2</span>
+                                <span>span3</span>
+                                <span>span4</span>
+                            </td>
+                            <td>
+                                <div class="input-container">
+                                    <label for="username">USERNAME</label>
+                                    <input type="text" id="username" placeholder="Enter username here" name="username"
+                                        value="Rakshita">
+                                </div>
+                                <div class="input-container">
+                                    <label for="email">EMAIL</label>
+                                    <input type="email" id="email" placeholder="Enter email here" name="email"
+                                        value="rakshita123@gamail.com">
+                                </div>
+                            </td>
+                            <td>
+                                <p data-name="para">First paragraph</p>
+                                <p data-name="para">Second paragraph</p>
+                                <p data-name="para">Thrid paragraph</p>
+                                <p data-name="para">Fourth paragraph</p>
+                            </td>
+                        </tr>
+                    </table>
+                </main>
+            </body>
+</html>'
+      >
+      </iframe>
+      <button id="changecolor">Change Color</button>
+      <button id="change-bgcolor">Change Color</button>
+      <button id="change-content">Change content</button>
+      <button id="disable-input">Disable input</button>
+      <button id="add-custom-attribute">Add Custom Attribute</button>
+    </main>
+
+    <script>
+      function getRandomColor() {
+        let letters = "0123456789ABCDEF";
+
+        let color = "#";
+
+        for (let i = 0; i < 6; i++) {
+          color += letters[Math.ceil(Math.random() * letters.length)];
+        }
+
+        return color;
+      }
+
+      const iframeDocument = document.querySelector("iframe").contentDocument;
+
+      document.getElementById("changecolor").addEventListener("click", () => {
+        const childrens = iframeDocument.getElementById("iddata").children;
+
+        Array.from(childrens).forEach((node) => {
+          if (node.tagName === "P") node.style.color = getRandomColor();
+        });
+      });
+
+      document
+        .getElementById("change-bgcolor")
+        .addEventListener("click", () => {
+          const classCollection =
+            iframeDocument.getElementsByClassName("bgcolor");
+
+          Array.from(classCollection).forEach((eachNode) => {
+            eachNode.classList.toggle("active");
+          });
+        });
+
+      document
+        .getElementById("change-content")
+        .addEventListener("click", (evt) => {
+          const tagCollection = iframeDocument.getElementsByTagName("span");
+
+          Array.from(tagCollection).forEach((span) => {
+            span.innerHTML = `<p>Changed context</p>`;
+          });
+        });
+
+      document.getElementById("disable-input").addEventListener("click", () => {
+        const nameCollection = iframeDocument.getElementsByName("username");
+
+        Array.from(nameCollection).forEach((eachNode) => {
+          eachNode.disabled = !eachNode.disabled;
+        });
+      });
+
+      document
+        .getElementById("add-custom-attribute")
+        .addEventListener("click", (evt) => {
+          const paraEle = iframeDocument.querySelector("[data-name = para]");
+
+          paraEle.dataset["save"] = "save-attribute";
+        });
+    </script>
+  </body>
+</html>
