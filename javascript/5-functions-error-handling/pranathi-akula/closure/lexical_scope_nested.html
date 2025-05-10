@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lexical Scoping in Nested Functions</title>
+  </head>
+  <body>
+    <h1>Lexical Scoping in Nested Functions</h1>
+    <div>
+      <label for="outerVar">Outer Variable:</label>
+      <input type="text" id="outerVar" placeholder="Set outer variable" />
+    </div>
+    <br /><br />
+    <div>
+      <label for="middleVar">Middle Variable:</label>
+      <input type="text" id="middleVar" placeholder="Set middle variable" />
+    </div>
+    <br /><br />
+    <div>
+      <label for="innerVar">Inner Variable:</label>
+      <input type="text" id="innerVar" placeholder="Set inner variable" />
+    </div>
+    <br /><br />
+    <button onclick="GenerateConcatString()">Generate Concatenated String</button
+    ><br /><br />
+    <div id="output">Result:</div>
+    <script src="/javascript/5-functions-error-handling/pranathi-akula/closure/scripts/lexical-nested-scope.js"></script>
+  </body>
+</html>
