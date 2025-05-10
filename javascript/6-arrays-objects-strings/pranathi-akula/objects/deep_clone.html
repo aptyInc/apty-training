@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Deep Clone an Object</title>
+  </head>
+  <body>
+    <h1>Deep Clone an object</h1>
+    <input
+      type="text"
+      id="input"
+      placeholder='{"a":1,"b":{"c":2}}'
+    /><br /><br />
+    <input
+      type="text"
+      id="modifyKey"
+      placeholder="Nested key (e.g., b.c)"
+    /><br /><br />
+    <input type="text" id="modifyValue" placeholder="New value" /><br /><br />
+    <button onclick="process()">Process</button>
+
+    <h3>Original</h3>
+    <pre id="original">{}</pre>
+    <h3>Modified</h3>
+    <pre id="cloned">{}</pre>
+    <script src="/javascript/6-arrays-objects-strings/pranathi-akula/objects/scripts/deep-clone.js"></script>
+  </body>
+</html>
