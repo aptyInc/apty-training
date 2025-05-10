@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accessing and Manipulating Elements</title>
+    <script src="./script.js" ></script>
+    <style>
+        .toggle-bg {
+            background-color: yellow;
+        }
+    </style>
+</head>
+<body>
+    <table border="1" style="width: 100%; text-align: center;">
+        <thead>
+            <tr>
+                <th>id</th>
+                <th>className</th>
+                <th>tag</th>
+                <th>name</th>
+                <th>attribute</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>
+                    <p id="p1">Paragraph 1</p>
+                    <p id="p2">Paragraph 2</p>
+                    <button onclick="changeTextColorById()">Change Text Color</button>
+                </td>
+                <td>
+                    <p class="same-class">Paragraph 1</p>
+                    <p class="same-class">Paragraph 2</p>
+                    <button onclick="toggleBackgroundByClass()">Toggle Background</button>
+                </td>
+                <td>
+                    <span>Span 1</span>
+                    <span>Span 2</span>
+                    <button onclick="changeInnerHTMLByTag()">Change InnerHTML</button>
+                </td>
+                <td>
+                    <input type="text" disabled name="input1" value="Input 1">
+                    <input type="text" name="input2" value="Input 2">
+                    <button onclick="toggleDisabledByName()">Toggle Disabled</button>
+                </td>
+                <td>
+                    <p data-attr="attr1">Custom Attribute 1</p>
+                    <p data-attr="attr2">Custom Attribute 2</p>
+                    <button onclick="addCustomAttribute()">Add Attribute</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+</body>
+</html>
