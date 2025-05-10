@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 2 - Accessing Elements through iframe</title>
+    <style>
+
+        iframe {
+            width: 100%;
+            height: 400px;
+            border: 1px solid black;
+        }
+
+        .highlight {
+            background-color: yellow;
+        }
+
+        button {
+            margin: 10px;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Iframe Integration Example</h1>
+    <iframe id="contentIframe"></iframe>
+    <div>
+        <button id="changeColorBtn">Change Color</button>
+        <button id="toggleClassBtn">Toggle Background</button>
+        <button id="changeTextBtn">Change Text</button>
+        <button id="toggleDisabledBtn">Toggle Disabled</button>
+        <button id="addCustomAttrBtn">Add Custom Attribute</button>
+    </div>
+
+    <script src="./scripts/2-accessing-iframe.js"></script>
+
+</body>
+</html>
