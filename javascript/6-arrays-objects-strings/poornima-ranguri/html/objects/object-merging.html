@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Object Merging</title>
+    <link rel="stylesheet" href="../../css/objects/object-merging.css" />
+  </head>
+  <body>
+    <header style="text-align: center">
+      <h1>Object Merging</h1>
+    </header>
+    <main style="text-align: center">
+      <section>
+        <div>
+          <label for="firstObject">Enter Your First Obejct : </label>
+          <input
+            type="text"
+            name="text"
+            id="firstObject"
+            placeholder='{"key1": {"subKey1": "value1"}}'
+            required
+            aria-placeholder="Enter a of string"
+          />
+        </div>
+
+        <div style="margin-top: 30px">
+          <label for="secondObject">Enter your Second Object : </label>
+          <input
+            type="text"
+            name="text"
+            id="secondObject"
+            placeholder='{"key2": {"subKey2": "value2"}}'
+            required
+            aria-placeholder="Enter a of object"
+          />
+        </div>
+
+        <button onclick="OnMerging()">Merge Objects</button>
+
+        <pre id="result"></pre>
+        <p id="errorMesssage"></p>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-content">
+        <p>&copy; 2024 Poornima Ranguri. All Rights Reserved.</p>
+        <p>
+          <a href="https://apty.io" target="_blank">Privacy Policy</a>
+          <a href="https://apty.io" target="_blank">Terms of Service</a>
+        </p>
+      </div>
+    </footer>
+
+    <script src="../../javascript/objects/object-merging.js"></script>
+  </body>
+</html>
