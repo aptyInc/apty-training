@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form Validation Example</title>
+    <link rel="stylesheet" href="../css/form-events.css" />
+  </head>
+  <body>
+    <header>Registration Form</header>
+    <main>
+        <form id="registrationForm">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" />
+            <div id="username-error" class="error"></div>
+            <br>
+        
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" />
+            <div id="email-error" class="error"></div>
+            <br>
+        
+            <button type="submit">Submit</button>
+        </form>
+    </main>
+    <footer>© 2024 Javascript Assignments</footer>
+    <script src="../js/form-events.js"></script>
+  </body>
+</html>
