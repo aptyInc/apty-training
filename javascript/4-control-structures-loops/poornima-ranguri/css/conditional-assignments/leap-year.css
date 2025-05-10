@@ -1,0 +1,81 @@
+*{
+    margin: 0px;
+    background: aliceblue;
+}
+
+header{
+    text-align: center;
+    padding-top: 40px;
+}
+
+
+.input-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+}
+
+input{
+    margin-left: 40px;
+    cursor: pointer;
+    text-align: center;
+}
+
+button{
+    background-color: darkgray;
+    border: none;
+    cursor: pointer;
+    padding: 20px;
+    border-radius: 20px;
+    color: white;
+    font-weight: bold;
+}
+
+
+
+.buttons-container{
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.buttons-container p {
+    padding-top: 30px;
+    color: darkcyan;
+    font-weight: bold;
+} 
+
+footer {
+    width: 100%;
+    background-color: darkcyan;
+    margin-top: 30px;
+    padding: 20px 0; 
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column; 
+    justify-content: center; 
+    align-items: center; 
+}
+
+/* Footer */
+.footer-content p {
+    margin: 5px 0; 
+    font-size: 14px; 
+    text-align: center; 
+}
+
+.footer-content a {
+    
+    text-decoration: none;
+    margin: 0 5px;
+    font-weight: bold;
+}
+
+.footer-content a:hover {
+    text-decoration: underline; 
+}

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Sum of Numbers Calculator</title>
+    <link
+      rel="stylesheet"
+      href="../../css/loops-assignments/sum-of-number.css"
+    />
+  </head>
+  <body>
+    <header style="text-align: center">
+      <h1>Sum of Numbers Calculator</h1>
+    </header>
+    <main style="text-align: center">
+      <section class="input-container">
+        <label for="userInput">Enter a Number : </label>
+        <input
+          type="number"
+          name="user Input"
+          id="userInput"
+          required
+          aria-label="Sum of Numbers"
+          placeholder="enter a number"
+          min="1"
+        />
+      </section>
+      <div class="buttons-container">
+        <button onclick="calculateSum()">Calculate Sum</button>
+      </div>
+      <p id="result"></p>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-content">
+        <p>&copy; 2024 Poornima Ranguri. All Rights Reserved.</p>
+        <p>
+          <a href="https://apty.io" target="_blank">Privacy Policy</a> |
+          <a href="https://apty.io" target="_blank">Terms of Service</a>
+        </p>
+      </div>
+    </footer>
+
+    <script src="../../javascript/loops-assignments/sum-of-numbers.js"></script>
+  </body>
+</html>
