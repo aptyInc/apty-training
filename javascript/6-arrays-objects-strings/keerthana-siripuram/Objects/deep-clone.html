@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deep Clone</title>
+    <style>
+        main {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container {
+            width: 300px;
+            padding: 10px;
+            border: 2px solid grey;
+            border-radius: 5px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <h1>Deep Clone!!</h1>
+        <section class="container">
+            <label for="json-string">Json String:</label>
+            <textarea id="json-string" type="text" required>{"a":1,"b":{"c":2}}</textarea>
+            <label for="property">Property:</label>
+            <input id="property" type="text" placeholder="Enter property ex:b.c" required />
+            <button onclick="modifyObj()">modify Object</button>
+            <p id="org">Original Obj is:</p>
+            <p id="cloned">Cloned obj is:</p>
+            <p id="err"></p>
+        </section>
+    </main>
+    <script src="./scripts/deep-clone.js">
+
+    </script>
+</body>
+
+</html>

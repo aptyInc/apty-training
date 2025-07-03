@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <style>
+        h1 {
+            text-align: center;
+        }
+
+        form {
+            border: 2px solid black;
+            border-radius: 2px;
+            width: 25%;
+            padding: 40px;
+            margin: auto;
+        }
+
+        .form-ele {
+            display: flex;
+            flex-direction: column;
+            padding: 3px;
+        }
+
+        label {
+            padding-bottom: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <h1>Registration Form!!</h1>
+        <form>
+            <div class="form-ele">
+                <label for="name">Name</label>
+                <input id="name" type="text" placeholder="Enter name" required />
+            </div>
+            <div class="form-ele">
+                <label for="tel">Tel</label>
+                <input id="tel" type="tel" placeholder="Enter phone" required />
+            </div>
+            <div class="form-ele">
+                <label for="email">Email</label>
+                <input id="email" type="email" placeholder="Enter email" required />
+            </div>
+            <div class="form-ele">
+                <label for="pswd">Password</label>
+                <input id="pswd" type="password" placeholder="Enter password"
+                    pattern="^$(?=.*[A-Z])(?=.*[a-z])(?=.*\d)(?=.*[@$!*?&])[A-Za-z\d@$!*?&]{8,}" required />
+            </div>
+            <div class="form-ele">
+                <label for="date">Date</label>
+                <input id="date" type="date" required />
+            </div>
+            <div class="form-ele">
+                <label for="time">Time</label>
+                <input id="time" type="time" required />
+            </div>
+            <div class="form-ele">
+                <label for="num">Num</label>
+                <input id="num" type="number" min="1" max="10" required />
+            </div>
+            <div class="form-ele">
+                <label for="range">Range</label>
+                <input id="range" type="range" min="1" max="10" required />
+            </div>
+            <div>
+                <label>Gender</label>
+                <br>
+                <input type="radio" value="female" name="gender" />Female
+                <br>
+                <input type="radio" value="male" name="gender" />Male
+            </div>
+            <div>
+                <label>Choose Language</label>
+                <br>
+                <input type="checkbox" value="telugu" name="telugu" />Telugu
+                <br>
+                <input type="checkbox" value="hindi" name="hindi" />Hindi
+            </div>
+            <div class="form-ele">
+                <label for="desc">Desc</label>
+                <textarea id="desc" placeholder="Enter text..." minlength="1" maxlength="10"></textarea>
+            </div>
+            <button type="button">Submit</button>
+        </form>
+    </main>
+</body>
+
+</html>

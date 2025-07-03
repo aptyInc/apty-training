@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Combining Array Methods-Filter,Reduce,Map</title>
+    <style>
+        main {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container {
+            width: 300px;
+            padding: 10px;
+            border: 2px solid grey;
+            border-radius: 5px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <h1>Combining Array Methods-Filter,Reduce,Map!!</h1>
+        <section class="container">
+            <label for="num-str">String:</label>
+            <textarea id="num-str" placeholder="Enter Numeric String"></textarea>
+            <button onclick="filterEvenNums()">Filter Even Nums</button>
+            <button onclick="doubleFilteredNums()">Double Filtered Nums</button>
+            <button onclick="sumOfFilteredNums()">Sum of Filtered Nums</button>
+            <p id="even-nums"></p>
+            <p id="double-nums"></p>
+            <p id="tot-sum"></p>
+        </section>
+    </main>
+    <script src="./scripts/combining-arr-mthds.js">
+
+    </script>
+</body>
+
+</html>

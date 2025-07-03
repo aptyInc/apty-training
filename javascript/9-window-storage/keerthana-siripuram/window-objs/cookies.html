@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cookies</title>
+    <style>
+        main {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container {
+            width: 300px;
+            padding: 10px;
+            border: 2px solid grey;
+            border-radius: 5px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <h1>Cookies!!</h1>
+        <section class="container">
+            <label for="name">Name:</label>
+            <input id="name" type="text" placeholder="Enter cookie name" required />
+            <label for="value">value:</label>
+            <input id="value" type="text" placeholder="Enter cookie value" required />
+            <label for="days">value:</label>
+            <input id="days" type="number" placeholder="Enter cookie Expires in days" required />
+            <p id="output"></p>
+            <button onclick="setCookie()">Set Cookie</button>
+            <button onclick="readCookie()">Read Cookie</button>
+            <button onclick="deleteCookie()">Delete Cookie</button>
+        </section>
+    </main>
+    <script src="./cookies.js">
+    </script>
+</body>
+
+</html>

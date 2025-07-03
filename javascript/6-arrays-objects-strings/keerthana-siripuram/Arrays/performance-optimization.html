@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Performace Optimization</title>
+    <style>
+        main {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container {
+            width: 300px;
+            padding: 10px;
+            border: 2px solid grey;
+            border-radius: 5px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <h1> Performace Optimization!!</h1>
+        <section class="container">
+            <label for="num">Array Size:</label>
+            <input id="num" type="number" placeholder="Enter Size of Array" required />
+            <button onclick="checkPerformance()">check Performance Using ForEach, For, For Of</button>
+            <p id="time"></p>
+            <p id="conclusion"></p>
+        </section>
+    </main>
+    <script src="./scripts/performance-optimization.js"></script>
+</body>
+
+</html>

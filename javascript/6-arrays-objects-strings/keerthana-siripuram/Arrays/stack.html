@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Stack</title>
+    <style>
+        main {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container {
+            width: 300px;
+            padding: 10px;
+            border: 2px solid grey;
+            border-radius: 5px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <h1>Dynamic Stack!!</h1>
+        <section class="container">
+            <label for="ele">Element:</label>
+            <input id="ele" type="text" placeholder="Enter Element" required />
+            <button onclick="push()">push</button>
+            <button onclick="pop()">pop</button>
+            <button onclick="peek()">peek</button>
+            <button onclick="size()">size</button>
+            <button onclick="isEmpty()">isEmpty</button>
+            <p id="res"></p>
+            <p id="display-stack"></p>
+        </section>
+    </main>
+    <script src="./scripts/stack.js"></script>
+</body>
+
+</html>

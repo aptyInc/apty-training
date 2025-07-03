@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Iframe Window</title>
+  <style>
+    main {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .container {
+      padding: 10px;
+      border: 2px solid grey;
+      border-radius: 5px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+  </style>
+</head>
+
+<body>
+  <main>
+    <section class="container">
+      <h1>Iframe Window</h1>
+      <button id="send-to-parent">Send Message to Parent</button>
+      <p id="res"></p>
+    </section>
+  </main>
+  <script>
+    // Send a message to the parent window
+    document.getElementById("send-to-parent").addEventListener("click", () => {
+      const message = "Hello from the iframe!";
+      window.parent.postMessage(message, "*");
+    });
+
+    // Use the onmessage property to handle incoming messages
+    window.top.onmessage = (event) => {
+      if (event.origin !== window.location.origin) return;
+      document.getElementById("res").innerText = `Message from parent: ${event.data}`
+    };
+  </script>
+</body>
+
+</html>
