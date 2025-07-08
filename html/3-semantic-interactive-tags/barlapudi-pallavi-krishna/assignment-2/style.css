@@ -1,0 +1,30 @@
+body {
+    font-family: Arial;
+    background: #f1d7e5;
+    padding: 20px;
+}
+form {
+    width: 500px;
+    background: #019eff;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 10px #ccc;
+    margin: auto;
+}
+button{
+    background-color: pink;
+    border-color: black;
+    border-radius: 5px;
+}
+label {
+    margin-top: 10px;   
+}
+
+button:hover {
+      background: #c8e1fc;
+}
+div{
+    display: block;
+    padding: 10px;
+    margin: 10px;
+}
