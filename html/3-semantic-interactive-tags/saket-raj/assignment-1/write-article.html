@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Write an Article</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            padding-top: 100px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background-color: #447D9B;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        .nav-bar a {
+            margin: 0 15px;
+            font-weight: bold;
+            color: #000;
+        }
+
+        article {
+            max-width: 500px;
+            width: 100%;
+            padding: 20px;
+            text-align: center;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            text-align: left;
+        }
+
+        label {
+            font-weight: bold;
+        }
+
+        input, textarea {
+            padding: 10px;
+            width: 100%;
+        }
+
+        button {
+            padding: 10px;
+            background-color: #333;
+            color: white;
+            max-width: 100px;
+        
+        }
+        footer {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            background-color: #447D9B;
+            padding: 20px 0;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="nav-bar">
+            <a href="./blog-page.html">Home</a>
+        </div>
+    </header>
+
+    <article>
+        <div class="content">
+            <h1>Write an Article</h1>
+            <form action="#">
+                <label for="fullname">Name:</label>
+                <input type="text" name="fullname" id="fullname" placeholder="Enter your full name">
+
+                <label for="message">Article:</label>
+                <textarea name="message" id="message" placeholder="Write an article" rows="7"></textarea>
+
+                <button type="submit">Publish</button>
+            </form>
+        </div>
+    </article>
+    <footer>
+        &copy; Thank You
+    </footer>
+
+</body>
+</html>
