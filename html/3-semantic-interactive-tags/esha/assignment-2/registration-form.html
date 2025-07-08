@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Registration Form</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background: #f2f2f2;
+        padding: 20px;
+      }
+
+      form {
+        background: #fff;
+        padding: 20px;
+        border-radius: 8px;
+        max-width: 500px;
+        margin: auto;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+
+      label {
+        display: block;
+        margin-top: 15px;
+        font-weight: bold;
+      }
+
+      input,
+      select,
+      textarea {
+        width: 100%;
+        padding: 8px;
+        margin-top: 5px;
+      }
+
+      input[type="radio"],
+      input[type="checkbox"] {
+        width: auto;
+        margin-right: 5px;
+      }
+
+      input[type="submit"] {
+        margin-top: 20px;
+        background-color: #4caf50;
+        color: white;
+        border: none;
+        cursor: pointer;
+      }
+
+      input[type="submit"]:hover {
+        background-color: #45a049;
+      }
+    </style>
+  </head>
+  <body>
+    <form>
+      <h2>Registration Form</h2>
+
+      <label>Full Name:</label>
+      <input type="text" name="name" required />
+
+      <label>Email:</label>
+      <input type="email" name="email" required />
+
+      <label>Password:</label>
+      <input type="password" name="password" minlength="6" required />
+
+      <label>Phone Number:</label>
+      <input
+        type="tel"
+        name="phone"
+        pattern="[0-9]{10}"
+        placeholder="10-digit number"
+        required
+      />
+
+      <label>Age:</label>
+      <input type="number" name="age" min="18" max="99" required />
+
+      <label>Date of Birth:</label>
+      <input type="date" name="dob" required />
+
+      <label>Gender:</label>
+      <input type="radio" name="gender" value="male" required /> Male
+      <input type="radio" name="gender" value="female" required /> Female
+      <input type="radio" name="gender" value="other" required /> Other
+
+      <label>Skills:</label>
+      <input type="checkbox" name="skills" value="html" /> HTML
+      <input type="checkbox" name="skills" value="css" /> CSS
+      <input type="checkbox" name="skills" value="js" /> JavaScript
+
+      <label>Profile Picture:</label>
+      <input type="file" name="profile" accept="image/*" required />
+
+      <label>Country:</label>
+      <select name="country" required>
+        <option value="">--Select--</option>
+        <option value="india">India</option>
+        <option value="usa">USA</option>
+        <option value="uk">UK</option>
+      </select>
+
+      <label>About You:</label>
+      <textarea
+        name="about"
+        rows="4"
+        placeholder="Write something..."
+      ></textarea>
+
+      <input type="submit" value="Register" />
+    </form>
+  </body>
+</html>
