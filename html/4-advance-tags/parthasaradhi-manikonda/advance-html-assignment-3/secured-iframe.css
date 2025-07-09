@@ -1,0 +1,16 @@
+ .iframe-video-container {
+      max-width: 560px;
+      margin: auto;
+      border-radius: 8px;
+      background-color: bisque;
+      text-align: center;
+      padding:10px;
+      height: 100vh;
+    }
+.iframe-video-container iframe {
+    width: 100%;
+    height: 315px;
+    display: block;
+    }
+
+    
