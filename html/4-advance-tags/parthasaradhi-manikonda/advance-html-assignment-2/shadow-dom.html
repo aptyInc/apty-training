@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Custom Element using shadow-dom and template.</title>
+</head>
+<body>
+
+  <template id="simple-card-template">
+    <style>
+      .template-container {
+        font-family: Arial, sans-serif;
+        border: 2px solid #4CAF50;
+        border-radius: 8px;
+        padding: 16px;
+        max-width: 280px;
+        background-color: #f0f9f0;
+      }
+      .title {
+        font-weight: bold;
+        font-size:25px;
+        margin-bottom: 8px;
+      }
+      .content {
+        font-size: 16px;
+        color: #840808;
+      }
+    </style>
+
+    <div class="template-container">
+      <div class="title" id="card-title"></div>
+      <div class="content" id="card-content"></div>
+    </div>
+  </template>
+
+  
+  <simple-card title="Hello World" content="This is content inside the simple card."></simple-card>
+
+  <script>
+    class SimpleCard extends HTMLElement {
+      constructor() {
+        super();
+        const shadow = this.attachShadow({ mode: 'open' });
+        const template = document.getElementById('simple-card-template');
+        const clone = template.content.cloneNode(true);
+        shadow.appendChild(clone);
+      }
+
+      connectedCallback() {
+        const title = this.getAttribute('title');
+        const content = this.getAttribute('content');
+
+        // Set content inside shadow DOM
+        this.shadowRoot.getElementById('card-title').textContent = title;
+        this.shadowRoot.getElementById('card-content').textContent = content;
+      }
+    }
+
+    customElements.define('simple-card', SimpleCard);
+  </script>
+
+</body>
+</html>
