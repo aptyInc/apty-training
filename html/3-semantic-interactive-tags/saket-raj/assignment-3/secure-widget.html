@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media Player Widget</title>
+    <style>
+        header {
+            font-family: monospace;
+            text-align: center;
+            padding: 20px;
+        }
+        section {
+            max-width: 650px;
+            text-align: center;
+            margin: auto;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Media Player Widget</h1>
+    </header>
+    <section>
+        <p>Secure embedded widget using iframe with sandbox and allow attributes to restrict permissions and control features like fullscreen or autoplay</p>
+        <iframe
+            src="./media/video.mp4"
+            width="600px"
+            height="450px"
+            title="Video"
+            sandbox="allow-scripts allow-same-origin allow-forms"
+            allow="autoplay; fullscreen">
+        </iframe>
+    </section>
+</body>
+</html>
