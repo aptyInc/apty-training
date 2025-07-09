@@ -1,0 +1,13 @@
+body{
+    padding: 20px;
+    margin: 20px;
+    background-color: rgb(250, 255, 115);
+    width: 600px;
+    font-family: 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode';
+}
+h2{
+    color: #008080;
+}
+p{
+    color: rgb(56, 228, 247);
+}
