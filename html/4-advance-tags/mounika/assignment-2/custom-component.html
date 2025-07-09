@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Shadow DOM Custom Component</title>
+</head>
+
+<body>
+
+    <fancy-card title="Innovation Coach" description="Pushes boundaries. Challenges norms.">
+        <span slot="footer">Breaking barriers. Building futures.</span>
+    </fancy-card>
+
+    <template id="card-template">
+        <style>
+            .card {
+                font-family: sans-serif;
+                background: #f5f5f5;
+                padding: 1.5rem;
+                margin: 1rem;
+                border-radius: 12px;
+                box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            }
+
+            .title {
+                font-size: 1.2rem;
+                font-weight: bold;
+                color: #222;
+            }
+
+            .description {
+                margin-top: 0.5rem;
+                color: #444;
+            }
+
+            .footer {
+                margin-top: 1rem;
+                font-size: 0.9rem;
+                color: #666;
+            }
+        </style>
+        <div class="card">
+            <div class="title" id="title"></div>
+            <div class="description" id="description"></div>
+            <div class="footer">
+                <slot name="footer"></slot>
+            </div>
+        </div>
+    </template>
+
+    <script>
+        class FancyCard extends HTMLElement {
+            constructor() {
+                super();
+                const template = document.getElementById('card-template').content.cloneNode(true);
+                const shadow = this.attachShadow({ mode: 'open' });
+                shadow.appendChild(template);
+
+                shadow.getElementById('title').textContent = this.getAttribute('title');
+                shadow.getElementById('description').textContent = this.getAttribute('description');
+            }
+        }
+
+        customElements.define('fancy-card', FancyCard);
+    </script>
+
+</body>
+
+</html>
