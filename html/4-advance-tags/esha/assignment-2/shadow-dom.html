@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Custom Info Box</title>
+  </head>
+  <body>
+    <info-box></info-box>
+
+    <template id="info-template">
+      <style>
+        .box {
+          background-color: #f0f8ff;
+          padding: 20px;
+          border-radius: 8px;
+          border: 1px solid #87cefa;
+          font-family: sans-serif;
+          width: 280px;
+        }
+        .box h3 {
+          margin: 0 0 10px;
+          font-size: 1.2em;
+          color: #2c3e50;
+        }
+        .box p {
+          margin: 0;
+          color: #34495e;
+        }
+      </style>
+
+      <div class="box">
+        <h3>Need Help?</h3>
+        <p>
+          This is a simple info box. You can reuse it anywhere on your site.
+        </p>
+      </div>
+    </template>
+
+    <script>
+      class InfoBox extends HTMLElement {
+        constructor() {
+          super();
+          const shadow = this.attachShadow({ mode: "open" });
+          const template = document.getElementById("info-template");
+          const content = template.content.cloneNode(true);
+          shadow.appendChild(content);
+        }
+      }
+
+      customElements.define("info-box", InfoBox);
+    </script>
+  </body>
+</html>
