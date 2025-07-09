@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sandbox Attributes</title>
+    <style>
+        .container {
+            max-width: 500px;
+            margin: auto;
+            padding-top: 50px;
+        }
+
+        iframe {
+            width: 400px;
+            height: 300px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h2>Youtube Video</h2>
+        <iframe src="index.html" title="YouTube video player"
+            sandbox="allow-scripts allow-same-origin allow-presentation" allow="autoplay; encrypted-media; fullscreen"
+            allowfullscreen>
+        </iframe>
+    </div>
+</body>
+
+</html>
