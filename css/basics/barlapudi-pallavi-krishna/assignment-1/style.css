@@ -1,0 +1,12 @@
+#main-heading {
+  font-size: 25px;
+  color: #00BFFF; 
+  text-align: center;
+}
+li {
+  color: #F08080;
+}
+ul {
+  padding: 10px;
+  margin: 10px;
+}

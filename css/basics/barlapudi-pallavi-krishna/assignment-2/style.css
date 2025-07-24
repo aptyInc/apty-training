@@ -1,0 +1,59 @@
+#section-main{
+  background-color: #FFFFF0;
+  border-radius: 10px;
+  padding-top: 20px; 
+  padding-bottom: 20px;
+  margin: 10px;
+  border: 2px solid #E6C200;
+}
+#section-main h1{
+  color: red;
+  text-align: center;
+  font-weight: bold;
+  font-size: 24px;
+}
+#section-image img { 
+ display: block;
+ margin: auto;
+ width: 100%;
+ height: auto;
+ max-width: 300px;
+}
+#section-ingredients{
+  background-color:#002147;
+  border-radius: 10px;
+  margin: 10px;
+  padding: 10px;
+  border-left: 10px solid #FFD700;
+  line-height: 24px;
+  color: white;
+}
+#section-steps{
+  background-color: #FFD700;
+  border-radius: 10px;
+  margin: 10px;
+  padding: 10px; 
+  border-left: 10px solid #002147;
+  line-height: 24px;
+}
+.bottom-para{
+  color: rgb(255, 0, 0);
+  text-align: center;
+  font-style: italic;
+}
+#section-image{
+  background-color: #FFEFD5;
+  margin: 10px;
+  padding: 10px;
+  border-radius: 10px;
+  border: 2px solid #E6C200;
+  color: #FF8C42;
+  text-align: center;
+}
+.container{
+  border: 3px solid red;
+  border-radius: 20px;
+}
+
+
+
