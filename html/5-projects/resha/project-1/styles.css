@@ -1,0 +1,158 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+    height: 100%;
+    font-family: "Poppins", sans-serif;
+    background: linear-gradient(to bottom right, #b0c4de, #f0f8ff);
+    color: #222;
+    overflow-y: scroll;
+    scroll-snap-type: y mandatory;
+    overflow-x: hidden;
+}
+
+section,
+header {
+    height: 100vh;
+    width: 100vw;
+    scroll-snap-align: start;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.intro {
+    max-width: 80%;
+    text-align: center;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    padding: 10px 20px;
+    background-color: rgba(255, 255, 255, 0.146);
+}
+
+nav a {
+    text-decoration: none;
+    font-weight: bold;
+    color: #333;
+    font-size: 16px;
+    transition: color 0.2s;
+}
+
+nav a:hover {
+    color: #44444520;
+}
+
+.back-to-top {
+    width: fit-content;
+    font-size: 20px;
+    display: inline-block;
+    margin-top: 30px;
+    padding: 10px 16px;
+    color: #222;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 6px;
+    transition: transform 0.3s ease;
+}
+
+.back-to-top:hover {
+    transform: translateY(-4px);
+}
+
+.section-content {
+    display: grid;
+    grid-template-columns: 450px 1fr;
+    gap: 50px;
+    max-width: 80%;
+    width: 60%;
+    align-items: start;
+}
+
+.heading {
+    font-size: 50px;
+    text-align: left;
+}
+
+.text {
+    display: flex;
+    flex-direction: column;
+    font-size: 18px;
+}
+
+ul {
+    padding-left: 20px;
+    list-style: none;
+}
+
+li {
+    margin-bottom: 10px;
+}
+
+input,
+textarea {
+    padding: 9px;
+    margin-bottom: 15px;
+    font-size: 16px;
+    width: 100%;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    color: #555;
+    font-weight: bold;
+}
+
+button {
+    padding: 10px;
+    font-size: 16px;
+    background-color: #72a0c1;
+    color: white;
+    border: none;
+    cursor: pointer;
+    max-width: 150px;
+}
+
+.button-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.button-box {
+    background-color: #e6efff;
+    padding: 15px 25px;
+    border-radius: 8px;
+    font-size: 18px;
+    font-weight: 600;
+    color: #333;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.button-box:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.15);
+}
