@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comparison App</title>
+</head>
+
+<body>
+    <h2>Comparison App:</h2>
+    <div>
+        <input type="text" placeholder="Enter Value 1" id="value1">&nbsp;
+        <select id="type1">
+            <option value="string">string</option>
+            <option value="number">number</option>
+            <option value="boolean">boolean</option>
+        </select>
+        
+        <br><br>
+
+        <input type="text" placeholder="Enter Value 2" id="value2">&nbsp;
+        <select id="type2">
+            <option value="string">string</option>
+            <option value="number">number</option>
+            <option value="boolean">boolean</option>
+        </select>
+    </div>
+
+    <br>
+
+    <div>
+        <button onclick="looseEquality()">==</button>
+        <button onclick="strictEquality()">===</button>
+        <button onclick="looseInequality()">!=</button>
+        <button onclick="strictInequality()">!==</button>
+        <button onclick="lessThan()">&lt;</button>
+        <button onclick="greaterThan()">&gt;</button>
+        <button onclick="lessThanOrEqualTo()">&lt;=</button>
+        <button onclick="greaterThanOrEqualTo()">&gt;=</button>
+    </div>
+
+    <p id="output"></p>
+
+    <script src="./scripts/script.js"></script>
+</body>
+
+</html>
