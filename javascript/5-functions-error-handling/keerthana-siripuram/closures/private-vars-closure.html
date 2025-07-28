@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Private variables with closures</title>
+    <style>
+        main {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container {
+            width: 300px;
+            padding: 10px;
+            border: 2px solid grey;
+            border-radius: 5px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <section class="container">
+            <input id="amount" type="number" placeholder="Enter amount"></input>
+            <button id="deposit">Deposit</button>
+            <button id="check">Check Balance</button>
+            <button id="withdraw">Withdraw</button>
+            <p id="res"></p>
+        </section>
+    </main>
+
+</body>
+<script>
+    function bankAccount() {
+        let balance = 0;
+        return {
+            deposit: function (amount) {
+                if (amount > 0) {
+                    balance += amount
+                    document.getElementById("res").innerHTML = `Current balance is ${balance}`
+                }
+                else {
+                    document.getElementById("res").innerHTML = "enter valid amunt"
+                }
+            },
+            withdraw: function (amount) {
+                if (amount > 0 && amount <= balance) {
+                    balance -= amount
+                    document.getElementById("res").innerHTML = `Current balance is ${balance}`
+                }
+                else {
+                    document.getElementById("res").innerHTML = "Insufficient Balance"
+                }
+            },
+            checkBalance() {
+                document.getElementById("res").innerHTML = `Current balance is ${balance}`
+            }
+        }
+    }
+
+    const account = bankAccount();
+
+    document.getElementById("deposit").addEventListener("click", function () {
+        const amount = parseFloat(document.getElementById("amount").value);
+        account.deposit(amount);
+    });
+
+    document.getElementById("withdraw").addEventListener("click", function () {
+        const amount = parseFloat(document.getElementById("amount").value);
+        account.withdraw(amount);
+    });
+
+    document.getElementById("check").addEventListener("click", function () {
+        account.checkBalance();
+    });
+</script>
+
+</html>

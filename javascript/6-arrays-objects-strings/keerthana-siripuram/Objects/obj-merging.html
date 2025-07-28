@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object Merging</title>
+    <style>
+        main {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container {
+            width: 300px;
+            padding: 10px;
+            border: 2px solid grey;
+            border-radius: 5px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <h1>Object Merging!!</h1>
+        <section class="container">
+            <label for="json-string1">Json String1:</label>
+            <textarea id="json-string1" type="text" required>{"a":1,"b":{"c":2}}</textarea>
+            <label for="json-string2">Json String2:</label>
+            <textarea id="json-string2" type="text" required>{"a":1,"b":{"c":2}}</textarea>
+            <button onclick="mergeObjects()">merge Objects</button>
+            <p id="merged-obj">Merged Obj is:</p>
+        </section>
+    </main>
+    <script src="./scripts/obj-merging.js">
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Scroll Control</title>
+  <style>
+    .content {
+      height: 200px;
+      background-color: lightcoral;
+    }
+  </style>
+</head>
+
+<body>
+  <h2>Scroll to Position</h2>
+
+  <form id="scrollForm">
+    <label for="xInput">X Position:</label>
+    <input type="number" id="xInput" placeholder="Enter X position" required>
+    <label for="yInput">Y Position:</label>
+    <input type="number" id="yInput" placeholder="Enter Y position" required>
+    <button type="submit">Scroll to Position</button>
+  </form>
+
+  <button id="scrollUpButton">Scroll Up by 10px</button>
+  <button id="scrollDownButton">Scroll Down by 10px</button>
+  <div class="content"></div>
+
+  <script>
+    document.getElementById('scrollForm').addEventListener('submit', function (event) {
+      event.preventDefault();
+      const x = parseInt(document.getElementById('xInput').value);
+      const y = parseInt(document.getElementById('yInput').value);
+
+
+      window.scrollTo(x, y);
+    });
+
+    document.getElementById('scrollUpButton').addEventListener('click', function () {
+      window.scrollBy(0, -10);
+    });
+
+    document.getElementById('scrollDownButton').addEventListener('click', function () {
+      window.scrollBy(0, 10);
+    });
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Default Value IIFE Example</title>
+    <style>
+        main {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container {
+            width: 300px;
+            padding: 10px;
+            border: 2px solid grey;
+            border-radius: 5px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <h1>IIFE Usage</h1>
+        <section class="container">
+            <label for="nameInput">Name</label>
+            <input type="text" id="nameInput" placeholder="Enter your name" />
+            <button onclick="displayName()">submit</button>
+            <p id="res">:</p>
+        </section>
+    </main>
+
+    <script>
+        (function initializeDefaultValues() {
+            const res = document.getElementById("res");
+            res.innerText = " Default name:Default Name"
+        })();
+        function displayName() {
+
+            const name = document.getElementById("nameInput").value
+            const res = document.getElementById("res");
+            res.innerText = `Default name:${name}`
+        }
+    </script>
+</body>
+
+</html>

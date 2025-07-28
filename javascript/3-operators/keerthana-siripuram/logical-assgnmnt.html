@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logical Assignment operator</title>
+    <style>
+        main {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .calculator {
+            width: 300px;
+            height: 300px;
+            padding: 10px;
+            border: 2px solid grey;
+            border-radius: 5px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <h1>Simple Calculator-Logical Assignment operator!!</h1>
+        <section class="calculator">
+            <label for="val1">Value1:</label>
+            <input id="val1" type="number" placeholder="Enter Value1" required />
+            <label for="type1">Choose a data type for first Value:</label>
+            <select id="type1">
+                <option value="String">String</option>
+                <option value="Number">Number</option>
+                <option value="Boolean">Boolean</option>
+                <option value="Object">Object</option>
+                <option value="Symbol">Symbol</option>
+            </select>
+            <label for="val2">Value2:</label>
+            <input id="val2" type="number" placeholder="Enter Value2" />
+            <label for="type2">Choose a data type for second Value:</label>
+            <select id="type2">
+                <option value="String">String</option>
+                <option value="Number">Number</option>
+                <option value="Boolean">Boolean</option>
+                <option value="Object">Object</option>
+                <option value="Symbol">Symbol</option>
+            </select>
+            <div>
+                <button onclick="logicalAssignmentAnd()">&&=</button>
+                <button onclick="logicalAssignmentOr()">||=</button>
+                <button onclick="Nullish()">??=</button>
+            </div>
+            <p id="res"></p>
+        </section>
+    </main>
+    <script src="./scripts/logical-assgnmnt.js"></script>
+</body>
+
+</html>

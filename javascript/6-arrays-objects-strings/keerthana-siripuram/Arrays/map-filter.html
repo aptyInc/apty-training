@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Methods-Map,Filter!!</title>
+    <style>
+        main {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container {
+            width: 300px;
+            padding: 10px;
+            border: 2px solid grey;
+            border-radius: 5px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <h1>View completed Tasks!!</h1>
+        <section class="container">
+            <label for="str">Tasks Info:</label>
+            <textarea id="str">[{"taskName":"A","completed":true},{"taskName":"B","completed":false},{"taskName":"C","completed":true}]</textarea>
+            <button onclick="fetchCompletedTasks()">Fetch completed Tasks</button>
+            <p id="res">Completed Tasks are:</p>
+        </section>
+    </main>
+    <script src="./scripts/map-filter.js">
+
+    </script>
+</body>
+
+</html>

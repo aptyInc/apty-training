@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Table Row Movement</title>
+  <style>
+    table {
+      width: 50%;
+      border-collapse: collapse;
+      margin: 20px 0;
+    }
+
+    th,
+    td {
+      border: 1px solid #ddd;
+      padding: 10px;
+      text-align: center;
+    }
+
+    button {
+      margin: 2px;
+      padding: 5px 10px;
+    }
+  </style>
+</head>
+
+<body>
+  <table id="myTable">
+    <thead>
+      <tr>
+        <th>#</th>
+        <th>Row Content</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <!-- 10 rows with buttons -->
+      <script>
+        for (let i = 1; i <= 10; i++) {
+          document.write(`
+            <tr>
+              <td>${i}</td>
+              <td>Row ${i}</td>
+              <td>
+                <button onclick="moveUp(this)">Up</button>
+                <button onclick="moveDown(this)">Down</button>
+                <button onclick="moveToTop(this)">Top</button>
+                <button onclick="moveToBottom(this)">Bottom</button>
+              </td>
+            </tr>
+          `);
+        }
+      </script>
+    </tbody>
+  </table>
+
+  <script src="./moving-eles.js">
+
+  </script>
+</body>
+
+</html>

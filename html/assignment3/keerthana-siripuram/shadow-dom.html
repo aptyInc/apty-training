@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shadow Dom Usage</title>
+    <style>
+        p {
+            color: blue;
+        }
+
+        main {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container {
+            width: 300px;
+            padding: 10px;
+            border: 2px solid grey;
+            border-radius: 5px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <section class="container">
+            <custom-ele></custom-ele>
+            <p>Normal P tag</p>
+        </section>
+        <!-- custom ele created with usage of shadow dom hence will not align with global color -->
+        <script>
+            class MyElement extends HTMLElement {
+                constructor() {
+                    super()
+                    this.attachShadow({ mode: "open" })
+                    const template = document.createElement("custom-ele")
+                    template.innerHTML = `
+                <p>I am custom P element with shadow dom</p>`
+                    this.shadowRoot.appendChild(template)
+                }
+            }
+            customElements.define("custom-ele", MyElement)
+        </script>
+
+    </main>
+</body>
+
+</html>

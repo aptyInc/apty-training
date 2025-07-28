@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Browser Info</title>
+    <style>
+        main {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container {
+            width: 300px;
+            padding: 10px;
+            border: 2px solid grey;
+            border-radius: 5px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <h1>Browser info!!</h1>
+        <section class="container">
+            <form id="my-form">
+                <label for="url">URL:</label>
+                <textarea id="url" place="Enter URL"></textarea>
+                <button type="submit">Navigate to URL</button>
+            </form>
+            <button id="backButton">Go Back</button>
+            <button id="forwardButton">Forward Back</button>
+            <button id="reloadButton">Reload Back</button>
+        </section>
+    </main>
+    <script src="./browser-info.js">
+
+    </script>
+</body>
+
+</html>

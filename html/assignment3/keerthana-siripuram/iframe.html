@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iframe Usage</title>
+    <style>
+        body {
+            background-color: grey;
+            color: white;
+        }
+
+        .outer-container {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .card {
+            display: flex;
+            flex-direction: column;
+            height: 300px;
+            width: 300px;
+        }
+
+        h2,
+        h1 {
+            text-align: center;
+            color: white
+        }
+
+        p {
+            text-align: center;
+        }
+
+        a {
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <h1>Iframes</h1>
+        <section class="outer-container">
+            <div class="card">
+                <p>Displaying map using Iframe</p>
+                <iframe id="inlineFrameExample" title="Inline Frame Example" width="300" height="300" allowfullscreen
+                    src="https://www.openstreetmap.org/export/embed.html?bbox=-0.004017949104309083%2C51.47612752641776%2C0.00030577182769775396%2C51.478569861898606&layer=mapnik">
+                </iframe>
+            </div>
+            <div class="card">
+                <p>Displaying image using Iframe</p>
+                <iframe src="./assets/alexa-and-katie.png" width="300px" height="300px"></iframe>
+            </div>
+            <div class="card">
+                <p>Usage of Sandbox</p>
+                <a target="myframe"
+                    href="https://www.openstreetmap.org/export/embed.html?bbox=-0.004017949104309083%2C51.47612752641776%2C0.00030577182769775396%2C51.478569861898606&layer=mapnik">Click
+                    to open in iframe</a>
+                <iframe width="300px" height="300px" name="myframe" sandbox="allow-same-origin allow-scripts"></iframe>
+            </div>
+            <div class="card">
+                <p>Usage of Srcdoc</p>
+                <iframe width="300px" height="300px"
+                    srcdoc="<style>h2{color:white;text-align:center}</style><h2>Iframe</h2>"></iframe>
+            </div>
+            <div class="card">
+                <p>Displaying Video using Iframe</p>
+                <iframe src="https://www.youtube.com/embed/tgbNymZ7vqY?mute=1&loop=1" width="300px"
+                    height="300px"></iframe>
+            </div>
+        </section>
+    </main>
+</body>
+
+</html>

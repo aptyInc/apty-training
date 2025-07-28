@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom Manipulation</title>
+    <style>
+        main {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container {
+            padding: 10px;
+            border: 2px solid grey;
+            border-radius: 5px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        table,
+        tr,
+        td {
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+
+        .highlight {
+            background-color: green;
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <section class="container">
+            <table>
+                <caption>Dom Manipulation</caption>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>CLASS</th>
+                        <th>TAG</th>
+                        <th>NAME</th>
+                        <th>ATTRIBUTE</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <p id="para1">Para1</p>
+                        </td>
+                        <td>
+                            <p class="toogle-bg">Text</p>
+                        </td>
+                        <td>
+                            <span>Span-1</span>
+                        </td>
+                        <td>
+                            <input type="text" name="name" value="value1" />
+                        </td>
+                        <td>
+                            <p data-custom-attr="custom-attr1">Custom attr-1</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p id="para2">Para2</p>
+                        </td>
+                        <td>
+                            <p class="toogle-bg">Text</p>
+                        </td>
+                        <td>
+                            <span>Span-2</span>
+                        </td>
+                        <td>
+                            <input type="text" name="name" value="value1" />
+                        </td>
+                        <td>
+                            <p data-custom-attr="custom-attr1">Custom attr-1</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><button onclick="changeTextColor()">Change Text Color</button></td>
+                        <td><button onclick="toggleBgColor()">Toggle Background Color</button></td>
+                        <td><button onclick="changeInnerHtml()">change InnerHTML</button></td>
+                        <td><button onclick="toggleDisabledAttr()">Toggle disabled Attribute</button></td>
+                        <td><button onclick="addNewCustomAttr()">Add new custom Attribute</button></td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
+    <script src="./access-manipulate-dom-ele.js"></script>
+</body>
+
+</html>

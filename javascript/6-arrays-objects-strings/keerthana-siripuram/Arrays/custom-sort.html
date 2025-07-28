@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom Array Sorting</title>
+    <style>
+        main {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container {
+            width: 300px;
+            padding: 10px;
+            border: 2px solid grey;
+            border-radius: 5px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <h1>Custom Array Sorting!!</h1>
+        <section class="container">
+            <label for="str">User Info:</label>
+            <textarea id="str">[{"name":"alexa","score":50},{"name":"kikki","score":130},{"name":"katie","score":30}]</textarea>
+            <button onclick="SortByScore()">Sort by score</button>
+            <p id="res">After sorting:</p>
+        </section>
+    </main>
+    <script src="./scripts/custom-sort.js">
+
+
+    </script>
+</body>
+
+</html>

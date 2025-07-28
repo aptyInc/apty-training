@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Including Scripts</title>
+    
+</head>
+<body onload="document.getElementById('result').innerHTML+='<br>Inline JS executed'">
+    <main>
+        <h1></h1>
+        <section>
+             <h1>Javascript Execution Order</h1>
+             <p id="result">Execution Order:</p>
+             <p >Click here to to trigger Inline JS</p>
+        </section>
+    </main>
+    <script>
+        document.addEventListener("DOMContentLoaded",()=>{
+            document.getElementById('result').innerHTML+='<br>Internal JS executed'
+        })
+        
+    </script>
+    <script src="./including-scripts.js"></script>
+</body>
+</html>

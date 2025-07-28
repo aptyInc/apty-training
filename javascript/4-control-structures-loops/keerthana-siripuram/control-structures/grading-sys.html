@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grading System</title>
+    <style>
+        main {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container {
+            width: 300px;
+            height: 300px;
+            padding: 10px;
+            border: 2px solid grey;
+            border-radius: 5px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <h1>Grading System!!</h1>
+        <section class="container">
+            <label for="marks">Marks:</label>
+            <input id="marks" type="number" placeholder="Enter marks" required />
+            <button onclick="setTheGrade()">Grade</button>
+            <p id="res"></p>
+        </section>
+    </main>
+    <script src="./scripts/grading-sys.js">
+
+    </script>
+</body>
+
+</html>

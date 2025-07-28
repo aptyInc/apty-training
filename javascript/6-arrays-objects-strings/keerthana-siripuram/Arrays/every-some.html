@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Every,Some-Array Methods</title>
+    <style>
+        main {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container {
+            width: 300px;
+            padding: 10px;
+            border: 2px solid grey;
+            border-radius: 5px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <h1>Every,Some-Array Methods!!</h1>
+        <section class="container">
+            <label for="str">User Info:</label>
+            <textarea id="str">[{"name":"katie","score":34},{"name":"alexa","score":50}]</textarea>
+            <button onclick="checkEveryUser()">Every</button>
+            <button onclick="checkSomeUser()">Some</button>
+            <p id="every">Message is:</p>
+            <p id="some">Message is:</p>
+        </section>
+    </main>
+    <script src="./scripts/every-some.js">
+
+
+    </script>
+</body>
+
+</html>

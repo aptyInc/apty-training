@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Factorial of a Number!!</title>
+    <style>
+        main {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container {
+            width: 300px;
+            padding: 10px;
+            border: 2px solid grey;
+            border-radius: 5px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <h1>Factorial of a Number!!</h1>
+        <section class="container">
+            <label for="num">Num:</label>
+            <input id="num" type="number" placeholder="Enter a number" required />
+            <button onclick="genFactorialOfANumber()">Generate Factorial of a Number</button>
+            <p id="calculations"></p>
+            <p id="res"></p>
+        </section>
+    </main>
+    <script src="./scripts/factorial.js">
+
+    </script>
+</body>
+
+</html>

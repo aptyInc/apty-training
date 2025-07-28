@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rest parameter for variable arguments</title>
+    <style>
+        main {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container {
+            width: 300px;
+            padding: 10px;
+            border: 2px solid grey;
+            border-radius: 5px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <h1>Rest parameter for variable arguments!!</h1>
+        <section class="container">
+            <form id="form-sum">
+                <label for="str">Numeric String:</label>
+                <input id="str" type="text" placeholder="Enter Numeric String" required />
+                <button type="submit">Generate Array Sum</button>
+            </form>
+            <p id="sum"></p>
+        </section>
+    </main>
+    <script src="./scripts/rest-param.js">
+
+    </script>
+</body>
+
+</html>

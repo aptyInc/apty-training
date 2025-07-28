@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multimedia | MultiPage</title>
+    <style>
+        body {
+            background: linear-gradient(pink, lightblue);
+        }
+
+        header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: pink;
+            color: white;
+            padding: 5px 20px;
+        }
+
+        nav ul {
+            display: flex;
+            gap: 10px;
+        }
+
+        nav ul li {
+            list-style-type: none;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: white
+        }
+
+        section {
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h2>MultiPage Navigation</h2>
+        <nav>
+            <ul>
+                <li><a href="https://www.google.com/" target="_blank">Google</a></li>
+                <li><a href="https://www.flipkart.com/" target="_blank">Flipkart</a></li>
+                <li><a href="https://www.myntra.com/" target="_blank">Myntra</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="video-section">
+            <h3>Birthday video</h3>
+            <video controls loop muted width="250px" height="150px">
+                <source src="./assets/bday_video.mp4" type="video/mp4" />
+                <p>Your browser doesn't support HTML video. Here is a
+                    <a
+                        href="https://www.pexels.com/video/igniting-a-handheld-stick-sparklers-from-the-candle-of-a-brithday-cake-3831835/">
+                        MP4</a>to download the video.
+                </p>
+            </video>
+        </section>
+        <section class="audio-section">
+            <h3>Birthday song by chipmunks</h3>
+            <audio controls loop muted>
+                <source src="./assets/bday.mp3.mp3" type="audio/mpeg">
+                <p>Your browser does not support the audio tag.</p>
+            </audio>
+        </section>
+    </main>
+</body>
+
+</html>
