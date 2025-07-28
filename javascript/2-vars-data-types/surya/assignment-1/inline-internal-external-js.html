@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Inline vs Internal vs External</title>
+  <script>
+    document.addEventListener("DOMContentLoaded",()=>{
+      const button=document.querySelector("button");
+      button.addEventListener("click",()=>{
+        alert("Internal Javascript");
+      });
+    });
+  </script>
+</head>
+<body>
+  <button onclick="
+   alert('Inline JavaScript')
+  ">Click Me</button>
+    <script src="./scripts/index.js"></script>
+</body>
+</html>
