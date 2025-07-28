@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Inline vs Internal vs External</title>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        document.getElementById("output").innerHTML += "Hello from Internal JS<br>";
+      });
+    </script>
+    <script src="scripts/script.js" defer></script>
+  </head>
+  <body>
+    <button onclick="document.getElementById('output').innerHTML += 'Hello from Inline JS<br>';">Run Inline JS</button>
+    <div id="output" style="margin-top: 20px; font-family: Arial"></div>
+  </body>
+</html>
