@@ -1,0 +1,66 @@
+body {
+  font-family: monospace, Arial;
+  background-color: #f2f2f2;
+  margin: 0;
+  padding: 0;
+}
+
+.team {
+  background-color: #ffffff;
+  padding: 20px;
+  margin: 30px auto;
+  text-align: center;
+}
+
+.team h1 {
+  margin-bottom: 20px;
+  color:blue;
+}
+
+.profiles {
+  display: inline-block;
+  width: 250px;
+  background-color: #f9f9f9;
+  margin: 15px;
+  border: 2px solid #ddd;
+  padding: 15px;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+
+.profiles:hover {
+  transform: scale(1.15);
+}
+
+.profiles img {
+  width: 100%;
+  height: auto;
+  border-radius: 50%;
+  margin-bottom: 10px;
+  border: 2px solid gray;
+}
+
+.profiles h2 {
+  font-size: 20px;
+  color: #333;
+  margin: 8px 0;
+}
+
+.profiles h3 {
+  font-size: 16px;
+  color: #777;
+  margin: 5px 0;
+  font-weight: normal;
+}
+
+.profiles p {
+  font-size: 14px;
+  color: #555;
+  margin: 10px 0;
+}
+
+@media (max-width: 600px) {
+  .profiles {
+    width: 80%;
+  }
+}
