@@ -1,0 +1,70 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+main {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+h1 {
+  text-align: center;
+  margin-top: 50px;
+  text-decoration: underline;
+  animation: moveX 3s ease-in-out infinite alternate;
+}
+
+@keyframes moveX {
+  from {
+    transform: translateX(-180px);
+  }
+  to {
+    transform: translateX(180px);
+  }
+}
+
+.box {
+  width: 100px;
+  height: 100px;
+  background-color: red;
+  animation: rotateBox 2s linear infinite;
+  transition: all 0.5s ease;
+  background-size: cover;
+  background-position: center;
+  border-radius: 8px;
+}
+
+@keyframes rotateBox {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.box:hover {
+  animation: none;
+  width: 360px;
+  height: 480px;
+  background-color: transparent;
+  background-image: url("https://wallpaperbat.com/img/124408-wallpaper-ronaldo-juventus-cristiano-ronaldo-juventus-cristano.jpg");
+}
+
+@media (max-width: 768px) {
+  .box {
+    animation: none;
+    width: 360px;
+    height: 480px;
+    background-color: transparent;
+    background-image: url("https://wallpaperbat.com/img/124408-wallpaper-ronaldo-juventus-cristiano-ronaldo-juventus-cristano.jpg");
+  }
+
+  .box:hover {
+    transform: none;
+  }
+}
