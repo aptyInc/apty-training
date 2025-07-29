@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Calculator App using switch statements</title>
+  <meta charset="UTF-8">
+  <script src="scripts/script.js" defer></script>
+</head>
+<body>
+
+  <h2>Simple Calculator</h2>
+
+  <label for="num1">enter number:</label>
+  <input type="number" id="num1" placeholder="First Number"><br>
+  <label for="num2">enter number:</label>
+  <input type="number" id="num2" placeholder="Second Number">
+  <br>
+
+  <button onclick="calculate('+')">+</button>
+  <button onclick="calculate('-')">-</button>
+  <button onclick="calculate('*')">*</button>
+  <button onclick="calculate('/')">/</button>
+  <button onclick="calculate('%')">%</button>
+  <br><br>
+
+  <div id="results"></div>
+
+</body>
+</html>

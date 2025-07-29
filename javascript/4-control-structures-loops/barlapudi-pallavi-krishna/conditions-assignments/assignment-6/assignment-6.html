@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>SI Calculator</title>
+        <meta charset="UTF-8">
+        <script src="scripts/script.js" defer></script>
+    </head>
+    <body>
+        <h2>Calculating Simple Interest</h2>
+
+        <label for="principal">enter principal amount</label>
+        <input type="number" id="principal" placeholder="enter principal amount" min="0" step="any"/><br>
+
+        <label for="rate">enter rate of interest</label>
+        <input type="number" id="rate" placeholder="enter rate of interest" min="0" step="any"/><br>
+
+        <label for="time">enter time</label>
+        <input type="number" id="time" placeholder="enter time" min="0" step="any"/><br>
+
+        <button onclick="calculate()">Calculate</button>
+
+        <div id="results"></div>
+    </body>
+</html>
