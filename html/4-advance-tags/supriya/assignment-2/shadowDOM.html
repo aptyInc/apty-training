@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Custom Component with Shadow DOM</title>
+</head>
+<body>
+  <h2>User Profile Card</h2>
+  <user-card></user-card>
+
+  <template id="user-card-template">
+    <style>
+      .card {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background: #ffffff;
+        padding: 20px;
+        border-radius: 12px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        max-width: 320px;
+        text-align: center;
+      }
+
+      .avatar {
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        object-fit: cover;
+        margin-bottom: 15px;
+        border: 3px solid wheat;
+      }
+
+      h3 {
+        margin: 10px 0 5px;
+        color: #333;
+        font-size: 1.4em;
+      }
+
+      p {
+        margin: 5px 0;
+        color: #555;
+        font-size: 0.95em;
+      }
+
+      a {
+        color: #4CAF50;
+        text-decoration: none;
+        font-weight: 500;
+      }
+
+      a:hover {
+        text-decoration: underline;
+      }
+    </style>
+
+    <div class="card">
+      <img class="avatar" src="supriya.png" alt="Supriya's Avatar" />
+      <h3>Supriya Dasari</h3>
+      <p>Technical Consultant Intern @ Apty</p>
+      <p>Hyderabad, India</p>
+      <p><a href="mailto:dasarisupriya3012@gmail.com">dasarisupriya3012@gmail.com</a></p>
+    </div>
+  </template>
+
+  <script>
+    class UserCard extends HTMLElement {
+      constructor() {
+        super();
+      }
+
+      connectedCallback() {
+        const shadow = this.attachShadow({ mode: "closed" });
+        
+
+        const template = document.getElementById("user-card-template");
+        const clone = template.content.cloneNode(true);
+
+        shadow.appendChild(clone);
+      }
+    }
+
+    customElements.define("user-card", UserCard);
+  </script>
+</body>
+</html>
