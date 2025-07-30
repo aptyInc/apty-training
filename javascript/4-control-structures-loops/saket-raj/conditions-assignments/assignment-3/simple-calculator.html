@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Simple calculator(cloned)</title>
+    <style>
+      body {
+        text-align: center;
+      }
+      .user-input label,
+      input {
+        margin: 20px 0;
+      }
+      .operations button {
+        font-size: large;
+        padding: 10px 10px;
+        margin: 0 20px;
+      }
+      #answer {
+        margin: 20px 0;
+        font-size: large;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Simple calculator(cloned)</h1>
+    <div class="user-input">
+      <label for="num1">Enter Value1:</label>
+      <input type="number" name="num1" id="num1" /> <br />
+
+      <label for="num2">Enter Value2:</label>
+      <input type="number" name="num2" id="num2" />
+    </div>
+
+    <div class="operations">
+      <button onclick="calculate('+')">+</button>
+      <button onclick="calculate('-')">-</button>
+      <button onclick="calculate('*')">*</button>
+      <button onclick="calculate('/')">/</button>
+      <button onclick="calculate('%')">%</button>
+      <button onclick="calculate('++')">++</button>
+      <button onclick="calculate('--')">--</button>
+    </div>
+
+    <div id="answer"></div>
+
+    <script src="./Scripts/index.js"></script>
+  </body>
+</html>
