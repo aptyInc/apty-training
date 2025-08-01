@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Comparison Operators App</title>
+  </head>
+  <body>
+    <h2>Comparison App</h2>
+
+    <label>Value 1:</label>
+    <input type="text" id="value1" />
+    <select id="type1">
+      <option value="string">String</option>
+      <option value="number">Number</option>
+      <option value="boolean">Boolean</option>
+    </select>
+    <br /><br />
+
+    <label>Value 2:</label>
+    <input type="text" id="value2" />
+    <select id="type2">
+      <option value="string">String</option>
+      <option value="number">Number</option>
+      <option value="boolean">Boolean</option>
+    </select>
+    <br /><br />
+
+    <button onclick="equalTo()">==</button>
+    <button onclick="strictEqualTo()">===</button>
+    <button onclick="notEqualTo()">!=</button>
+    <button onclick="strictNotEqualTo()">!==</button>
+    <button onclick="greaterThan()">&gt;</button>
+    <button onclick="lessThan()">&lt;</button>
+    <button onclick="greaterThanOrEqual()">&gt;=</button>
+    <button onclick="lessThanOrEqual()">&lt;=</button>
+
+    <h3 id="result"></h3>
+
+    <script src="./Scripts/index.js"></script>
+  </body>
+</html>
