@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculate the area of a rectangle</title>
+  </head>
+  <body>
+    <h1>Calculate the area of a rectangle</h1>
+    <form onsubmit="calculateArea(); return false;">
+      <label for="length">Enter length :</label>
+      <input
+        type="number"
+        id="length"
+        name="length"
+        placeholder="eg: 4"
+      /><br />
+      <label for="width">Enter width :</label>
+      <input type="number" id="width" name="width" placeholder="eg: 6" /><br />
+      <button type="submit">Calculate</button>
+    </form>
+    <p id="output"></p>
+    <script src="./Scripts/index.js"></script>
+  </body>
+</html>

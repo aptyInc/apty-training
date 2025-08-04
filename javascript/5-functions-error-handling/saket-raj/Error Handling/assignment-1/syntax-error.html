@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Syntax Errors - JSON Parsing</title>
+  </head>
+  <body>
+    <h1>JSON Parser with Error Handling</h1>
+
+    <label for="jsonInput">Enter JSON string:</label><br />
+    <textarea
+      id="jsonInput"
+      rows="5"
+      cols="40"
+      placeholder='e.g., {"key": "value"}'
+    ></textarea
+    ><br /><br />
+
+    <button onclick="parseJSON()">Parse JSON</button>
+
+    <p id="result"></p>
+
+    <script src="./Scripts/index.js"></script>
+  </body>
+</html>
