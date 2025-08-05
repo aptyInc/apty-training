@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Queue Implement</title>
+    <link rel="stylesheet" href="../css/global.css" />
+  </head>
+  <body>
+    <header>
+      <h1>2. Queue Data Structure Implementation</h1>
+    </header>
+
+    <main>
+      <section>
+        <form onsubmit="handleOnSubmit(event)">
+          <input
+            type="text"
+            placeholder="e.g., 'apty'"
+            id="queue_element"
+            required
+          />
+
+          <button type="submit">Push in queue</button>
+        </form>
+        <button onclick="removeTheElement()">Pop in queue</button>
+        <button onclick="isqueueEmpty()">is queue Empty?</button>
+      </section>
+
+      <section>
+        <h2>Output 🚀</h2>
+        <div class="output">Perform Some action to see the result.</div>
+        <div class="final_queue">[]</div>
+        <div class="isEmpty"></div>
+      </section>
+    </main>
+
+    <script src="../scripts/3-queue-data-structure.js"></script>
+  </body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chunk Array Functionality</title>
+    <link rel="stylesheet" href="../css/global.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Chunk Array Into Smaller Groups</h1>
+    </header>
+
+    <main>
+      <section>
+        <form onsubmit="handleOnSubmit(event)">
+          <input
+            type="text"
+            placeholder='e.g., [1,2,3,4,5]'
+            id="array_input"
+          />
+          <input
+            type="number"
+            placeholder="Chunk size"
+            id="chunk_size"
+          />
+          <button type="submit">Chunk the Array</button>
+        </form>
+        <p>Eg Input: Array = [1,2,3,4,5], Chunk Size = 2</p>
+      </section>
+
+      <section>
+        <h2>Output 🚀</h2>
+        <div class="output">Perform Some action to see the result.</div>
+      </section>
+    </main>
+
+    <script src="../scripts/11-array-chunking.js"></script>
+  </body>
+</html>
