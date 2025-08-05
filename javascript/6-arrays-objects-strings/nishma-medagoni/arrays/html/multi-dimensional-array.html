@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Transpose Matrix</title>
+    <link rel="stylesheet" href="../css/index.css" />
+    <script src="../js/multi-dimensional-array.js"></script>
+  </head>
+
+  <body>
+    <header>Transpose a Matrix</header>
+
+    <main>
+      <section>
+        <label for="matrixInput">Enter a 2D array (JSON format):</label>
+        <textarea
+          id="matrixInput"
+          placeholder="[[1, 2, 3], [4, 5, 6], [7, 8, 9]]"
+          rows="5"
+          cols="50"
+        ></textarea>
+        <br /><br />
+        <button onclick="transposeMatrix()">Transpose</button>
+        <h3>Result:</h3>
+        <p id="result">The transposed matrix will appear here.</p>
+      </section>
+    </main>
+    
+    <footer>2024@JavaScript Assignment</footer>
+  </body>
+</html>

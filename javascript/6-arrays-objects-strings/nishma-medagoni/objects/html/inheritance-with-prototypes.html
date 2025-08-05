@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object Inheritance Using Prototypes</title>
+    <script src="../js/inheritance-with-prototypes.js"></script>
+    <link rel="stylesheet" href="../css/index.css">
+</head>
+<body>
+    <header>
+        Object Inheritance Using Prototypes
+    </header>
+    <main>
+        <section>
+            <p>
+                In JavaScript, inheritance can be implemented using prototypes. A prototype is a property of an object 
+                that points to another object, allowing one object to inherit properties and methods from another. 
+                In this example, we have two objects: <strong>Person</strong> and <strong>Employee</strong>.
+            </p>
+            <p>
+                - The <strong>Person</strong> object has a <code>name</code> property and a <code>greet</code> method.
+            </p>
+            <p>
+                - The <strong>Employee</strong> object inherits from the <strong>Person</strong> object using 
+                <code>Object.create(person)</code> and adds a new <code>job</code> property.
+            </p>
+            <p>
+                - When we call <code>employee.greet()</code>, it uses the method from the <strong>Person</strong> object 
+                but with the added information from the <strong>Employee</strong> object, resulting in a personalized greeting.
+            </p>
+            <button onclick="showGreeting()">Show Greeting</button>
+
+            <h3>Result:</h3>
+            <p id="result">The greeting will appear here.</p>
+        </section>
+    </main>
+    <footer>
+        2024@JavaScript Assignment
+    </footer>
+</body>
+</html>

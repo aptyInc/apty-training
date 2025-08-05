@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Map and Filter Example</title>
+    <link rel = "stylesheet" href = "../css/index.css"/>
+    <script src = "../js/map-and-filter.js"></script>
+</head>
+<body>
+    <header>
+        Map and Filter Example
+    </header>
+    <main>
+        <section>
+            <label for="taskInput">Enter tasks (in JSON format):</label><br>
+            <textarea id="taskInput" placeholder='[{"task": "A", "completed": true}, {"task": "B", "completed": false}, {"task": "C", "completed": true}]' rows="5" cols="50"></textarea><br><br>
+
+            <button onclick="processTasks()">Get Completed Tasks</button>
+
+            <h3>Result:</h3>
+            <p id="result">The completed tasks will appear here.</p>
+        </section>
+    </main>
+    <footer>
+        2024@JavaScript Assignment
+    </footer>
+</body>
+</html>

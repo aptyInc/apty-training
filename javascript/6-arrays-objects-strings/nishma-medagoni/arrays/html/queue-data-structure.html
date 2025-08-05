@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Queue Data Structure</title>
+    <link rel="stylesheet" href="../css/index.css">
+    <script src = "../js/queue-data-structure.js"></script>
+</head>
+<body>
+    <header>
+        Queue Data Structure
+    </header>
+    <main>
+        <section>
+            <label for="queueInput">Enter a value to enqueue:</label>
+            <input type="text" id="queueInput" placeholder="Enter value here"><br><br>
+
+            <button onclick="enqueueToQueue()">Enqueue</button>
+            <button onclick="dequeueFromQueue()">Dequeue</button>
+            <button onclick="nextInQueue()">Next</button>
+            <button onclick="isQueueEmpty()">Check if Empty</button>
+
+            <h3>Queue Contents:</h3>
+            <p id="queueContents">[ ]</p>
+            <h3>Operation Result:</h3>
+            <p id="result">The result will appear here.</p>
+        </section>
+    </main>
+    <footer>
+        2024@JavaScript Assignment
+    </footer>
+</body>
+</html>
