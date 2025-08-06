@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 2 - Stack Data Structure | Prem Rajput</title>
+    <style>
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        #result {
+            margin-top: 10px;
+            font-weight: bold;
+        }
+        .actions { 
+            margin-top: 10px; 
+        }
+
+    </style>
+</head>
+<body>
+
+    <h3>Stack Data Structuring</h3>
+    <div>
+        <input id="elementInput" type="text" placeholder="Enter an element">
+        <button onclick="pushElement()">Push</button>
+        <button onclick="popElement()">Pop</button>
+        <button onclick="peekElement()">Peek</button>
+        <button onclick="checkEmpty()">Is Empty?</button>
+    </div>
+    <div class="actions">
+        <h4>Stack:</h4>
+        <p id="stackView">[ ]</p>
+        <h4>Result:</h4>
+        <p id="result"></p>
+    </div>
+
+    <script src="./scripts/2-stack-data.js"></script>
+
+</body>
+</html>
