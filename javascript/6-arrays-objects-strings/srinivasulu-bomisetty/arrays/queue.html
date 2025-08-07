@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Queue Data Structure</title>
+</head>
+<body>
+
+  <h2>Queue Data Structure</h2>
+  
+
+  <div>
+    <label for="addElement">Add Element to Queue: </label>
+    <input type="text" id="addElement" placeholder="Enter element">
+    <button onclick="addToQueue()">Add</button>
+  </div>
+
+  <div>
+    <button onclick="removeFromQueue()">Remove from Queue</button>
+  </div>
+
+  <div>
+    <button onclick="checkNextElement()">Check Next Element</button>
+  </div>
+
+  <div>
+    <button onclick="checkIfQueueIsEmpty()">Check if Queue is Empty</button>
+  </div>
+
+  <div>
+    
+    <p id="queueContent">Queue: []</p>
+    <p id="message"></p>
+  </div>
+
+  <script src="./scripts/queue.js">
+   
+  </script>
+
+</body>
+</html>

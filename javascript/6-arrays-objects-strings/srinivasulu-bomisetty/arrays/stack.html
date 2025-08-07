@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dynamic Stack with HTML Input</title>
+  </head>
+  <body>
+    <h2>Dynamic Stack</h2>
+
+    <div>
+      <label for="valueInput">Enter value to push to stack:</label>
+      <input type="number" id="valueInput" required />
+      <button onclick="pushValue()">Push to Stack</button>
+    </div>
+    <br />
+
+    <button onclick="popValue()">Pop from Stack</button>
+    <button onclick="checkTop()">Check Top</button>
+    <button onclick="checkEmpty()">Check if Stack is Empty</button>
+    <br /><br />
+
+    <h3>Stack Contents:</h3>
+    <pre id="stackDisplay">[]</pre>
+    <h3>Top Element:</h3>
+    <p id="topElement">N/A</p>
+    <h3>Is Stack Empty?</h3>
+    <p id="isEmpty">Yes</p>
+
+    <script src="./scripts/stack.js">
+      
+    </script>
+  </body>
+</html>
