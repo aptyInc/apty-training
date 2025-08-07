@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Student Pass Checker</title>
+  </head>
+  <body>
+    <h1>Check Student Scores</h1>
+
+    <label for="scores"
+      >Enter student data (e.g., [{"name": "Bob", "score": 80}]):</label
+    >
+    <input
+      type="text"
+      id="scores"
+      placeholder='example: [{"name": "Bob", "score": 80}]'
+    />
+    <br />
+    <button onclick="checkScores()">Check Scores</button>
+
+    <p id="result"></p>
+
+    <script src="./Scripts/index.js"></script>
+  </body>
+</html>

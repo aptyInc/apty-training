@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Object Manipulation with Dynamic Keys</title>
+  </head>
+  <body>
+    <h1>
+      Function to dynamically add key-value pairs to an object. If key exists,
+      overwrite its value.
+    </h1>
+
+    <label for="keyInput">Enter Key:</label>
+    <input type="text" id="keyInput" placeholder="e.g. name" /><br />
+
+    <label for="valueInput">Enter Value:</label>
+    <input type="text" id="valueInput" placeholder="e.g. Alice" /><br />
+
+    <button onclick="addToObject()">Add to Object</button>
+    <p id="result"></p>
+
+    <script src="./Scripts/index.js"></script>
+  </body>
+</html>
