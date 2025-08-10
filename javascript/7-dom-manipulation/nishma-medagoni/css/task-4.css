@@ -1,0 +1,33 @@
+header,footer {
+    text-align: center;
+    margin: 30px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 20px;
+}
+main {
+    margin: 20px;
+}
+div,iframe {
+    margin-bottom: 30px;
+    margin-top: 30px;
+}
+button {
+    padding: 5px 10px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: white;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.toggleDiv {
+    margin: 40px;
+    padding: 10px;
+    background-color: lightblue;
+    border: 1px solid #ccc;
+    display: block; 
+}
