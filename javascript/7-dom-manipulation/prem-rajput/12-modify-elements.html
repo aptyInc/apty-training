@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>DOM Practice with Iframes and Shadow Roots | Prem Rajput</title>
+        <style>
+
+            body {
+                font-family: Arial, sans-serif;
+                margin: 20px;
+                line-height: 1.6;
+            }
+
+            h1 {
+                color: #333;
+            }
+
+            .section {
+                border: 1px solid #ddd;
+                margin-bottom: 20px;
+                padding: 15px;
+                border-radius: 8px;
+                background-color: #f9f9f9;
+            }
+
+            iframe {
+                width: 100%;
+                height: 300px;
+                border: 1px solid #ccc;
+                margin-top: 15px;
+            }
+
+            .box {
+                width: 200px;
+                height: 100px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background-color: #ddd;
+                border-radius: 8px;
+                text-align: center;
+            }
+
+            .box.active {
+                background-color: lightgreen;
+                color: white;
+                font-weight: bold;
+            }
+
+            .external-link {
+                color: #007bff;
+                text-decoration: none;
+            }
+
+            .external-link:hover {
+                text-decoration: underline;
+            }
+            
+        </style>
+    </head>
+    <body>
+        <h1 id="main-heading">Original Heading</h1>
+        
+        <div class="section">
+            <h2>Parent Page - Update Image Source</h2>
+            <img
+                id="main-image"
+                src="https://via.placeholder.com/150"
+                alt="Placeholder Image"
+            />
+        </div>
+        
+        <div class="section">
+            <h2>Parent Page - Style Modification</h2>
+            <p id="main-paragraph">
+                This is a paragraph to be styled dynamically.
+            </p>
+        </div>
+        
+        <div class="section">
+            <h2>Parent Page - Toggle Classes</h2>
+            <div class="box" id="main-box">Parent Box</div>
+            <button id="toggle-parent-box-btn">Toggle Parent Box</button>
+        </div>
+        
+        <div class="section">
+            <h2>Parent Page - Dynamic Link Update</h2>
+            <a class="external-link" href="#" id="main-link"
+                >Original Parent Link</a
+            >
+        </div>
+        
+        <div class="section">
+            <h2>Iframe Content</h2>
+            <iframe
+                id="iframe1"
+                srcdoc=
+    "
+        <!DOCTYPE html>
+        <html lang='en'>
+        <head>
+            <style>
+            body {
+                font-family: Arial, sans-serif;
+                line-height: 1.6;
+            }
+            .box {
+                width: 200px;
+                height: 100px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background-color: #ddd;
+                border-radius: 8px;
+                text-align: center;
+            }
+            .box.active {
+                background-color: lightcoral;
+                color: white;
+                font-weight: bold;
+            }
+            .external-link {
+                color: #007BFF;
+                text-decoration: none;
+            }
+            .external-link:hover {
+                text-decoration: underline;
+            }
+            </style>
+        </head>
+        <body>
+            <h1 id='iframe-heading'>Iframe Heading</h1>
+            <img id='iframe-image' src='https://via.placeholder.com/100' alt='Iframe Placeholder Image'>
+            <p id='iframe-paragraph'>This is a paragraph inside the iframe.</p>
+            <div class='box' id='iframe-box'>Iframe Box</div>
+            <a class='external-link' href='#' id='iframe-link'>Original Iframe Link</a>
+        </body>
+        </html>
+    "
+            ></iframe>
+        </div>
+        
+        <div class="section">
+            <h2>Shadow DOM Content</h2>
+            <div id="shadow-host"></div>
+        </div>
+
+        <script>
+
+            // Main Document
+            // 1. Change Heading Text
+            document.getElementById("main-heading").textContent =
+                "Welcome to the DOM Practice!";
+
+            // 2. Update Image Source
+            document.getElementById("main-image").src =
+                "https://via.placeholder.com/200";
+
+            // 3. Style Modification
+            let mainParagraph = document.getElementById("main-paragraph");
+            mainParagraph.style.color = "blue";
+            mainParagraph.style.fontSize = "18px";
+            mainParagraph.style.backgroundColor = "lightgray";
+
+            // 4. Toggle Classes
+            let mainBox = document.getElementById("main-box");
+            document
+                .getElementById("toggle-parent-box-btn")
+                .addEventListener("click", () => {
+                    mainBox.classList.toggle("active");
+                });
+
+            // 5. Dynamic Link Update
+            let mainLink = document.getElementById("main-link");
+            mainLink.href = "https://example.com";
+            mainLink.textContent = "Visit Example";
+
+            // Iframe Document
+            let iframe = document.getElementById("iframe1").contentDocument;
+
+            // 1. Change Heading Text
+            iframe.getElementById("iframe-heading").textContent =
+                "Welcome to the DOM Practice!";
+
+            // 2. Update Image Source
+            iframe.getElementById("iframe-image").src =
+                "https://via.placeholder.com/200";
+
+            // 3. Style Modification
+            let iframeParagraph = iframe.getElementById("iframe-paragraph");
+            iframeParagraph.style.color = "blue";
+            iframeParagraph.style.fontSize = "18px";
+            iframeParagraph.style.backgroundColor = "lightgray";
+
+            // 4. Toggle Classes
+            let iframeBox = iframe.getElementById("iframe-box");
+            iframeBox.classList.toggle("active");
+
+            // 5. Dynamic Link Update
+            let iframeLink = iframe.getElementById("iframe-link");
+            iframeLink.href = "https://example.com";
+            iframeLink.textContent = "Visit Example";
+
+            // Shadow Root
+            let shadowHost = document.getElementById("shadow-host");
+            let shadowRoot = shadowHost.attachShadow({ mode: "open" });
+
+            // Add heading
+            let shadowHeading = document.createElement("h1");
+            shadowHeading.textContent = "Shadow DOM Heading";
+            shadowRoot.appendChild(shadowHeading);
+
+            // Add paragraph
+            let shadowParagraph = document.createElement("p");
+            shadowParagraph.textContent =
+                "This is a paragraph inside the Shadow DOM";
+            shadowParagraph.style.color = "purple";
+            shadowRoot.appendChild(shadowParagraph);
+
+            // Add anchor tag
+            let shadowLink = document.createElement("a");
+            shadowLink.href = "https://example.com";
+            shadowLink.textContent = "Visit Example in Shadow DOM";
+            shadowLink.className = "external-link";
+            shadowRoot.appendChild(shadowLink);
+
+        </script>
+    </body>
+</html>
