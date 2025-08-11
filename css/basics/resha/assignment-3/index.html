@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Team Members Gallery</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .parent-container {
+            padding: 30px;
+            border: 3px solid black;
+            margin: 20px;
+            text-align: center;
+        }
+
+        .heading {
+            font-size: 35px;
+            margin-bottom: 30px;
+            color: #222;
+        }
+
+        .profile-cards {
+            display: inline-block;
+            vertical-align: top;
+            width: 400px;
+            margin: 15px;
+            padding: 15px;
+            background-color: #ffffff;
+            border: 2px solid black;
+            border-radius: 5px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+        }
+
+        .profile-cards img {
+            width: 120px;
+            height: 120px;
+            border-radius: 20%;
+            object-fit: cover;
+            border: 3px solid black;
+            margin-bottom: 15px;
+        }
+
+        .name {
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 8px;
+            color: #333;
+        }
+
+        .position {
+            font-size: 16px;
+            font-weight: 600;
+            color: #00796b;
+            margin-bottom: 10px;
+        }
+
+        .text {
+            font-size: 14px;
+            color: #444;
+            margin-bottom: 12px;
+        }
+
+        .contact {
+            font-size: 14px;
+            color: #000;
+            line-height: 1.5;
+        }
+
+        .card-one {
+            background: linear-gradient(to bottom right, #fcd34d, #f87171);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .card-one:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+        }
+
+        .card-two {
+            background: linear-gradient(to bottom right, #d8b4fe, #fbcfe8);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .card-two:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+        }
+
+        .card-three {
+            background: linear-gradient(to bottom right, #bae6fd, #99f6e4);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .card-three:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="parent-container">
+        <h1 class="heading">Meet the team!</h1>
+
+        <div class="profile-cards card-one">
+            <img src="./media/card-1.jpg" alt="Akansha">
+            <h1 class="name">Akansha Sharma</h1>
+            <h2 class="position">Front-End Developer</h2>
+            <p class="text">Akansha builds dynamic web pages using JavaScript frameworks.</p>
+            <p class="contact"> akansha.sharma@example.com</p>
+        </div>
+
+        <div class="profile-cards card-two">
+            <img src="./media/card-2.jpg" alt="Esha">
+            <h1 class="name">Esha Chinthala</h1>
+            <h2 class="position">Python Developer</h2>
+            <p class="text">Esha builds dynamic web pages using Python.</p>
+            <p class="contact"> esha.chinthala@example.com</p>
+        </div>
+
+        <div class="profile-cards card-three">
+            <img src="./media/card-3.jpg" alt="Rakesh">
+            <h1 class="name">Rakesh Patel</h1>
+            <h2 class="position">Back-End Developer</h2>
+            <p class="text">Rakesh builds solid back-end scalable systems.</p>
+            <p class="contact"> rakesh.patel@example.com</p>
+        </div>
+    </div>
+</body>
+
+</html>
