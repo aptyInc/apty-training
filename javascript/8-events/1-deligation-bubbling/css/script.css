@@ -1,0 +1,22 @@
+table {
+    width: 80%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    border-radius: 5px;
+    border: 1px solid black;
+}
+
+td {
+    padding: 10px;
+    text-align: center;
+    font-family: Arial, sans-serif;
+}
+
+th {
+    padding: 10px;
+    text-align: center;
+}
+
+.highlight {
+    background-color:lightblue;
+}
