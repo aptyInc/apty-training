@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Logical Operators</title>
+        <link rel="stylesheet" href="styles.css">
+        
+    </head>
+    <body>
+        <header>
+            Assignment 4 - Logical Operators
+        </header>
+        <br>
+        <p>Enter two numbers:</p>
+        <div>
+            <input id="value1" type="number" placeholder="First Number">
+            <br>
+            <form>
+                <label for="firstNumber">Select</label>
+                <select name="firstNumber" id="type1">
+                <option value="string">String</option>
+                <option value="number">Number</option>
+                <option value="boolean">Boolean</option>
+                </select>
+                <br><br>
+            </form>
+        </div>
+        <div>
+            <input id="value2" type="number" placeholder="Second Number">
+            <br>
+            <form>
+                <label for="secondNumber">Select</label>
+                <select name="secondNumber" id="type2">
+                <option value="string">String</option>
+                <option value="number">Number</option>
+                <option value="boolean">Boolean</option>
+                </select>
+                <br><br>
+            </form>
+        </div>
+          
+        <button onclick="logicalAnd()">&&</button>
+        <button onclick="logicalOr()">||</button>
+        <button onclick="logicalNot()">!</button>
+        
+
+        <div id="output">Result will be displayed here</div>
+        <script src="js-operators-4.js"></script>
+    </body>
+</html>
