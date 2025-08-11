@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1 style="font-size: 20px">VAR AND LET DECLERATION</h1>
+    <p>
+      case 1- Understanding the scenario of Hoisting In javascript-<b
+        >The let and const are stored in Script scope and the Var is stored in
+        Global scope</b
+      >.So we should compulsory declare let and const after intialising it.But
+      for var if we declare before intialising it ,it shows a special
+      placeholder called undefined .Case 1-When we console.log var before
+      Intialising we Get undefined(memory is allocated but not intialised),and
+      when we console.log let before intialising it we get error.When we
+      console.log let after intialising we get appropriate result.
+    </p>
+    <script src="var-let.js"></script>
+    <img src="assets/let and Var.png" loading="lazy" width="500px" />
+    <h2 style="font-size: 20px">LET AND LET DECLERATION</h2>
+    <p>
+      Case 2-let is more Strictor than var.If we redeclare let even afetr
+      intialising it then it throws a syntax error in console stating let cannot
+      be redeclared.Var can be redeclared.
+    </p>
+    <img src="assets/let-let-decleration.jpg" loading="lazy" width="200px" />
+    <h3 style="font-size: 20px">LET AND CONST DECLERATION</h3>
+    <p>
+      Case 3-Const is more strictor than let .when we try to declare let a and
+      when we intialise it later we get results in console.But when we declare a
+      const and intialise it later we get a syntax error.
+    </p>
+    <img src="assets/let-const.jpg" loading="lazy" width="200px" />
+    <h4 style="font-size: 20px">CONST DECLERATION</h4>
+    <p style="font-size: 20px">
+      Case 4-When we try to redeclare const even after intialising it we get a
+      Type Error.
+    </p>
+    <img
+      src="assets/const-const-Decleration.jpg"
+      loading="lazy"
+      width="200px"
+    />
+    <script src="var-let.js"></script>
+  </body>
+</html>
