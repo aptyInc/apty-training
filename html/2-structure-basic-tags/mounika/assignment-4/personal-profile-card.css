@@ -1,0 +1,47 @@
+body {
+    font-family: sans-serif;
+    background-color: #f9f9f9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.profile-card {
+    background: #fff;
+    border-radius: 12px;
+    padding: 20px;
+    text-align: center;
+    width: 320px;
+}
+
+.profile-img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 15px;
+}
+
+h2 {
+    margin: 10px 0;
+    font-size: 22px;
+    color: #2c3e50;
+}
+
+.details {
+    text-align: left;
+    margin-top: 10px;
+    font-size: 14px;
+    color: #333;
+}
+
+.label {
+    font-weight: bold;
+    color: #555;
+}
+
+.value {
+    color: #333;
+}
