@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Keydown and Keyup Events</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        .key-event {
+            border: 1px solid #ddd;
+            padding: 10px;
+            margin-bottom: 10px;
+            min-height: 50px;
+            background-color: #f9f9f9;
+        }
+        .key-event h3 {
+            margin: 0 0 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <div id="keydownDiv" class="key-event">
+        <h3>Keydown Events</h3>
+        <p id="keydownOutput">Press any key...</p>
+    </div>
+
+    <div id="keyupDiv" class="key-event">
+        <h3>Keyup Events</h3>
+        <p id="keyupOutput">Release any key...</p>
+    </div>
+
+    <script src="../js/key-board-events.js"></script>
+</body>
+</html>
