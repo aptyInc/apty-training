@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Simple E-Commerce Application Assignment | Prem Rajput</title>
+
+		<link rel="stylesheet" href="./styles/home.css" />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap"
+			rel="stylesheet"
+		/>
+	</head>
+	<body>
+		<header>
+			<h1>Fetch E-Commerce Site Assignment</h1>
+			<input type="text" id="search-input" placeholder="Search products..." />
+		</header>
+
+		<div id="product-list"></div>
+
+		<div id="product-detail" style="display: none">
+			<button id="back-btn">Back to All Products</button>
+			<div id="product-info"></div>
+		</div>
+
+		<script src="./scripts/fetch-data.js"></script>
+		<script src="./scripts/search-products.js"></script>
+		<script src="./scripts/view-product.js"></script>
+	</body>
+</html>
