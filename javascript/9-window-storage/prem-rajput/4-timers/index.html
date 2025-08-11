@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 4 - Timers | Prem Rajput</title>
+    <style>
+        body{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            line-height: 3rem;
+        }
+        button{
+            line-height: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <h1>Timers</h1>
+
+    <h2>Timer</h2>
+    <input type="number" id="countdownInput" placeholder="Enter seconds">
+    <button id="startCountdown">Start Countdown</button>
+    <div id="countdownDisplay">Time Remaining: 0</div>
+
+    <h2>Stopwatch</h2>
+    <button id="startStopwatch">Start</button>
+    <button id="stopStopwatch">Stop</button>
+    <button id="resetStopwatch">Reset</button>
+    <div id="stopwatchDisplay">Elapsed Time: 0 seconds</div>
+
+    <script src="./scripts/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 3 - Srolling | Prem Rajput</title>
+    <style>
+
+        body{
+            line-height: 12px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        #content {
+            width: 200px;
+            height: 400px;
+            overflow: scroll;
+            border: 1px solid black;
+        }
+        .box {
+            height: 1000px;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <h1>Scrolling Assignment</h1>
+    <div id="content">
+        <div class="box" style="background-color: lightblue;"></div>
+        <div class="box" style="background-color: lightgreen;"></div>
+    </div>
+    <div>
+        <label for="xInput">X:</label>
+        <input type="number" id="xInput">
+        <label for="yInput">Y:</label>
+        <input type="number" id="yInput">
+        <button id="scrollToBtn">Scroll To</button>
+    </div>
+    <button id="scrollUpBtn">Scroll Up</button>
+    <button id="scrollDownBtn">Scroll Down</button>
+    <script src="./scripts/script.js"></script>
+</body>
+</html>
