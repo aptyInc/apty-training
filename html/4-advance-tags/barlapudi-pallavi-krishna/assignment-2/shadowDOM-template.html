@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Custom Component with Shadow DOM</title>
+</head>
+<body>
+  <user-card></user-card>
+  <template id="user-card-template">
+    <style>
+      .card {
+        font-family: Arial;
+        background: #f4f4f4;
+        padding: 15px;
+        border-radius: 10px;
+        box-shadow: 0 0 8px rgba(0,0,0,0.1);
+        max-width: 300px;
+      }
+      .card h3 {
+        color: #333;
+      }
+      .card p {
+        font-size: 14px;
+        color: #666;
+      }
+    </style>
+    <div class="card">
+      <h3>Barlapudi Pallavi Krishna</h3>
+      <p>Technical Consultant Intern at Apty</p>
+    </div>
+  </template>
+
+  <script>
+    class UserCard extends HTMLElement {
+      constructor() {
+        super();
+      }
+      connectedCallback(){
+        const shadow = this.attachShadow({ mode: "open" });
+
+        const template = document.getElementById("user-card-template");
+        const clone = template.content.cloneNode(true);
+
+        shadow.appendChild(clone);
+      }
+    }
+
+    customElements.define('user-card', UserCard);
+  </script>
+
+</body>
+</html>
