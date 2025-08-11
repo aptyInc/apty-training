@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Comparison operators</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+
+    .container {
+      max-width: 600px;
+      margin: auto;
+    }
+
+    .input-group {
+      margin-bottom: 15px;
+    }
+
+    .input-group label {
+      display: block;
+      margin-bottom: 5px;
+    }
+
+    button {
+      margin: 5px 0;
+      padding: 10px;
+      cursor: pointer;
+    }
+
+    #result {
+      margin-top: 20px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <h1>Data Comparison uing comparision operator </h1>
+
+    <div class="input-group">
+      <label for="value1">Value 1:</label>
+      <input type="text" id="value1" placeholder="Enter first value">
+    </div>
+
+    <div class="input-group">
+      <label for="type1">Type of Value 1:</label>
+      <select id="type1">
+        <option value="string">String</option>
+        <option value="number">Number</option>
+        <option value="boolean">Boolean</option>
+        <option value="object">Object</option>
+        <option value="undefined">Undefined</option>
+        <option value="null">Null</option>
+      </select>
+    </div>
+
+    <div class="input-group">
+      <label for="value2">Value 2:</label>
+      <input type="text" id="value2" placeholder="Enter second value">
+    </div>
+
+    <div class="input-group">
+      <label for="type2">Type of Value 2:</label>
+      <select id="type2">
+        <option value="string">String</option>
+        <option value="number">Number</option>
+        <option value="boolean">Boolean</option>
+        <option value="object">Object</option>
+        <option value="undefined">Undefined</option>
+        <option value="null">Null</option>
+      </select>
+    </div>
+
+    <div>
+      <button onclick="compareEqual()">==</button>
+      <button onclick="compareStrictEqual()">===</button>
+      <button onclick="compareNotEqual()">!=</button>
+      <button onclick="compareStrictNotEqual()">!==</button>
+      <button onclick="compareGreater()">&gt;</button>
+      <button onclick="compareLesser()">&lt;</button>
+      <button onclick="compareGreaterOrEqual()">&gt;=</button>
+      <button onclick="compareLesserOrEqual()">&lt;=</button>
+    </div>
+
+    <div id="result"></div>
+
+    <script type="text/javascript" src="./../script/comparision-operators.js">
+
+
+    </script>
+</body>
+
+</html>

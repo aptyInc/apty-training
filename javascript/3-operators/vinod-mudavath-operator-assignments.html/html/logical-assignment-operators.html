@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logical Assignment Operators</title>
+
+    <style>
+        #result {
+            font-size: 36px;
+            font-weight: 700;
+        }
+
+        main {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .input-container {
+            margin-top: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 style="text-align: center;">Logical Assignment Operators</h1>
+    <main>
+        <div>
+            <div class="input-container">
+                <label for="value1">Value1:</label>
+                <input type="text" id="value1" placeholder="Enter your value here">
+                <select id="type1">
+                    <option value="string">String</option>
+                    <option value="number">Number</option>
+                    <option value="boolean">Boolean</option>
+                    <option value="object">Object</option>
+                </select>
+            </div>
+            <div class="input-container">
+                <label for="value2">Value2:</label>
+                <input type="text" id="value2" placeholder="Enter your value here">
+                <select id="type2">
+                    <option value="string">String</option>
+                    <option value="number">Number</option>
+                    <option value="boolean">Boolean</option>
+                    <option value="object">Object</option>
+                </select>
+            </div>
+
+            <div class="input-container">
+                <button onclick="performAndAssignmentOperator()">&&=</button>
+                <button onclick="performOrAssignmentOperator()">||=</button>
+                <button onclick="performNullishAssignmentOperator()">??=</button>
+            </div>
+
+            <div id="result"></div>
+        </div>
+    </main>
+
+    <script type="text/javascript" src="./../script/logical-assignment-operators.js"></script>
+</body>
+
+
+</html>
