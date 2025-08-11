@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form with Buttons</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- The form does not submit to a server; action set to "#" for clarity -->
+    <form action="#">
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required />
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required />
+
+      <label for="message">Message:</label>
+      <textarea id="message" name="message" rows="4" required></textarea>
+
+      <button type="submit" class="submit-btn">Submit</button>
+      <button type="reset" class="reset-btn">Reset</button>
+      <button
+        type="button"
+        class="plain-btn"
+      >
+        Plain Button
+      </button>
+    </form>
+    <div class="text-container">
+      <ul>
+        <li><b>Submit</b> button submits the form data to the server.</li>
+        <li>
+          <b>Reset</b> button clears all form fields to their default values.
+        </li>
+        <li>
+          <b>Button</b> with type as button does not submit or reset
+          the form. It can be used for custom actions like showing an alert.
+        </li>
+      </ul>
+    </div>
+  </body>
+</html>

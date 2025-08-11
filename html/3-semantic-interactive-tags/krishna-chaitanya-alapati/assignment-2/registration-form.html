@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Registration</title>
+  </head>
+  <body>
+    <h1 style="text-align: center">Registration Form for School admission</h1>
+    <div class="form-container" style="display: flex; justify-content: center">
+      <form action="#" method="post">
+        <label for="first-name">First Name: </label>
+        <input
+          type="text"
+          id="first-name"
+          pattern="^[A-Za-z]+$"
+          placeholder="Enter student first name"
+          required
+          autocomplete="off"
+        />
+        <br /><br />
+        <label for="last-name">Last Name: </label>
+        <input
+          type="text"
+          id="last-name"
+          pattern="^[A-Za-z]+$"
+          placeholder="Enter student last name"
+          autocomplete="off"
+          required
+        />
+        <br /><br />
+        <label for="gender">Gender: </label>
+        <input type="radio" id="male" name="gender" value="Male" required />
+        <label for="male">Male</label>
+        <input type="radio" id="female" name="gender" value="Female" />
+        <label for="female">Female</label>
+        <br /><br />
+        <label for="birthday">Date of Birth: </label>
+        <input
+          type="date"
+          id="birthday"
+          min="2000-01-01"
+          max="2021-12-31"
+          required
+        />
+        <br /><br />
+        <label for="email">Email: </label>
+        <input
+          type="email"
+          id="email"
+          pattern="^[a-zA-Z0-9._%!-]+@gmail\.com$"
+          placeholder="Enter parent mail id"
+          autocomplete="off"
+          required
+        />
+        <br /><br />
+        <label for="number">Mobile No: </label>
+        <input
+          type="tel"
+          id="number"
+          pattern="[0-9]{10}"
+          placeholder="Parent mobile no"
+          required
+        />
+        <input type="button" value="Send OTP" />
+        <br /><br />
+        <label for="otp">OTP: </label>
+        <input type="password" id="otp" placeholder="Enter OTP" required />
+        <br /><br />
+        <label for="student-hobbies">Hobbies: </label>
+        <input type="checkbox" id="hobby-cricket" name="student-hobbies" value="cricket" />
+        <label for="hobby-cricket">Playing cricket</label><br />
+        <input type="checkbox" id="hobby-tennis" name="student-hobbies" value="tennis" />
+        <label for="hobby-tennis">Playing tennis</label><br />
+        <input type="checkbox" id="hobby-reading" name="student-hobbies" value="reading" />
+        <label for="hobby-reading">Reading story books</label><br />
+        <input type="checkbox" id="hobby-cooking" name="student-hobbies" value="cooking" />
+        <label for="hobby-cooking">Cooking</label><br /><br />
+        <label for="age">Student Age: </label>
+        <input type="radio" id="student-age" name="age" />3-6
+        <input type="radio" name="age" />6-12
+        <input type="radio" name="age" />12-15 <br /><br />
+        <input type="submit" />
+        <input type="reset" />
+      </form>
+    </div>
+  </body>
+</html>
