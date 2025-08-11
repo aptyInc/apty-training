@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Complex DOM Manipulation Challenges</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      margin: 20px;
+    }
+    h1 {
+      color: #333;
+    }
+    .section {
+      margin-bottom: 20px;
+      padding: 15px;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      background-color: #f9f9f9;
+    }
+    ul {
+      list-style-type: none;
+      padding: 0;
+    }
+    li {
+      padding: 5px 10px;
+      background-color: #eee;
+      margin-bottom: 5px;
+      display: flex;
+      justify-content: space-between;
+    }
+    button {
+      padding: 5px 10px;
+      background-color: #007BFF;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #0056b3;
+    }
+    .btn {
+      background-color: green;
+      color: white;
+      padding: 10px;
+      margin: 10px 0;
+      border-radius: 4px;
+    }
+    .container {
+      margin: 10px 0;
+      padding: 10px;
+      border: 1px solid #ccc;
+    }
+    .table-container {
+      margin-top: 20px;
+    }
+    .btn{
+        background-color: green;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+    table, th, td {
+      border: 1px solid black;
+    }
+    th, td {
+      padding: 10px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <h1>DOM Manipulation Challenges</h1>
+
+  <!-- Main Document Section -->
+  <div class="section">
+    <h2>Main Document</h2>
+    <ul id="main-list">
+      <li>Item 1 <button class="delete-item">Delete</button></li>
+      <li>Item 2 <button class="delete-item">Delete</button></li>
+    </ul>
+    <div class="button-container"></div>
+    <div class="container" id="clone-container">
+      <div class="card">Card Content</div>
+    </div>
+    <p id="existing-paragraph">Existing Paragraph</p>
+    <div class="table-container"></div>
+  </div>
+  <script>
+    //Add New List Item
+    let newListItem = document.createElement("li")
+    newListItem.textContent = "New Item"
+    document.querySelector("ul").appendChild(newListItem)
+    // Remove Child Element
+    let divCont = document.querySelector("div.container")
+    let childEle = divCont.lastElementChild 
+    divCont.removeChild(childEle)
+    // Create and Style Button
+    let dynamicBut = document.createElement("button")
+    dynamicBut.textContent = "Click Me"
+    dynamicBut.classList.add("btn")
+    document.querySelector(".button-container").appendChild(dynamicBut)
+    // Insert Before
+    let paragraphEle = document.createElement("p")
+    paragraphEle.textContent = "New Paragraph" 
+    let referenceEle = document.getElementById("existing-paragraph")
+    let parentEle = referenceEle.parentNode 
+    parentEle.insertBefore(paragraphEle,referenceEle)
+    // Dynamic Table
+    let reqDiv = document.querySelector(".table-container")
+    let reqTable = document.createElement("table")
+    let count = 1
+    for (let i=0;i<3;i++){
+      let reqRow = document.createElement("tr")
+      for (let j=0;j<3;j++){
+         let reqColumn = document.createElement("td")
+         reqColumn.textContent = `${count}`
+         count += 1 
+         reqRow.appendChild(reqColumn)
+      }
+      reqTable.appendChild(reqRow)
+    }
+    reqDiv.appendChild(reqTable)
+    // Event-Based Element Creation
+    let newButton = document.createElement("button")
+    newButton.textContent = "click" 
+    function randomColorGenerator() {
+       let string = "0123456789ABCDEF"
+       let color = "#"
+       for (let i = 0;i<6;i++){
+            color += string[Math.floor(Math.random()*16)]
+       }
+       return color
+    }
+    newButton.addEventListener("click",()=>{
+      let newDiv = document.createElement("div")
+      newDiv.textContent = "Event-Based Element Creation"
+      newDiv.style.backgroundColor = randomColorGenerator()
+      document.body.appendChild(newDiv) 
+    })
+    document.body.appendChild(newButton)
+    // Delete Specific List Item
+    let deleteNodeList = document.querySelectorAll(".delete-item")
+    for (let i=0; i<2;i++){
+      deleteNodeList[i].addEventListener("click",()=>{
+        document.getElementById("main-list").removeChild(deleteNodeList[i].parentNode)
+      })
+    }
+    // Dynamic Attribute Setter
+    let inputEle = document.createElement("input")
+    inputEle.setAttribute("type","text")
+    inputEle.setAttribute("placeholder","Enter your name")
+    let formEle = document.createElement("form")
+    formEle.appendChild(inputEle)
+    document.body.appendChild(formEle)
+    // Generate Nested Elements
+  </script>
+</body>
+</html>
