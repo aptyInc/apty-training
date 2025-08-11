@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Event Propagation</title>
+    <style>
+      .level {
+        padding: 20px;
+        margin: 10px;
+        border: 2px solid black;
+        text-align: center;
+        font-family: Arial, sans-serif;
+        cursor: pointer;
+      }
+
+      #level-1 {
+        background-color: #ffcccc;
+      }
+
+      #level-2 {
+        background-color: #ccffcc;
+      }
+
+      #level-3 {
+        background-color: #ccccff;
+      }
+
+      .level:hover {
+        opacity: 0.8;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="level-1" class="level">
+      Level 1
+      <div id="level-2" class="level">
+        Level 2
+        <div id="level-3" class="level">Level 3</div>
+      </div>
+    </div>
+    <script src="event-propagation.js"></script>
+  </body>
+</html>
