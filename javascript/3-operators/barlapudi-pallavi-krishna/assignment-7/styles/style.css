@@ -1,0 +1,13 @@
+body {
+  font-family: Arial, sans-serif;
+  padding: 2rem;
+}
+input,
+button {
+  margin: 0.5rem 0.3rem;
+  padding: 0.4rem;
+}
+#result {
+  margin-top: 1rem;
+  font-weight: bold;
+}

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Arithmetic Calculator</title>
+  <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+  <div class="calculator-container">
+    <h2>Arithmetic Operators Calculator</h2>
+    <label for="value1">Enter Value1</label>
+    <input type="number" id="value1" placeholder="Enter value 1"><br>
+    <label for="value2">Enter Value2</label>
+    <input type="number" id="value2" placeholder="Enter value 2"><br>
+
+    <button onclick="add()">+=</button>
+    <button onclick="subtract()">-=</button>
+    <button onclick="multiply()">*=</button>
+    <button onclick="divide()">/=</button>
+    <button onclick="modulus()">%=</button>
+    <button onclick="increment()">++ (value1)</button>
+    <button onclick="decrement()">-- (value1)</button>
+
+    <div id="result"></div>
+  </div>
+  <script src="scripts/script.js"></script>
+</body>
+</html>

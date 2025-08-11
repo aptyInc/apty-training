@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Data Comparison App</title>
+  <link rel="stylesheet" href="styles/style.css"/>
+</head>
+<body>
+
+  <h2>Compare Two Values</h2>
+
+  <div>
+    <label>Value 1: <input type="text" id="value1"></label>
+    <select id="type1">
+      <option value="string">String</option>
+      <option value="number">Number</option>
+      <option value="boolean">Boolean</option>
+    </select>
+  </div>
+
+  <div>
+    <label>Value 2: <input type="text" id="value2"></label>
+    <select id="type2">
+      <option value="string">String</option>
+      <option value="number">Number</option>
+      <option value="boolean">Boolean</option>
+    </select>
+  </div>
+
+  <div>
+    <button onclick="equal()">==</button>
+    <button onclick="strictEqual()">===</button>
+    <button onclick="notEqual()">!=</button>
+    <button onclick="strictNotEqual()">!==</button>
+    <button onclick="greaterThan()">&gt;</button>
+    <button onclick="lessThan()">&lt;</button>
+    <button onclick="greaterThanOrEqual()">&gt;=</button>
+    <button onclick="lessThanOrEqual()">&lt;=</button>
+  </div>
+
+  <div id="result"></div>
+  <script src="scripts/script.js"></script>
+
+</body>
+</html>

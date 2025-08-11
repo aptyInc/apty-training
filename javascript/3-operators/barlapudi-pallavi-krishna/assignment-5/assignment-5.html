@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Logical Assignment Operators App</title>
+  <link rel="stylesheet" href="styles/style.css"/>
+</head>
+<body>
+
+  <h2>Logical Assignment Operators</h2>
+
+  <div>
+    <label>Value 1: <input type="text" id="value1"></label>
+    <select id="type1">
+      <option value="string">String</option>
+      <option value="number">Number</option>
+      <option value="boolean">Boolean</option>
+      <option value="null">Null</option>
+    </select>
+  </div>
+
+  <div>
+    <label>Value 2: <input type="text" id="value2"></label>
+    <select id="type2">
+      <option value="string">String</option>
+      <option value="number">Number</option>
+      <option value="boolean">Boolean</option>
+      <option value="null">Null</option>
+    </select>
+  </div>
+
+  <div>
+    <button onclick="logicalAndAssign()">&&= (AND Assignment)</button>
+    <button onclick="logicalOrAssign()">||= (OR Assignment)</button>
+    <button onclick="nullishAssign()">??= (Nullish Assignment)</button>
+  </div>
+
+  <div id="result"></div>
+  <script src="scripts/script.js"></script>
+</body>
+</html>
