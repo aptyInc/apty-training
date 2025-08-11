@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>DOM Selection Table</title>
+    <meta charset="UTF-8" />
+    <script src="scripts/script.js" defer></script>
+    <style>
+      table,
+      th,
+      td {
+        border: 1px solid black;
+        border-collapse: collapse;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>DOM Selection Methods Example</h2>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Unique ID</th>
+          <th>Shared Class</th>
+          <th>HTML Tag</th>
+          <th>Element Name</th>
+          <th>Custom Attribute</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr>
+          <td>
+            <p id="para1">Paragraph</p>
+            <p id="para2">Paragraph</p>
+            <button onclick="changeIdColor()">Change ID Color</button>
+          </td>
+          <td>
+            <p class="highlight">Paragraph with class="highlight"</p>
+            <p class="highlight">Another paragraph with class="highlight"</p>
+            <button onclick="toggleClassBg()">Toggle Class Background</button>
+          </td>
+          <td>
+            <p>Paragraph tag</p>
+            <span>Span 1</span>
+            <span>Span 2</span>
+            <button onclick="changeSpanText()">Change Span Text</button>
+          </td>
+          <td>
+            <input type="text" name="username" placeholder="Name=username" />
+            <input type="text" name="email" placeholder="Name=email" />
+            <button onclick="toggleNameDisabled()">Toggle Disabled</button>
+          </td>
+          <td>
+            <p data-info="first">Paragraph with data-info</p>
+            <button onclick="addCustomAttribute()">Add Custom Attribute</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>
