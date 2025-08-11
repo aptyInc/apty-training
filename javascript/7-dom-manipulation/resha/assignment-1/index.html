@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/style.css">
+    <title>Accessing and Manipulating Elements</title>
+</head>
+
+<body>
+    <div>
+        <h2>Accessing and Manipulating Element</h2><br>
+        <table>
+            <tr>
+                <th>id</th>
+                <th>className</th>
+                <th>tag</th>
+                <th>name</th>
+                <th>attribute</th>
+            </tr>
+            <tr>
+                <td>
+                <p id="p1">ABCD</p>
+                <p id="p2">EFGH</p>
+                <p id="p3">IJKL</p>
+                <p id="p4">MNO</p>
+                <button onclick="changeById()">Change Color</button>
+            </td>
+
+            <td>
+                <p class="c1">Class 1</p>
+                <p class="c2">Class 2</p>
+                <p class="c1">Class 1</p>
+                <p class="c1">Class 1</p>
+                <p class="c2">Class 2</p>
+                <button onclick="changeByClass()">Toggle Background</button>
+            </td>
+
+            <td>
+                <span>1234</span><br><br>
+                <span>5678</span><br><br>
+                <button onclick="changeSpans()">Change Text</button>
+            </td>
+
+            <td>
+                <input type="text" name="firstInput" value="Input 1"><br><br>
+                <input type="text" name="secondInput" value="Input 2"><br><br>
+                <button onclick="toggleDisable()">Toggle Disable</button>
+            </td>
+
+            <td>
+                <p custom-attr="one">Custom 1</p>
+                <p custom-attr="two">Custom 2</p>
+                <p id="output"></p>
+                <button onclick="addCustomAttr()">Add New Attr</button>
+            </td>
+            </tr>
+        </table>
+    </div>
+    <script src="./scripts/script.js"></script>
+</body>
+
+</html>
