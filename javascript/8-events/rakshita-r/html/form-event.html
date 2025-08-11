@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Registration Form with Real-Time Validation</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 20px;
+      }
+      form {
+        max-width: 400px;
+      }
+      .form-group {
+        margin-bottom: 15px;
+      }
+      label {
+        display: block;
+        font-weight: bold;
+        margin-bottom: 5px;
+      }
+      input {
+        width: 100%;
+        padding: 8px;
+        font-size: 1em;
+        margin-bottom: 5px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+      }
+      input.error {
+        border-color: red;
+      }
+      .error-message {
+        color: red;
+        font-size: 0.9em;
+        margin-top: -5px;
+      }
+      .success-message {
+        color: green;
+        font-size: 0.9em;
+        margin-top: -5px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Registration Form</h1>
+    <form id="registrationForm">
+      <div class="form-group">
+        <label for="username">Username:</label>
+        <input
+          type="text"
+          id="username"
+          name="username"
+          placeholder="Enter your username"
+        />
+        <span id="usernameError" class="error-message"></span>
+      </div>
+      <div class="form-group">
+        <label for="email">Email:</label>
+        <input
+          type="email"
+          id="email"
+          name="email"
+          placeholder="Enter your email"
+        />
+        <span id="emailError" class="error-message"></span>
+      </div>
+      <div class="form-group">
+        <label for="password">Password:</label>
+        <input
+          type="password"
+          id="password"
+          name="password"
+          placeholder="Enter your password"
+        />
+        <span id="passwordError" class="error-message"></span>
+      </div>
+      <button type="submit">Register</button>
+    </form>
+    <script src="../scripts/form-event.js"></script>
+  </body>
+</html>
