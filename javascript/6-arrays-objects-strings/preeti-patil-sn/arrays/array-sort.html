@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Custom Array Sorting</title>
+  </head>
+  <body>
+    <h1>Custom Array Sorting</h1>
+
+    <label for="arrayInput"
+      >Enter an array of objects (e.g., [{"name": "Bob", "score": 80}, {"name":
+      "Alice", "score": 90}]):</label
+    >
+    <input
+      id="arrayInput"
+      type="text"
+      placeholder='[{"name": "Bob", "score": 80}, {"name": "Alice", "score": 90}]'
+    />
+
+    <label for="propertyInput"
+      >Enter property to sort by (e.g., "score"):</label
+    >
+    <input id="propertyInput" type="text" placeholder="score" />
+
+    <button onclick="sortArray()">Sort</button>
+
+    <h2>Sorted Array:</h2>
+    <pre id="sortedArray"></pre>
+
+    <script src="./scripts/array-sort.js"></script>
+  </body>
+</html>

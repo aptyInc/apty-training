@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Every and Some on Array</title>
+  </head>
+  <body>
+    <h1>Check Student Scores</h1>
+
+    <label for="studentScores"
+      >Enter student scores (e.g., [{"name": "Bob", "score": 80}, {"name":
+      "Alice", "score": 90}]):</label
+    >
+    <input
+      id="studentScores"
+      type="text"
+      placeholder='[{"name": "Bob", "score": 80}, {"name": "Alice", "score": 90}]'
+    />
+
+    <button onclick="checkScores()">Check Scores</button>
+
+    <h2>Results:</h2>
+    <p id="allPassed"></p>
+    <p id="someFailed"></p>
+
+    <script src="./scripts/every-some.js"></script>
+  </body>
+</html>
