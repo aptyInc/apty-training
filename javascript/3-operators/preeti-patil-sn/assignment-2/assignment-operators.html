@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Simple Assignment Operators</title>
+  </head>
+  <body>
+    <h1>Assignment Operators Calculator</h1>
+    <p>
+      Enter two numbers and click an operator button to perform calculations.
+    </p>
+
+    <div>
+      <input type="number" id="input1" placeholder="Enter X" />
+      <input type="number" id="input2" placeholder="Enter Operand" />
+    </div>
+
+    <div>
+      <button onclick="addAssignment()">+=</button>
+      <button onclick="subAssignment()">-=</button>
+      <button onclick="mulAssignment()">*=</button>
+      <button onclick="divAssignment()">/=</button>
+      <button onclick="modAssignment()">%=</button>
+      <button onclick="clearValues()">C</button>
+    </div>
+
+    <div id="result"></div>
+
+    <script src="assignment-operators.js"></script>
+  </body>
+</html>
