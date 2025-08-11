@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Scroll Control</title>
+  </head>
+  <body>
+    <h1>Scroll Control</h1>
+
+    <!-- Input fields for x and y coordinates -->
+    <label for="xInput">X Position:</label>
+    <input type="number" id="xInput" placeholder="Enter X position" />
+
+    <label for="yInput">Y Position:</label>
+    <input type="number" id="yInput" placeholder="Enter Y position" />
+
+    <button onclick="scrollToPosition()">Scroll to Position</button>
+
+    <br /><br />
+
+    <!-- Buttons for scrolling up and down -->
+    <button onclick="scrollUp()">Scroll Up</button>
+    <button onclick="scrollDown()">Scroll Down</button>
+
+    <!-- Additional content to make the page scrollable -->
+    <div
+      style="
+        height: 2000px;
+        background: linear-gradient(to bottom, #f8f9fa, #e9ecef);
+      "
+    >
+      <p style="padding: 50px">Scroll down to see more content!</p>
+    </div>
+
+    <script src="./scripts/assignment-3.js"></script>
+  </body>
+</html>
