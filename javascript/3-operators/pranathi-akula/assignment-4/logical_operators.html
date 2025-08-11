@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Logical Operators</title>
+    <link rel="stylesheet" href="./logical.css" />
+  </head>
+  <body>
+    <h1>Data Comparison - Logical Operators</h1>
+    <div>
+      <input type="text" id="value1" placeholder="Enter first value" />
+      <select id="type1">
+        <option value="string">String</option>
+        <option value="number">Number</option>
+        <option value="boolean">Boolean</option>
+      </select>
+      <br />
+      <input type="text" id="value2" placeholder="Enter second value" />
+      <select id="type2">
+        <option value="string">String</option>
+        <option value="number">Number</option>
+        <option value="boolean">Boolean</option>
+      </select>
+    </div>
+    <div>
+      <button onclick="logicalAnd()">&&</button>
+      <button onclick="logicalOr()">||</button>
+      <button onclick="logicalNot()">!</button>
+    </div>
+    <div id="result">Result:</div>
+
+    <script src="./logical-operators.js"></script>
+    <footer><p>© 2024 Javascript</p></footer>
+  </body>
+</html>
