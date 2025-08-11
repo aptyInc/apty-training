@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Logical Operators App</title>
+    <link rel="stylesheet" href="logical.css" />
+  </head>
+  <body>
+    <h1>Logical Operators App</h1>
+    <div>
+      <input type="text" id="value1" placeholder="Enter Value 1" />
+      <select id="type1">
+        <option value="string">String</option>
+        <option value="number">Number</option>
+        <option value="boolean">Boolean</option>
+      </select>
+    </div>
+    <div>
+      <input type="text" id="value2" placeholder="Enter Value 2" />
+      <select id="type2">
+        <option value="string">String</option>
+        <option value="number">Number</option>
+        <option value="boolean">Boolean</option>
+      </select>
+    </div>
+    <div>
+      <button onclick="logicalAnd()">&& (AND)</button>
+      <button onclick="logicalOr()">|| (OR)</button>
+      <button onclick="logicalNot()">! (NOT)</button>
+    </div>
+    <div id="result">Result:</div>
+    <script src="logical.js"></script>
+  </body>
+</html>

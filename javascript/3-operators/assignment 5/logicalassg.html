@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Logical Assignment Operators App</title>
+    <link rel="stylesheet" href="logicalassg.css" />
+  </head>
+  <body>
+    <h1>Logical Assignment Operators App</h1>
+    <div>
+      <input type="text" id="value1" placeholder="Enter Value 1" />
+      <select id="type1">
+        <option value="string">String</option>
+        <option value="number">Number</option>
+        <option value="boolean">Boolean</option>
+      </select>
+    </div>
+    <div>
+      <input type="text" id="value2" placeholder="Enter Value 2" />
+      <select id="type2">
+        <option value="string">String</option>
+        <option value="number">Number</option>
+        <option value="boolean">Boolean</option>
+      </select>
+    </div>
+    <div>
+      <button onclick="logicalAndAssign()">&&= (AND Assignment)</button>
+      <button onclick="logicalOrAssign()">||= (OR Assignment)</button>
+      <button onclick="nullishCoalescingAssign()">
+        ??= (Nullish Coalescing Assignment)
+      </button>
+    </div>
+    <div id="result">Result:</div>
+    <script src="logicalassg.js"></script>
+  </body>
+</html>
