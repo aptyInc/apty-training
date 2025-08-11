@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practise javascript datatypes</title>
+</head>
+<body>
+    <main>
+        <h1>Practise of javascript datatypes</h1>
+        <div id = "datatypes"></div>
+    </main>
+
+    <script>
+       const datatypesEle =  document.getElementById("datatypes")
+
+       let strType = "vinod mudavath";
+       let numberType = 21;
+       let booleanType = false;
+       let undefinedType = undefined;
+       let symbolType = Symbol('description');
+       let objectType = {name : strType, age : numberType };
+
+       const result = `Type of strtype variable is = ${typeof strType} 
+        ,<br/> typeof numberType variable is = ${typeof numberType} 
+        ,<br/>typeof booleanType variable is = ${typeof booleanType}
+        , <br/> typeof underfinedType variable is = ${typeof undefinedType} 
+        ,<br/> typeof symbolType variable is = ${typeof symbolType.description} 
+        ,<br/> typeof objectType variable is = ${typeof objectType} `
+
+        document.write(result)
+
+    </script>
+</body>
+</html>
