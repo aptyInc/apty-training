@@ -1,0 +1,122 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Segoe UI", "Georgia", serif;
+    background-color: #f6fff6;
+    color: #1a1a1a;
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    background-color: #416033;
+    color: #fff;
+    padding: 25px 20px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+.heading {
+    font-family: "Playfair Display", serif;
+    font-size: 2.8rem;
+    margin-top: 10px;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+}
+
+nav a {
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #fff;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #dfffd9;
+}
+
+main {
+    padding: 30px 20px;
+    flex: 1;
+    background: linear-gradient(to bottom right, #f0fff0, #e9fbe9);
+}
+
+.container {
+    max-width: 1000px;
+    margin: 15px auto;
+}
+
+.subheading h2 {
+    font-size: 2.2rem;
+    margin-bottom: 25px;
+    text-align: center;
+    font-family: "Playfair Display", serif;
+    color: #3b5c3b;
+}
+
+.flex-content {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 12px;
+    transition: transform 0.3s ease;
+}
+
+.flex-content:hover {
+    transform: translateY(-5px);
+}
+
+.text {
+    max-width: 600px;
+    font-size: 1rem;
+    color: #333;
+}
+
+.flex-content img {
+    width: 100%;
+    border-radius: 12px;
+    height: auto;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+footer {
+    background-color: #416033;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    font-size: 0.9rem;
+    margin-top: 40px;
+}
+
+@media (min-width: 768px) {
+    .flex-content {
+        flex-direction: row;
+        justify-content: space-between;
+        text-align: left;
+    }
+
+    .text {
+        flex: 1;
+        padding-right: 25px;
+        font-size: 1.1rem;
+    }
+
+    .flex-content img {
+        width: 45%;
+    }
+}
