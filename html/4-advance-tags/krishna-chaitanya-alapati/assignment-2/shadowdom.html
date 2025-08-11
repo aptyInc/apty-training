@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Custom ShadowDOM Component</title>
+</head>
+<body>
+  <user-card></user-card>
+  <template id="userCardTemplate">
+    <style>
+      .card {
+        font-family: Arial, sans-serif;
+        background: #f0f0f0;
+        border-radius: 10px;
+        padding: 30px;
+        width: 250px;
+        box-shadow: 3px 3px 10px 2px gray;
+      }
+      .name {
+        font-weight: bold;
+        font-size: 1.2em;
+      }
+      .bio {
+        margin-top: 5px;
+        color: gray;
+      }
+    </style>
+    <div class="card">
+      <div class="name">Krishna Chaitanya</div>
+      <div class="bio">Frontend Developer & Tech Enthusiast</div>
+    </div>
+  </template>
+  <script>
+    class UserCard extends HTMLElement {
+      constructor() {
+        super();
+      }
+      connectedCallback(){
+        const shadow = this.attachShadow({ mode: 'open' });
+        const template = document.getElementById('userCardTemplate');
+        const templateContent = template.content.cloneNode(true);
+        shadow.appendChild(templateContent);
+      }
+    }
+    customElements.define('user-card', UserCard);
+  </script>
+
+</body>
+</html>
