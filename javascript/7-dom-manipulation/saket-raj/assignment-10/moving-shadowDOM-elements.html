@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Moving Table Rows in Shadow DOM</title>
+    <link rel="stylesheet" href="./Styles/style.css" />
+  </head>
+  <body>
+    <h1>Control Table Rows in Shadow DOM</h1>
+
+    <div class="controls">
+      <label
+        >Row Number:
+        <input type="number" id="rowNumber" min="1" max="10" value="1"
+      /></label>
+      <button id="upBtn">Up</button>
+      <button id="downBtn">Down</button>
+      <button id="topBtn">Top</button>
+      <button id="bottomBtn">Bottom</button>
+    </div>
+
+    <div id="shadow-host"></div>
+
+    <script src="./Scripts/index.js"></script>
+  </body>
+</html>

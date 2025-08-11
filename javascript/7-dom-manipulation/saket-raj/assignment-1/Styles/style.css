@@ -1,0 +1,29 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 20px;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  text-align: center;
+}
+
+th,
+td {
+  padding: 10px;
+  border: 1px solid #333;
+}
+
+.bg-toggle {
+  background-color: yellow;
+}
+
+.disabled {
+  opacity: 0.6;
+}
+
+[data-new] {
+  border: 2px dashed green;
+  padding: 5px;
+}

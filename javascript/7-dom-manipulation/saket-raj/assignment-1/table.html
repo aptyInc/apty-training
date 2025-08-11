@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./Styles/style.css" />
+    <title>Accessing and Manipulating Elements</title>
+  </head>
+  <body>
+    <h1>Accessing and Manipulating Elements</h1>
+    <table border="1">
+      <thead>
+        <tr>
+          <th>Id</th>
+          <th>Class Name</th>
+          <th>Tag</th>
+          <th>Name</th>
+          <th>Attribute</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>
+            <p id="p1">Paragraph 1</p>
+            <p id="p2">Paragraph 2</p>
+            <p id="p3">Paragraph 3</p>
+            <button onclick="changeColorById()">Change Color</button>
+          </td>
+          <td>
+            <p class="sameClass">Class Para 1</p>
+            <p class="sameClass">Class Para 2</p>
+            <p class="sameClass">Class Para 3</p>
+            <button onclick="toggleClassName()">Toggle Background</button>
+          </td>
+          <td>
+            <span>Tag Span 1</span>
+            <span>Tag Span 2</span>
+            <span>Tag Span 3</span>
+            <button onclick="changeSpans()">Change Span Text</button>
+          </td>
+          <td>
+            <input type="text" name="input1" value="Value 1" />
+            <input type="text" name="input2" value="Value 2" />
+            <input type="text" name="input3" value="Value 3" />
+            <button onclick="toggleDisabled()">Toggle Disabled</button>
+          </td>
+          <td>
+            <p data-info="first">Custom Attribute 1</p>
+            <p data-info="second">Custom Attribute 2</p>
+            <p data-info="third">Custom Attribute 3</p>
+            <button onclick="addCustomAttribute()">Add New Attribute</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <script src="./Scripts/index.js"></script>
+  </body>
+</html>
