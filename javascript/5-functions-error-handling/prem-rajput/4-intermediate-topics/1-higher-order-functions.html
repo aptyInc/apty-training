@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 1 - Higher-Order Functions | Prem Rajput</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+        input {
+            padding: 5px;
+            font-size: 14px;
+            width: 200px;
+            margin: 5px;
+        }
+        button {
+            padding: 5px 10px;
+            font-size: 14px;
+        }
+        ul {
+            text-align: left;
+            display: inline-block;
+            margin-top: 20px;
+        }
+        li {
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+    
+    <h2>Repeat Action: Create List</h2>
+
+    <form id="listForm">
+        <input type="text" id="itemInput" placeholder="Enter item name">
+        <br><br>
+        <input type="number" id="countInput" placeholder="Enter number of items" min="1">
+        <br><br>
+        <button type="button" onclick="createList()">Create List</button>
+    </form>
+
+    <ul id="itemList"></ul>
+
+    <script src="./script/1-higher-order-functions.js"></script>
+</body>
+</html>

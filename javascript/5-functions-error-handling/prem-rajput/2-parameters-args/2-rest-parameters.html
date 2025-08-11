@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 2 - Rest Parameters | Prem Rajput</title>
+    <style>
+
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+        input {
+            padding: 5px;
+            font-size: 14px;
+            width: 300px;
+        }
+        button {
+            padding: 5px 10px;
+            font-size: 14px;
+        }
+        p {
+            font-size: 18px;
+        }
+
+    </style>
+</head>
+<body>
+    <h2>Calculate the Sum of Numbers</h2>
+
+    <form onsubmit="calculateSum(event)">
+        <label for="numbers">Enter numbers (comma-separated):</label>
+        <br>
+        <input type="text" id="numbers" placeholder="e.g., 1,2,3,4">
+        <br><br>
+        <button type="submit">Calculate Sum</button>
+    </form>
+
+    <p id="result">Sum: </p>
+
+    <script src="./script/2-rest-parameters.js"></script>
+</body>
+</html>

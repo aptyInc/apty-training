@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 4 - Callback Function | Prem Rajput</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+        input {
+            padding: 5px;
+            font-size: 14px;
+            width: 300px;
+        }
+        button {
+            padding: 5px 10px;
+            font-size: 14px;
+        }
+        p {
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+    <h2>Process String Using a Callback</h2>
+
+    <form onsubmit="processInput(event)">
+        <label for="inputText">Enter a string:</label>
+        <br>
+        <input type="text" id="inputText" placeholder="e.g., hello">
+        <br><br>
+        <button type="submit">Uppercase the String</button>
+    </form>
+
+    <p id="result"></p>
+
+    <script src="./script/4-callback-fnc.js"></script>
+</body>
+</html>

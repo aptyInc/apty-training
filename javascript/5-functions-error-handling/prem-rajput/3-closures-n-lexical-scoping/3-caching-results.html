@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 3 - Caching Results | Prem Rajput</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+        input {
+            padding: 5px;
+            font-size: 14px;
+            width: 200px;
+            margin: 5px;
+        }
+        button {
+            padding: 5px 10px;
+            font-size: 14px;
+        }
+        p {
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+    <h2>Factorial with Caching</h2>
+
+    <form id="factorialForm">
+        <input type="number" id="numberInput" placeholder="Enter a number" min="0">
+        <br><br>
+        <button type="button" onclick="calculateFactorial()">Calculate Factorial</button>
+    </form>
+
+    <p id="result"></p>
+
+    <script src="./script/3-caching-results.js"></script>
+
+</body>
+</html>
