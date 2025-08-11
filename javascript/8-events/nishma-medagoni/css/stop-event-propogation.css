@@ -1,0 +1,22 @@
+header,footer {
+    text-align: center;
+    margin: 30px;
+    font-size: 20px;
+    font-weight: bold;
+}
+#parent {
+    width: 300px;
+    height: 300px;
+    background-color: lightblue;
+    padding: 20px;
+    text-align: center;
+}
+
+#child {
+    width: 100px;
+    height: 100px;
+    background-color: lightcoral;
+    margin: 50px auto;
+    text-align: center;
+    line-height: 100px;
+}
