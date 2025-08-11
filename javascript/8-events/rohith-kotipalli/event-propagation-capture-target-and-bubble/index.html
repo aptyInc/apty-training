@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Propagation: Capture, Target, and Bubble</title>
+</head>
+<body>
+    <h1>Event Phase Demonstration</h1>
+  <div class="level1" id="level1">
+    Level 1 (Capture Phase)
+    <div class="level2" id="level2">
+      Level 2 (Bubble Phase)
+      <div class="level3" id="level3">
+        Level 3 (Target Phase)
+      </div>
+    </div>
+  </div>
+  <h2>Event Logs:</h2>
+  <div id="logContainer" style="border: 1px solid #ccc; padding: 10px; height: 200px; overflow-y: auto; background: #f9f9f9;"></div>
+
+    <script src="./index.js" ></script>
+</body>
+</html>
