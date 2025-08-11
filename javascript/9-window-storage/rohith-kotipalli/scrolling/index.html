@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scrolling</title>
+</head>
+<body>
+    <h1>Scroll Control</h1>
+  <div>
+    <label for="xInput">X Position:</label>
+    <input type="number" id="xInput" placeholder="Enter X position">
+    <label for="yInput">Y Position:</label>
+    <input type="number" id="yInput" placeholder="Enter Y position">
+    <button onclick="scrollToPosition()">Scroll to Position</button>
+  </div>
+  <br>
+  <button onclick="scrollUp()">Scroll Up by 10px</button>
+  <button onclick="scrollDown()">Scroll Down by 10px</button>
+  
+  <div class="scroll-area" id="scrollArea">
+    <div class="scroll-content"></div>
+  </div>
+
+  <div id="result">
+    <p><strong>Current Scroll Position:</strong></p>
+    <p>X: <span id="currentX"></span></p>
+    <p>Y: <span id="currentY"></span></p>
+  </div>
+
+    <script src="./script.js" > </script>
+</body>
+</html>
