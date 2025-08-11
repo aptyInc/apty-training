@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form with proper label tags</title>
+    <style>
+        header {
+            text-align: center;
+            font-family: monospace;
+            background-color: antiquewhite;
+            padding: 20px;
+            color: orangered;
+        }
+        body {
+            box-sizing: border-box;
+            text-align: center;
+        }
+        input, label, button {
+            margin: 10px;
+            display: inline-block;
+        }
+
+        .form-content {
+            max-width: 650px;
+            width: 50%;
+            padding: 20px;
+            margin: 20px auto;
+            border: 1px solid #000;
+        }
+        .enter-details {
+            font-weight: 900;
+            margin-top: 20px;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Form</h1>
+    </header>
+    <section>
+        <div class="enter-details">
+            Enter Your details below:
+        </div>
+        <div class="form-content">
+            <form action="#">
+                <label for="fullname">Name:</label><br>
+                <input class="form" type="text" required name="fullname" placeholder="Full Name" id="fullname"><br>
+                <label for="emailid">Email-Id:</label><br>
+                <input class="form" type="email" required placeholder="abc@gmail.com" id="emailid"><br>
+                <label for="message">Message:</label><br>
+                <textarea name="message" id="" class="form" required rows="7" placeholder="Enter your message"></textarea><br>
+                <label for="submit"><b>Submit</b> button-sends form data</label><br>
+                <button name="submit" type="submit">Submit</button><br>
+                <label for="reset"><b>Reset</b> button-clears all form inputs</label><br>
+                <button name="reset" type="reset">Reset</button><br>
+                <label for="button"><b>Button</b> -does nothing by default (used with JavaScript)</label><br>
+                <button name="button" type="button">Button</button>                
+            </form>
+        </div>
+    </section>
+</body>
+</html>

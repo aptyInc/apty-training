@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Page</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 0;
+            margin-bottom: 40px;
+        }
+
+        header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background-color: #447D9B;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        .nav-bar a {
+            margin: 0 15px;
+            font-weight: bold;
+            color: #000;
+        }
+
+        h1 {
+            text-align: center;
+            margin-top: 0;
+        }
+
+        .main-content {
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            gap: 20px;
+            width: 100%;
+            padding: 20px;
+            max-width: 1300px;
+        }
+
+        aside {
+            width: 250px;
+            padding: 20px;
+            background-color: #f2f2f2;
+            border: 1px solid #ccc;
+        }
+
+        .content-blog {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 30px;
+        }
+
+        article {
+            max-width: 600px;
+            text-align: center;
+            padding: 20px;
+            margin-bottom: 40px;
+            border: 1px solid #ccc;
+            background-color: #f9f9f9;
+        }
+
+        footer {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            background-color: #447D9B;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        img {
+            width: 100%;
+            height: auto;
+            max-height: 500px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="nav-bar">
+            <a href="./assignment-1.html">Home</a>
+            <a href="./write-article.html">Write</a>
+        </div>
+    </header>
+
+    <h1>Artificial Intelligence</h1>
+
+    <div class="main-content">
+        <aside>
+            <h3>About This Blog</h3>
+            <p>This blog explores how artificial intelligence is shaping the world — from academic publishing to business and decision-making.</p>
+
+            <h4>Author</h4>
+            <p>Jane Doe, AI Researcher & Tech Blogger</p>
+        </aside>
+
+        <div class="content-blog">
+            <article>
+                <div class="content">
+                    <img src="https://miro.medium.com/v2/resize:fit:1100/format:webp/1*wDQA-RCUw8VFPioR07iLUQ.jpeg" alt="Machine learning and AI">
+                    <p>
+                        The academic world has long been adapting to new technologies, often with a mix of fascination and skepticism...
+                        Generative AI, like so many tools before it, promised to ease the heavy burden of intellectual work — and now we’re seeing its impact in one of the most traditional and ritualized corners of the scientific ecosystem: academic journals and their peer-review processes.
+                    </p>
+                </div>
+            </article>
+
+            <article>
+                <div class="content">
+                    <img src="https://www.brookings.edu/wp-content/uploads/2018/04/robotics.jpg?resize=2000,1331" alt="Good use of AI">
+                    <p>
+                        Despite its widespread lack of familiarity, AI is a technology that is transforming every walk of life. It is a wide-ranging tool that enables people to rethink how we integrate information, analyze data, and use the resulting insights to improve decisionmaking...
+                    </p>
+                </div>
+            </article>
+        </div>
+    </div>
+
+    <footer>
+        &copy; Thank You
+    </footer>
+</body>
+</html>
