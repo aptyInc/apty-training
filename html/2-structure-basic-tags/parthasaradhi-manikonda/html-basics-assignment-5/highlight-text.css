@@ -1,0 +1,21 @@
+.normal-text{
+ font-family: "Roboto";
+ font-size: 30px;
+}
+
+.highlighted-text{
+font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+background-color: yellow;
+font-size: 30px;
+font-weight: bold;
+font-style: italic;
+color:blue;
+}
+.highlighted-text-2{
+font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+background-color: rgb(0, 200, 255);
+font-size: 30px;
+font-weight: bold;
+font-style: italic;
+color:red;
+}

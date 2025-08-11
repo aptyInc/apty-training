@@ -1,0 +1,51 @@
+.profile-container-main{
+    border:5px solid grey ;
+    padding:5px;
+    border-radius: 10px;
+    background-color: #ffde22;
+    
+}
+.profile-image-container{
+    text-align: center;
+}
+.profile-image{
+    border-radius: 100px 100px 100px 100px;
+    height:150px;
+    width:150px;
+    text-align: center;
+}
+h1{
+    text-align: center;
+}
+.profile-name{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color:rgb(10, 208, 145);
+}
+.profile-bio{
+    font-family: "Roboto";
+    color:rgb(71, 6, 132);
+    font-size:20px;
+    text-align: center;
+}
+.profile-skill{
+    font-weight: bold;
+}
+.profile-technologies-heading{
+font-size:20px;
+font-weight: 700;
+}
+.profile-technologies{
+    color:blue;
+    
+}
+.profile-hobbies{
+    font-family: "Roboto";
+    
+    font-size:20px;
+
+}
+.thank-you-text{
+    text-align: center;
+    font-size: 25px;
+    text-decoration: underline;
+}

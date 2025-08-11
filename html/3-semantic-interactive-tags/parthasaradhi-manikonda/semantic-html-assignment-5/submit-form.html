@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Details-submission-form</title>
+    <link rel="stylesheet" href="submit-form.css"> 
+</head>
+<body>
+    <main>
+        <form action="/submit-form" method="post" enctype="application/x-www-form-urlencoded" class="submit-form">
+            <h2>Submit your details for further updates regarding the apty hackathon</h2> 
+            <div class="form-inputs">
+                <label for="full-name">Full Name:</label>
+                <input type="text" id="full-name" name="full-name" placeholder="Enter your full name" required>
+            </div>
+
+            <div class="form-inputs">
+                <label for="email-input">Email Address:</label>
+                <input type="email" id="email-input" name="email" placeholder="e.g., user@example.com" required>
+            </div>
+
+        <div class="form-inputs">
+                    <label for="convey-message">Convey here:</label>
+                    <textarea id="convey-message" name="convey-message" rows="4" cols="20" placeholder="Anything else you want to convey"></textarea>
+                    <button type="reset">reset</button>
+                </div>
+        <div>
+            <button type="submit" action="/submit-form">Submit</button>
+        </div>
+        </form>
+    </main>
+</body>
+</html>
