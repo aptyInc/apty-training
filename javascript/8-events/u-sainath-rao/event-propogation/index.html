@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Event Propagation</title>
+
+		<link rel="stylesheet" href="./index.css" />
+	</head>
+	<body>
+		<div id="level1">
+			Level 1 (Capture Phase)
+			<div id="level2">
+				Level 2 (Bubble Phase)
+				<div id="level3">Level 3 (Target Phase)</div>
+			</div>
+		</div>
+
+		<script src="./index.js"></script>
+	</body>
+</html>
