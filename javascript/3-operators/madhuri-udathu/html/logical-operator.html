@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logical Operators </title>
+    <style>
+        p{
+            color: brown;
+            padding:20px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Logical Operators</h1>
+
+    <!-- Value 1 Input and Type Selector -->
+    <label>Value 1: <input type="text" id="value1"></label>
+    <label>Type 1:
+        <select id="type1">
+            <option value="string">String</option>
+            <option value="number">Number</option>
+            <option value="boolean">Boolean</option>
+            <option value="null">Null</option>
+            <option value="undefined">Undefined</option>
+            <option value="object">Object</option>
+        </select>
+    </label>
+    <br><br>
+
+    <!-- Value 2 Input and Type Selector -->
+    <label>Value 2: <input type="text" id="value2"></label>
+    <label>Type 2:
+        <select id="type2">
+            <option value="string">String</option>
+            <option value="number">Number</option>
+            <option value="boolean">Boolean</option>
+            <option value="null">Null</option>
+            <option value="undefined">Undefined</option>
+            <option value="object">Object</option>
+        </select>
+    </label>
+    <br><br>
+
+    <!-- Buttons for Logical Operators -->
+    <button onclick="andOperator()">AND (&&)</button>
+    <button onclick="orOperator()">OR (||)</button>
+    <button onclick="notOperator()">NOT (!)</button>
+
+    <p id="output"></p>
+    <script src="../js/logical-operator.js"></script>
+</body>
+</html>
