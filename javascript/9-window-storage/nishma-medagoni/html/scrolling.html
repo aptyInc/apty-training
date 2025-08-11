@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Scrolling</title>
+    <link rel="stylesheet" href="../css/scrolling.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Scroll Control</h1>
+
+      <div class="input-group">
+        <label for="xPos">X Position:</label>
+        <input type="number" id="xPos" placeholder="0" />
+        <label for="yPos">Y Position:</label>
+        <input type="number" id="yPos" placeholder="0" />
+        <button onclick="scrollToPosition()">Scroll to Position</button>
+      </div>
+
+      <div class="input-group">
+        <button onclick="scrollUp()">Scroll Up</button>
+        <button onclick="scrollDown()">Scroll Down</button>
+      </div>
+
+      <div
+        style="height: 2000px; background: linear-gradient(white, lightgray)"
+      >
+        <p style="position: fixed; top: 10px; left: 10px">
+          Scroll this page to test functionality.
+        </p>
+      </div>
+    </div>
+
+    <script src="../js/scrolling.js"></script>
+  </body>
+</html>

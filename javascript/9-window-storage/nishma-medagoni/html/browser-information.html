@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Browser Information and Navigation</title>
+    <link rel="stylesheet" href="../css/browser-information.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Browser Navigation</h1>
+      <div id="browserInfo" class="input-group">
+        <h3>Browser Information:</h3>
+        <p id="browserDetails"></p>
+      </div>
+      <div class="input-group">
+        <label for="url">Enter URL:</label>
+        <input
+          type="text"
+          id="url"
+          placeholder="e.g., https://www.google.com"
+        />
+        <button onclick="navigateToURL()">Go</button>
+        <button onclick="goBack()">Back</button>
+        <button onclick="goForward()">Forward</button>
+        <button onclick="reloadPage()">Reload</button>
+      </div>
+    </div>
+
+    <script src="../js/browser-information.js"></script>
+  </body>
+</html>
