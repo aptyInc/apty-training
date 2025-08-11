@@ -1,0 +1,28 @@
+header {
+  background-color: #4caf50;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  border-radius: 20px;
+}
+nav{
+    text-align: right;
+}
+h3{
+    color: pink;
+}
+h1{
+    color: #98ff98;
+}
+h2{
+    color: purple;
+}
+body{
+    padding: 20px;
+}
+img{
+    text-align: center;
+}
+li{
+    color: rgb(1, 108, 108);
+}

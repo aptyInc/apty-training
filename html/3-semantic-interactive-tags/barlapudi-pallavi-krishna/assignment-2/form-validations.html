@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <title>Form Validations</title>
+        <link rel="stylesheet" href="style.css"/>
+    </head>
+    <body>
+    <form action="#" method="POST">
+        <h2>Create Account</h2>
+        <div>
+            <label for="username">UserName:</label>
+            <input type="text" id="username" name="username" placeholder="enter your name" minlength="5" maxlength="20" required/>
+        </div>
+        <div>
+            <label for="email">Email Address:</label>
+            <input type="email" id="email" name="email" placeholder="enter your email address" required/>
+        </div>
+        <div>
+            <label for="enter-password">Enter Password:</label>
+            <input type="password" id="enter-password" name="enter-password" required minlength="8" maxlength="100" placeholder="enter password"/>
+        </div>
+        <div>
+            <label for="confirm-password">Confirm Password:</label>
+            <input type="password" id="confirm-password" name="confirm-password" required minlength="8" maxlength="100" placeholder="confirm password"/>
+        </div>
+        <div>
+            <label for="phonenumber">Enter Your PhoneNumber</label>
+            <input type="tel" id="phonenumber" name="phonenumber" required pattern="[6-9]{1}[0-9]{9}" placeholder="enter your phonenumber"/>
+        </div>
+        <div>
+            <label for="dob">Enter Your Date of Birth</label>
+            <input type="date" id="dob" name="dob" required max="2007-12-31"/>
+        </div>
+        <div>
+            <label for="gender">Gender:</label>
+            <select id="gender" name="gender" required>
+            <option value="" disabled selected>--Select--</option>
+            <option value="Male">Male</option>
+            <option value="Female">Female</option>
+            <option value="Other">Other</option>
+            </select>
+        </div>
+        <div>
+            <label>User Role:</label>
+            <input type="radio" id="student" name="role" value="Student" required>
+            <label for="student">Student</label>
+            <input type="radio" id="professional" name="role" value="Professional" required>
+            <label for="professional">Professional</label>
+            <input type="radio" id="other-role" name="role" value="Other" required>
+            <label for="other-role">Other</label>
+        </div>
+        <div>
+            <label>Hobbies:</label>
+            <input type="checkbox" id="reading" name="hobbies" value="Reading">
+            <label for="reading">Reading</label>
+            <input type="checkbox" id="traveling" name="hobbies" value="Traveling">
+            <label for="traveling">Traveling</label>
+            <input type="checkbox" id="gaming" name="hobbies" value="Gaming">
+            <label for="gaming">Gaming</label>
+        </div>
+        
+        <button type="submit">Register</button>
+    </form> 
+
+</body>
+</html>
