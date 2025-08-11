@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PS5 Landing Page</title>
+  <style>
+    * {
+      font-family: Arial, sans-serif;
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+    body {
+      padding-top: 100px;
+    }
+
+    header {
+      background-color: white;
+      padding: 20px;
+      position: fixed;
+      top: 0;
+      width: 100%;
+    }
+    footer {
+      background-color: white;
+      padding: 20px;
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+      text-align: center;
+    }
+
+    .nav-bar {
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    .logo {
+      height: 40px;
+    }
+
+    .nav-items {
+      text-align: right;
+    }
+
+    .nav-items a {
+      text-decoration: none;
+      color: black;
+      font-weight: bold;
+      margin-left: 15px;
+    }
+
+    section {
+      max-width: 800px;
+      margin: 40px auto;
+      padding: 20px;
+    }
+
+    .watch-button {
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+
+    .video-wrapper {
+      margin-top: 20px;
+      text-align: center;
+    }
+
+    .about-section {
+      text-align: center;
+    }
+
+    .about-section h2 {
+      margin-bottom: 20px;
+    }
+
+    .about-section p {
+      margin-bottom: 30px;
+    }
+
+    .ps5-images img {
+      width: 100%;
+      max-width: 500px;
+      display: block;
+      margin: 20px auto;
+    }
+
+    .features-section h2 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    table {
+      width: 100%;
+      margin-top: 20px;
+    }
+
+    caption {
+      text-align: center;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    th, td {
+      padding: 10px;
+      text-align: center;
+    }
+
+    .logos-with-url {
+      text-align: center;
+    }
+
+    .store {
+      margin-bottom: 40px;
+    }
+
+    .store img {
+      width: 250px;
+      height: 250px;
+      display: block;
+      margin: 0 auto 10px;
+    }
+
+    .store a {
+      display: block;
+      font-weight: bold;
+      color: blue;
+    }
+
+    #pricing h2 {
+      text-align: center;
+    }
+
+    .logos-with-url {
+      margin-top: 50px;
+    }
+
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="nav-bar">
+      <img src="https://gmedia.playstation.com/is/image/SIEPDC/ps5-black-badge-01-en-11sep20?$400px$" alt="PS5 Logo" class="logo">
+      <div class="nav-items">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#features">Features</a>
+        <a href="#pricing">Pricing</a>
+      </div>
+    </div>
+  </header>
+
+  <section id="home">
+    <details>
+      <summary class="watch-button">Watch Video</summary>
+      <div class="video-wrapper">
+        <iframe width="560" height="315"
+          src="https://www.youtube.com/embed/eWf4wjPjMYE?si=yeU_D7MI5yY2ovmA"
+          title="YouTube video player" frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+        </iframe>
+      </div>
+    </details>
+  </section>
+
+  <section id="about" class="about-section">
+    <h2>PLAY LIKE NEVER BEFORE</h2>
+    <p>
+      Experience lightning-fast loading with an ultra-high speed SSD, deeper immersion with support for haptic feedback, adaptive triggers and 3D Audio, and an incredible collection of PlayStation games.
+    </p>
+
+    <div class="ps5-images">
+      <img src="https://t3.ftcdn.net/jpg/05/25/37/30/360_F_525373026_mEvYH9lgyphjWukE2aiqp4O20xSTiZ0g.jpg" alt="PS5 Image 1">
+      <img src="https://hips.hearstapps.com/hmg-prod/images/esq240112-digital-ecomm-playstationps5-0305-679133a09328d.jpg?crop=0.509xw:0.763xh;0.262xw,0.0765xh&resize=640:*" alt="PS5 Image 2">
+      <img src="https://cdn.mos.cms.futurecdn.net/sG7xNvwuo9EvpHByXSx3E3-970-80.jpg.webp" alt="PS5 Image 3">
+    </div>
+  </section>
+
+  <section id="features" class="features-section">
+    <h2>Key Features</h2>
+    <table>
+      <caption>PS5 Product Plans and Features</caption>
+      <thead>
+        <tr>
+          <th>Feature</th>
+          <th>Standard Edition</th>
+          <th>Digital Edition</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Ultra-fast SSD</td>
+          <td>Yes</td>
+          <td>Yes</td>
+        </tr>
+        <tr>
+          <td>Ray Tracing</td>
+          <td>Yes</td>
+          <td>Yes</td>
+        </tr>
+        <tr>
+          <td>4K Resolution</td>
+          <td>Yes</td>
+          <td>Yes</td>
+        </tr>
+        <tr>
+          <td>HDR Support</td>
+          <td>Yes</td>
+          <td>Yes</td>
+        </tr>
+        <tr>
+          <td>Disk Drive</td>
+          <td>Yes</td>
+          <td>No</td>
+        </tr>
+        <tr>
+          <td>Backward Compatibility</td>
+          <td>Yes</td>
+          <td>Yes</td>
+        </tr>
+        <tr>
+          <td>DualSense Controller</td>
+          <td>Included</td>
+          <td>Included</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section id="pricing">
+    <h2>You can purchase your PS5 from the following stores:</h2>
+    <div class="logos-with-url">
+      <div class="store">
+        <img src="https://play-lh.googleusercontent.com/FA_rzaEeLlumm0qh68q3z5Pt-PGMVPf2Z28_pbega7SaXSiKjSzh-0MZceB3FpdvQIBq" alt="flipkart logo">
+        <a href="https://www.flipkart.com/gaming/gaming-consoles/ps5/pr?sid=4rr,x1m,ogz" target="_blank">Buy here</a>
+      </div>
+      <div class="store">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg" alt="amazon logo">
+        <a href="https://www.amazon.in/s?k=amazon+ps5&adgrpid=56395396742&ext_vrnc=hi&hvadid=590592741054&hvdev=c&hvlocphy=9062141&hvnetw=g&hvqmt=e&hvrand=6684978980329762091&hvtargid=kwd-761772532525&hydadcr=15007_2268279&mcid=c90f3a2955ef333e89d581a6c06d1a20&tag=googinhydr1-21&ref=pd_sl_5jp2tm6gfs_e" target="_blank">Buy here</a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    &copy;PlayStation5 | Play Has No Limits.
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact</title>
+  <style>
+    * {
+      font-family: monospace;
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      padding-top: 100px;
+      padding-bottom: 100px;
+    }
+
+    header {
+      color: orangered;
+      padding: 20px;
+      background-color: white;
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 1000;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .nav-bar {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    .nav-items a,
+    .logo {
+      text-decoration: none;
+      margin: 0 10px;
+      color: orangered;
+      font-weight: bold;
+      font-size: large;
+    }
+
+    .contact-info {
+      max-width: 650px;
+      margin: 0 auto;
+      padding: 30px;
+      border: 2px solid #000;
+      font-size: larger;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+    }
+
+    label {
+      text-align: left;
+      margin-bottom: 5px;
+      margin-top: 15px;
+      font-weight: bold;
+    }
+
+    input,
+    textarea {
+      padding: 10px;
+      border: 1px solid #000;
+    }
+
+    button {
+      margin-top: 20px;
+      padding: 10px;
+      background-color: orangered;
+      color: white;
+      border: none;
+    }
+
+    .contact-info h2 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    footer {
+      color: orangered;
+      padding: 20px;
+      background-color: white;
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+      text-align: center;
+      font-weight: bold;
+      font-size: large;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="nav-bar">
+      <a href="./personal-homepage.html" class="logo">Saket Raj</a>
+      <div class="nav-items">
+        <a href="./personal-homepage.html">About</a>
+        <a href="./education.html">Education</a>
+        <a href="./skills.html">Skills</a>
+        <a href="./contact.html">Contact</a>
+      </div>
+    </div>
+  </header>
+
+  <section>
+    <div class="contact-info">
+      <h2>Let's Connect</h2>
+      <form action="#">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" placeholder="Full Name" required />
+
+        <label for="emailid">Email Id:</label>
+        <input type="email" id="emailid" name="emailid" placeholder="Enter your email" required />
+
+        <label for="todays-date">Date:</label>
+        <input type="date" id="todays-date" name="todays-date" required>
+
+        <label for="message">Message:</label>
+        <textarea name="message" id="message" placeholder="Enter a message(optional)" rows="7"></textarea>
+
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+  </section>
+
+  <footer>
+    &copy; Saket Raj; All Rights Reserved.
+  </footer>
+</body>
+</html>

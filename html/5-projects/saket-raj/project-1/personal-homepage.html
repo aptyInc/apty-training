@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Personal HomePage</title>
+  <style>
+    * {
+      font-family: monospace;
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      padding-top: 80px;
+    }
+
+    header {
+      color: orangered;
+      padding: 20px;
+      background-color: white;
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 1000;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .nav-bar {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    .nav-items a,
+    .logo {
+      text-decoration: none;
+      margin: 0 10px;
+      color: orangered;
+      font-weight: bold;
+      font-size: large;
+    }
+
+    #home {
+      margin: 50px auto;
+    }
+
+    section {
+      text-align: center;
+      position: relative;
+      max-width: 650px;
+      width: 70%;
+      margin: 0 auto;
+      padding: 20px 10px;
+      font-size: larger;
+    }
+    .about-info p{
+        margin: 25px auto;
+    }
+    .about-info h1 {
+      margin: 20px;
+    }
+    .social-links {
+      margin: 20px;
+      padding: 20px;
+    }
+    .social-links a{
+      margin: 20px;
+      text-decoration: none;
+    }
+
+    .btn {
+      background-color: antiquewhite;
+      color: #000;
+      margin: 50px;
+      padding: 10px;
+      border-radius: 10px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    footer {
+      color: orangered;
+      padding: 20px;
+      background-color: white;
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+      text-align: center;
+      font-weight: bold;
+      font-size: large;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="nav-bar">
+      <a href="./personal-homepage.html" class="logo">Saket Raj</a>
+      <div class="nav-items">
+        <a href="./personal-homepage.html">About</a>
+        <a href="./education.html">Education</a>
+        <a href="./skills.html">Skills</a>
+        <a href="./contact.html">Contact</a>
+      </div>
+    </div>
+  </header>
+
+  <section id="home">
+    <div class="info">
+      <h2>About Me</h2><br>
+      <p>
+        I have recently joined Apty as a Solution Engineer. I am excited to be a part of Apty as it offers a great opportunity to build key client-facing skills and learn what it takes to become a successful consultant. 
+      </p><br>
+      <p>
+        I am passionate about software development and have hands-on experience with programming languages like C, Java, and Python. My interest also extends to full-stack development and machine learning, where I enjoy building efficient and impactful solutions.
+      </p><br>
+      <p>
+        I look forward to learning, growing, and collaborating with talented teams to contribute meaningfully to exciting projects.
+      </p><br> 
+    </div>
+
+    <div class="social-links">
+        <a href="https://www.linkedin.com/in/saket-raj-5aaa45253/" class="btn" target="_blank">LinkedIn</a>
+        <a href="https://github.com/saketsraj" class="btn" target="_blank">GitHub</a>
+    </div>
+  </section>
+
+  <footer>
+    &copy; Saket Raj; All Rights Reserved.
+  </footer>
+</body>
+</html>
