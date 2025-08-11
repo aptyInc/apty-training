@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Child Iframe</title>
+    <script src="../scripts/child.js" defer></script>
+  </head>
+  <body>
+    <h1>Child Iframe</h1>
+
+    <!-- Input to send message to Parent -->
+    <div>
+      <h2>Send Message to Parent</h2>
+      <label for="messageToParent">Message:</label>
+      <input type="text" id="messageToParent" />
+      <button onclick="sendMessageToParent()">Send to Parent</button>
+    </div>
+
+    <!-- Display received message -->
+    <div>
+      <h2>Message from Parent</h2>
+      <p id="messageFromParent">No message from Parent yet.</p>
+    </div>
+  </body>
+</html>

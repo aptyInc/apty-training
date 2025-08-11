@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Scroll Control</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 20px;
+        height: 2000px; /* To make the page scrollable */
+      }
+      #scrollControls {
+        position: fixed;
+        top: 20px;
+        left: 20px;
+        padding: 10px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        background-color: #f9f9f9;
+        width: 250px;
+      }
+      label,
+      input,
+      button {
+        display: block;
+        margin-bottom: 10px;
+      }
+      button {
+        padding: 5px 10px;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="scrollControls">
+      <h3>Scroll Controller</h3>
+      <form id="scrollForm">
+        <label for="xInput">Enter X (horizontal) position:</label>
+        <input type="number" id="xInput" placeholder="e.g., 0" required />
+
+        <label for="yInput">Enter Y (vertical) position:</label>
+        <input type="number" id="yInput" placeholder="e.g., 100" required />
+
+        <button type="button" onclick="scrollToPosition()">
+          Scroll to Position
+        </button>
+      </form>
+
+      <button onclick="scrollByAmount(0, -10)">Scroll Up by 10px</button>
+      <button onclick="scrollByAmount(0, 10)">Scroll Down by 10px</button>
+
+      <div id="scrollOutput">
+        <h4>Scroll Position:</h4>
+        <p><strong>X:</strong> <span id="currentX">0</span></p>
+        <p><strong>Y:</strong> <span id="currentY">0</span></p>
+      </div>
+    </div>
+    <script src="../scripts/scrolling.js"></script>
+  </body>
+</html>
