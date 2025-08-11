@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./../style/simple-interest-calculator.css" />
+    <title>Simple Interest Calculator</title>
+</head>
+
+<body>
+    <main>
+        <h1>Simple Interest Calculator</h1>
+        <form id="form">
+            <div class="input-container">
+                <lable for="principalammount">Principal Amount</lable><br />
+                <input type="number" id="principalammount" required placeholder="Enter principal ammount here" />
+            </div>
+            <div class="input-container">
+                <lable for="rateofinterest">Rate of Interest</lable><br />
+                <input type="number" id="rateofinterest" required placeholder="Enter rate of interest ammount here" />
+            </div>
+            <div class="input-container">
+                <lable for="time">Time</lable><br />
+                <input type="number" id="time" required placeholder="Enter time period here" />
+            </div>
+            <button type="submit">submit</button>
+        </form>
+        <div id="result"></div>
+    </main>
+
+    <script type="text/javascript" src="./../script/simple-interest-calculator.js" />
+</body>
+
+</html>
