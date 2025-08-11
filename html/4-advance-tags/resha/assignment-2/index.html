@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shadow DOM</title>
+</head>
+
+<body>
+    <my-box></my-box>
+
+    <template id="box-template">
+        <style>
+            div {
+                padding: 10px;
+                background-color: lightblue;
+                border-radius: 5px;
+                font-family: sans-serif;
+            }
+        </style>
+        <div>
+            <p>Hello from Shadow DOM</p>
+        </div>
+    </template>
+
+    <script>
+        class MyBox extends HTMLElement {
+            constructor() {
+                super();
+                const shadow = this.attachShadow({ mode: 'open' });
+                const template = document.getElementById('box-template');
+                const clone = template.content.cloneNode(true);
+                shadow.appendChild(clone);
+            }
+        }
+
+        customElements.define('my-box', MyBox);
+    </script>
+</body>
+
+</html>
