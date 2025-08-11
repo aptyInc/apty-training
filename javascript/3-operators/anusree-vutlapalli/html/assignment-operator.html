@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment Calculator</title>
+    <link rel="stylesheet" href="../css/arthmetic-calculator.css">
+</head>
+<body>
+    <h1>Arithmetic Calculator</h1>
+    <div class="calculator">
+        <div class="calculator_input">
+            <input type="number" id="value1" placeholder="Enter value 1">
+            <input type="number" id="value2" placeholder="Enter value 2">
+        </div>
+        <div class="calculator_buttons">
+            <button onclick="add()">+=</button>
+            <button onclick="subtract()">-=</button>
+            <button onclick="multiply()">*=</button>
+            <button onclick="divide()">/=</button>
+            <button onclick="modulus()">%=</button>
+            <button onclick="increment()">++</button>
+            <button onclick="decrement()">--</button>
+            <button onclick="clearCalculator()">Clear</button>
+        </div>
+        <div id="result">Result: </div>
+    </div>
+    <script src="../js/assignment-calculator.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logical Assignment Calculator</title>
+    <link rel="stylesheet" href="../css/logical-calculator.css">
+</head>
+
+<body>
+    <div class="container">
+        <h2>Logical-Operations</h2>
+        <label for="value1">Value1:</label>
+        <input type="text" id="value1">
+        <br><br>
+        <label for="type1">Type 1:</label>
+        <select id="type1">
+            <option value="number">number</option>
+            <option value="boolean">boolean</option>
+            <option value="string">string</option>
+            <option value="object">object</option>
+            <option value="null">null</option>
+            <option value="undefined">undefined</option>
+
+        </select>
+
+        <br><br>
+        <label for="value2">Value2:</label>
+        <input type="text" id="value2">
+        <label for="type2">Type 2:</label>
+        <select id="type2">
+            <option value="number">number</option>
+            <option value="boolean">boolean</option>
+            <option value="string">string</option>
+            <option value="object">object</option>
+            <option value="null">null</option>
+            <option value="undefined">undefined</option>
+        </select>
+        <br><br>
+        <div class="app-buttons">
+            <!-- Comparison Operators -->
+            <button onclick="compareLogicalAndAssignment()">&&=</button>
+            <button onclick="compareLogicalOrAssignment()">||=</button>
+            <button onclick="compareLogicalNullishAssign()">??=</button>
+        </div>
+        <div class="result" id="result"></div>
+    </div>
+    <script src="../js/logical-assignment-operator.js"></script>
+
+</body>
+
+</html>
