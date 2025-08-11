@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cookie Management</title>
+</head>
+<body>
+
+  <h1>Cookie Management</h1>
+
+  <!-- Form to set a cookie -->
+  <label for="cookieName">Cookie Name:</label>
+  <input type="text" id="cookieName">
+  <br><br>
+
+  <label for="cookieValue">Cookie Value:</label>
+  <input type="text" id="cookieValue">
+  <br><br>
+
+  <button onclick="setCookie()">Set Cookie</button>
+  <button onclick="readCookie()">Read Specific Cookie</button>
+  <button onclick="deleteCookie()">Delete Cookie</button>
+  <button onclick="readAllCookies()">Show All Cookies</button>
+
+  <p id="cookieResult"></p>
+
+  <script src="../js/script.js"></script>
+
+</body>
+</html>
