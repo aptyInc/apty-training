@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Update List Items</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 20px;
+      }
+      ul {
+        list-style-type: square;
+        margin: 20px 0;
+        padding: 0;
+      }
+      li {
+        margin: 5px 0;
+      }
+      button {
+        margin-top: 20px;
+        padding: 10px 20px;
+        font-size: 16px;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Update List Items</h1>
+    <ul id="itemList">
+      <li>Item 1</li>
+      <li>Item 2</li>
+      <li>Item 3</li>
+      <li>Item 4</li>
+      <li>Item 5</li>
+    </ul>
+    <button id="updateButton">Update List</button>
+
+    <script>
+      document
+        .getElementById("updateButton")
+        .addEventListener("click", function () {
+          // Get all list items
+          const listItems = document.querySelectorAll("#itemList li");
+
+          // Update the second item (index 1) and fourth item (index 3)
+          if (listItems[1]) listItems[1].textContent = "Updated Item";
+          if (listItems[3]) listItems[3].textContent = "Updated Item";
+        });
+    </script>
+  </body>
+</html>
