@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>E-Commerce App</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+    }
+    header {
+      background: linear-gradient(to right,#24304e,#4b4425);
+      color: white;
+      padding: 1rem;
+      text-align: center;
+    }
+    .container {
+      padding: 1rem;
+      margin:20px;
+    }
+    .product {
+      border: 1px solid black;
+      border-radius: 5px;
+      padding: 20px;
+      margin-bottom: 5px;
+      width:300px;
+    }
+    .product img {
+      max-width: 100%;
+      height: auto;
+    }
+    .product h3 {
+      margin: 0;
+    }
+    .search-bar {
+      margin-bottom: 1rem;
+    }
+    .search-bar input {
+      width: 80%;
+      padding: 0.5rem;
+      margin-right: 0.5rem;
+    }
+    .search-bar button {
+      padding: 0.5rem;
+    }
+    #productList{
+        display:flex;
+        gap:20px;
+        flex-wrap: wrap;
+        align-items: center;
+        margin-left:40px;
+    }
+    .product1{
+        display:flex;
+        gap:20px;
+    }
+    .text{
+        display:flex;
+        flex-direction: column;
+        text-align:left;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>E-Commerce Application</h1>
+  </header>
+  <div class="container">
+    <div class="search-bar">
+      <input type="text" id="searchInput" placeholder="Search products...">
+      <button onclick="searchProducts()">Search</button>
+    </div>
+    <div id="productList"></div>
+  </div>
+
+  <script src="../madhuri-udathu/products.js"></script>
+</body>
+</html>
