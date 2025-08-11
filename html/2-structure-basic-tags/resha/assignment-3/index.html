@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: medium;
+      }
+
+      h1 {
+        text-align: center;
+        color: cadetblue;
+      }
+
+      table {
+        border-collapse: collapse;
+        margin: 50px auto;
+        border: 2px solid;
+      }
+
+      th,
+      th,
+      td {
+        border: 2px solid;
+        text-align: center;
+        padding: 15px;
+      }
+
+      form {
+        width: 250px;
+        margin: 10px auto;
+      }
+
+      label,
+      input {
+        display: block;
+        width: 200px;
+        margin-bottom: 10px;
+      }
+
+      button {
+        width: 100%;
+        padding: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Timetable</h1>
+
+    <table>
+      <tr>
+        <th>Day</th>
+        <th>9:00 - 10:00</th>
+        <th>10:00 - 11:00</th>
+        <th>11:15 - 12:15</th>
+        <th>12:15 - 1:15</th>
+        <th>1:15 - 2:15</th>
+        <th>2:15 - 3:15</th>
+      </tr>
+      <tr>
+        <td>Monday</td>
+        <td colspan="2">Math</td>
+        <td>Science</td>
+        <td>Sports</td>
+        <td rowspan="6"><b>LUNCH</b></td>
+        <td>Biology</td>
+      </tr>
+      <tr>
+        <td>Tuesday</td>
+        <td>Physics</td>
+        <td>Math</td>
+        <td>Chemistry</td>
+        <td>Art</td>
+        <td>English</td>
+      </tr>
+      <tr>
+        <td>Wednesday</td>
+        <td>Biology</td>
+        <td>Yoga</td>
+        <td colspan="2">History</td>
+        <td>Art</td>
+      </tr>
+      <tr>
+        <td>Thursday</td>
+        <td>Computer</td>
+        <td>Math</td>
+        <td>English</td>
+        <td>Geography</td>
+        <td>Science</td>
+      </tr>
+      <tr>
+        <td>Friday</td>
+        <td>Math</td>
+        <td>Sports</td>
+        <td>English</td>
+        <td>Biology</td>
+        <td>Geography</td>
+      </tr>
+    </table>
+
+    <h1>Login</h1>
+
+    <form action="#">
+      <label for="username">Name:</label>
+      <input
+        type="text"
+        id="username"
+        name="username"
+        placeholder="Bob"
+        required
+      />
+
+      <label for="password">Password:</label>
+      <input
+        type="password"
+        id="password"
+        name="password"
+        placeholder="bob@example.com"
+        required
+      />
+
+      <button type="submit">Login</button>
+    </form>
+  </body>
+</html>
