@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sum and Average Calculator</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        h1 {
+            font-style: oblique;
+        }
+
+        .container {
+            border: 20x solid grey;
+            box-shadow: 1px;
+            background-color: whitesmoke;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 50%;
+            padding: 20px;
+
+            button {
+                color: brown;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Sum and Average Calculator</h1>
+    <p>Enter numbers separated by commas:</p>
+    <input type="text" id="numbersInput" placeholder="Enter array of numbers here"><br>
+    <button onclick="calculateSumAndAverage()">Calculate</button>
+    <p id="result"></p>
+
+    <script src="/javascript/4-control-structures-loops/madhuri-udathu/js/loops-js/sum-average.js"></script>
+</body>
+
+</html>

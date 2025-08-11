@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prime numbers</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        h1 {
+            color: gold;
+        }
+
+        .container {
+            border: 20x solid grey;
+            box-shadow: 1px;
+            background-color: whitesmoke;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 50%;
+            padding: 20px;
+
+            button {
+                color: brown;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Enter range of prime numbers</h1>
+    <div class="container">
+    <label for="value1">Start Number:</label>
+    <input type="number" id="value1" name="value1" placeholder="Starting number:"><br>
+    <label for="value2">End Number:</label>
+    <input type="number" id="value2" name="value2" placeholder="Ending Number:"><br>
+    <button onclick="primeNumbers()">Find Numbers</button><br>
+    <div id="result"></div>
+    <script src="/javascript/4-control-structures-loops/madhuri-udathu/js/loops-js/prime-number.js"></script>
+    </div>
+</body>
+</html>

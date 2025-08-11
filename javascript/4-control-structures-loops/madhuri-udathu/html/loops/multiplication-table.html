@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multiplication Table</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            text-align: center;
+        }
+
+        input[type="number"] {
+            padding: 5px;
+            font-size: 16px;
+        }
+
+        button {
+            padding: 5px 10px;
+            font-size: 16px;
+            cursor: pointer;
+            background-color: antiquewhite;
+            border-style: groove;
+        }
+
+        #table {
+            margin: 20px auto;
+            border-collapse: collapse;
+            width: 50%;
+            border: 1px solid #000;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Multiplication Table Generator</h1>
+    <p>Enter a number to generate its multiplication table:</p>
+    <input type="number" id="numberInput" placeholder="Enter a number">
+    <button onclick="generateTable()">Generate Table</button>
+    <div id="table"></div>
+    <script src="/javascript/4-control-structures-loops/madhuri-udathu/js/loops-js/multiplication-table.js"></script>
+</body>
+
+</html>
