@@ -1,0 +1,36 @@
+header,footer {
+    text-align: center;
+    font-weight: bold;
+    font-size: x-large;
+    margin: 30px;
+}
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+section {
+    border:2px solid black;
+    margin: 40px;
+    padding: 40px;
+}
+div {
+    padding: 30px;
+}
+button {
+    background-color: black;
+    color: white;
+    padding: 10px;
+    cursor: pointer;
+    margin: 20px;
+}
+input {
+    padding: 10px;
+}
+
+#result {
+    border: 2px solid brown;
+    width: 300px;
+    padding: 10px;
+}
