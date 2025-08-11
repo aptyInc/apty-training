@@ -1,0 +1,22 @@
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 20px;
+    h1{text-align: center;}
+    #inline {
+        padding: 20px;
+        background-color: pink;
+    }
+
+    #external {
+        padding: 20px;
+        background-color: lightseagreen;
+    }
+
+
+    #internal {
+        padding: 20px;
+        background: linear-gradient(#F312, #f313);
+    }
+}
