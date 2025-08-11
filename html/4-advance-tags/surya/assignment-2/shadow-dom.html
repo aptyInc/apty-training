@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shadow DOM Custom Component</title>
+</head>
+<body>
+    <h1>Shadow DOM Example</h1>
+    <my-custom-element></my-custom-element>
+    <template id="my-template">
+        <style>
+            h2 {
+                color: blue;
+            }
+            .shadow-content {
+                background-color: lightgray;
+                padding: 10px;
+                border: 1px solid black;
+                width: 250px;
+            }
+        </style>
+        <div class="shadow-content">
+            <h2>Shadow DOM Content</h2>
+        </div>
+        
+    </template>
+    <script>
+        class MyCustomElement extends HTMLElement {
+            constructor() {
+                super();
+            }
+            connectedCallback() {
+                const shadowRoot = this.attachShadow({ mode: 'open' });
+                const template = document.getElementById('my-template');
+                const templateContent = template.content.cloneNode(true);
+                shadowRoot.appendChild(templateContent);
+            }
+        }
+        customElements.define('my-custom-element', MyCustomElement);
+    </script>
+</body>
+</html>
