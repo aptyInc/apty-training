@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Registration Form</title>
+    <link rel="stylesheet" href="registration-form.css"> 
+</head>
+<body>
+    <main class="form-container">
+        <form action="/submit-registration" method="post" enctype="application/x-www-form-urlencoded" class="registration-form">
+            <h2>Register here for the apty Hackathon.</h2> 
+            <p>You can register for 1 or more hackathons in the coming months.</p>
+            <div class="form-group">
+                <label for="full-name">Full Name:</label>
+                <input type="text" id="full-name" name="full-name" placeholder="Enter your full name" required>
+            </div>
+
+            <div class="form-group">
+                <label for="email-input">Email Address:</label>
+                <input type="email" id="email-input" name="email" placeholder="e.g., user@example.com" required>
+            </div>
+
+            
+            
+            <div class="form-group">
+                <label for="dob-input">Date of Birth:</label>
+                <input type="date" id="dob-input" name="date-of-birth" 
+                min = "2000-01-01"max="2007-01-01" required> 
+            </div>
+
+            <div class="form-group">
+                <label for="phone">Phone Number:</label>
+                <input type="tel" id="phone" name="phone-number" placeholder="e.g., 9876543210" pattern="[0-9]{10}" aria-describedby="phoneHelp">
+                <small id="help-text" class="form-text">Enter 10-digit phone number (numbers only).</small>
+            </div>
+
+            <div class="form-group">
+                <label for="gender">Gender:</label>
+                <select id="gender" name="gender">
+                    <option value="">-- Please Select --</option>
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                    <option value="other">Other</option>
+                    <option value="prefer_not_to_say">Prefer not to say</option>
+                </select>
+            </div>
+
+            
+
+            <div class="form-group">
+                <label>Select Your Topics:</label><br>
+                <input type="checkbox" id="AI" name="hackathon-topic" value="ai-integration">
+                <label for="AI">AI Integration in products</label><br>
+                <input type="checkbox" id="Cyber" name="hackathon-topic" value="cyber-attacks-scope">
+                <label for="Cyber">Scope for cyber attacks on a product</label><br>
+                <input type="checkbox" id="Security" name="hobbies" value="product-security">
+                <label for="Security">Securing your product</label>
+            </div>
+
+            <div class="form-group">
+                <label>Preferred Communication Method:</label><br>
+                <input type="radio" id="Email" name="communication" value="email" >
+                <label for="Email">Email</label><br>
+                <input type="radio" id="Phone" name="communication" value="phone">
+                <label for="Phone">Phone</label><br>
+                <input type="radio" id="SMS" name="communication" value="sms">
+                <label for="SMS">SMS</label>
+            </div>
+
+            <div class="form-group">
+                <label for="address">Address:</label>
+                <textarea id="address" name="address" rows="4" cols="50" placeholder="Enter your full address"></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="profile-picture">Upload Profile Picture:</label>
+                <input type="file" id="profile-picture" name="profile-picture" accept="image/*">
+            </div>
+
+            <div class="form-group">
+                <label for="Github">Github (Optional):</label>
+                <input type="url" id="Github" name="Github" placeholder="Github-Link">
+            </div>
+            
+             <div class="form-group">
+                <label for="reporting-time">Reporting Time:</label>
+                <input type="time" id="reporting-time" name="reporting-time">
+            </div>
+
+            <div class="form-group">
+                <label for="start-week">Attending Week:</label>
+                <input type="week" id="start-week" name="start-week">
+            </div>
+
+            <div class="form-group">
+                <label for="start-month">Attending Month:</label>
+                <input type="month" id="start-month" name="start-month">
+            </div>
+
+            <div class="form-group">
+                <label for="gpa">GPA:</label>
+                <input type="number" id="gpa" name="gpa" step="0.1" min="0.0" max="10" placeholder="e.g., 3.5">
+            </div>
+            
+            <div class="form-group">
+                <input type="checkbox" id="terms-and-conditions" name="terms-and-conditions" required>
+                <label for="terms-and-conditions">I agree to the Terms and Conditions</label>
+            </div>
+
+            <div class="form-actions">
+                <button type="submit" class="btn-submit">Register Now</button>
+        </form>
+    </main>
+</body>
+</html>
