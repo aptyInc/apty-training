@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stack</title>
+    <style>
+        body {
+          font-family: Arial, sans-serif;
+          background-color: #f0fff0; 
+          color: #007;
+          padding: 20px;
+        }
+    
+        h1 {
+          color: #009; 
+        }
+    
+        input, button {
+          font-size: 16px;
+          padding: 10px;
+          margin: 5px 0;
+          border: 2px solid #03003c; 
+          border-radius: 5px;
+        }
+    
+        button {
+          background-color: #009; 
+          color: white;
+          cursor: pointer;
+          border-bottom: 20px;
+        }
+    
+        button:hover {
+          background-color: #007; 
+        }
+      </style>
+</head>
+<body>
+  <h1>Dynamic Stack Implementation</h1>
+  <p>Use the buttons below to interact with the stack.</p>
+  <input type="text" id="stackInput" placeholder="Enter a value to push" size="30"><br>
+  <button onclick="pushToStack()">Push</button>
+  <button onclick="popFromStack()">Pop</button>
+  <button onclick="peekStack()">Peek</button>
+  <button onclick="checkEmpty()">Is Empty?</button>
+
+  <div id="output" class="output"></div>
+  <script src="../js/array-stack.js"></script>
+</body>
+</html>
