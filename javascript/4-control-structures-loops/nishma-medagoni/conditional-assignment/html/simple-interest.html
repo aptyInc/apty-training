@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src = "../javascript/simple-interest.js"></script>
+    <link rel = "stylesheet" href = "../css/simple-interest.css"/>
+    <title>Simple Interest Calculator</title>
+</head>
+<body>
+    <header>
+        Simple Interest Calculator
+    </header>
+    <main>
+        <section>
+            <div>
+                <label for = "principle">Principal Amount:</label>
+                <input type = "number" id = "principle">
+                <label for = "rate">Rate of Interest (%):</label>
+                <input type = "number" id = "rate">
+                <label for = "time">Time (in years):</label>
+                <input type = "number" id = "time">
+                <button onClick = "calculate()">Generate Result</button>
+                <div id = "result"></div>
+            </div>
+        </section>
+    </main>
+    <footer>2024@JavaScript Assignment</footer>
+</body>
+</html>
