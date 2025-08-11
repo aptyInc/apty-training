@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Video & Audio Webpage</title>
+</head>
+<body>
+    <h1>Video and Audio Webpage</h1>
+    <figure style="display: flex; flex-direction: column; gap: 20px;">
+        <video controls width="600" height="300" poster="./sources/thumnail.jpg" style="object-fit: cover;" muted>
+            <source src="./sources/nature.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <figcaption>Nature Video</figcaption>
+        <p>This is a video about the beauty of nature.</p>
+        <audio controls>
+            <source src="./sources/audio.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+        <figcaption>Relaxing Music</figcaption>
+        <p>This is a relaxing music track to enhance your experience.</p>
+    </figure>
+</body>
+</html>
