@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Media Showcase</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background: #fdf6f0;
+        padding: 30px;
+      }
+      h2 {
+        color: #6a3e3e;
+      }
+      video,
+      audio {
+        display: block;
+        margin-top: 20px;
+        margin-bottom: 10px;
+      }
+      p {
+        margin-top: 5px;
+        font-style: italic;
+        color: #555;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Relaxing Beach Scene</h2>
+    <video width="640" height="360" controls>
+      <source src="./beach-video.mp4" type="video/mp4" />
+      <track
+        src="./beach-captions.vtt"
+        kind="captions"
+        srclang="en"
+        label="English"
+      />
+      Your browser does not support the video tag.
+    </video>
+    <p>
+      Description: A peaceful video of a girl sitting on a beach, gazing at the
+      ocean, with calm clouds and waves.
+    </p>
+
+    <h2>Energetic Drum Beat</h2>
+    <audio controls>
+      <source src="./drumbeat.mp3" type="audio/mp3" />
+      Your browser does not support the audio element.
+    </audio>
+    <p>
+      Description: This audio track features a fast-paced, high-energy drum beat
+      designed to uplift and energize.
+    </p>
+  </body>
+</html>

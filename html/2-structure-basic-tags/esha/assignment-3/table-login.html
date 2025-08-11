@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Class Timetable and Login</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f2f2f2;
+      margin: 30px;
+    }
+
+    h1, h2 {
+      text-align: center;
+      color: #333;
+    }
+
+    .table-wrapper {
+      overflow-x: auto;
+    }
+
+    table {
+      width: 80%;
+      margin: 20px auto;
+      background-color: #fff;
+      border-spacing: 0;
+      border-collapse: collapse;
+    }
+
+    table, th, td {
+      border: 1px solid #ccc;
+    }
+
+    th {
+      background-color: #f7b731;
+      color: white;
+    }
+
+    th, td {
+      padding: 12px;
+      text-align: center;
+    }
+
+    form {
+      width: 250px;
+      margin: 30px auto;
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: bold;
+    }
+
+    input[type="text"],
+    input[type="password"] {
+      width: 100%;
+      padding: 8px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    input[type="submit"] {
+      width: 100%;
+      padding: 8px;
+      background-color: #4caf50;
+      color: white;
+      border: none;
+      cursor: pointer;
+      border-radius: 4px;
+    }
+
+    input[type="submit"]:hover {
+      background-color: #45a049;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>My Class Timetable</h1>
+
+  <div class="table-wrapper">
+    <table>
+      <tr>
+        <th scope="col">Day</th>
+        <th scope="col">9:00 - 10:00</th>
+        <th scope="col">10:00 - 11:00</th>
+        <th scope="col">11:00 - 12:00</th>
+        <th scope="col">12:00 - 1:00</th>
+      </tr>
+      <tr>
+        <td>Monday</td>
+        <td>Math</td>
+        <td>English</td>
+        <td>Science</td>
+        <td rowspan="5">Sports</td>
+      </tr>
+      <tr>
+        <td>Tuesday</td>
+        <td colspan="2">Physics</td>
+        <td>Computer</td>
+      </tr>
+      <tr>
+        <td>Wednesday</td>
+        <td>Biology</td>
+        <td>English</td>
+        <td>Chemistry</td>
+      </tr>
+      <tr>
+        <td>Thursday</td>
+        <td colspan="2">History</td>
+        <td>Math</td>
+      </tr>
+      <tr>
+        <td>Friday</td>
+        <td>Computer</td>
+        <td>English</td>
+        <td>Science</td>
+      </tr>
+    </table>
+  </div>
+
+  <h2>Login Form</h2>
+
+  <form aria-label="Student login form">
+    <label for="username">Username:</label>
+    <input type="text" id="username" name="username" placeholder="Enter your username" required />
+
+    <label for="password">Password:</label>
+    <input type="password" id="password" name="password" placeholder="Enter your password" required />
+
+    <input type="submit" value="Login" title="Click to log in" />
+  </form>
+
+</body>
+</html>

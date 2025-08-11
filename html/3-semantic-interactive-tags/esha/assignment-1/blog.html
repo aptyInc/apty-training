@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Esha's Journal</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --bg: #fdfdfd;
+        --text: #2d2d2d;
+        --accent: #ff7eb3;
+        --header: linear-gradient(to right, #ff758c, #ff7eb3);
+        --aside-bg: #f0f4ff;
+        --border: #ffa7c4;
+      }
+
+      [data-theme="dark"] {
+        --bg: #181818;
+        --text: #f1f1f1;
+        --accent: #ffa7c4;
+        --header: linear-gradient(to right, #2a2a2a, #444);
+        --aside-bg: #2e2e2e;
+        --border: #5f4b8b;
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        font-family: "Quicksand", sans-serif;
+        background: var(--bg);
+        color: var(--text);
+        line-height: 1.6;
+        transition: 0.3s;
+      }
+
+      header {
+        background: var(--header);
+        color: #fff;
+        text-align: center;
+        padding: 50px 20px;
+      }
+
+      header h1 {
+        font-size: 2.5em;
+        margin-bottom: 10px;
+      }
+
+      nav {
+        background: #fff;
+        text-align: center;
+        padding: 12px 0;
+        border-bottom: 1px solid #eee;
+      }
+
+      nav a {
+        margin: 0 15px;
+        text-decoration: none;
+        color: var(--accent);
+        font-weight: bold;
+      }
+
+      .toggle-btn {
+        position: fixed;
+        top: 15px;
+        right: 15px;
+        padding: 8px 12px;
+        border: none;
+        background: var(--accent);
+        color: #fff;
+        border-radius: 5px;
+        cursor: pointer;
+        font-weight: bold;
+      }
+
+      main {
+        margin: 40px auto;
+        padding: 0 20px;
+      }
+
+      article {
+        background: #fff8f9;
+        padding: 20px;
+        border-left: 4px solid var(--border);
+        margin-bottom: 30px;
+        border-radius: 10px;
+      }
+
+      .date {
+        font-size: 0.9em;
+        color: #666;
+        margin-bottom: 12px;
+      }
+
+      aside {
+        background: var(--aside-bg);
+        border-left: 4px solid var(--border);
+        padding: 16px;
+        font-style: italic;
+        border-radius: 10px;
+        margin-top: 40px;
+        position: relative;
+      }
+
+      aside button {
+        position: absolute;
+        top: 12px;
+        right: 12px;
+        background: #fff;
+        border: none;
+        padding: 8px 12px;
+        border-radius: 5px;
+        font-weight: bold;
+        cursor: pointer;
+      }
+
+      footer {
+        text-align: center;
+        padding: 20px;
+        font-size: 0.9em;
+        color: #888;
+        border-top: 1px solid #eee;
+        margin-top: 50px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <button class="toggle-btn" onclick="toggleTheme()">🌓 Theme</button>
+
+    <header>
+      <h1>Esha's Journal</h1>
+      <p>Observations, thoughts, and everyday reflections</p>
+    </header>
+
+    <nav>
+      <a href="#food">🍜 Food</a>
+      <a href="#friends">😊 Friends</a>
+      <a href="#quote">🎬 Quote</a>
+    </nav>
+
+    <main>
+      <section>
+        <article id="food">
+          <h2>Weekend Food Trails 🍜</h2>
+          <p class="date">July 7, 2025</p>
+          <p>
+            I ended up at a small food truck near the park—spicy momos for ₹50.
+            Unreal!
+          </p>
+          <p>
+            It’s not just the food—it’s the breeze, casual talks, and city
+            lights ✨
+          </p>
+        </article>
+
+        <article id="friends">
+          <h2>Making New Friends, Randomly 😄</h2>
+          <p class="date">July 4, 2025</p>
+          <p>
+            Talked to someone at a bookstore café for 2 hours—no phones, just
+            vibes.
+          </p>
+          <p>Unplanned moments hit different. People are awesome sometimes.</p>
+        </article>
+      </section>
+
+      <aside id="quote">
+        “Solo movie nights are not lonely — they're self-care.” 🎬
+        <button
+          onclick="alert('💡 Tip: Watch your favorite genre with no distractions.')"
+        >
+          Inspire Me
+        </button>
+      </aside>
+    </main>
+
+    <footer>&copy; 2025 Esha's Journal | Real thoughts. Simple days.</footer>
+
+    <script>
+      function toggleTheme() {
+        const html = document.documentElement;
+        if (html.getAttribute("data-theme") === "dark") {
+          html.setAttribute("data-theme", "light");
+        } else {
+          html.setAttribute("data-theme", "dark");
+        }
+      }
+    </script>
+  </body>
+</html>
