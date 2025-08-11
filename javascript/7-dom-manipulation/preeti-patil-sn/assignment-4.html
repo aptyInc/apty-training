@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Element Counter</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 20px;
+      }
+      button {
+        margin-top: 20px;
+        padding: 10px 20px;
+        font-size: 16px;
+        cursor: pointer;
+      }
+      .output {
+        margin-top: 20px;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        background-color: #f9f9f9;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Element Counter</h1>
+    <div>
+      <p>Paragraph 1</p>
+      <p>Paragraph 2</p>
+      <span>Span 1</span>
+      <span>Span 2</span>
+      <iframe srcdoc="<p>Iframe Content</p>" width="300" height="100"></iframe>
+      <div>
+        <p>Nested Paragraph</p>
+        <span>Nested Span</span>
+      </div>
+    </div>
+    <button id="countButton">Count Elements</button>
+    <div id="output" class="output"></div>
+
+    <script>
+      document
+        .getElementById("countButton")
+        .addEventListener("click", function () {
+          const elements = document.body.getElementsByTagName("*");
+          const countMap = {};
+
+          // Count elements
+          for (let el of elements) {
+            const tagName = el.tagName.toLowerCase();
+            countMap[tagName] = (countMap[tagName] || 0) + 1;
+          }
+
+          // Display results
+          const outputDiv = document.getElementById("output");
+          outputDiv.innerHTML = "<h3>Element Counts:</h3>";
+          for (let tag in countMap) {
+            outputDiv.innerHTML += `<p>${tag}: ${countMap[tag]}</p>`;
+          }
+        });
+    </script>
+  </body>
+</html>

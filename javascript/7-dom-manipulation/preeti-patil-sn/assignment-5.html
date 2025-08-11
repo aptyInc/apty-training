@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nested Elements Counter</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 20px;
+      }
+      .parent {
+        margin-bottom: 20px;
+        padding: 10px;
+        border: 1px solid #ccc;
+      }
+      .result {
+        margin-top: 20px;
+        padding: 10px;
+        border: 1px solid #4caf50;
+        background-color: #f9f9f9;
+      }
+      button {
+        padding: 10px 15px;
+        background-color: #4caf50;
+        color: white;
+        border: none;
+        cursor: pointer;
+      }
+      button:hover {
+        background-color: #45a049;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Nested Elements Counter</h1>
+    <div class="parent" id="parent1">
+      <p>
+        This is a paragraph inside parent 1.
+        <span>This is a span inside the paragraph.</span>
+      </p>
+    </div>
+    <div class="parent" id="parent2">
+      <p>This is a paragraph inside parent 2.</p>
+      <div>
+        <p>Nested paragraph inside a div.</p>
+        <span>Nested span inside a div.</span>
+      </div>
+    </div>
+    <div class="parent" id="parent3">
+      <iframe src="about:blank"></iframe>
+      <p>Another paragraph with a nested <span>span</span>.</p>
+    </div>
+
+    <button id="countButton">Count Elements</button>
+
+    <div class="result" id="result">
+      Click the button to count nested elements.
+    </div>
+
+    <script>
+      document.getElementById("countButton").addEventListener("click", () => {
+        const parents = document.querySelectorAll(".parent");
+        const resultDiv = document.getElementById("result");
+        resultDiv.innerHTML = "<strong>Nested Elements Count:</strong><ul>";
+
+        parents.forEach((parent, index) => {
+          const nestedCount = parent.querySelectorAll("*").length;
+          resultDiv.innerHTML += `<li>Parent ${
+            index + 1
+          }: ${nestedCount} nested elements</li>`;
+        });
+
+        resultDiv.innerHTML += "</ul>";
+      });
+    </script>
+  </body>
+</html>
