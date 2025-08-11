@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Display Nested Elements</title>
+        <link rel="stylesheet" href="../styles/assignment.css" />
+    </head>
+    <body>
+        <header>
+            <h1>Display Nested Elements</h1>
+        </header>
+
+        <main>
+            <section>
+                <div class="div_root">
+                    <div class="parent">
+                        <div class="child">
+                            <div class="child_2">
+                                <div>Apty 1</div>
+                                <div>Apty 2</div>
+                                <div>Apty 3</div>
+                                <div class="child_3">
+                                    <span class="span_root"
+                                        ><span class="paren"
+                                            ><span class="child1"
+                                                ><span class="child2">
+                                                    Final Child
+                                                </span></span
+                                            ></span
+                                        ></span
+                                    >
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <ol>
+
+                </ol>
+
+                <button onclick="countElements()">Count Elements</button>
+            </section>
+        </main>
+
+        <script src="script.js"></script>
+    </body>
+</html>
