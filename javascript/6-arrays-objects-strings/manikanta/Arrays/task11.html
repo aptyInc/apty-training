@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chunk Array</title>
+</head>
+<body>
+    <input id="v1" type="text" >
+    <input id="v2" type="number" >
+    <input type="submit" onclick="pro()">
+    <div id="res"></div>
+</body>
+<script>
+    function chunkArray(arr, size) {
+       
+        let result = [];
+
+
+        for (let i = 0; i < arr.length; i += size) {
+            result.push(arr.slice(i, i + size)); 
+        }
+
+        return result;
+    }
+
+    function pro() {
+        let input = document.getElementById('v1').value;
+        let res = document.getElementById('res');
+        
+        
+        const array = JSON.parse(input);
+        const chunkSize = Number(document.getElementById('v2').value);
+
+        
+        const result = chunkArray(array, chunkSize);
+        
+      
+        res.innerHTML = JSON.stringify(result);
+    }
+</script>
+</html>

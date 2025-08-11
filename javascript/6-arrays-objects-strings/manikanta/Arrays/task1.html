@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="v">
+    <input type="submit" onclick="proce()">
+    <div id="re"></div>
+</body>
+<script>
+    let ans;
+    function flat(inp){
+             for(let i=0;i<inp.length;i++){
+                if(typeof inp[i]!="number"){
+                    flat(inp[i]);
+                    return;
+                }
+                ans.push(inp[i]);
+             }
+
+    }
+    function proce(){
+        ans=[];
+         flat(JSON.parse(document.getElementById('v').value));
+         
+         document.getElementById('re').innerHTML=ans.toString();
+    }
+</script>
+</html>

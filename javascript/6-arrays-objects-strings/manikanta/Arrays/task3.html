@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Queue</title>
+</head>
+<body>
+    <h2>Dynamic Queue Implementation</h2>
+
+    <div>
+        <label for="inputElement">Enter a number to enqueue:</label>
+        <input type="number" id="inputElement" placeholder="Enter number">
+        <button onclick="enqueueToQueue()">Enqueue</button>
+    </div>
+
+    <div>
+        <button onclick="dequeueFromQueue()">Dequeue</button>
+        <button onclick="checkFront()">Check Front</button>
+        <button onclick="checkIfEmpty()">Check if Queue is Empty</button>
+    </div>
+
+    <h3>Queue Operations:</h3>
+    <p id="queueOutput">Current Queue: []</p>
+    <p id="message"></p>
+
+    <script>
+       
+        function Queue() {
+            this.items = [];
+
+           
+            this.enqueue = function(element) {
+                this.items.push(element);
+            };
+
+            
+            this.dequeue = function() {
+                if (this.isEmpty()) {
+                    return "Queue is empty.";
+                }
+                return this.items.shift(); 
+            };
+
+           
+            this.isEmpty = function() {
+                return this.items.length === 0;
+            };
+
+          
+            this.front = function() {
+                if (this.isEmpty()) {
+                    return "Queue is empty.";
+                }
+                return this.items[0]; 
+            };
+
+           
+            this.size = function() {
+                return this.items.length;
+            };
+
+            
+            this.clear = function() {
+                this.items = [];
+            };
+        }
+
+      
+        const queue = new Queue();
+
+        
+        function enqueueToQueue() {
+            const inputElement = document.getElementById("inputElement").value;
+            if (inputElement !== "") {
+                queue.enqueue(Number(inputElement)); 
+                document.getElementById("inputElement").value = ''; 
+                updateQueueOutput();
+            } else {
+                document.getElementById("message").innerText = "Please enter a number.";
+            }
+        }
+
+        
+        function dequeueFromQueue() {
+            const dequeuedElement = queue.dequeue();
+            document.getElementById("message").innerText = dequeuedElement === "Queue is empty." ? dequeuedElement : `Dequeued element: ${dequeuedElement}`;
+            updateQueueOutput();
+        }
+
+        
+        function checkFront() {
+            const frontElement = queue.front();
+            document.getElementById("message").innerText = `Front element: ${frontElement}`;
+        }
+
+        
+        function checkIfEmpty() {
+            const isEmpty = queue.isEmpty();
+            document.getElementById("message").innerText = isEmpty ? "The queue is empty." : "The queue is not empty.";
+        }
+
+        
+        function updateQueueOutput() {
+            document.getElementById("queueOutput").innerText = `Current Queue: [${queue.items.join(", ")}]`;
+        }
+    </script>
+</body>
+</html>

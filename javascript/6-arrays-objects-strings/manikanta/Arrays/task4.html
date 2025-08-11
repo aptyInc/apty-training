@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input id="v1" type="text">
+    <div id="res"></div>
+</body>
+<script>
+    
+    function convertWordsToSentence(words) {
+        
+        let sentence = words.join(' ');
+
+        
+        sentence = sentence.charAt(0).toUpperCase() + sentence.slice(1);
+
+        return sentence;
+    }
+
+  
+    const inputElement = document.getElementById('v1');
+    const resultElement = document.getElementById('res');
+
+    inputElement.addEventListener('input', function() {
+        const inputText = inputElement.value;
+        const wordsArray = inputText.split(' ');
+        const sentence = convertWordsToSentence(wordsArray);
+        resultElement.textContent = sentence;
+    });
+</script>
+</html>

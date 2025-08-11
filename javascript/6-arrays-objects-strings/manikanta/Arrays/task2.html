@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Stack</title>
+</head>
+<body>
+    <h2>Dynamic Stack Implementation</h2>
+
+    <div>
+        <label for="inputElement">Enter a number to push onto the stack:</label>
+        <input type="number" id="inputElement" placeholder="Enter number">
+        <button onclick="pushToStack()">Push</button>
+    </div>
+
+    <div>
+        <button onclick="popFromStack()">Pop</button>
+        <button onclick="checkTop()">Check Top</button>
+        <button onclick="checkIfEmpty()">Check if Stack is Empty</button>
+    </div>
+
+    <h3>Stack Operations:</h3>
+    <p id="stackOutput">Current Stack: []</p>
+    <p id="message"></p>
+
+    <script>
+        
+        function Stack() {
+            this.items = [];
+
+            
+            this.push = function(element) {
+                this.items.push(element);
+            };
+
+            
+            this.pop = function() {
+                if (this.isEmpty()) {
+                    return "Stack is empty.";
+                }
+                return this.items.pop();
+            };
+
+            
+            this.isEmpty = function() {
+                return this.items.length === 0;
+            };
+
+            
+            this.peek = function() {
+                if (this.isEmpty()) {
+                    return "Stack is empty.";
+                }
+                return this.items[this.items.length - 1];
+            };
+
+
+            this.size = function() {
+                return this.items.length;
+            };
+
+            
+            this.clear = function() {
+                this.items = [];
+            };
+        }
+
+        
+        const stack = new Stack();
+
+        
+        function pushToStack() {
+            const inputElement = document.getElementById("inputElement").value;
+            if (inputElement !== "") {
+                stack.push(Number(inputElement)); 
+                document.getElementById("inputElement").value = '';
+                updateStackOutput();
+            } else {
+                document.getElementById("message").innerText = "Please enter a number.";
+            }
+        }
+
+       
+        function popFromStack() {
+            const poppedElement = stack.pop();
+            document.getElementById("message").innerText = poppedElement === "Stack is empty." ? poppedElement : `Popped element: ${poppedElement}`;
+            updateStackOutput();
+        }
+
+        
+        function checkTop() {
+            const topElement = stack.peek();
+            document.getElementById("message").innerText = `Top element: ${topElement}`;
+        }
+
+        
+        function checkIfEmpty() {
+            const isEmpty = stack.isEmpty();
+            document.getElementById("message").innerText = isEmpty ? "The stack is empty." : "The stack is not empty.";
+        }
+
+       
+        function updateStackOutput() {
+            document.getElementById("stackOutput").innerText = `Current Stack: [${stack.items.join(", ")}]`;
+        }
+    </script>
+</body>
+</html>

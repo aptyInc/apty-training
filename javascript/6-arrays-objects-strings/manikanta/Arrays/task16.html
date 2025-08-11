@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input id="v1" type="submit" onclick="pro()" value="compare">
+    <div id="res1"></div>
+    <div id="res2"></div>
+    <div id="res3"></div>
+
+</body>
+<script>
+    function pro(){
+       let ar=new Array(10000000).fill(0);
+       let start;
+       let end;
+       start=performance.now();
+       for(let i=0;i<ar.length;i++){
+        
+       }
+       end=performance.now();
+       document.getElementById('res1').innerHTML=`for loop ${end-start}`;
+       start=performance.now();
+       for(i of ar){
+        
+       }
+       end=performance.now();
+       document.getElementById('res2').innerHTML=`for of ${end-start}`;
+       start=performance.now();
+       ar.forEach((i)=>{
+
+       })
+       end=performance.now();
+       document.getElementById('res3').innerHTML=`for each ${end-start}`;
+
+
+    }
+</script>
+</html>
