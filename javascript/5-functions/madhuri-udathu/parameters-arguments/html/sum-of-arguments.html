@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sum Calculator</title>
+    <style>
+        body {
+            text-align: center;
+        }
+
+        .container {
+
+            border: 2px solid grey;
+            margin: 10px;
+            padding: 20px;
+            display: inline-block;
+
+
+            button {
+                padding: 10px;
+                background-color: lightskyblue;
+                margin: 10px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <h2>Sum Calculator</h2>
+    <div class="container">
+        <form id="sumForm">
+            <label for="numbers">Enter numbers (comma-separated):</label><br>
+            <input type="text" id="numbers" placeholder="e.g., 1, 2, 3, 4"><br><br>
+
+            <button type="button" onclick="calculateSum()">Calculate Sum</button>
+        </form>
+        <h3 id="result"></h3>
+    </div>
+    <script src="../js/sum-of-arguments.js"></script>
+</body>
+
+</html>
