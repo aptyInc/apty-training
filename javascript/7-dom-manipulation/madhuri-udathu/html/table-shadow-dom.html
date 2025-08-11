@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Table with Dynamic Manipulation in Shadow DOM</title>
+  <style>
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    th, td {
+      border: 1px solid #ccc;
+      padding: 10px;
+      text-align: center;
+    }
+    thead {
+      background-color: rgb(197, 134, 249);
+    }
+    tbody {
+      background-color: rgb(236, 216, 252);
+    }
+    .highlight {
+      background-color: yellow;
+    }
+
+    button {
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div id="shadow-container"></div>
+
+  <script src="../js/table-shadow-dom.js"></script>
+</body>
+</html>

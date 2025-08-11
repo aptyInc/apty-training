@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Table with Iframe</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th,td {
+            border: 1px solid #ccc;
+            padding: 10px;
+            text-align: center;
+        }
+
+        thead {
+            background-color: rgb(197, 134, 249);
+        }
+
+        tbody {
+            background-color: rgb(236, 216, 252);
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Dynamic Table with Iframe</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>id</th>
+                <th>className</th>
+                <th>tag</th>
+                <th>name</th>
+                <th>attribute</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>
+                    <button id="changeColorBtn">Change Text Color</button>
+                </td>
+                <td>
+                    <button id="toggleClassBtn">Toggle Background</button>
+                </td>
+                <td>
+                    <button id="changeSpanContentBtn">Change Span Content</button>
+                </td>
+                <td>
+                    <button id="toggleDisabledBtn">Toggle Disabled</button>
+                </td>
+                <td>
+                    <button id="addCustomAttrBtn">Add Custom Attribute</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <!-- Directly embed HTML content into iframe -->
+    <iframe id="iframeContainer" style="width: 100%; height: 400px; border: 1px solid #000;" srcdoc='
+        <!DOCTYPE html>
+        <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <style>
+                p {
+                    font-size: 16px;
+                }
+                .highlight {
+                    background-color: lightblue;
+                }
+            </style>
+        </head>
+        <body>
+            <p id="para1">Paragraph 1</p>
+            <p id="para2">Paragraph 2</p>
+            <p class="sameClass">Class 1</p>
+            <p class="sameClass">Class 2</p>
+            <span>Span 1</span>
+            <span>Span 2</span>
+            <input type="text" name="input1" value="Input 1">
+            <input type="text" name="input2" value="Input 2">
+            <p data-custom-attr="value1">Custom 1</p>
+            <p data-custom-attr="value2">Custom 2</p>
+        </body>
+        </html>'>
+    </iframe>
+
+    <script src="../js/table-iframe.js"></script>
+</body>
+
+</html>
