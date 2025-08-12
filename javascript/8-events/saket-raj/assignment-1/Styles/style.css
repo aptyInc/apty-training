@@ -1,0 +1,8 @@
+td {
+  padding: 8px 12px;
+  cursor: pointer;
+}
+
+.highlight {
+  background-color: green;
+}

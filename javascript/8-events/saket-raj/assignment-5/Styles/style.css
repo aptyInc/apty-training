@@ -1,0 +1,10 @@
+#parent {
+  padding: 50px;
+  background-color: blue;
+}
+
+#child {
+  padding: 30px;
+  background-color: green;
+  margin-top: 10px;
+}
