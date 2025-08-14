@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>localStorage & sessionStorage Example</title>
+  </head>
+  <body>
+    <h1>Storage Example</h1>
+
+    <h2>Local Storage</h2>
+    <input type="text" id="localInput" placeholder="Enter localStorage value" />
+    <button onclick="saveLocal()">Save to LocalStorage</button>
+
+    <h2>Session Storage</h2>
+    <input
+      type="text"
+      id="sessionInput"
+      placeholder="Enter sessionStorage value"
+    />
+    <button onclick="saveSession()">Save to SessionStorage</button>
+
+    <h2>Stored Values on Reload</h2>
+    <p><b>LocalStorage:</b> <span id="localValue"></span></p>
+    <p><b>SessionStorage:</b> <span id="sessionValue"></span></p>
+
+    <script src="./Scripts/index.js"></script>
+  </body>
+</html>

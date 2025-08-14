@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cookies</title>
+  </head>
+  <body>
+    <h1>Cookies Example</h1>
+
+    <label>Name:</label>
+    <input type="text" id="cookieName" />
+    <br /><br />
+    <label>Value:</label>
+    <input type="text" id="cookieValue" />
+    <br /><br />
+    <label>Days to Expire:</label>
+    <input type="number" id="cookieDays" value="7" />
+    <br /><br />
+
+    <button onclick="setCookie()">Set Cookie</button>
+    <button onclick="getCookie()">Read Cookies</button>
+    <button onclick="deleteCookie()">Delete Cookie</button>
+
+    <p id="output"></p>
+
+    <script src="./Scripts/index.js"></script>
+  </body>
+</html>
