@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>One Stop Shop</title>
+    <link rel="stylesheet" href="./styles/style.css">
+</head>
+
+<body>
+    <nav>
+        <h1>One Stop Shop</h1>
+        <div class="search-box">
+            <input type="text" id="search-input" placeholder="Search products">
+            <button onclick="searchProducts()">Search</button>
+        </div>
+        <div class="categories-box">
+            <select id="categories">
+                <option value="">Categories</option>
+            </select>
+        </div>
+    </nav>
+
+    <section id="all-products">
+        <div class="container" id="product-list"></div>
+    </section>
+
+    <section id="search-results" style="display:none;">
+        <div class="container" id="search-container"></div>
+    </section>
+
+    <section id="view-product" style="display:none;">
+        <div id="product-details"></div>
+        <button onclick="backToAll()">Back</button>
+    </section>
+
+    <script src="./scripts/list-products.js"></script>
+    <script src="./scripts/search-product.js"></script>
+    <script src="./scripts/view-product.js"></script>
+</body>
+
+</html>
