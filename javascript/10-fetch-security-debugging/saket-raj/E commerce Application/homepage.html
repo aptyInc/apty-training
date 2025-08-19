@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shopping Mall</title>
+    <link rel="stylesheet" href="./Styles/style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Shop Your Favs!</h1>
+      <nav>
+        <button id="allProductsBtn">All Products</button>
+        <input
+          type="text"
+          id="searchInput"
+          placeholder="Search by ID or Name"
+        />
+        <button id="searchBtn">Search</button>
+      </nav>
+    </header>
+
+    <main id="productContainer">
+      <p>Loading products...</p>
+    </main>
+
+    <div id="productModal" class="modal hidden">
+      <div class="modal-content">
+        <span id="closeModal" class="close">&times;</span>
+        <div id="modalBody"></div>
+      </div>
+    </div>
+
+    <footer>&copy; Your goto shopping mall. All rights reserved.</footer>
+
+    <script src="./Scripts/index.js"></script>
+  </body>
+</html>
