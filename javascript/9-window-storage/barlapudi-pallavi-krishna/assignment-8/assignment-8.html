@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Storage Demo</title>
+   <script src="scripts/script.js" defer4></script>
+</head>
+<body>
+  <h2>LocalStorage & SessionStorage Demo</h2>
+
+  <h3>Save to LocalStorage</h3>
+  <input type="text" id="localKey" placeholder="Key">
+  <input type="text" id="localValue" placeholder="Value">
+  <button onclick="saveLocal()">Save Local</button>
+
+  <h3>Save to SessionStorage</h3>
+  <input type="text" id="sessionKey" placeholder="Key">
+  <input type="text" id="sessionValue" placeholder="Value">
+  <button onclick="saveSession()">Save Session</button>
+
+  <h3>Stored Data</h3>
+  <p><strong>LocalStorage:</strong></p>
+  <ul id="localData"></ul>
+
+  <p><strong>SessionStorage:</strong></p>
+  <ul id="sessionData"></ul>
+</body>
+</html>
