@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Dummy Products API Demo</title>
+  <link rel="stylesheet" href="styles/website.css">
+  <script src="scripts/website.js" defer></script>
+</head>
+<body>
+  <h1>Quick Cart</h1>
+  
+  <nav>
+    <button onclick="showPage('all')">All Products</button>
+    <button onclick="showPage('search')">Search Products</button>
+    <button onclick="showPage('view')">View Product</button>
+  </nav>
+
+  <!-- All Products Page -->
+  <div id="all" class="page active">
+    <h2>All Products</h2>
+    <div id="all-products" class="product-list"></div>
+  </div>
+
+  <!-- Search Products Page -->
+  <div id="search" class="page">
+    <h2>Search Products</h2>
+    <input type="text" id="search-input" placeholder="Enter keyword">
+    <button onclick="searchProducts()">Search</button>
+    <div id="search-results" class="product-list"></div>
+  </div>
+
+  <!-- View Product Page -->
+  <div id="view" class="page">
+    <h2>View Product</h2>
+    <input type="number" id="product-id" placeholder="Enter Product ID">
+    <button onclick="getProduct()">Get Product</button>
+    <div id="product-details"></div>
+  </div>
+
+  <!-- Product Modal -->
+  <div id="product-modal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal()">&times;</span>
+      <div id="modal-body"></div>
+    </div>
+  </div>
+</body>
+</html>
