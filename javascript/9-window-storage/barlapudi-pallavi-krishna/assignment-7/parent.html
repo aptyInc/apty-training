@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Parent Window</title>
+  <script src="scripts/parent.js" defer></script>
+</head>
+<body>
+  <h3>Parent Window</h3>
+  <input type="text" id="parentMsg" placeholder="Message to child">
+  <button onclick="sendToChild()">Send to Child</button>
+  <input type="text" id="parentToTopMsg" placeholder="Message to top">
+  <button onclick="sendToTop()">Send to Top</button>
+  <p id="parentOutput"></p>
+
+  <iframe src="child.html" id="childFrame"></iframe>
+</body>
+</html>

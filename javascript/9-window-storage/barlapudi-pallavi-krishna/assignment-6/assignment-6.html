@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Parent Window</title>
+  <script src="scripts/script.js" defer></script>
+</head>
+<body>
+  <h2>Parent Window</h2>
+  <input type="text" id="parentMsg" placeholder="Message to iframe">
+  <button onclick="sendToIframe()">Send to Iframe</button>
+  <p id="parentOutput"></p>
+
+  <iframe src="child.html" id="childFrame"></iframe>
+</body>
+</html>

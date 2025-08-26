@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Top Window</title>
+  <script src="scripts/script.js" defer></script>
+</head>
+<body>
+  <h2>Top Window</h2>
+  <input type="text" id="topMsg" placeholder="Message to parent">
+  <button onclick="sendToParent()">Send to Parent</button>
+  <p id="topOutput"></p>
+
+  <iframe src="parent.html" id="parentFrame" style="width:500px;height:250px;border:2px solid black;"></iframe>
+</body>
+</html>
