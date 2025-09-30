@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration form</title>
+</head>
+
+<body>
+    <h1>Singing Club Registration</h1>
+    <form action="" method="post">
+
+        <legend>Personal Information</legend>
+        <label for="firstname">First Name:</label>
+        <input type="text" placeholder="Enter First Name" pattern="^[A-Za-z]+$" autocomplete="off" required>
+        <br> <br>
+        <label for="lastname">Last Name:</label>
+        <input type="text" placeholder="Enter Last Name" pattern="^[A-Za-z]+$" autocomplete="off" required>
+
+        <br><br>
+
+        <label for="email">Email:</label>
+        <input type="email" pattern="^[a-zA-Z0-9._%!-]+@gmail\.com$" placeholder="Enter you Email" required>
+
+        <br><br>
+        
+        <label for="phone number">Phone Number:</label>
+        <input type="tel" pattern="^(\+91)?[0-9]{10}$" placeholder="Enter Your Number" required>
+        
+        <br><br>
+        
+        <label for="dob">Date of Birth:</label>
+        <input type="date" id="birthday" min="2020-01-01" max="2025-12-31" required>
+        
+        <br><br>
+
+        <legend>Singing Preference</legend>
+        
+        <br>
+        
+        <label>Preferred Singing Style:</label><br>
+        <input type="radio" name="style" value="Classical" required>
+        
+        <label for="classical">Classical</label><br>
+        <input type="radio" name="style" value="Pop">
+        
+        <label for="pop">Pop</label><br>
+        <input type="radio" name="style" value="Rock">
+        
+        <label for="rock">Rock</label><br>
+        <input type="radio" name="style" value="Folk">
+        
+        <label for="folk">Folk</label><br><br>
+        
+        <label>Instruments You Play (if any):</label><br>
+        <input type="checkbox" name="instrument" value="Guitar">
+        <label for="guitar">Guitar</label><br>
+        <input type="checkbox" name="instrument" value="Piano">
+        <label for="piano">Piano</label><br>
+        <input type="checkbox" name="instrument" value="Drums">
+        <label for="drums">Drums</label><br>
+        <input type="checkbox" name="instrument" value="None">
+        <label for="none">None</label><br><br>
+
+    </form>
+
+</body>
+
+</html>
