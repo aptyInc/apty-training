@@ -1,0 +1,133 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #fafafa;
+    color: #222;
+    padding: 20px;
+}
+
+.gallery-wrapper {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 2px solid #e0e0e0;
+    background-color: #ffffff;
+}
+
+.gallery-header {
+    padding: 18px;
+    margin-bottom: 18px;
+    border: 1px solid #f0c987;
+    background-color: #fff3e0;
+    text-align: center;
+}
+
+.gallery-header h1 {
+    font-size: 1.8rem;
+    margin-bottom: 6px;
+}
+
+.gallery-header p {
+    font-size: 1rem;
+    color: #444;
+}
+
+.cards-container {
+    padding: 14px;
+    margin: 8px;
+    border: 1px solid #e6eef3;
+    background-color: #f7fbff;
+    font-size: 0;
+}
+
+.card {
+    display: inline-block;
+    vertical-align: top;
+    width: 30%;
+    margin: 1.333%;
+    padding: 16px;
+    border: 1px solid #dcdcdc;
+    background-color: #ffffff;
+    box-shadow: 0 6px 14px rgba(34, 34, 34, 0.08);
+    transition: transform 0.18s ease, box-shadow 0.18s ease;
+    font-size: 16px;
+}
+
+.card .profile-pic {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 6px;
+    margin-bottom: 12px;
+    border: 1px solid #ddd;
+}
+
+.card .name {
+    font-size: 1.1rem;
+    margin-bottom: 6px;
+    color: #222;
+}
+
+.card .position {
+    font-size: 0.96rem;
+    margin-bottom: 10px;
+    color: #666;
+}
+
+.card .bio {
+    font-size: 0.95rem;
+    margin-bottom: 12px;
+    color: #444;
+}
+
+.card .contact {
+    font-size: 0.9rem;
+    color: #333;
+    border-top: 1px dashed #eee;
+    padding-top: 10px;
+}
+
+.card:hover {
+    transform: translateY(-6px) scale(1.02);
+    box-shadow: 0 12px 28px rgba(34, 34, 34, 0.15);
+}
+
+.gallery-footer {
+    text-align: center;
+    margin-top: 16px;
+    padding: 12px;
+    border-top: 1px solid #eee;
+    color: #666;
+}
+
+@media (max-width: 900px) {
+    .card {
+        width: 46%;
+        margin: 2%;
+    }
+}
+
+@media (max-width: 600px) {
+    .gallery-wrapper {
+        padding: 12px;
+    }
+
+    .cards-container {
+        padding: 10px;
+    }
+
+    .card {
+        display: block;
+        width: 100%;
+        margin: 8px 0;
+    }
+
+    .card .name {
+        font-size: 1.05rem;
+    }
+}

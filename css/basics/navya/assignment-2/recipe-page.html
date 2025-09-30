@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Delicious Chocolate Cake</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            line-height: 1.5;
+            background-color: #fffaf0;
+            color: #222;
+            padding: 16px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 16px;
+        }
+
+        #recipe-name {
+            background-color: #ff8c42;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 16px;
+        }
+
+        #recipe-name h1 {
+            font-size: 2rem;
+            font-weight: 700;
+            line-height: 1.1;
+        }
+
+        #recipe-name p {
+            margin-top: 8px;
+            font-size: 1rem;
+            opacity: 0.95;
+        }
+
+        .section {
+            padding: 18px;
+            border-radius: 8px;
+            margin-bottom: 16px;
+        }
+
+        .ingredients {
+            background-color: #e9f8ee;
+        }
+
+        .preparation {
+            background-color: #fff6d6;
+        }
+
+        .image-section {
+            background-color: #f4f5f6;
+            text-align: center;
+        }
+
+       
+        h2 {
+            font-size: 1.25rem;
+            margin-bottom: 10px;
+        }
+
+        p {
+            font-size: 1rem;
+        }
+
+        ul {
+            margin-left: 1.1rem;
+            margin-top: 8px;
+        }
+
+        ol {
+            margin-left: 1.1rem;
+            margin-top: 8px;
+        }
+
+        li {
+            margin-bottom: 8px;
+            font-size: 1rem;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+            border-radius: 10px;
+        }
+
+        .caption {
+            font-style: italic;
+            margin-top: 10px;
+            color: #555;
+            font-size: 0.95rem;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 12px;
+            color: #555;
+            font-size: 0.95rem;
+        }
+
+        
+        @media (max-width: 480px) {
+            #recipe-name h1 {
+                font-size: 1.4rem;
+            }
+
+            #recipe-name {
+                padding: 14px;
+            }
+
+            .container {
+                padding: 12px;
+            }
+
+            h2 {
+                font-size: 1.05rem;
+            }
+
+            li {
+                font-size: 0.98rem;
+            }
+        }
+
+        @media (min-width: 481px) and (max-width: 768px) {
+            #recipe-name h1 {
+                font-size: 1.6rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <main class="container">
+        <section id="recipe-name" aria-labelledby="title">
+            <h1 id="title">Delicious Chocolate Cake</h1>
+            <p>Moist, simple, and perfect for sharing.</p>
+        </section>
+
+        <section class="section ingredients" aria-labelledby="ing-heading">
+            <h2 id="ing-heading">Ingredients</h2>
+            <ul>
+                <li>2 cups all-purpose flour</li>
+                <li>1 cup granulated sugar</li>
+                <li>1/2 cup cocoa powder</li>
+                <li>1 tsp baking powder</li>
+                <li>1/2 cup unsalted butter, softened</li>
+                <li>2 large eggs</li>
+                <li>1 cup milk</li>
+            </ul>
+        </section>
+
+        <section class="section preparation" aria-labelledby="prep-heading">
+            <h2 id="prep-heading">Preparation Steps</h2>
+            <ol>
+                <li>Preheat the oven to 180°C (350°F).</li>
+                <li>Whisk together flour, sugar, cocoa, and baking powder.</li>
+                <li>Add butter, eggs, and milk; mix until smooth.</li>
+                <li>Pour batter into a greased 9-inch pan.</li>
+                <li>Bake for 30-35 minutes or until a toothpick comes out clean.</li>
+                <li>Cool, slice, and serve.</li>
+            </ol>
+        </section>
+
+        <section class="section image-section" aria-labelledby="img-heading">
+            <h2 id="img-heading">Dish Image</h2>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRi9ogI7v6gVuekfDeL9UlVQF1dlplpwtXXTg&s"
+                alt="Slice of chocolate cake on a plate" />
+            <p class="caption">A slice of our delicious homemade chocolate cake.</p>
+        </section>
+
+        <footer>
+            <p>Recipe by Navya</p>
+        </footer>
+    </main>
+</body>
+
+</html>
