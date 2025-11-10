@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Logical Operators App</title>
+</head>
+
+<body>
+    <h2>Logical Operators App</h2>
+
+    <label>First Input:</label>
+    <input type="text" id="inputA" />
+    <select id="kindA">
+        <option value="string">String</option>
+        <option value="number">Number</option>
+        <option value="boolean">Boolean</option>
+    </select>
+    <br><br>
+
+    <label>Second Input:</label>
+    <input type="text" id="inputB" />
+    <select id="kindB">
+        <option value="string">String</option>
+        <option value="number">Number</option>
+        <option value="boolean">Boolean</option>
+    </select>
+    <br><br>
+
+    <button onclick="runAnd()">&&</button>
+    <button onclick="runOr()">||</button>
+    <button onclick="runNot()">!</button>
+
+    <h3 id="display"></h3>
+
+    <script src="./scripts/index.js"></script>
+</body>
+
+</html>
