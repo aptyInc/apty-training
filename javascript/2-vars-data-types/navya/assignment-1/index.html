@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript Execution Assignment</title>
+
+    <!-- Internal Javascript -->
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const btn = document.querySelector("button");
+            btn.addEventListener("click", () => {
+                alert("Internal Javscript");
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <!-- Inline Javascript -->
+    <button onclick="alert('Inline Javascript')">Click Me</button>
+
+    <!-- External Javascript -->
+    <script src="./scripts/index.js"></script>
+</body>
+
+</html>
